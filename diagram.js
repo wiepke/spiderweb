@@ -2,7 +2,7 @@
  * Created by fides-WHK on 13.03.2017.
  */
 function diagram(a, b, c, d, e, f, g, h) {
-    //alert("oeffentlichkeit =" +a+ "; Bewertung =" +b+ "; inquiry =" +c+ "; tasks =" +d+ "; question =" +e+ "; topic =" +f+ "; negotiable =" +a+ "; knowledgebuilding =" +h);
+    alert("oeffentlichkeit =" +a+ "; Bewertung =" +b+ "; inquiry =" +c+ "; tasks =" +d+ "; question =" +e+ "; topic =" +f+ "; negotiable =" +a+ "; knowledgebuilding =" +h);
     bonsai.run(document.getElementById('diagram'), {
         code: function () {
             let picwidth = 500;
