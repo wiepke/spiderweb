@@ -2,27 +2,24 @@
  * Created by fides-WHK on 13.03.2017.
  */
 function diagram(a, b, c, d, e, f, g, h) {
-    alert("oeffentlichkeit =" +a+ "; Bewertung =" +b+ "; inquiry =" +c+ "; tasks =" +d+ "; question =" +e+ "; topic =" +f+ "; negotiable =" +a+ "; knowledgebuilding =" +h);
+    //alert("oeffentlichkeit =" +a+ "; Bewertung =" +b+ "; inquiry =" +c+ "; tasks =" +d+ "; question =" +e+ "; topic =" +f+ "; negotiable =" +a+ "; knowledgebuilding =" +h);
     bonsai.run(document.getElementById('diagram'), {
+        a: a,
+        b: b,
+        c: c,
+        d: d,
+        e: e,
+        f: f,
+        g: g,
+        h: h,
         code: function () {
             let picwidth = 500;
             let picheight = 400;
             let maxradius;
-            let a=Math.round(Math.random()*2+1);
-            let b=Math.round(Math.random()*2+1);
-            let c=Math.round(Math.random()*2+1);
-            let d=Math.round(Math.random()*2+1);
-            let e=Math.round(Math.random()*2+1);
-            let f=Math.round(Math.random()*2+1);
-            let g=Math.round(Math.random()*2+1);
-            let h=Math.round(Math.random()*2+1);
-            /*
-             * todo: Parameter müssen von außen übergeben werden, hier ist nur die Testlösung.
-             */
+            let Kriterien = [stage.options.a,stage.options.b,stage.options.c,stage.options.d,stage.options.e,stage.options.f,stage.options.g,stage.options.h];
             if (picwidth < picheight)
                 maxradius = picwidth;
             else maxradius = picheight;
-            let Kriterien = [a, b, c, d, e, f, g, h];
             new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 20)
                 .addTo(stage)
                 .stroke('red', 3);

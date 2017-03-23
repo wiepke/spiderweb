@@ -9,11 +9,22 @@
         src="https://code.jquery.com/jquery-3.1.1.js"
         integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
         crossorigin="anonymous"></script>
+<?php include 'service.php'; ?>
 <script src="bonsai.js"></script>
 <script src="diagram.js"></script>
 <script src="service.js"></script>
+<script src="Listing.js"></script>
 
+ID:
+<input id="id" value="1"><br>
+Uni:
+<input id="Uni" value="Potsdam"><br>
+oeffentlichkeit:
+<input id="oeffentlichkeit" value=""><br>
+Bewertung:
+<input id="Bewertung" value=""><br>
+<button onClick="javascript:location.reload()" target="_self">Test Test Test</button>
+<button onClick="document.getElementById('diagram').innerHTML = '';showall(Listing())">next!</button>
 <div id="diagram"></div>
-<button onClick="diagram(1,1,1,1,1,1,1,1)">next!</button>
 </body>
 </html>
