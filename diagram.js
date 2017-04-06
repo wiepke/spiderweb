@@ -1,22 +1,14 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(a, b, c, d, e, f, g, h) {
-    //alert("oeffentlichkeit =" +a+ "; Bewertung =" +b+ "; inquiry =" +c+ "; tasks =" +d+ "; question =" +e+ "; topic =" +f+ "; negotiable =" +a+ "; knowledgebuilding =" +h);
+function diagram(Kriterien) {
     bonsai.run(document.getElementById('diagram'), {
-        a: a,
-        b: b,
-        c: c,
-        d: d,
-        e: e,
-        f: f,
-        g: g,
-        h: h,
+        Kriterien: Kriterien,
         code: function () {
             let picwidth = 500;
             let picheight = 400;
             let maxradius;
-            let Kriterien = [stage.options.a,stage.options.b,stage.options.c,stage.options.d,stage.options.e,stage.options.f,stage.options.g,stage.options.h];
+            let Kriterien = stage.options.Kriterien;
             if (picwidth < picheight)
                 maxradius = picwidth;
             else maxradius = picheight;

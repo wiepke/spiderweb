@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fragebogen</title>
+</head>
+<body>
+<div id="react-app"></div>
+<div id="react-form"></div>
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>
+<script src="bonsai.js"></script>
+<script src="diagram.js"></script>
+<?php include 'servicein.php'; ?>
+<form id="survey" onSubmit="send()">
+    Uni: <input id="Uni" value="Potsdam"><br>
+    <input type="submit" value="send">
+</form>
+<dev id="getData"></dev>
+<script>
+    var CollectData = React.createClass ({
+       propTypes: {
+           onSend: React.PropTypes.func,
+           //SetOfData: React.PropTypes.object,
+       },
+       render: function(){
+           //var oldSetOfData = this.props.SetOfData;
+           var onSend = this.props.onSend;
+           return (
+               React.createElement('div', {},
+                   React.createElement('p', {}, "Universität: ",
+                   React.createElement('input', {
+                       //oldSetOfData: this.props.SetOfData.Uni,
+                       className:"DataInput",
+                       id:"Uni",
+                       placeholder: "your Uni"}),
+                   ),
+                   React.createElement('p', {},"Öffentlichkeit: ",
+                   React.createElement('input', {
+                       //SetOfData: this.props.SetOfData.Oeffentlichkeit,
+                       className:"DataInput",
+                       id:"oeffentlichkeit",
+                       placeholder: "Öffentlichkeit"}),
+                   ),
+                   React.createElement('p', {},
+                       React.createElement('input', {
+                       //SetOfData: this.props.SetOfData.Bewertung,
+                       className:"DataInput",
+                       id:"Bewertung",
+                       placeholder: "Bewertung"}),
+                   ),
+                   React.createElement('p', {},
+                       React.createElement('input', {
+                       //SetOfData: this.props.SetOfData.inquiry,
+                       className:"DataInput",
+                       id:"inquiry",
+                       placeholder: "inquiry"}),
+                   ),
+                   React.createElement('p', {},
+                   React.createElement('input', {
+                       //SetOfData: this.props.SetOfData.tasks,
+                       className:"DataInput",
+                       id:"tasks",
+                       placeholder: "tasks"}),
+                   ),
+                   React.createElement('p', {},
+                   React.createElement('input', {
+                       //SetOfData: this.props.SetOfData.question,
+                       className:"DataInput",
+                       id:"question",
+                       placeholder: "question"}),
+                   ),
+                   React.createElement('p', {},
+                   React.createElement('button', {
+                       type: "submit",
+                       className: "button",
+                       onSend: function(e){
+                           onSend("hello");
+                       }
+                   }, "drück mich")
+               )
+               )
+           );
+       }
+    });
+    var AllData = {};
+    ReactDOM.render(
+        React.createElement(CollectData, {function() {alert("hi"); },AllData}),
+        document.getElementById('getData'));
+</script>
+</body>
+</html>
