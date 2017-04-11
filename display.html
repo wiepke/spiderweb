@@ -15,19 +15,28 @@
 <script src="serviceout.js"></script>
 <script src="Listingout.js"></script>
 ID:
-<input id="id" value="1" class="Filter"><br>
+<input name="id" value="1" class="idclass"><br>
 ID greater than:
-<input id="idgreat" value="" class="Filter"><br>
+<input name="idgreat" value="" class="idclass"><br>
 ID smaller than:
-<input id="idsmall" value="" class="Filter"><br>
+<input name="idsmall" value="" class="idclass"><br>
 Uni:
-<input id="Uni" value="Potsdam" class="Filter"><br>
+<input name="Uni" value="Potsdam" class="stringFilter"><br>
 oeffentlichkeit:
-<input id="oeffentlichkeit" value="" class="Filter"><br>
+<input name="oeffentlichkeit" value="" class="dimensionFilter"><br>
 Bewertung:
-<input id="Bewertung" value="" class="Filter"><br>
-<button onClick="javascript:location.reload()" target="_self">Test Test Test</button>
+<input name="Bewertung" value="" class="dimensionFilter"><br>
+inquiry:
+<input name="inquiry" value="" class="dimensionFilter"><br>
+question:
+<input name="question" value="" class="dimensionFilter"><br>
+negotiable:
+<input name="negotiable" value="" class="dimensionFilter"><br>
+knowledgebuilding:
+<input name="knowledgebuilding" value="" class="dimensionFilter"><br>
+<!-- <button onClick="javascript:location.reload()" target="_self">Test Test Test</button> -->
 <button onClick="document.getElementById('diagram').innerHTML = '';showall(Listing())">next!</button>
+<button onClick="cleanFilter(); return false">clean Filters</button>
 <div id="diagram"></div>
 </body>
 </html>

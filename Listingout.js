@@ -3,36 +3,27 @@
  */
 function Listing(){
 let output = [];
-/*let Filter = document.getElementsByClassName("Filter");
-for (let i=0;i<Filter.length-1;i++){
-    if (Filter[i].value!=""){
-        output.push(Filter[i].name);
-        output.push(Filter[i].value);
+let idclass = document.getElementsByClassName("idclass");
+for (let i=0;i<idclass.length;i++){
+    if (idclass[i].value.match(/[0-9].*/)!=null){
+        output.push(idclass[i].name);
+        output.push(idclass[i].value);
     }
-}*/
-if (document.getElementById('id').value!="") {
-    output.push("id");
-    output.push(document.getElementById('id').value);
 }
-if (document.getElementById('fromid').value!="") {
-    output.push("fromid");
-    output.push(document.getElementById('fromid').value);
+let stringFilter = document.getElementsByClassName("stringFilter");
+for (let i=0;i<stringFilter.length;i++){
+    if (stringFilter[i].value!=""){
+        output.push(stringFilter[i].name);
+        output.push(stringFilter[i].value);
+    }
 }
-if (document.getElementById('toid').value!="") {
-    output.push("toid");
-    output.push(document.getElementById('toid').value);
+let dimensionFilter = document.getElementsByClassName("dimensionFilter");
+for (let i=0;i<dimensionFilter.length;i++){
+    if (dimensionFilter[i].value.match(/1|2|3/)!=null){
+        output.push(dimensionFilter[i].name);
+        output.push(dimensionFilter[i].value);
+    }
 }
-if (document.getElementById('Uni').value!="") {
-    output.push("Uni");
-    output.push(document.getElementById('Uni').value);
-}
-if (document.getElementById('oeffentlichkeit').value!="") {
-    output.push("oeffentlichkeit");
-    output.push(document.getElementById('oeffentlichkeit').value);
-}
-if (document.getElementById('Bewertung').value!="") {
-    output.push("Bewertung");
-    output.push(document.getElementById('Bewertung').value);
-}
+
 return output;
 }

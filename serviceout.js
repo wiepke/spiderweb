@@ -23,3 +23,17 @@ function showall(Filter) {
             }
         });
     }
+function cleanFilter() {
+    let inputs = document.getElementsByClassName("idclass");
+    for (let i=0;i<inputs.length;i++){
+        inputs[i].value="";
+    }
+    inputs = document.getElementsByClassName("stringFilter");
+    for (let i=0;i<inputs.length;i++){
+        inputs[i].value="";
+    }
+    inputs = document.getElementsByClassName("dimensionFilter");
+    for (let i=0;i<inputs.length;i++){
+        inputs[i].value="";
+    }
+}

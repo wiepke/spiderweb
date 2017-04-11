@@ -7,21 +7,9 @@
  */
 echo "[\n";
 $Kriterien = [];
-if (isset($_GET['uni'])) {
-    array_push($Kriterien,'uni');
-    array_push($Kriterien,$_GET['uni']);
-}
-if (isset($_GET['id'])){
-    array_push($Kriterien,'id');
-    array_push($Kriterien,$_GET['id']);
-}
-if (isset($_GET['oeffentlichkeit'])){
-    array_push($Kriterien,'oeffentlichkeit');
-    array_push($Kriterien,$_GET['oeffentlichkeit']);
-}
-if (isset($_GET['Bewertung'])) {
-    array_push($Kriterien,'Bewertung');
-    array_push($Kriterien,$_GET['Bewertung']);
+foreach ($_GET as $key => $value){
+    array_push($Kriterien,$key);
+    array_push($Kriterien,$value);
 }
 $db = mysqli_connect("localhost", "root", "", "test"); // this should be in a config php file
 $REQUESTSPINNE  = "SELECT * FROM spinnendiagrammdaten";
