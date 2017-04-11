@@ -14,15 +14,18 @@
 <script src="diagram.js"></script>
 <script src="serviceout.js"></script>
 <script src="Listingout.js"></script>
-
 ID:
-<input id="id" value="1"><br>
+<input id="id" value="1" class="Filter"><br>
+ID greater than:
+<input id="idgreat" value="" class="Filter"><br>
+ID smaller than:
+<input id="idsmall" value="" class="Filter"><br>
 Uni:
-<input id="Uni" value="Potsdam"><br>
+<input id="Uni" value="Potsdam" class="Filter"><br>
 oeffentlichkeit:
-<input id="oeffentlichkeit" value=""><br>
+<input id="oeffentlichkeit" value="" class="Filter"><br>
 Bewertung:
-<input id="Bewertung" value=""><br>
+<input id="Bewertung" value="" class="Filter"><br>
 <button onClick="javascript:location.reload()" target="_self">Test Test Test</button>
 <button onClick="document.getElementById('diagram').innerHTML = '';showall(Listing())">next!</button>
 <div id="diagram"></div>

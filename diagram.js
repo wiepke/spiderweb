@@ -1,7 +1,7 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien) {
+function diagram(Kriterien) {       //Kriterien needs to be an array
     bonsai.run(document.getElementById('diagram'), {
         Kriterien: Kriterien,
         code: function () {
@@ -21,14 +21,19 @@ function diagram(Kriterien) {
             new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 130)
                 .addTo(stage)
                 .stroke('red', 3);
+            /*just 3 red circles so far*/
             let xvalue = 1/3;
             let yvalue = 1/3;
             let sign = 1;
-            let y = (maxradius / 2 + picheight / 2) * (1 / 2 + Math.tan((0) / 2.15681043225));
+            let y = 0.0;
             let x = 0.0;
             for (let i = 0; i < Kriterien.length; i++) {
                 y = maxradius / 2 * Math.sin(2*Math.PI*(i+1)/Kriterien.length);
                 x = maxradius / 2 * Math.cos(2*Math.PI*(i+1)/Kriterien.length);
+               /*
+                * Point (x1,y1) is the center of the width and on the upper end
+                * All following points circle in equal distances around the center
+                */
                 new Path()
                     .moveTo(picwidth / 2, picheight / 2)
                     .stroke('gray', 2)
@@ -37,9 +42,9 @@ function diagram(Kriterien) {
                     .addTo(stage);
             }
             /*
-             * Das Rohdiagramm ist nun fertig
-             * Durch Veränderung der Kriterienliste ändert sich auch das Diagram
-             * todo: Kriteriennamen am Rand.
+             * The basic picture (circles and dimensions) is done now
+             * The length of "Kriterien" is variable.
+             * todo: dimension values on the rim.
              */
             if (maxradius / 2 * maxradius / 2 - (y - picheight / 2) * (y - picheight / 2) <= 0)
                 sign = -1;
@@ -50,9 +55,15 @@ function diagram(Kriterien) {
             let inner = new Path()
                 .moveTo(x * xvalue * Kriterien[0] + picwidth / 2, picheight / 2 + y * yvalue * Kriterien[0])
                 .fill(gradient.radial(['transparent', 'black'], 200, 50, 50));
+            /*
+             * "inner" is the shadowed part of the graphic
+             */
             let outer = new Path()
                 .moveTo(x * xvalue * Kriterien[0] + picwidth / 2, picheight / 2 + y * yvalue * Kriterien[0])
                 .stroke('black', 4);
+            /*
+             * "outer" is the black line connecting the values
+             */
             for (let i=0; i<Kriterien.length;i++) {
                 y = (maxradius / 2 - (Kriterien[i]-1)*10) * Math.sin(2*Math.PI*(i+1)/Kriterien.length);
                 x = (maxradius / 2 - (Kriterien[i]-1)*10) * Math.cos(2*Math.PI*(i+1)/Kriterien.length);
@@ -66,5 +77,8 @@ function diagram(Kriterien) {
         },
         width: 500,
         height: 400
+        /*
+         * todo: width and height need to be scalable at some point
+         */
     });
 }
