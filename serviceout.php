@@ -11,9 +11,9 @@ foreach ($_GET as $key => $value){
     array_push($Kriterien,$key);
     array_push($Kriterien,$value);
 }
-$db = mysqli_connect("localhost", "root", "", "test"); // this should be in a config php file
+$db = mysqli_connect("localhost", "root", "", "test");
 $REQUESTSPINNE  = "SELECT * FROM spinnendiagrammdaten";
-for ($i=0;$i<count($Kriterien);$i++){
+for ($i=0;$i<count($Kriterien)-2;$i++){
     if ($i % 2 == 0) {
         if ($i == 0) {
             $REQUESTSPINNE = $REQUESTSPINNE . " WHERE " . $Kriterien[$i];
@@ -22,6 +22,7 @@ for ($i=0;$i<count($Kriterien);$i++){
     }
     else $REQUESTSPINNE = $REQUESTSPINNE."=".$Kriterien[$i];
 }
+$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$Kriterien[count($Kriterien)-1] .",10;";
 $queryObj = mysqli_query($db, $REQUESTSPINNE);
 header('Content-Type: application/json');
 $next = 0;

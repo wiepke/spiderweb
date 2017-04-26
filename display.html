@@ -2,41 +2,147 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Display</title>
+    <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .dia {float: left; padding: 20px;}
+    </style>
 </head>
-<body>
-<script
-        src="https://code.jquery.com/jquery-3.1.1.js"
-        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-        crossorigin="anonymous"></script>
+<body style="width:100%;">
+<script src="libs/jquery.js"></script>
+<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <?php include 'service.php'; ?>
 <script src="bonsai.js"></script>
 <script src="diagram.js"></script>
 <script src="serviceout.js"></script>
 <script src="Listingout.js"></script>
-ID:
-<input name="id" value="1" class="idclass"><br>
-ID greater than:
-<input name="idgreat" value="" class="idclass"><br>
-ID smaller than:
-<input name="idsmall" value="" class="idclass"><br>
-Uni:
-<input name="Uni" value="Potsdam" class="stringFilter"><br>
-oeffentlichkeit:
-<input name="oeffentlichkeit" value="" class="dimensionFilter"><br>
-Bewertung:
-<input name="Bewertung" value="" class="dimensionFilter"><br>
-inquiry:
-<input name="inquiry" value="" class="dimensionFilter"><br>
-question:
-<input name="question" value="" class="dimensionFilter"><br>
-negotiable:
-<input name="negotiable" value="" class="dimensionFilter"><br>
-knowledgebuilding:
-<input name="knowledgebuilding" value="" class="dimensionFilter"><br>
-<!-- <button onClick="javascript:location.reload()" target="_self">Test Test Test</button> -->
-<button onClick="document.getElementById('diagram').innerHTML = '';showall(Listing())">next!</button>
-<button onClick="cleanFilter(); return false">clean Filters</button>
-<div id="diagram"></div>
+<div align="center">
+<table style="width:900px" class="table table-bordered table-striped js-options-table">
+    <tr>
+        <td width="70%">
+            ID:
+        </td>
+        <td>
+            <input name="id" value="1" class="idclass" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ID greater than:
+        </td>
+        <td>
+            <input name="idgreat" value="" class="idclass" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ID smaller than:
+        </td>
+        <td>
+            <input name="idsmall" value="" class="idclass" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Uni:
+        </td>
+        <td>
+            <input name="uni" value="potsdam" class="stringFilter" size="40">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Öffentlichkeit:
+        </td>
+        <td>
+            <input name="audience" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bewertung:
+        </td>
+        <td>
+            <input name="assessment" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            inquiry:
+        </td>
+        <td>
+            <input name="inquiry" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            question:
+        </td>
+        <td>
+            <input name="question" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            negotiable:
+        </td>
+        <td>
+            <input name="negotiable" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            knowledgebuilding:
+        </td>
+        <td>
+            <input name="knowledgebuilding" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+</table>
+    <button type="button" class="btn btn-primary" onClick="cleanall();showall(Listing())">search!</button>
+    <button type="button" class="btn btn-default" onClick="cleanFilter(); return false">clean Filters</button><br> <br>
+    <button type="button" class="btn btn-primary" onClick="cleanall();previous(Listing());return false;">previous 10</button>
+    <button type="button" class="btn btn-primary" onClick="cleanall();next(Listing());return false;">next 10</button>
+</div>
+<table border="0">
+    <tr>
+        <td>
+            <div  id="diagram0" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram1" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram2" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram3" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram4" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram5" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram6" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram7" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram8" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram9" class="dia"></div>
+        </td>
+        <td>
+            <div  id="diagram10" class="dia"></div>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>

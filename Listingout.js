@@ -1,6 +1,14 @@
 /**
  * Created by fides-WHK on 22.03.2017.
  */
+function cleanall(){
+    let idclass = document.getElementsByClassName("dia");
+    for (let i=0;i<idclass.length;i++) {
+        idclass[i].innerHTML = '';
+    }
+    return false;
+}
+
 function Listing(){
 let output = [];
 let idclass = document.getElementsByClassName("idclass");
@@ -14,7 +22,7 @@ let stringFilter = document.getElementsByClassName("stringFilter");
 for (let i=0;i<stringFilter.length;i++){
     if (stringFilter[i].value!=""){
         output.push(stringFilter[i].name);
-        output.push(stringFilter[i].value);
+        output.push("'"+stringFilter[i].value+"'");
     }
 }
 let dimensionFilter = document.getElementsByClassName("dimensionFilter");
