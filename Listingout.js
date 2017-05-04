@@ -1,14 +1,6 @@
 /**
  * Created by fides-WHK on 22.03.2017.
  */
-function cleanall(){
-    let idclass = document.getElementsByClassName("dia");
-    for (let i=0;i<idclass.length;i++) {
-        idclass[i].innerHTML = '';
-    }
-    return false;
-}
-
 function Listing(){
 let output = [];
 let idclass = document.getElementsByClassName("idclass");

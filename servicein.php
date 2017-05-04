@@ -6,7 +6,7 @@
  * Time: 13:15
  */
 header('Content-Type: application/json');
-$conn = new mysqli("localhost", "root", "", "test");
+$conn = mysqli_connect("localhost", "root", "", "test");
 if($_SERVER['REQUEST_METHOD'] =='POST') {
     $INSERTSPINNE = "INSERT INTO `spinnendiagrammdaten` (`".
         implode('`, `',array_keys($_POST)).
@@ -23,12 +23,14 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
     } else {
         openLog("New record could not be created",LOG_INFO,1);
     }
+    $id=mysqli_insert_id($conn);
     $conn->close();
 }
-
 function redirect($url, $statusCode = 303)
 {
     header('Location: ' . $url, true, $statusCode);
     die();
 }
-redirect ("display.html",303);
+if($_SERVER['PHP_SELF'] == "/surveyeng.php"){
+redirect ("displayeng.php?id=".$id,303);}
+else redirect("displayger.php?id=".$id,303);

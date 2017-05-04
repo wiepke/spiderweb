@@ -1,8 +1,18 @@
 /**
  * Created by fides-WHK on 16.03.2017.
  */
-var number_of_showall;
+function cleanall(){
+    let idclass = document.getElementsByClassName("dia");
+    for (let i=0;i<idclass.length;i++) {
+        idclass[i].innerHTML = '';
+    }
+    return false;
+}
+
+let number_of_showall;
+
 function showall(Filter) {
+    cleanall();
     number_of_showall=0;
     let values = [];
     let Kriterien = [];
@@ -16,7 +26,10 @@ function showall(Filter) {
         }
         else url = url + "=" + Filter[i];
     }
-    url=url + "&from="+String(number_of_showall);
+    if (Filter.length<2){
+        url=url + "?from="+String(number_of_showall);
+    }
+    else url=url + "&from="+String(number_of_showall);
         $.ajax({
             url: url,
             success: function (data) {
@@ -24,13 +37,15 @@ function showall(Filter) {
                     Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
                     values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
                     diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                    number_of_showall++;
                 }
-            }
+            },
+            async: false
         });
-        number_of_showall=Kriterien.length;
-    }
+}
 function next(Filter) {
-    number_of_showall+=10;
+    if (number_of_showall % 3 != 0) return false;
+    cleanall();
     let values = [];
     let Kriterien = [];
     let url="serviceout.php";
@@ -43,7 +58,10 @@ function next(Filter) {
         }
         else url = url + "=" + Filter[i];
     }
-    url=url + "&from="+String(number_of_showall);
+    if (Filter.length<2){
+        url=url + "?from="+String(number_of_showall);
+    }
+    else url=url + "&from="+String(number_of_showall);
     $.ajax({
         url: url,
         success: function (data) {
@@ -51,12 +69,17 @@ function next(Filter) {
                 Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
                 values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
                 diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                number_of_showall++;
             }
-        }
+        },
+        async: false
     });
 }
 function previous(Filter) {
-    number_of_showall-=10;
+    if (number_of_showall<4) return false;
+    if (number_of_showall%3==0) number_of_showall-=3;
+    else number_of_showall-=number_of_showall%3;
+    cleanall();
     let values = [];
     let Kriterien = [];
     let url="serviceout.php";
@@ -69,7 +92,10 @@ function previous(Filter) {
         }
         else url = url + "=" + Filter[i];
     }
-    url=url + "&from="+String(number_of_showall);
+    if (Filter.length<2){
+        url=url + "?from="+String(number_of_showall-3);
+    }
+    else url=url + "&from="+String(number_of_showall-3);
     $.ajax({
         url: url,
         success: function (data) {
@@ -77,9 +103,12 @@ function previous(Filter) {
                 Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
                 values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
                 diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                number_of_showall--;
             }
-        }
+        },
+        async: false
     });
+    number_of_showall+=3;
 }
 function cleanFilter() {
     let inputs = document.getElementsByClassName("idclass");
