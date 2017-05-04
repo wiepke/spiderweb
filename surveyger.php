@@ -25,7 +25,7 @@
             Sollte ihre zu beschreibene Universität ihrer Auffassung nach in beiden Richtungen gleich stark vertreten sein, wählen sie die Mitte.<br>
             <br>
             Nach dem Absenden des Fragebogens werden Sie weitergeleitet und können ihre Antworten grafisch dargestellt betrachten.
-        </p>
+        </p> <!-- explanation text -->
         <form name="survey" method="POST" action="servicein.php">
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
                 <tr>
@@ -245,7 +245,7 @@
                         von den Studenten
                     </td>
                 </tr>
-            </table>
+            </table> <!-- all dimensions of the universities -->
             <button class="btn btn-primary" type="submit">send</button>
         </form>
     </div>

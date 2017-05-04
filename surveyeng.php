@@ -18,7 +18,6 @@
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <div align="center" style="margin-top: 5px;">
         <h2><u> Uni evaluation </u></h2>
-        <p>
         <p align="left" style="margin-left:28%">
             In the following table you can see different points of a university.<br>
             Please enter the name of your university in the first line.<br>
@@ -26,8 +25,8 @@
             If bot directions are equally presented, you can decide for the middle.<br>
             <br>
             After completing the survey you get redirected to a graphical view of your answers.
-        </p>
-        </p>
+
+        </p> <!-- explanation text -->
         <form name="survey" method="POST" action="servicein.php">
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
                 <tr>
@@ -247,7 +246,8 @@
                         students
                     </td>
                 </tr>
-            </table>
+
+            </table> <!-- all dimensions of the universities -->
             <button class="btn btn-primary" type="submit">send</button>
         </form>
     </div>
