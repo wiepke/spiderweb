@@ -7,33 +7,23 @@
  */
 echo "[\n";
 $Kriterien = [];
-if (isset($_GET['uni'])) {
-    array_push($Kriterien,'uni');
-    array_push($Kriterien,$_GET['uni']);
+foreach ($_GET as $key => $value){
+    array_push($Kriterien,$key);
+    array_push($Kriterien,$value);
 }
-if (isset($_GET['id'])){
-    array_push($Kriterien,'id');
-    array_push($Kriterien,$_GET['id']);
-}
-if (isset($_GET['oeffentlichkeit'])){
-    array_push($Kriterien,'oeffentlichkeit');
-    array_push($Kriterien,$_GET['oeffentlichkeit']);
-}
-if (isset($_GET['Bewertung'])) {
-    array_push($Kriterien,'Bewertung');
-    array_push($Kriterien,$_GET['Bewertung']);
-}
-$db = mysqli_connect("localhost", "root", "", "test"); // this should be in a config php file
+$db = mysqli_connect("localhost", "root", "", "test");
 $REQUESTSPINNE  = "SELECT * FROM spinnendiagrammdaten";
-for ($i=0;$i<count($Kriterien);$i++){
+for ($i=0;$i<count($Kriterien)-2;$i++){
     if ($i % 2 == 0) {
         if ($i == 0) {
-            $REQUESTSPINNE = $REQUESTSPINNE . " WHERE " . $Kriterien[$i];
+            $REQUESTSPINNE = $REQUESTSPINNE . " WHERE LOWER(" . $Kriterien[$i];
         }
-        else $REQUESTSPINNE = $REQUESTSPINNE . " AND " . $Kriterien[$i];
+        else $REQUESTSPINNE = $REQUESTSPINNE . ") AND LOWER(" . $Kriterien[$i];
     }
-    else $REQUESTSPINNE = $REQUESTSPINNE."=".$Kriterien[$i];
+    else $REQUESTSPINNE = $REQUESTSPINNE.")=LOWER(".$Kriterien[$i];
 }
+if (count($Kriterien)!=2) {$REQUESTSPINNE=$REQUESTSPINNE.")";}
+$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$Kriterien[count($Kriterien)-1] .",3;";
 $queryObj = mysqli_query($db, $REQUESTSPINNE);
 header('Content-Type: application/json');
 $next = 0;
