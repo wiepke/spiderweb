@@ -25,6 +25,7 @@
             If bot directions are equally presented, you can decide for the middle.<br>
             <br>
             After completing the survey you get redirected to a graphical view of your answers.
+
         </p> <!-- explanation text -->
         <form name="survey" method="POST" action="servicein.php">
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
@@ -245,6 +246,7 @@
                         students
                     </td>
                 </tr>
+
             </table> <!-- all dimensions of the universities -->
             <button class="btn btn-primary" type="submit">send</button>
         </form>

@@ -23,6 +23,7 @@ for ($i=0;$i<count($Kriterien)-2;$i++){
     else $REQUESTSPINNE = $REQUESTSPINNE.")=LOWER(".$Kriterien[$i];
 }
 if (count($Kriterien)!=2) {$REQUESTSPINNE=$REQUESTSPINNE.")";}
+
 $REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$Kriterien[count($Kriterien)-1] .",3;";
 $queryObj = mysqli_query($db, $REQUESTSPINNE);
 header('Content-Type: application/json');
