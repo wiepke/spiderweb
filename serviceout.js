@@ -15,7 +15,10 @@ function showall(Filter) {
     cleanall();
     number_of_showall=0;
     let values = [];
-    let Kriterien = [];
+    var Kriterien;
+    if(location.pathname[location.pathname.length-5] == "g") {
+        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
+    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
     let url="serviceout.php";
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
@@ -34,9 +37,8 @@ function showall(Filter) {
             url: url,
             success: function (data) {
                 for (let i=data.length-1; i>=0; i--) {
-                    Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
-                    values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
-                    diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                    values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
+                    diagram(Kriterien, values,data[i].uni, data[i].course,i);
                     number_of_showall++;
                 }
             },
@@ -47,7 +49,10 @@ function next(Filter) {
     if (number_of_showall % 3 != 0) return false;
     cleanall();
     let values = [];
-    let Kriterien = [];
+    var Kriterien;
+    if(location.pathname[location.pathname.length-5] == "g") { //displayeng.php is the page, so "G" is the 5th letter from behind
+        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
+    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
     let url="serviceout.php";
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
@@ -66,9 +71,8 @@ function next(Filter) {
         url: url,
         success: function (data) {
             for (let i=data.length-1; i>=0; i--) {
-                Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
-                values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
-                diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
+                diagram(Kriterien, values,data[i].uni, data[i].course,i);
                 number_of_showall++;
             }
         },
@@ -81,7 +85,10 @@ function previous(Filter) {
     else number_of_showall-=number_of_showall%3;
     cleanall();
     let values = [];
-    let Kriterien = [];
+    var Kriterien;
+    if(location.pathname[location.pathname.length-5] == "g") {
+        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
+    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
     let url="serviceout.php";
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
@@ -100,9 +107,8 @@ function previous(Filter) {
         url: url,
         success: function (data) {
             for (let i=data.length-1; i>=0; i--) {
-                Kriterien = ["audience", "assessment", "inquiry", "tasks", "question", "knowledgebuilding", "topic", "negotiable"];
-                values = [data[i].audience, data[i].assessment, data[i].inquiry, data[i].tasks, data[i].question, data[i].knowledgebuilding, data[i].topic, data[i].negotiable];
-                diagram(Kriterien, values,data[i].id,data[i].uni,i);
+                values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
+                diagram(Kriterien, values,data[i].uni, data[i].course,i);
                 number_of_showall--;
             }
         },

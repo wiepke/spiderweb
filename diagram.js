@@ -1,20 +1,20 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien, values,id,uni,diacount) {
+function diagram(Kriterien, values, uni, course, diacount) {
     bonsai.run(document.getElementById('diagram'+diacount), {
-        id: id,
         uni: uni,
         Kriterien: Kriterien,
         values: values,
+        course: course,
         code: function () {
             let picwidth = 490;
             let picheight = 500;
             let maxradius=400;
-            let id = stage.options.id;
             let uni = stage.options.uni;
             let Kriterien = stage.options.Kriterien;
             let values = stage.options.values;
+            let course = stage.options.course;
             new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 20)
                 .addTo(stage)
                 .stroke('red', 3);
@@ -64,7 +64,7 @@ function diagram(Kriterien, values,id,uni,diacount) {
                 x:20,
                 y:20
             });
-            new Text("ID: "+id).addTo(stage).attr({
+            new Text("Course: "+course).addTo(stage).attr({
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '20',
                 textFillColor: 'red',
@@ -78,8 +78,8 @@ function diagram(Kriterien, values,id,uni,diacount) {
              * The length of "Kriterien" is variable.
              * dimension values on the rim.
              */
-            y = (maxradius / 2 - (values[0]-1)*10) * Math.sin(2*Math.PI/values.length);
-            x = (maxradius / 2 - (values[0]-1)*10) * Math.cos(2*Math.PI/values.length);
+            y = (maxradius / 2 - (values[0]-1)*10) * Math.sin(Math.PI/values.length);
+            x = (maxradius / 2 - (values[0]-1)*10) * Math.cos(Math.PI/values.length);
             let inner = new Path()
                 .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0])
                 .fill(gradient.radial(['transparent', 'black'], 200, 50, 50));
@@ -93,10 +93,33 @@ function diagram(Kriterien, values,id,uni,diacount) {
              * "outer" is the black line connecting the values
              */
             for (let i=0; i<values.length;i++) {
+                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+0.5)/values.length);
+                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+0.5)/values.length);
+                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+0.75)/values.length); /*Tested */
+                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+0.75)/values.length);
+                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
                 y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1)/values.length);
                 x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1)/values.length);
                 inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
                 outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1.25)/values.length);
+                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1.25)/values.length);
+                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1.5)/values.length);
+                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1.5)/values.length);
+                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+            /*
+            *
+            * todo: Junge hier alter, mach mal cooler!
+            * Vorschlag zur Güte: zunächst von der Mitte aus, 2 Punkte auf Peripherie ansteuern und dann back too the mid.
+            * Das ist ja wohl auch nicht schwer, gib mir mal Mühe Junge!
+            *
+             */
             }
             inner.closePath();
             inner.addTo(stage);

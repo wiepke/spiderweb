@@ -25,7 +25,7 @@ for (let i=0;i<stringFilter.length;i++){
 }
 let dimensionFilter = document.getElementsByClassName("dimensionFilter");
 for (let i=0;i<dimensionFilter.length;i++){
-    if (dimensionFilter[i].value.match(/1|2|3/)!=null){
+    if (dimensionFilter[i].value.match(/0|1|2|3/)!=null){
         output.push(dimensionFilter[i].name);
         output.push(dimensionFilter[i].value);
     }

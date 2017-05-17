@@ -16,9 +16,10 @@
         if (isset($_GET["id"])) {
             echo "showall([ 'id',";
             echo $_GET["id"];
+            echo "])";
         }
-    ?>]
-        )">
+    ?>
+        ">
 <div class="dropdown" align="right" style="margin-right:50px;margin-top:10px">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">language
         <span class="caret"></span></button>
@@ -52,7 +53,7 @@
 </table> <!--includes all diagrams-->
 <div class="collapse" id="table" align="center" style="margin-top:20px;">
 <table style="width:900px" class="table table-bordered table-striped js-options-table">
-    <tr>
+    <!-- <tr>
         <td width="70%">
             ID:
         </td>
@@ -75,13 +76,61 @@
         <td>
             <input name="id<" value="" class="idclass" size="3">
         </td>
-    </tr>
+    </tr> -->
     <tr>
-        <td>
+        <td width="70%">
             Uni:
         </td>
         <td>
             <input name="uni" value="" class="stringFilter" size="40">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Knowledgebuilding:
+        </td>
+        <td>
+            <input name="knowledgebuilding" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Negotiability:
+        </td>
+        <td>
+            <input name="negotiable" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Topic:
+        </td>
+        <td>
+            <input name="topic" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Question:
+        </td>
+        <td>
+            <input name="question" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Tasks:
+        </td>
+        <td>
+            <input name="tasks" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Inquiry:
+        </td>
+        <td>
+            <input name="inquiry" value="" class="dimensionFilter" size="3">
         </td>
     </tr>
     <tr>
@@ -98,38 +147,6 @@
         </td>
         <td>
             <input name="assessment" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Inquiry:
-        </td>
-        <td>
-            <input name="inquiry" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Question:
-        </td>
-        <td>
-            <input name="question" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Negotiable:
-        </td>
-        <td>
-            <input name="negotiable" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Knowledgebuilding:
-        </td>
-        <td>
-            <input name="knowledgebuilding" value="" class="dimensionFilter" size="3">
         </td>
     </tr>
 </table>

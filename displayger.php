@@ -16,9 +16,11 @@
     if (isset($_GET["id"])) {
         echo "showall([ 'id',";
         echo $_GET["id"];
-}
-?>]
-        )">
+        echo "])";
+
+    }
+?>
+        ">
 
 <script src="libs/jquery.js"></script>
 <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
@@ -54,20 +56,12 @@
 
 <div class="collapse" id="table" align="center" style="margin-top:20px;">
 <table style="width:900px" class="table table-bordered table-striped js-options-table">
-    <tr>
+    <!-- <tr>
         <td width="70%">
             ID:
         </td>
         <td>
             <input name="id" value="" class="idclass" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ID kleiner oder gleich:
-        </td>
-        <td>
-            <input name="id<" value="" class="idclass" size="3">
         </td>
     </tr>
     <tr>
@@ -80,6 +74,14 @@
     </tr>
     <tr>
         <td>
+            ID kleiner oder gleich:
+        </td>
+        <td>
+            <input name="id<" value="" class="idclass" size="3">
+        </td>
+    </tr> -->
+    <tr>
+        <td>
             Uni:
         </td>
         <td>
@@ -88,34 +90,10 @@
     </tr>
     <tr>
         <td>
-            Öffentlichkeit:
+            Aufzubauendes Wissen:
         </td>
         <td>
-            <input name="audience" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Bewertung:
-        </td>
-        <td>
-            <input name="assessment" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Befragung:
-        </td>
-        <td>
-            <input name="inquiry" value="" class="dimensionFilter" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Frage:
-        </td>
-        <td>
-            <input name="question" value="" class="dimensionFilter" size="3">
+            <input name="knowledgebuilding" value="" class="dimensionFilter" size="3">
         </td>
     </tr>
     <tr>
@@ -128,10 +106,50 @@
     </tr>
     <tr>
         <td>
-            Wissen:
+            Thema:
         </td>
         <td>
-            <input name="knowledgebuilding" value="" class="dimensionFilter" size="3">
+            <input name="topic" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Fragen:
+        </td>
+        <td>
+            <input name="question" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Aufgaben:
+        </td>
+        <td>
+            <input name="tasks" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Befragung:
+        </td>
+        <td>
+            <input name="inquiry" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Publikum:
+        </td>
+        <td>
+            <input name="audience" value="" class="dimensionFilter" size="3">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Einschätzung:
+        </td>
+        <td>
+            <input name="assessment" value="" class="dimensionFilter" size="3">
         </td>
     </tr>
 </table>

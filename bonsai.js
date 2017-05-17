@@ -37,11 +37,108 @@
  http://www.freesound.org/people/HerbertBoland/sounds/33637/
 
  */
-(function __bonsaiRunnerCode__(){function ta(a){if(!(this instanceof ta))return new ta(a);this.name="ParserError";this.message=a[0]}function $(a,b){this.x=a||0;this.y=b||0}function wd(a,b,c){this.translationData={};this.numericStartValues=c?c.toNumeric.call(this.translationData,a,!1):[a];this.numericEndValues=c?c.toNumeric.call(this.translationData,b,!0):[b];this.length=this.numericStartValues.length;this.translator=c}function Wf(){var a=this.movies=[];this.add=function(b){-1===a.indexOf(b)&&a.push(b)};
-    this.remove=function(b){b=a.indexOf(b);delete a[b]}}function Xf(a){var b=this.type,c=Yf[b];do a.emit(b,this),a=a.parent;while(c&&!this._isStopped&&a)}function Zf(){this._isStopped=!0}function xd(a,b){var c,d,e,f=[],g=!0,h=[],k=a&&a.length||0,b=b||P;if(0===k)return[];for(var j,n,l=0;l<k;l++){n=a[l];if(g){g=!1;f=[];c=b[n];if("undefined"===typeof c){if("undefined"===typeof j)throw new Ta.ParserError(['Unknown command: "'+n+'"']);c=b[j];l--}else j=n;f.push(j);d=c.attributes.slice(0)}else switch(c=d.shift(),
-    e=+n,c){case "B":if(0!=e&&1!=e)throw new Ta.ParserError(['Invalid parameter for command "'+j+'", expected 0 or 1 but got "'+n+'".']);f.push(e);break;case "N":if(isNaN(e))throw new Ta.ParserError(['Invalid parameter for command "'+j+'", expected numeric but got "'+n+'".']);f.push(e);break;case "P":if(isNaN(e))throw new Ta.ParserError(['Could not create Point from String for command "'+j+'", expected numeric but got "'+n+'".']);f.push(e);e=+a[++l];if(isNaN(e))throw new Ta.ParserError(['Could not create Point from String for command "'+
-j+'", expected numeric but got "'+a[l]+'".']);f.push(e)}0===d.length&&(g=!0,h.push(f))}return h}function aa(a,b){a=aa.parse(a,b);return null===a?a:new Wb(a>>24&255,a>>16&255,a>>8&255,(a>>0&255)/255)}function Wb(a,b,c,d){var e,f,g;e=a/255;f=b/255;g=c/255;var h,k,j,n,l=U(e,f,g);k=V(e,f,g);j=(k+l)/2;if(l==k)h=k=0;else{n=l-k;k=0.5<j?n/(2-l-k):n/(l+k);switch(l){case e:h=(f-g)/n+(f<g?6:0);break;case f:h=(g-e)/n+2;break;case g:h=(e-f)/n+4}h/=6}this._properties={r:a||0,g:b||0,b:c||0,a:null==d?1:d,h:h,s:k,
-    l:j}}function ka(a){return function(b){return 0<arguments.length?this.set(a,b):this.get(a)}}function Ac(a,b,c){c=0>c?c+1:1<c?c-1:c;return 1>6*c?a+6*(b-a)*c:1>2*c?b:2>3*c?a+6*(b-a)*(2/3-c):a}function yd(a,b,c){var b=0.5>=c?c*(b+1):c+b-c*b,d=2*c-b,c=255*Ac(d,b,a+1/3),e=255*Ac(d,b,a),a=255*Ac(d,b,a-1/3);return la(c)<<24|la(e)<<16|la(a)<<8}function Bc(a,b,c){this.context=a;this.listener=b;this.times=c||Infinity}function zd(a){this.pendingAssets=a}function Ad(a,b){this.disconnect=b;this.notifyRenderer=
+(function __bonsaiRunnerCode__(){
+    function ta(a){
+        if(!(this instanceof ta))
+            return new ta(a);
+    this.name="ParserError";
+    this.message=a[0]
+    }
+    function $(a,b){
+        this.x=a||0;
+        this.y=b||0
+    }
+    function wd(a,b,c){
+        this.translationData={};
+        this.numericStartValues=c?c.toNumeric.call(this.translationData,a,!1):[a];
+        this.numericEndValues=c?c.toNumeric.call(this.translationData,b,!0):[b];
+        this.length=this.numericStartValues.length;
+        this.translator=c
+    }
+    function Wf(){
+        var a=this.movies=[];
+        this.add=function(b){
+            -1===a.indexOf(b)&&a.push(b)
+        };
+    this.remove=function(b){
+        b=a.indexOf(b);
+        delete a[b]
+        }
+    }
+    function Xf(a){
+        var b=this.type,c=Yf[b];
+        do a.emit(b,this),a=a.parent;
+        while(c&&!this._isStopped&&a)
+    }
+    function Zf(){
+        this._isStopped=!0
+    }
+    function xd(a,b){
+        var c,d,e,f=[],g=!0,h=[],k=a&&a.length||0,b=b||P;if(0===k)
+            return[];
+        for(var j,n,l=0;l<k;l++){
+            n=a[l];
+            if(g){g=!1;f=[];
+            c=b[n];
+            if("undefined"===typeof c){
+                if("undefined"===typeof j)
+                    throw new Ta.ParserError(['Unknown command: "'+n+'"']);
+                c=b[j];
+                l--
+            }else j=n;
+            f.push(j);
+            d=c.attributes.slice(0)
+            }
+            else switch(c=d.shift(),e=+n,c){
+                case "B":
+                    if(0!=e&&1!=e)throw new Ta.ParserError(['Invalid parameter for command "'+j+'", expected 0 or 1 but got "'+n+'".']);
+                    f.push(e);
+                    break;
+                case "N":
+                    if(isNaN(e))throw new Ta.ParserError(['Invalid parameter for command "'+j+'", expected numeric but got "'+n+'".']);
+                    f.push(e);
+                    break;
+                case "P":
+                    if(isNaN(e))throw new Ta.ParserError(['Could not create Point from String for command "'+j+'", expected numeric but got "'+n+'".']);
+                    f.push(e);
+                    e=+a[++l];
+                    if(isNaN(e))throw new Ta.ParserError(['Could not create Point from String for command "'+j+'", expected numeric but got "'+a[l]+'".']);
+                    f.push(e)}0===d.length&&(g=!0,h.push(f))
+        }
+        return h
+    }
+    function aa(a,b){
+        a=aa.parse(a,b);
+        return null===a?a:new Wb(a>>24&255,a>>16&255,a>>8&255,(a>>0&255)/255)
+    }
+    function Wb(a,b,c,d){
+        var e,f,g;e=a/255;
+        f=b/255;g=c/255;
+        var h,k,j,n,l=U(e,f,g);
+        k=V(e,f,g);j=(k+l)/2;
+        if(l==k)h=k=0;
+        else{
+            n=l-k;
+            k=0.5<j?n/(2-l-k):n/(l+k);
+            switch(l){
+                case e:
+                    h=(f-g)/n+(f<g?6:0);
+                    break;
+                case f:
+                    h=(g-e)/n+2;
+                    break;
+                case g:
+                    h=(e-f)/n+4}h/=6
+        }
+        this._properties={r:a||0,g:b||0,b:c||0,a:null==d?1:d,h:h,s:k,l:j}
+    }
+    function ka(a){
+        return function(b){
+            return 0<arguments.length?this.set(a,b):this.get(a)}
+    }
+    function Ac(a,b,c){
+        c=0>c?c+1:1<c?c-1:c;
+        return 1>6*c?a+6*(b-a)*c:1>2*c?b:2>3*c?a+6*(b-a)*(2/3-c):a}function yd(a,b,c){var b=0.5>=c?c*(b+1):c+b-c*b,d=2*c-b,c=255*Ac(d,b,a+1/3),e=255*Ac(d,b,a),a=255*Ac(d,b,a-1/3);return la(c)<<24|la(e)<<16|la(a)<<8}function Bc(a,b,c){this.context=a;this.listener=b;this.times=c||Infinity}function zd(a){this.pendingAssets=a}function Ad(a,b){this.disconnect=b;this.notifyRenderer=
     a}function Bd(a,b){this.runnerUrl=a;this.doc=b}function W(a){return $f.mixin({},a)}function s(a,b,c){a=document.createElementNS("http://www.w3.org/2000/svg",a);if(b)for(var d in b)a.setAttribute(d,b[d]);c&&c.appendChild(a);return a}function Cd(a){for(var a=a||[],b,c=0,d=a.length;c<d;c+=1)if(b=a[c],ag&&b instanceof window.SVGFEMergeElement||bg&&b instanceof window.SVGFEBlendElement||cg&&b instanceof window.SVGFECompositeElement)return!0;return!1}function Dd(){return{toNumeric:function(a){a=Ed(a);return[a.r(),
     a.g(),a.b(),a.a()]},toAttr:function(a){return""+new Ed.RGBAColor(a[0],a[1],a[2],a[3])}}}function Fd(){return{toNumeric:function(a){var b=a.stops,c=[];this.mutableGradient=a.clone();a.matrix&&(this.hasMatrix=!0,c.push(a.matrix.a,a.matrix.b,a.matrix.c,a.matrix.d,a.matrix.tx,a.matrix.ty));"linear-gradient"===a.type?isNaN(a.direction)||(this.hasDirection=!0,c.push(a.direction)):(this.hasRadius=!0,this.radiusUnit=((""+a.radius).match(/\D$/)||[""])[0],c.push(parseFloat(a.radius)));for(var d=0,e=b.length;d<
 e;++d)a=Gd(b[d][0]),c.push(a.r(),a.g(),a.b(),a.a(),b[d][1]);return c},toAttr:function(a){var b=this.mutableGradient,c=0;b.matrix&&(b.matrix.a=a[c++],b.matrix.b=a[c++],b.matrix.c=a[c++],b.matrix.d=a[c++],b.matrix.tx=a[c++],b.matrix.ty=a[c++]);this.hasDirection?b.direction=a[c++]:b.radius=a[c++]+this.radiusUnit;for(var d=b.stops,e=0,f=d.length;e<f;++e)d[e][0]=+new Gd.RGBAColor(a[c++],a[c++],a[c++],a[c++]),d[e][1]=a[c++];return b}}}function ma(a,b,c,d,e,f){if(dg.isArray(a))return ma.apply(this,a);this.a=

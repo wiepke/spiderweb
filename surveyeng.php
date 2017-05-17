@@ -25,9 +25,11 @@
             If bot directions are equally presented, you can decide for the middle.<br>
             <br>
             After completing the survey you get redirected to a graphical view of your answers.
-
         </p> <!-- explanation text -->
         <form name="survey" method="POST" action="servicein.php">
+            <div class="panel-group" id="forms">
+                <div class="panel panel-default">
+            <div class="panel-collapse collapse in" id="first">
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
                 <tr>
                     <td width="38%">
@@ -35,6 +37,14 @@
                     </td>
                     <td colspan="3">
                         <div align="right"><input name="uni" placeholder="uni" size="72%" ></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="38%">
+                        Course:
+                    </td>
+                    <td colspan="3">
+                        <div align="right"><input name="course" placeholder="course" size="72%" ></div>
                     </td>
                 </tr>
                 <tr>
@@ -51,7 +61,7 @@
                                     <input type="radio" name="knowledgebuilding" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="knowledgebuilding" value="2" checked>
+                                    <input type="radio" name="knowledgebuilding" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="knowledgebuilding" value="3">
@@ -78,7 +88,7 @@
                                     <input type="radio" name="negotiable" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="negotiable" value="2" checked>
+                                    <input type="radio" name="negotiable" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="negotiable" value="3">
@@ -104,7 +114,7 @@
                                     <input type="radio" name="topic" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="topic" value="2" checked>
+                                    <input type="radio" name="topic" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="topic" value="3">
@@ -130,7 +140,7 @@
                                     <input type="radio" name="question" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="question" value="2" checked>
+                                    <input type="radio" name="question" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="question" value="3">
@@ -156,7 +166,7 @@
                                     <input type="radio" name="tasks" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="tasks" value="2" checked>
+                                    <input type="radio" name="tasks" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="tasks" value="3">
@@ -182,7 +192,7 @@
                                     <input type="radio" name="inquiry" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="inquiry" value="2" checked>
+                                    <input type="radio" name="inquiry" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="inquiry" value="3">
@@ -208,7 +218,7 @@
                                     <input type="radio" name="audience" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="audience" value="2" checked>
+                                    <input type="radio" name="audience" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="audience" value="3">
@@ -234,7 +244,7 @@
                                     <input type="radio" name="assessment" value="1">
                                 </td>
                                 <td>
-                                    <input type="radio" name="assessment" value="2" checked>
+                                    <input type="radio" name="assessment" value="2">
                                 </td>
                                 <td style="width:5%">
                                     <input type="radio" name="assessment" value="3">
@@ -246,9 +256,25 @@
                         students
                     </td>
                 </tr>
-
             </table> <!-- all dimensions of the universities -->
-            <button class="btn btn-primary" type="submit">send</button>
+                <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> next </button>
+            </div>
+                </div>
+                <div class="panel panel-default">
+                <div class="panel-collapse collapse" id="second">
+                    Even More STUUUUUUUUUFFFFFF!!!!! <br> <!-- It's a dummy! -->
+                    <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> back </button>
+                    <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> next </button>
+                </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="third">
+                        So Much STUFFFFFFF!!!!! <br> <!-- It's a dummy! -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> back </button>
+                        <button class="btn btn-primary" type="submit">send</button>
+                    </div>
+                </div>
+            </div> <!--complete form div -->
         </form>
     </div>
     </body>
