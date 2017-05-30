@@ -262,14 +262,14 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-collapse collapse" id="second">
-            Even More STUUUUUUUUUFFFFFF!!!!! <br> <!-- It's a dummy! -->
+            Dummy for survey <br> <!-- It's a dummy! -->
             <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
             <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
         </div>
     </div>
     <div class="panel panel-default">
         <div class="panel-collapse collapse" id="third">
-            So Much STUFFFFFFF!!!!! <br> <!-- It's a dummy! -->
+            another Dummy <br> <!-- It's a dummy! -->
             <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
             <button class="btn btn-primary" type="submit">senden</button>
         </div>
