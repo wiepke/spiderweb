@@ -56,16 +56,16 @@
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
             <tr>
                 <td width="19%">
-                    Wie sieht die curriculare Einbindung aus?
+                    Wer bestimmt das Forschungsthema?
                 </td>
                 <td width="27%">
-                    Die studentische Forschung der ist mit Credit Points versehen und wird benotet.
+                    Lehrende geben das Forschungsthema vor.
                 </td>
                 <td width="27%">
-                    Die studentische Forschung ist unbenotet, aber mit Credit Points versehen.
+                    Innerhalb eines vorgegebenen Rahmens legen die Studierenden ihr Forschungsthema fest.
                 </td>
                 <td width="27%">
-                    Die studentische Forschung wird nicht mit Credit Points versehen.
+                    Die Studierenden legen das Thema ihrer Forschungsarbeit selbst fest.
                 </td>
             </tr>
                 <tr>
@@ -90,16 +90,16 @@
             <table style="width:900px" class="table table-bordered table-striped js-options-table">
                 <tr>
                     <td width="19%">
-                        Wie ist die Gewichtung /CP-Anzahl) im Curriculum?
+                        Wer entwickelt die Forschungsfrage?
                     </td>
                     <td width="27%">
-                        Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
+                        Lehrende geben die Forschungsfrage vor.
                     </td>
                     <td width="27%">
-                        Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
+                        Die Studierenden entwickeln die Forschungsfrage unter Anleitung von Lehrenden.
                     </td>
                     <td width="27%">
-                        Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
+                        Die Studierenden entwickeln die Forschungsfrage selbst.
                     </td>
                 </tr>
                 <tr>
@@ -124,16 +124,16 @@
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td width="19%">
-                                    Wie sieht die modulare Verortung aus?
+                                    Wie planen die Studierenden den Forschungsprozess?
                                 </td>
                                 <td width="27%">
-                                    Die studentische Forschung ist für Studierende Pflicht.
+                                    Lehrende geben Phasen und Fristen des Forschungs-prozesses vor.
                                 </td>
                                 <td width="27%">
-                                    Die studentische Forschung ist für Studierende ein Wahlpflichtangebot.
+                                    Die Studierenden planen unter Anleitung von Lehrenden den Forschungsprozess.
                                 </td>
                                 <td width="27%">
-                                    Die Studierenden nehmen an der Forschung freiwillig teil.
+                                    Die Studierenden planen den Forschungsprozess selbständig.
                                 </td>
                             </tr>
                             <tr>
@@ -158,16 +158,16 @@
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td width="19%">
-                                    Wie ist der Prüfungsrahmen gestaltet?
+                                    Wie führen die Studierenden die Forschung durch?
                                 </td>
                                 <td width="27%">
-                                    Für die Bewertung der studentischen Forschung ist eine Prüfungsform vorgegeben.
+                                    Lehrende (oder Tutoren) leiten die Durchführung der Forschung an.
                                 </td>
                                 <td width="27%">
-                                    Für die Bewertung der studentischen Forschung kann zwischen mehreren Prüfungsform gewählt werden.
+                                    Lehrende (oder Tutoren) leiten die Durchführung der Forschung an.
                                 </td>
                                 <td width="27%">
-                                    Die studentischen Forschung wird nicht über eine Prüfung bewertet.
+                                    Die Studierenden führen die Forschung selbständig durch.
                                 </td>
                             </tr>
                             <tr>
@@ -192,15 +192,15 @@
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td width="19%">
-                                    Wie ist der Zeitrahmen gestaltet?
+                                    Wie erhalten die Studierenden Feedback im Forschungs-prozess?
                                 </td>
                                 <td width="27%">
-                                    Für die studentische Forschung steht ein Semester zur Verfügung.                                </td>
+                                    Lehrende (oder Tutoren) geben (oder fordern) zu gesetzten Zeitpunkten (Peer-)Feedback.
                                 <td width="27%">
-                                    Für die studentische Forschung steht mehr als ein Semester zur Verfügung.
+                                    Gesetztes und selbst eingeholtes Feedback werden kombiniert
                                 </td>
                                 <td width="27%">
-                                    Studentische Forschung kann begleitend während des Studiums erfolgen.
+                                    Die Studierenden erfragen selbst Feedback bei Lehrenden oder Peers.
                                 </td>
                             </tr>
                             <tr>
@@ -221,19 +221,19 @@
                     </div>
                 </div>
                 <div class="panel panel-default">
-                    <div class="panel-collapse collapse" id="seventh">
+                    <div class="panel-collapse collapse" id="sixth">
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td width="19%">
-                                    Wie ist der Ressourcen-rahmen gestaltet?
+                                    Was passiert mit den Ergebnissen studentischer Forschung?
                                 </td>
                                 <td width="27%">
-                                    Für die studentische Forschung stehen keine zusätzlichen Ressourcen zur Verfügung.
+                                    Die Ergebnisse bleiben im geschützten Rahmen der Beteiligten.
                                 <td width="27%">
-                                    Für die studentische Forschung stehen befristet Ressourcen zur Verfügung.
+                                    Die Ergebnisse werden im Fachbereich / in der Fakultät öffentlich gemacht.
                                 </td>
                                 <td width="27%">
-                                    Für die studentische Forschung stehen längerfristig planbare Ressourcen zur Verfügung.
+                                    Die Ergebnisse werden veröffent-licht und hochschulweit sichtbar.
                                 </td>
                             </tr>
                             <tr>
@@ -250,6 +250,39 @@
                             </tr>
                         </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
                         <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> zurück </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#eighth"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="eighth">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td width="19%">
+                                    Wie wird der Erfolg der Forschung bewertet?
+                                </td>
+                                <td width="27%">
+                                    Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).
+                                <td width="27%">
+                                    Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.
+                                </td>
+                                <td width="27%">
+                                    Studierende entscheiden selbst, ob und wie ihre Forschung bewertet wird.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td align="center">
+                                    <input type="radio" name="inquiry" value="1">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="inquiry" value="2">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="inquiry" value="3">
+                                </td>
+                            </tr>
+                        </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
                         <button class="btn btn-primary" type="submit">senden</button>
                     </div>
                 </div>
