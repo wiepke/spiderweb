@@ -8,27 +8,27 @@ function diagram(Kriterien, values, uni, course, diacount) {
         values: values,
         course: course,
         code: function () {
-            let picwidth = 490;
+            let picwidth = 530;
             let picheight = 500;
             let maxradius=400;
             let uni = stage.options.uni;
             let Kriterien = stage.options.Kriterien;
             let values = stage.options.values;
             let course = stage.options.course;
-            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 20)
-                .addTo(stage)
-                .stroke('red', 3);
-            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 75)
-                .addTo(stage)
-                .stroke('red', 3);
-            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 130)
-                .addTo(stage)
-                .stroke('red', 3);
-            /*just 3 red circles so far*/
-            let xvalue = 1/3;
-            let yvalue = 1/3;
             let y = 0.0;
             let x = 0.0;
+            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 20)
+                .addTo(stage)
+                .stroke('lightgray', 3);
+            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 74)
+                .addTo(stage)
+                .stroke('lightgray', 3);
+            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 133)
+                .addTo(stage)
+                .stroke('lightgray', 3);
+            /*just 3 gray circles so far*/
+            let xvalue = 1/3;
+            let yvalue = 1/3;
             let slidein=0;
             for (let i = 0; i < values.length; i++) {
                 y = maxradius / 2 * Math.sin(2*Math.PI*(i+1)/values.length);
@@ -37,8 +37,8 @@ function diagram(Kriterien, values, uni, course, diacount) {
                 else slidein=0;
                 new Text(Kriterien[i]).addTo(stage).attr({
                     fontFamily: 'Arial, sans-serif',
-                    fontSize: '11',
-                    textFillColor: 'red',
+                    fontSize: '10',
+                    textFillColor: 'black',
                     textStrokeColor: 'black',
                     textStrokeWidth: 1,
                     x: x+picwidth/2+slidein*(Kriterien[i].length*5),
@@ -50,15 +50,16 @@ function diagram(Kriterien, values, uni, course, diacount) {
                 */
                 new Path()
                     .moveTo(picwidth / 2, picheight / 2)
-                    .stroke('gray', 2)
+                    .stroke('lightgray', 2)
                     .lineTo(x + picwidth / 2,picheight / 2 + y)
                     .closePath()
-                    .addTo(stage);
+                    .addTo(stage).attr('strokeDash', 10);
             }
+            /* one line for each dimension which shall be displayed */
             new Text("Uni: "+uni).addTo(stage).attr({
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '20',
-                textFillColor: 'red',
+                textFillColor: 'darkblue',
                 textStrokeColor: 'black',
                 textStrokeWidth: 1,
                 x:20,
@@ -67,7 +68,7 @@ function diagram(Kriterien, values, uni, course, diacount) {
             new Text("Course: "+course).addTo(stage).attr({
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '20',
-                textFillColor: 'red',
+                textFillColor: 'darkblue',
                 textStrokeColor: 'black',
                 textStrokeWidth: 1,
                 x:150,
@@ -82,51 +83,68 @@ function diagram(Kriterien, values, uni, course, diacount) {
             x = (maxradius / 2 - (values[0]-1)*10) * Math.cos(Math.PI/values.length);
             let inner = new Path()
                 .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0])
-                .fill(gradient.radial(['transparent', 'black'], 200, 50, 50));
+                .fill(gradient.radial(['transparent', 'rgb(0,255,0)'], 200, 50, 50));
             /*
              * "inner" is the shadowed part of the graphic
              */
             let outer = new Path()
                 .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0])
-                .stroke('black', 4);
+                .stroke('rgba(50,150,10,2)', 4);
             /*
-             * "outer" is the black line connecting the values
+             * "outer" is the darkgreen line connecting the values
              */
+            let apprlimit=20;
             for (let i=0; i<values.length;i++) {
-                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+0.5)/values.length);
-                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+0.5)/values.length);
-                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+0.75)/values.length); /*Tested */
-                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+0.75)/values.length);
-                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1)/values.length);
-                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1)/values.length);
-                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1.25)/values.length);
-                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1.25)/values.length);
-                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+1.5)/values.length);
-                x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+1.5)/values.length);
-                inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-                outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
-            /*
-            *
-            * todo: Junge hier alter, mach mal cooler!
-            * Vorschlag zur Güte: zunächst von der Mitte aus, 2 Punkte auf Peripherie ansteuern und dann back too the mid.
-            * Das ist ja wohl auch nicht schwer, gib mir mal Mühe Junge!
-            *
-             */
+                for (let appr=0; appr<apprlimit;appr++){
+                    y = (maxradius / 2 - (values[i]-1)*10) * Math.sin(2*Math.PI*(i+0.5+appr/apprlimit)/values.length);
+                    x = (maxradius / 2 - (values[i]-1)*10) * Math.cos(2*Math.PI*(i+0.5+appr/apprlimit)/values.length);
+                    inner.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                    outer.lineTo(picwidth / 2 + x * xvalue * values[i], picheight / 2 + y * yvalue * values[i]);
+                }
             }
             inner.closePath();
             inner.addTo(stage);
             outer.closePath();
             outer.addTo(stage);
+            new Text('0').addTo(stage).attr({
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '10',
+                textFillColor: 'black',
+                textStrokeColor: 'black',
+                textStrokeWidth: 1,
+                x: picwidth/2 - 14,
+                y: picheight/2 - 2
+            });
+            new Text('1').addTo(stage).attr({
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '10',
+                textFillColor: 'black',
+                textStrokeColor: 'black',
+                textStrokeWidth: 1,
+                x: picwidth/2 - 15,
+                y: picheight/2 - 65
+            });
+            new Text('2').addTo(stage).attr({
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '10',
+                textFillColor: 'black',
+                textStrokeColor: 'black',
+                textStrokeWidth: 1,
+                x: picwidth/2 - 15,
+                y: picheight/2 - 126
+            });
+            new Text('3').addTo(stage).attr({
+                fontFamily: 'Arial, sans-serif',
+                fontSize: '10',
+                textFillColor: 'black',
+                textStrokeColor: 'black',
+                textStrokeWidth: 1,
+                x: picwidth/2 - 15,
+                y: picheight / 2 - 180,
+            });
+            /* label on each circle. "0" to "3" */
         },
-        width: 500,
+        width: 530,
         height: 480
         /*
          * todo: width and height need to be scalable at some point

@@ -7,12 +7,18 @@
  */
 echo "[\n";
 $Kriterien = [];
+$REQUESTSPINNE  = "SELECT * FROM mesoebene";
 foreach ($_GET as $key => $value){
+    if ($key!="mikro"){
     array_push($Kriterien,$key);
     array_push($Kriterien,$value);
+    }else {
+        if ($value=="true"){
+            $REQUESTSPINNE  = "SELECT * FROM mikroebene";
+        }
+    }
 }
 $db = mysqli_connect("localhost", "root", "", "test");
-$REQUESTSPINNE  = "SELECT * FROM spinnendiagrammdaten";
 for ($i=0;$i<count($Kriterien)-2;$i++){
     if ($i % 2 == 0) {
         if ($i == 0) {
@@ -30,9 +36,12 @@ $next = 0;
 if ($result = mysqli_fetch_object($queryObj))
     $next=1;
 while ($next) {
-    echo json_encode($result, JSON_PRETTY_PRINT);
+    $temp=$result;
+    $temp->Kurs=utf8_encode($result->Kurs);
+    $temp->Uni=utf8_encode($result->Uni);
+    echo json_encode($temp, JSON_PRETTY_PRINT);
     if ($result = mysqli_fetch_object($queryObj)) {
-    echo ",\n";
+        echo ",\n";
     }
     else $next=0;
 }

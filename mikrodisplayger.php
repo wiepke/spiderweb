@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Uni evaluation </title>
+    <title> Analyse und Konzeption forschenden Lernens - das FideS-Doppelradmodell </title>
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     <style>
         .dia {float: left; padding: 20px;}
@@ -32,12 +32,16 @@
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sprache
         <span class="caret"></span></button>
     <ul class="dropdown-menu dropdown-menu-right">
-        <li><a href="displayger.php">deutsch</a></li>
-        <li><a href="displayeng.php">englisch</a></li>
+        <li><a href="mikrodisplayger.php">deutsch</a></li>
+        <li><a href="mikrodisplayeng.php">englisch</a></li>
     </ul>
 </div> <!-- language toogle -->
+<div align="right" style="margin-right:50px;margin-top:10px">
+    <a href="mesodisplayger.php">meso</a>
+</div><!-- meso / mikro toggle -->
 <div align="center">
     <h2><u>Diagramme zur Darstellung verschiedener Kriterien in Universitäten</u></h2>
+    <h2><u>mikroebene</u></h2>
 </div>
 <table border="0" align="center">
     <tr>
@@ -56,36 +60,12 @@
 
 <div class="collapse" id="table" align="center" style="margin-top:20px;">
 <table style="width:500px" class="table table-bordered table-striped js-options-table">
-    <!-- <tr>
-        <td width="70%">
-            ID:
-        </td>
-        <td>
-            <input name="id" value="" class="idclass" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ID größer oder gleich:
-        </td>
-        <td>
-            <input name="id>" value="" class="idclass" size="3">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ID kleiner oder gleich:
-        </td>
-        <td>
-            <input name="id<" value="" class="idclass" size="3">
-        </td>
-    </tr> -->
     <tr>
         <td>
             Uni:
         </td>
         <td>
-            <input name="uni" value="" class="stringFilter" size="40">
+            <input name="Uni" value="" class="stringFilter" size="40">
         </td>
     </tr>
     <tr>
@@ -93,24 +73,24 @@
             Kurs:
         </td>
         <td>
-            <input name="course" value="" class="stringFilter" size="40">
+            <input name="Kurs" value="" class="stringFilter" size="40">
         </td>
     </tr>
     <tr>
         <td>
-            Aufzubauendes Wissen:
+            Assessment:
         </td>
         <td>
             <table>
                 <tr>
                 <td width="150">
-                    <input type="radio" name="knowledgebuilding" class="dimensionFilter" value="1">
+                    <input type="radio" name="Assessment" class="dimensionFilter" value="1">
                 </td>
                 <td width="150">
-                    <input type="radio" name="knowledgebuilding" class="dimensionFilter" value="2">
+                    <input type="radio" name="Assessment" class="dimensionFilter" value="2">
                 </td>
                 <td width="150">
-                    <input type="radio" name="knowledgebuilding" class="dimensionFilter" value="3">
+                    <input type="radio" name="Assessment" class="dimensionFilter" value="3">
                 </td>
                 </tr>
             </table>
@@ -118,19 +98,19 @@
     </tr>
     <tr>
         <td>
-            Verhandelbarkeit:
+            Forschungsthema:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="negotiable" class="dimensionFilter" value="1">
+                        <input type="radio" name="Forschungsthema" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="negotiable" class="dimensionFilter" value="2">
+                        <input type="radio" name="Forschungsthema" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="negotiable" class="dimensionFilter" value="3">
+                        <input type="radio" name="Forschungsthema" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
@@ -138,19 +118,19 @@
     </tr>
     <tr>
         <td>
-            Thema:
+            Forschungsfrage:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="topic" class="dimensionFilter" value="1">
+                        <input type="radio" name="Forschungsfrage" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="topic" class="dimensionFilter" value="2">
+                        <input type="radio" name="Forschungsfrage" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="topic" class="dimensionFilter" value="3">
+                        <input type="radio" name="Forschungsfrage" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
@@ -158,19 +138,19 @@
     </tr>
     <tr>
         <td>
-            Fragen:
+            Planung:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="question" class="dimensionFilter" value="1">
+                        <input type="radio" name="Planung" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="question" class="dimensionFilter" value="2">
+                        <input type="radio" name="Planung" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="question" class="dimensionFilter" value="3">
+                        <input type="radio" name="Planung" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
@@ -178,19 +158,19 @@
     </tr>
     <tr>
         <td>
-            Aufgaben:
+            Durchführung:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="tasks" class="dimensionFilter" value="1">
+                        <input type="radio" name="Durchfuhrung" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="tasks" class="dimensionFilter" value="2">
+                        <input type="radio" name="Durchfuhrung" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="tasks" class="dimensionFilter" value="3">
+                        <input type="radio" name="Durchfuhrung" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
@@ -198,19 +178,19 @@
     </tr>
     <tr>
         <td>
-            Befragung:
+            Reflexion:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="inquiry" class="dimensionFilter" value="1">
+                        <input type="radio" name="Reflexion" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="inquiry" class="dimensionFilter" value="2">
+                        <input type="radio" name="Reflexion" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="inquiry" class="dimensionFilter" value="3">
+                        <input type="radio" name="Reflexion" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
@@ -218,39 +198,19 @@
     </tr>
     <tr>
         <td>
-            Publikum:
+            Ergebnisdarstellung:
         </td>
         <td>
             <table>
                 <tr>
                     <td width="150">
-                        <input type="radio" name="audience" class="dimensionFilter" value="1">
+                        <input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="1">
                     </td>
                     <td width="150">
-                        <input type="radio" name="audience" class="dimensionFilter" value="2">
+                        <input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="2">
                     </td>
                     <td width="150">
-                        <input type="radio" name="audience" class="dimensionFilter" value="3">
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Einschätzung:
-        </td>
-        <td>
-            <table>
-                <tr>
-                    <td width="150">
-                        <input type="radio" name="assessment" class="dimensionFilter" value="1">
-                    </td>
-                    <td width="150">
-                        <input type="radio" name="assessment" class="dimensionFilter" value="2">
-                    </td>
-                    <td width="150">
-                        <input type="radio" name="assessment" class="dimensionFilter" value="3">
+                        <input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="3">
                     </td>
                 </tr>
             </table>
