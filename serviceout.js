@@ -15,30 +15,42 @@ function showall(Filter) {
     cleanall();
     number_of_showall=0;
     let values = [];
-    var Kriterien;
-    if(location.pathname[location.pathname.length-5] == "g") {
-        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
-    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
-    let url="serviceout.php";
+    let Kriterien;
+    let url="";
+    let mikro=false;
+    if(location.pathname.match('mikrodisplayeng')!==null) {
+        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
+        url="serviceout.php?mikro=true";
+        mikro=true;
+    } else if (location.pathname.match('mikrodisplayger')!==null) {
+        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+        url = "serviceout.php?mikro=true";
+        mikro=true;
+    } else if(location.pathname.match('mesodisplayeng')!==null) {
+        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
+        url="serviceout.php?mikro=false";
+    } else if (location.pathname.match('mesodisplayger')!==null) {
+        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
+        url="serviceout.php?mikro=false";
+    }
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
-            if (i==0) {
-                url = url + "?" + Filter[i];
-            }
-            else url = url + "&" + Filter[i];
+            url = url + "&" + Filter[i];
         }
         else url = url + "=" + Filter[i];
     }
-    if (Filter.length<2){
-        url=url + "?from="+String(number_of_showall);
-    }
-    else url=url + "&from="+String(number_of_showall);
+    url=url + "&from="+String(number_of_showall);
         $.ajax({
             url: url,
+            mikro: mikro,
             success: function (data) {
                 for (let i=data.length-1; i>=0; i--) {
-                    values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
-                    diagram(Kriterien, values,data[i].uni, data[i].course,i);
+                    if (mikro){
+                        values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
+                    } else {
+                        values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+                    }
+                    diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
                     number_of_showall++;
                 }
             },
@@ -47,33 +59,46 @@ function showall(Filter) {
 }
 function next(Filter) {
     if (number_of_showall % 3 != 0) return false;
-    cleanall();
     let values = [];
-    var Kriterien;
-    if(location.pathname[location.pathname.length-5] == "g") { //displayeng.php is the page, so "G" is the 5th letter from behind
-        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
-    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
-    let url="serviceout.php";
+    let Kriterien;
+    let url="";
+    let mikro=false;
+    if(location.pathname.match('mikrodisplayeng')!==null) {
+        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
+        url="serviceout.php?mikro=true";
+        mikro=true;
+    } else if (location.pathname.match('mikrodisplayger')!==null) {
+        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+        url = "serviceout.php?mikro=true";
+        mikro=true;
+    } else if(location.pathname.match('mesodisplayeng')!==null) {
+        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
+        url="serviceout.php?mikro=false";
+    } else if (location.pathname.match('mesodisplayger')!==null) {
+        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
+        url="serviceout.php?mikro=false";
+    }
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
-            if (i==0) {
-                url = url + "?" + Filter[i];
-            }
-            else url = url + "&" + Filter[i];
+            url = url + "&" + Filter[i];
         }
         else url = url + "=" + Filter[i];
     }
-    if (Filter.length<2){
-        url=url + "?from="+String(number_of_showall);
-    }
-    else url=url + "&from="+String(number_of_showall);
+    url=url + "&from="+String(number_of_showall);
     $.ajax({
         url: url,
         success: function (data) {
-            for (let i=data.length-1; i>=0; i--) {
-                values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
-                diagram(Kriterien, values,data[i].uni, data[i].course,i);
-                number_of_showall++;
+            if (data.length!=0){
+                cleanall();
+                for (let i=data.length-1; i>=0; i--) {
+                    if (mikro){
+                        values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
+                    } else {
+                        values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+                    }
+                    diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
+                    number_of_showall++;
+                }
             }
         },
         async: false
@@ -85,11 +110,24 @@ function previous(Filter) {
     else number_of_showall-=number_of_showall%3;
     cleanall();
     let values = [];
-    var Kriterien;
-    if(location.pathname[location.pathname.length-5] == "g") {
-        Kriterien = ["knowledgebuilding", "negotiability", "topic", "question", "tasks", "inquiry", "audience", "assessment"];
-    } else Kriterien = ["Wissen", "Verhandelbarkeit", "Thema", "Frage", "Aufgaben", "Befragung", "Öffentlichkeit", "Einschätzung"];
-    let url="serviceout.php";
+    let Kriterien;
+    let url="";
+    let mikro=false;
+    if(location.pathname.match('mikrodisplayeng')!==null) {
+        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
+        url="serviceout.php?mikro=true";
+        mikro=true;
+    } else if (location.pathname.match('mikrodisplayger')!==null) {
+        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+        url = "serviceout.php?mikro=true";
+        mikro=true;
+    } else if(location.pathname.match('mesodisplayeng')!==null) {
+        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
+        url="serviceout.php?mikro=false";
+    } else if (location.pathname.match('mesodisplayger')!==null) {
+        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
+        url="serviceout.php?mikro=false";
+    }
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
             if (i==0) {
@@ -99,16 +137,17 @@ function previous(Filter) {
         }
         else url = url + "=" + Filter[i];
     }
-    if (Filter.length<2){
-        url=url + "?from="+String(number_of_showall-3);
-    }
-    else url=url + "&from="+String(number_of_showall-3);
+    url=url + "&from="+String(number_of_showall-3);
     $.ajax({
         url: url,
         success: function (data) {
             for (let i=data.length-1; i>=0; i--) {
-                values = [data[i].knowledgebuilding, data[i].negotiable, data[i].topic, data[i].question, data[i].tasks, data[i].inquiry, data[i].audience, data[i].assessment];
-                diagram(Kriterien, values,data[i].uni, data[i].course,i);
+                if (mikro){
+                    values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
+                } else {
+                    values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+                }
+                diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
                 number_of_showall--;
             }
         },
