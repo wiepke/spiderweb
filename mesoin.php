@@ -8,20 +8,26 @@
 header('Content-Type: application/json');
 $conn = mysqli_connect("localhost", "root", "", "test");
 if($_SERVER['REQUEST_METHOD'] =='POST') {
-    $INSERTSPINNE = "INSERT INTO `mesoebene` (`".
-        implode('`, `',array_keys($_POST)).
-        "`) VALUES ('".
-        implode('\',\'',array_values($_POST)).
-        "')";
-    $queryObj = mysqli_query($conn,$INSERTSPINNE);
-    header('Content-Type: application/x-www-form-urlencoded');
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    $values=[];
+    $keys=[];
+    while (list($key, $val) = each($_POST)) {
+        array_push($keys,($key));
+        array_push($values,($val));
     }
-    if ($conn->query($INSERTSPINNE) === TRUE) {
+    $conn->set_charset("utf8");
+    $INSERTSPINNE = "INSERT INTO `mesoebene` (`".
+        implode('`, `',$keys).
+        "`) VALUES ('".
+        implode('\',\'', $values).
+        "')";
+    if (mysqli_query($conn,$INSERTSPINNE) === TRUE){
         openLog("New record created successfully",LOG_INFO,1);
     } else {
         openLog("New record could not be created",LOG_INFO,1);
+    }
+    header('Content-Type: application/x-www-form-urlencoded');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
     $id=mysqli_insert_id($conn);
     $conn->close();

@@ -166,6 +166,6 @@ function cleanFilter() {
     }
     inputs = document.getElementsByClassName("dimensionFilter");
     for (let i=0;i<inputs.length;i++){
-        inputs[i].value="";
+        inputs[i].checked=false;
     }
 }

@@ -21,14 +21,14 @@
         <h3><u> Mikroebene </u></h3>
         <br>
         <br>
-        <p align="left" style="margin-left:28%;margin-right:5%">
+        <p align="center" style="width:900px;margin-bottom:50px">
             Im Folgenden betrachten wir die Mikroebene Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
         </p>
-        <form name="survey" method="POST" action="mikroin.php">
+        <form name="survey" method="POST" action="mikroin.php?utf8=✓" style="width:950px">
             <div class="panel-group" id="forms">
                 <div class="panel panel-default">
                     <div class="panel-collapse collapse in" id="first">
-                        <p align="center" style="margin-left:5%;margin-right:5%">                            Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
+                        <p align="center" style="margin-top:10px">                            Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
                         </p> <!-- explanation text -->
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>

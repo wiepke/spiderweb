@@ -65,7 +65,7 @@ function diagram(Kriterien, values, uni, course, diacount) {
                 x:20,
                 y:20
             });
-            new Text("Course: "+course).addTo(stage).attr({
+            new Text("Kurs: "+course).addTo(stage).attr({
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '20',
                 textFillColor: 'darkblue',
