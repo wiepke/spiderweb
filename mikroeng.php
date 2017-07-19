@@ -21,11 +21,11 @@
         <h3><u> Micro-/ Meso-Level </u></h3>
         <br>
         <br>
-        <form name="survey" method="POST" action="mikroin.php">
+        <form name="survey" method="POST" action="mikroin.php" style="width:950px">
             <div class="panel-group" id="forms">
                 <div class="panel panel-default">
             <div class="panel-collapse collapse in" id="first">
-                <p align="left" style="margin-left:28%">
+                <p align="center" style="margin-top:10px">
                     Here you can choose between different dimensions of your lecture. Your choice comprehends your didactic methods, which you used related to research learning. Be advised to have a specific course in mind to reflect the same or to build up a concept for a new similar course. After finishing this survey you will see a graphic of your results and you can compare your course to others.<br>
                 </p> <!-- explanation text -->
                 <table style="width:900px" class="table table-bordered table-striped js-options-table">
