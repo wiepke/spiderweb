@@ -9,36 +9,49 @@ function cleanall(){
     return false;
 }
 
-let number_of_showall;
+function setKriterien() {
+    if (location.pathname.match('mikrodisplayeng') !== null) {
+        return ["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
+    } else if (location.pathname.match('mikrodisplayger') !== null) {
+        return ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+    } else if (location.pathname.match('mesodisplayeng') !== null) {
+        return ["curric. embedding", "modular location", "content", "assessement", "recourses", "time"];
+    } else if (location.pathname.match('mesodisplayger') !== null) {
+        return ["Curric. Einbindung", "Modulare Verortung", "Inhaltsrahmen", "Prüfungsrahmen", "Ressourcenrahmen", "Zeitrahmen"];
+    }
+}
 
-function showall(Filter) {
-    cleanall();
-    number_of_showall=0;
-    let values = [];
-    let Kriterien;
-    let url="";
-    let mikro=false;
-    if(location.pathname.match('mikrodisplayeng')!==null) {
-        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
-        url="serviceout.php?mikro=true";
-        mikro=true;
-    } else if (location.pathname.match('mikrodisplayger')!==null) {
-        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
-        url = "serviceout.php?mikro=true";
-        mikro=true;
-    } else if(location.pathname.match('mesodisplayeng')!==null) {
-        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
-        url="serviceout.php?mikro=false";
-    } else if (location.pathname.match('mesodisplayger')!==null) {
-        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
-        url="serviceout.php?mikro=false";
+function setmikro(){
+    return location.pathname.match('mikro')!==null;
+}
+
+function seturl(mikro, Filter){
+    let tempurl="serviceout.php";
+    if (mikro) {
+        tempurl = tempurl + "?mikro=true";
+    }
+    else {
+        tempurl = tempurl + "?mikro=false";
     }
     for (let i=0; i<Filter.length; i++){
         if (i%2==0){
-            url = url + "&" + Filter[i];
+            tempurl = tempurl + "&" + Filter[i];
         }
-        else url = url + "=" + Filter[i];
+        else tempurl = tempurl + "=" + Filter[i];
     }
+    return tempurl;
+}
+let number_of_showall;
+
+function showall(Filter) {
+    document.getElementById('next').disabled=false;
+    document.getElementById('previous').disabled=true;
+    cleanall();
+    number_of_showall=0;
+    let values = [];
+    let Kriterien=setKriterien();
+    let mikro=setmikro();
+    let url=seturl(mikro,Filter);
     url=url + "&from="+String(number_of_showall);
         $.ajax({
             url: url,
@@ -56,87 +69,55 @@ function showall(Filter) {
             },
             async: false
         });
+    if (number_of_showall % 3 != 0) {
+        document.getElementById('next').disabled=true;
+    }
 }
 function next(Filter) {
-    if (number_of_showall % 3 != 0) return false;
-    let values = [];
-    let Kriterien;
-    let url="";
-    let mikro=false;
-    if(location.pathname.match('mikrodisplayeng')!==null) {
-        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
-        url="serviceout.php?mikro=true";
-        mikro=true;
-    } else if (location.pathname.match('mikrodisplayger')!==null) {
-        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
-        url = "serviceout.php?mikro=true";
-        mikro=true;
-    } else if(location.pathname.match('mesodisplayeng')!==null) {
-        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
-        url="serviceout.php?mikro=false";
-    } else if (location.pathname.match('mesodisplayger')!==null) {
-        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
-        url="serviceout.php?mikro=false";
-    }
-    for (let i=0; i<Filter.length; i++){
-        if (i%2==0){
-            url = url + "&" + Filter[i];
-        }
-        else url = url + "=" + Filter[i];
-    }
-    url=url + "&from="+String(number_of_showall);
-    $.ajax({
-        url: url,
-        success: function (data) {
-            if (data.length!=0){
-                cleanall();
-                for (let i=data.length-1; i>=0; i--) {
-                    if (mikro){
-                        values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
-                    } else {
-                        values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+    document.getElementById('previous').disabled=false;
+    if (number_of_showall % 3 == 0) {
+        let values = [];
+        let Kriterien = setKriterien();
+        let mikro = setmikro();
+        let url = seturl(mikro, Filter);
+        url = url + "&from=" + String(number_of_showall);
+        $.ajax({
+            url: url,
+            success: function (data) {
+                if (data.length != 0) {
+                    cleanall();
+                    for (let i = data.length - 1; i >= 0; i--) {
+                        if (mikro) {
+                            values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
+                        } else {
+                            values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+                        }
+                        diagram(Kriterien, values, data[i].Uni, data[i].Kurs, i);
+                        number_of_showall++;
                     }
-                    diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
-                    number_of_showall++;
                 }
-            }
-        },
-        async: false
-    });
+            },
+            async: false
+        });
+    }
+    if (number_of_showall % 3 != 0) {
+        document.getElementById('next').disabled=true;
+        document.getElementById('previous').disabled=false;
+    }
 }
 function previous(Filter) {
-    if (number_of_showall<4) return false;
+    document.getElementById('next').disabled=false;
+    if (number_of_showall<4) {
+        document.getElementById('previous').disabled=true;
+        return false;
+    }
     if (number_of_showall%3==0) number_of_showall-=3;
     else number_of_showall-=number_of_showall%3;
     cleanall();
     let values = [];
-    let Kriterien;
-    let url="";
-    let mikro=false;
-    if(location.pathname.match('mikrodisplayeng')!==null) {
-        Kriterien = ["Assessment","research topic","research question","scheduling","conduct","relfection","results"];
-        url="serviceout.php?mikro=true";
-        mikro=true;
-    } else if (location.pathname.match('mikrodisplayger')!==null) {
-        Kriterien = ["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
-        url = "serviceout.php?mikro=true";
-        mikro=true;
-    } else if(location.pathname.match('mesodisplayeng')!==null) {
-        Kriterien = ["curric. embedding","modular location","content","assessement","recourses","time"];
-        url="serviceout.php?mikro=false";
-    } else if (location.pathname.match('mesodisplayger')!==null) {
-        Kriterien = ["Curric. Einbindung","Modulare Verortung","Inhaltsrahmen","Prüfungsrahmen","Ressourcenrahmen","Zeitrahmen"];
-        url="serviceout.php?mikro=false";
-    }
-    for (let i=0; i<Filter.length; i++){
-        if (i%2==0){
-            if (i==0) {
-                url = url + "?" + Filter[i];
-            }
-            else url = url + "&" + Filter[i];
-        }
-        else url = url + "=" + Filter[i];
-    }
+    let Kriterien=setKriterien();
+    let mikro=setmikro();
+    let url=seturl(mikro,Filter);
     url=url + "&from="+String(number_of_showall-3);
     $.ajax({
         url: url,

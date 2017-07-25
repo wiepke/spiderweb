@@ -5,6 +5,7 @@
  * Date: 16.03.2017
  * Time: 14:04
  */
+include 'dbconn.php';
 echo "[\n";
 $Kriterien = [];
 $REQUESTSPINNE  = "SELECT * FROM mesoebene";
@@ -18,7 +19,6 @@ foreach ($_GET as $key => $value){
         }
     }
 }
-$db = mysqli_connect("localhost", "root", "", "test");
 for ($i=0;$i<count($Kriterien)-2;$i++){
     if ($i % 2 == 0) {
         if ($i == 0) {
@@ -30,8 +30,7 @@ for ($i=0;$i<count($Kriterien)-2;$i++){
 }
 if (count($Kriterien)!=2) {$REQUESTSPINNE=$REQUESTSPINNE.")";}
 $REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$Kriterien[count($Kriterien)-1] .",3;";
-$queryObj = mysqli_query($db, $REQUESTSPINNE);
-header('Content-Type: application/json');
+$queryObj = mysqli_query($conn, $REQUESTSPINNE);
 $next = 0;
 if ($result = mysqli_fetch_object($queryObj))
     $next=1;
