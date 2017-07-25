@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Analyse und Konzeption forschenden Lernens - das FideS-Doppelradmodell </title>
+    <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<script src="libs/jquery.js"></script>
+<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="inithelper.js"></script>
+<a href="http://fides-projekt.de/">
+    <img alt="Brand" src="pics/Fides_logo.png" style="margin-top: -3px;">
+</a><br>
+<h2 align="center"><u> Analysis and conception of research learning - the FideS-Doppelradmodell </u></h2><br>
+<div class="dropdown" align="right" style="margin-right:50px;margin-top:-93px;margin-bottom: 20px;">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sprache
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="index.html">german</a></li>
+        <li><a href="#">english</a></li>
+    </ul>
+</div> <!-- language toogle -->
+<div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-top: 50px;">
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" onclick="showdiv('Mikroebene')">Micro-level</button>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" onclick="showdiv('Mesoebene')">Meso-level</button>
+    </div>
+</div>
+<div class="Ebenen" id="Mikroebene" style="display: none">
+    <h3 align="center"><u>Micro-level</u></h3>
+    <table align="center">
+        <tr>
+            <td align="center">
+                <a href="mikroger.php">to survey</a>
+            </td>
+            <td align="center">
+                <a href="mikrodisplayeng.php">to depiction</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="mikroeng.php">
+                    <img alt="survey" src="pics/survey.png" style="margin-top: -3px;">
+                </a>
+            </td>
+            <td>
+                <a href="mikrodisplayeng.php">
+                    <img alt="depiction" src="pics/Darstellungmikro.png" style="margin-top: -3px;">
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="Ebenen" id="Mesoebene" style="display: none">
+    <h3 align="center"><u>Meso-level</u></h3>
+    <table align="center">
+        <tr>
+            <td align="center">
+                <a href="mesoeng.php">to survey</a>
+            </td>
+            <td align="center">
+                <a href="mesodisplayeng.php">to depiction</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="mesoeng.php">
+                    <img alt="survey" src="pics/survey.png" style="margin-top: -3px;">
+                </a>
+            </td>
+            <td>
+                <a href="mesodisplayeng.php">
+                    <img alt="depiction" src="pics/Darstellungmeso.png" style="margin-top: -3px;">
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

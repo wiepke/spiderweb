@@ -21,14 +21,16 @@
     }
 ?>
         ">
-
+<a href="http://fides-projekt.de/">
+    <img alt="Brand" src="pics/Fides_logo.png" style="margin-top: -3px;">
+</a><br>
 <script src="libs/jquery.js"></script>
 <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="bonsai.js"></script>
 <script src="diagram.js"></script>
 <script src="serviceout.js"></script>
 <script src="Listingout.js"></script>
-<div class="dropdown" align="right" style="margin-right:50px;margin-top:10px">
+<div class="dropdown" align="right" style="margin-right:50px;margin-top:-10px;margin-bottom: 20px;">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sprache
         <span class="caret"></span></button>
     <ul class="dropdown-menu dropdown-menu-right">
@@ -222,8 +224,8 @@
     <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#table">zeige Filter</button>
     <button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
     <button type="button" class="btn btn-primary" onClick="showall(Listing())">suche!</button><br> <br>
-    <button type="button" class="btn btn-info" onClick="previous(Listing());return false;">letzten 3</button>
-    <button type="button" class="btn btn-info" onClick="next(Listing());return false;">nächsten 3</button>
+    <button id="previous" type="button" class="btn btn-info" disabled onClick="previous(Listing());return false;">letzten 3</button>
+    <button id="next" type="button" class="btn btn-info" disabled onClick="next(Listing());return false;">nächsten 3</button>
 </div> <!-- all the buttons -->
 
 </body>

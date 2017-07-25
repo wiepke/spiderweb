@@ -6,14 +6,17 @@
         <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-    <div class="dropdown" align="right" style="margin-right:50px;margin-top:10px">
+    <a href="http://fides-projekt.de/">
+        <img alt="Brand" src="pics/Fides_logo.png" style="margin-top: -3px;">
+    </a><br>
+    <div class="dropdown" align="right" style="margin-right:50px;margin-top:-10px;margin-bottom: 20px;">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">language
             <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right">
             <li><a href="mesoger.php">german</a></li>
             <li><a href="mikroeng.php">english</a></li>
         </ul>
-    </div>
+    </div> <!-- language toggle -->
     <script src="libs/jquery.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <div align="center" style="margin-top: 5px;">

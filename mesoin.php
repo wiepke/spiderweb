@@ -5,8 +5,8 @@
  * Date: 27.03.2017
  * Time: 13:15
  */
-header('Content-Type: application/json');
-$conn = mysqli_connect("localhost", "root", "", "test");
+include 'dbconn.php';
+$conn->set_charset("utf8");
 if($_SERVER['REQUEST_METHOD'] =='POST') {
     $values=[];
     $keys=[];
@@ -14,7 +14,6 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
         array_push($keys,($key));
         array_push($values,($val));
     }
-    $conn->set_charset("utf8");
     $INSERTSPINNE = "INSERT INTO `mesoebene` (`".
         implode('`, `',$keys).
         "`) VALUES ('".

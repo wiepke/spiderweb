@@ -2,8 +2,10 @@
  * Created by fides-WHK on 13.03.2017.
  */
 function diagram(Kriterien, values, uni, course, diacount) {
+    mikro=(location.pathname.match('mikro')!==null);
     bonsai.run(document.getElementById('diagram'+diacount), {
         uni: uni,
+        mikrobool: mikro,
         Kriterien: Kriterien,
         values: values,
         course: course,
@@ -13,6 +15,7 @@ function diagram(Kriterien, values, uni, course, diacount) {
             let maxradius=400;
             let uni = stage.options.uni;
             let Kriterien = stage.options.Kriterien;
+            let mikrobool = stage.options.mikrobool;
             let values = stage.options.values;
             let course = stage.options.course;
             let y = 0.0;
@@ -40,7 +43,7 @@ function diagram(Kriterien, values, uni, course, diacount) {
                     fontSize: '10',
                     textFillColor: 'black',
                     textStrokeColor: 'black',
-                    textStrokeWidth: 1,
+                    textStrokeWidth: 0.5,
                     x: x+picwidth/2+slidein*(Kriterien[i].length*5),
                     y: y+picheight/2
                 });
@@ -82,14 +85,20 @@ function diagram(Kriterien, values, uni, course, diacount) {
             y = (maxradius / 2 - (values[0]-1)*10) * Math.sin(Math.PI/values.length);
             x = (maxradius / 2 - (values[0]-1)*10) * Math.cos(Math.PI/values.length);
             let inner = new Path()
-                .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0])
-                .fill(gradient.radial(['transparent', 'rgb(0,255,0)'], 200, 50, 50));
+                .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0]);
             /*
              * "inner" is the shadowed part of the graphic
              */
             let outer = new Path()
-                .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0])
-                .stroke('rgba(50,150,10,2)', 4);
+                .moveTo(x * xvalue * values[0] + picwidth / 2, picheight / 2 + y * yvalue * values[0]);
+            if(mikrobool) {
+                outer.stroke('rgba(200,80,40,2)', 3);
+                inner.fill(gradient.radial(['transparent', 'rgb(255,10,10)'], 200, 50, 50));
+            }
+            else{
+                outer.stroke('rgba(50,150,10,2)', 3);
+                inner.fill(gradient.radial(['transparent', 'rgb(10,255,10)'], 200, 50, 50));
+            }
             /*
              * "outer" is the darkgreen line connecting the values
              */
