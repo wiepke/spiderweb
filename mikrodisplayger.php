@@ -227,6 +227,4 @@
 
    <?php include 'footer.php' ?>
     </body>
-
-</body>
 </html>

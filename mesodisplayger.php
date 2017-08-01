@@ -44,16 +44,142 @@
 <div align="center">
     <h2><u>Diagramme zur Darstellung verschiedener Kriterien in Universitäten</u></h2>
     <h2><u>mesoebene</u></h2>
-</div>
+</div><!--header -->
 <table border="0" align="center">
     <tr>
         <td>
+            <table id="labels0" hidden align="center">
+                <tr>
+                    <td>
+                        <p>Universität:</p>
+                    </td>
+                    <td>
+                        <p id="Unilabel0">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Projekttitel:</p>
+                    </td>
+                    <td>
+                        <p id="Kurslabel0">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Fachbereich:</p>
+                    </td>
+                    <td>
+                        <p id="Fachbereichlabel0">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Anzahl von Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="AnzahlStudentenlabel0">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Semesterzahl der Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="Semesterzahllabel0">Dummy</p>
+                    </td>
+                </tr>
+            </table>
             <div  id="diagram0" class="dia"></div>
         </td>
         <td>
+            <table id="labels1" hidden align="center">
+                <tr>
+                    <td>
+                        <p>Universität:</p>
+                    </td>
+                    <td>
+                        <p id="Unilabel1">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Projekttitel:</p>
+                    </td>
+                    <td>
+                        <p id="Kurslabel1">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Fachbereich:</p>
+                    </td>
+                    <td>
+                        <p id="Fachbereichlabel1">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Anzahl von Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="AnzahlStudentenlabel1">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Semesterzahl der Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="Semesterzahllabel1">Dummy</p>
+                    </td>
+                </tr>
+            </table>
             <div  id="diagram1" class="dia"></div>
         </td>
         <td>
+            <table id="labels2" hidden align="center">
+                <tr>
+                    <td>
+                        <p>Universität:</p>
+                    </td>
+                    <td>
+                        <p id="Unilabel2">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Projekttitel:</p>
+                    </td>
+                    <td>
+                        <p id="Kurslabel2">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Fachbereich:</p>
+                    </td>
+                    <td>
+                        <p id="Fachbereichlabel2">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Anzahl von Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="AnzahlStudentenlabel2">Dummy</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Semesterzahl der Studierenden:</p>
+                    </td>
+                    <td>
+                        <p id="Semesterzahllabel2">Dummy</p>
+                    </td>
+                </tr>
+            </table>
             <div  id="diagram2" class="dia"></div>
         </td>
         <td>
@@ -76,6 +202,30 @@
         </td>
         <td>
             <input name="Kurs" value="" class="stringFilter" size="40">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Fachbereich:
+        </td>
+        <td>
+            <input name="Fachbereich" value="" class="stringFilter" size="40">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Anzahl von Studierenden:
+        </td>
+        <td>
+            <input name="AnzahlStudenten" value="" class="stringFilter" size="40">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Semesterzahl der Studierenden:
+        </td>
+        <td>
+            <input name="Semesterzahl" value="" class="stringFilter" size="40">
         </td>
     </tr>
     <tr>

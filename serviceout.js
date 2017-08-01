@@ -46,6 +46,9 @@ let number_of_showall;
 function showall(Filter) {
     document.getElementById('next').disabled=false;
     document.getElementById('previous').disabled=true;
+    document.getElementById('labels0').hidden=true;
+    document.getElementById('labels1').hidden=true;
+    document.getElementById('labels2').hidden=true;
     cleanall();
     number_of_showall=0;
     let values = [];
@@ -63,18 +66,38 @@ function showall(Filter) {
                     } else {
                         values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                     }
-                    diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
+                    diagram(Kriterien, values,/*data[i].Uni, data[i].Kurs,*/i);
                     number_of_showall++;
+                    document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
+                    document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
+                    document.getElementById('Fachbereichlabel'+i).innerHTML=data[i].Fachbereich;
+                    document.getElementById('Semesterzahllabel'+i).innerHTML=data[i].Semesterzahl;
+                    document.getElementById('AnzahlStudentenlabel'+i).innerHTML=data[i].AnzahlStudenten;
                 }
             },
             async: false
         });
-    if (number_of_showall % 3 != 0) {
+    if (number_of_showall % 3 !== 0) {
         document.getElementById('next').disabled=true;
+    }
+    if (number_of_showall % 3 === 1){
+        document.getElementById('labels0').hidden=false;
+    }
+    if (number_of_showall % 3 === 2){
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
+    }
+    if ((number_of_showall %3 === 0)&&(number_of_showall!==0)){
+        document.getElementById('labels2').hidden=false;
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
     }
 }
 function next(Filter) {
     document.getElementById('previous').disabled=false;
+    document.getElementById('labels0').hidden=true;
+    document.getElementById('labels1').hidden=true;
+    document.getElementById('labels2').hidden=true;
     if (number_of_showall % 3 == 0) {
         let values = [];
         let Kriterien = setKriterien();
@@ -92,8 +115,13 @@ function next(Filter) {
                         } else {
                             values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                         }
-                        diagram(Kriterien, values, data[i].Uni, data[i].Kurs, i);
+                        diagram(Kriterien, values, /*data[i].Uni, data[i].Kurs, */i);
                         number_of_showall++;
+                        document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
+                        document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
+                        document.getElementById('Fachbereichlabel'+i).innerHTML=data[i].Fachbereich;
+                        document.getElementById('Semesterzahllabel'+i).innerHTML=data[i].Semesterzahl;
+                        document.getElementById('AnzahlStudentenlabel'+i).innerHTML=data[i].AnzahlStudenten;
                     }
                 }
             },
@@ -103,6 +131,18 @@ function next(Filter) {
     if (number_of_showall % 3 != 0) {
         document.getElementById('next').disabled=true;
         document.getElementById('previous').disabled=false;
+    }
+    if (number_of_showall % 3 === 1){
+        document.getElementById('labels0').hidden=false;
+    }
+    if (number_of_showall % 3 === 2){
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
+    }
+    if ((number_of_showall %3 === 0)&&(number_of_showall!==0)){
+        document.getElementById('labels2').hidden=false;
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
     }
 }
 function previous(Filter) {
@@ -128,12 +168,29 @@ function previous(Filter) {
                 } else {
                     values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                 }
-                diagram(Kriterien, values,data[i].Uni, data[i].Kurs,i);
+                diagram(Kriterien, values,/*data[i].Uni, data[i].Kurs,*/i);
                 number_of_showall--;
+                document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
+                document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
+                document.getElementById('Fachbereichlabel'+i).innerHTML=data[i].Fachbereich;
+                document.getElementById('Semesterzahllabel'+i).innerHTML=data[i].Semesterzahl;
+                document.getElementById('AnzahlStudentenlabel'+i).innerHTML=data[i].AnzahlStudenten;
             }
         },
         async: false
     });
+    if (number_of_showall % 3 === 1){
+        document.getElementById('labels0').hidden=false;
+    }
+    if (number_of_showall % 3 === 2){
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
+    }
+    if ((number_of_showall %3 === 0)&&(number_of_showall!==0)){
+        document.getElementById('labels2').hidden=false;
+        document.getElementById('labels1').hidden=false;
+        document.getElementById('labels0').hidden=false;
+    }
     number_of_showall+=3;
 }
 function cleanFilter() {
