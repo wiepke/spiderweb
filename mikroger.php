@@ -344,7 +344,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td >
+													<td width="10px" >
 														<input type="radio" name="Assessment" value="1">
 													</td>
 													<td >
@@ -352,7 +352,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td align="center">
+													<td width="10px">
 														<input type="radio" name="Assessment" value="2">
 													</td>
 													<td >
@@ -360,7 +360,7 @@
 													</td>
 												</tr>
 												<tr>
-												   <td align="center">
+												   <td width="10px">
 														<input type="radio" name="Assessment" value="3">
 													</td>
 												   <td >

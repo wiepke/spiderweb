@@ -188,3 +188,15 @@ article table tr.header td {
 .panel > .panel-collapse > .table {
 	margin-bottom:20px !important;
 }
+
+#left-col {
+	    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+#right-col {
+	width: 40%;
+    box-sizing: border-box;
+    float: right;
+}
