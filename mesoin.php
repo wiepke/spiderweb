@@ -36,6 +36,6 @@ function redirect($url, $statusCode = 303)
     header('Location: ' . $url, true, $statusCode);
     die();
 }
-if($_SERVER['PHP_SELF'] == "/mikroeng.php"){
-redirect ("mesodisplayeng.php?id=".$id,303);}
+if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
+    redirect ("mesodisplayeng.php?id=".$id,303);}
 else redirect("mesodisplayger.php?id=".$id,303);

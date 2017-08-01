@@ -30,7 +30,7 @@
         <form name="survey" method="POST" action="mikroin.php?utf8=✓" style="width:950px">
             <div class="panel-group" id="forms">
                 <div class="panel panel-default">
-                    <div class="panel-collapse collapse in" id="first">
+                    <div class="panel-collapse collapse in" id="zero">
                         <p align="center" style="margin-top:10px">                            Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
                         </p> <!-- explanation text -->
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
@@ -50,91 +50,123 @@
                                     <div align="right"><input name="Kurs" placeholder="Kurs" size="72%" ></div>
                                 </td>
                             </tr>
-            </table> <!-- all dimensions of the universities -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
-    </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-collapse collapse" id="second">
-            <table style="width:900px" class="table table-bordered table-striped js-options-table">
-            <tr>
-                <td colspan="3">
-                    <p align="center">
-                        Wer bestimmt das Forschungsthema?
-                    </p>
-                </td>
-            </tr>
-                <tr>
-                <td width="27%">
-                    Lehrende geben das Forschungsthema vor.
-                </td>
-                <td width="27%">
-                    Innerhalb eines vorgegebenen Rahmens legen die Studierenden ihr Forschungsthema fest.
-                </td>
-                <td width="27%">
-                    Die Studierenden legen das Thema ihrer Forschungsarbeit selbst fest.
-                </td>
-            </tr>
-                <tr>
-                    <td align="center">
-                        <input type="radio" name="Forschungsthema" value="1">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Forschungsthema" value="2">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Forschungsthema" value="3">
-                    </td>
-                </tr>
-            </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-collapse collapse" id="third">
-            <table style="width:900px" class="table table-bordered table-striped js-options-table">
-                <tr>
-                    <td colspan="3">
-                        <p align="center">
-                        Wer entwickelt die Forschungsfrage?
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="27%">
-                        Lehrende geben die Forschungsfrage vor.
-                    </td>
-                    <td width="27%">
-                        Die Studierenden entwickeln die Forschungsfrage unter Anleitung von Lehrenden.
-                    </td>
-                    <td width="27%">
-                        Die Studierenden entwickeln die Forschungsfrage selbst.
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <input type="radio" name="Forschungsfrage" value="1">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Forschungsfrage" value="2">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Forschungsfrage" value="3">
-                    </td>
-                </tr>
-            </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
-        </div>
-    </div>
+                            <tr>
+                                <td width="38%">
+                                    Fachbereich:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
+                                </td>
+                            </tr>
+                        </table> <!-- all dimensions of the universities -->
+                        <button id="zerobutton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first" autofocus onclick="document.getElementById('zerobutton').autofocus=false;document.getElementById('firstbutton').autofocus=true;"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="first">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td width="38%">
+                                    Anzahl von Studenten:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="38%">
+                                    Semesterzahl:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
+                        <button id="firstbutton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="second">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td colspan="3">
+                                    <p align="center">
+                                        Wer bestimmt das Forschungsthema?
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="27%">
+                                    Lehrende geben das Forschungsthema vor.
+                                </td>
+                                <td width="27%">
+                                    Innerhalb eines vorgegebenen Rahmens legen die Studierenden ihr Forschungsthema fest.
+                                </td>
+                                <td width="27%">
+                                    Die Studierenden legen das Thema ihrer Forschungsarbeit selbst fest.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsthema" value="1">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsthema" value="2">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsthema" value="3">
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
+                        <button id="secondbutton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="third">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td colspan="3">
+                                    <p align="center">
+                                        Wer entwickelt die Forschungsfrage?
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="27%">
+                                    Lehrende geben die Forschungsfrage vor.
+                                </td>
+                                <td width="27%">
+                                    Die Studierenden entwickeln die Forschungsfrage unter Anleitung von Lehrenden.
+                                </td>
+                                <td width="27%">
+                                    Die Studierenden entwickeln die Forschungsfrage selbst.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsfrage" value="1">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsfrage" value="2">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Forschungsfrage" value="3">
+                                </td>
+                            </tr>
+                        </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-collapse collapse" id="fourth">
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie planen die Studierenden den Forschungsprozess?
+                                        Wie planen die Studierenden den Forschungsprozess?
                                     </p>
                                 </td>
                             </tr>
@@ -171,7 +203,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie führen die Studierenden die Forschung durch?
+                                        Wie führen die Studierenden die Forschung durch?
                                     </p>
                                 </td>
                             </tr>
@@ -208,7 +240,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie erhalten die Studierenden Feedback im Forschungs-prozess?
+                                        Wie erhalten die Studierenden Feedback im Forschungs-prozess?
                                     </p>
                                 </td>
                             </tr>
@@ -244,7 +276,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Was passiert mit den Ergebnissen studentischer Forschung?
+                                        Was passiert mit den Ergebnissen studentischer Forschung?
                                     </p>
                                 </td>
                             </tr>
@@ -280,7 +312,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie wird der Erfolg der Forschung bewertet?
+                                        Wie wird der Erfolg der Forschung bewertet?
                                     </p>
                                 </td>
                             </tr>
@@ -310,8 +342,8 @@
                         <button class="btn btn-primary" type="submit">senden</button>
                     </div>
                 </div>
-    </div> <!--complete form div -->
-    </form>
+            </div> <!--complete form div -->
+        </form>
     </div>
     </body>
 <?php

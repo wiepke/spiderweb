@@ -30,7 +30,7 @@
         <form name="survey" method="POST" action="mesoin.php?utf8=✓" style="width:950px">
             <div class="panel-group" id="forms">
                 <div class="panel panel-default">
-                    <div class="panel-collapse collapse in" id="first">
+                    <div class="panel-collapse collapse in" id="zero">
                         <p align="center" style="margin-top:10px">
                             Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
                         </p> <!-- explanation text -->
@@ -50,11 +50,42 @@
                                 <td colspan="3">
                                     <div align="right"><input name="Kurs" placeholder="Kurs" size="72%" ></div>
                                 </td>
+                            </tr><tr>
+                                <td width="38%">
+                                    Fachbereich:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
+                                </td>
                             </tr>
-            </table> <!-- all dimensions of the universities -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
-    </div>
-    </div>
+                        </table> <!-- all dimensions of the universities -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="first">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td width="38%">
+                                    Anzahl von Studenten:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="38%">
+                                    Semesterzahl:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
+                    </div>
+                </div>
     <div class="panel panel-default">
         <div class="panel-collapse collapse" id="second">
             <table style="width:900px" class="table table-bordered table-striped js-options-table">

@@ -1,14 +1,14 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien, values, uni, course, diacount) {
+function diagram(Kriterien, values, /*uni, course, */diacount) {
     mikro=(location.pathname.match('mikro')!==null);
     bonsai.run(document.getElementById('diagram'+diacount), {
-        uni: uni,
+        //uni: uni,
         mikrobool: mikro,
         Kriterien: Kriterien,
         values: values,
-        course: course,
+        //course: course,
         code: function () {
             let picwidth = 530;
             let picheight = 500;
@@ -58,7 +58,7 @@ function diagram(Kriterien, values, uni, course, diacount) {
                     .closePath()
                     .addTo(stage).attr('strokeDash', 10);
             }
-            /* one line for each dimension which shall be displayed */
+            /* one line for each dimension which shall be displayed
             new Text("Uni: "+uni).addTo(stage).attr({
                 fontFamily: 'Arial, sans-serif',
                 fontSize: '20',

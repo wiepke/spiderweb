@@ -21,13 +21,14 @@
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <div align="center" style="margin-top: 5px;">
         <h2><u> Analysis and conception of research learning - the FideS-Doppelradmodell </u></h2>
-        <h3><u> Micro-/ Meso-Level </u></h3>
+        <h3><u> Micro-Level </u></h3>
         <br>
         <br>
+        <p align="center" style="width:900px;margin-bottom:50px">With this survey you can see the micro-level of your lecture (teach-/learn -setting), which contains your decisions for your course. This will effect the students in their research quality and scale.</p>
         <form name="survey" method="POST" action="mikroin.php" style="width:950px">
             <div class="panel-group" id="forms">
                 <div class="panel panel-default">
-            <div class="panel-collapse collapse in" id="first">
+            <div class="panel-collapse collapse in" id="zero">
                 <p align="center" style="margin-top:10px">
                     Here you can choose between different dimensions of your lecture. Your choice comprehends your didactic methods, which you used related to research learning. Be advised to have a specific course in mind to reflect the same or to build up a concept for a new similar course. After finishing this survey you will see a graphic of your results and you can compare your course to others.<br>
                 </p> <!-- explanation text -->
@@ -45,12 +46,43 @@
                             Course:
                         </td>
                         <td colspan="3">
-                            <div align="right"><input name="Kurs" placeholder="Kurs" size="72%" ></div>
+                            <div align="right"><input name="Kurs" placeholder="Course" size="72%" ></div>
+                        </td>
+                    </tr><tr>
+                        <td width="38%">
+                            department:
+                        </td>
+                        <td colspan="3">
+                            <div align="right"><input name="Fachbereich" placeholder="department" size="72%" ></div>
                         </td>
                     </tr>
                 </table> <!-- all dimensions of the universities -->
-                <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
+                <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> next </button>
             </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="first">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td width="38%">
+                                    number of students:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="38%">
+                                    semester count:
+                                </td>
+                                <td colspan="3">
+                                    <div align="right"><input name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                </td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> next </button>
+                    </div>
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-collapse collapse" id="second">
@@ -85,8 +117,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -122,8 +154,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -159,8 +191,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -196,8 +228,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -232,8 +264,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -268,8 +300,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> zurück </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#eighth"> weiter </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> back </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#eighth"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -304,8 +336,8 @@
                                 </td>
                             </tr>
                         </table>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
-                        <button class="btn btn-primary" type="submit">senden</button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> back </button>
+                        <button class="btn btn-primary" type="submit">send</button>
                     </div>
                 </div>
             </div> <!--complete form div -->
