@@ -7,12 +7,20 @@
 </head> <!-- all the libraries-->
 <body class="home blog custom-background" onLoad="
 <?php
-    if (isset($_GET["id"])) {
-        echo "showall([ 'id',";
-        echo $_GET["id"];
+    echo "showResults([";
+    if (isset($_GET["mikroid"])) {
+        echo "'mikroid',";
+        echo $_GET["mikroid"];
+        if (isset($_GET["mesoid"])) {
+            echo ',';
+        }
+    }
+    if (isset($_GET["mesoid"])) {
+        echo "'mesoid',";
+        echo $_GET["mesoid"];
+    }
         echo "])";
 
-    }
 ?>
         ">
 <script src="libs/jquery.js"></script>

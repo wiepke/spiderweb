@@ -13,9 +13,9 @@
 </head> <!-- all the libraries-->
 <body style="width:100%;" onLoad="
 <?php
-    if (isset($_GET["id"])) {
+    if (isset($_GET["mesoid"])) {
         echo "showall([ 'id',";
-        echo $_GET["id"];
+        echo $_GET["mesoid"];
         echo "])";
 
     }

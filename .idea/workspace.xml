@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="" />
+    <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +20,8 @@
       <file leaf-file-name="mesodisplayger.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mesodisplayger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="819">
-              <caret line="186" column="8" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="186" selection-end-column="8" />
+            <state relative-caret-position="3906">
+              <caret line="186" column="8" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="186" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -28,7 +30,7 @@
       <file leaf-file-name="mikrodisplayeng.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mikrodisplayeng.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="861">
               <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="23" />
               <folding />
             </state>
@@ -50,11 +52,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="840">
               <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-              <folding>
-                <marker date="1501592035382" expanded="true" signature="357:384" ph="INSERT INTO `mikroebene`... " />
-                <marker date="1501592035382" expanded="true" signature="357:488" ph="INSERT INTO `mikroebene`... " />
-                <marker date="1501592035382" expanded="true" signature="386:488" ph="INSERT INTO `mikroebene`... " />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,8 +60,8 @@
       <file leaf-file-name="mikroger.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mikroger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="797">
-              <caret line="85" column="88" lean-forward="true" selection-start-line="85" selection-start-column="88" selection-end-line="85" selection-end-column="88" />
+            <state relative-caret-position="1785">
+              <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
               <folding>
                 <marker date="1501593091609" expanded="true" signature="17659:17671" ph="..." />
               </folding>
@@ -74,8 +72,8 @@
       <file leaf-file-name="mikrodisplayger.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mikrodisplayger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            <state relative-caret-position="483">
+              <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -84,8 +82,8 @@
       <file leaf-file-name="serviceout.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serviceout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="1575">
+              <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -94,8 +92,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="6426">
+              <caret line="306" column="0" lean-forward="false" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
               <folding>
                 <marker date="1501592035259" expanded="true" signature="17403:17410" ph="..." />
               </folding>
@@ -106,7 +104,7 @@
       <file leaf-file-name="mikroeng.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mikroeng.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
+            <state relative-caret-position="819">
               <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
               <folding />
             </state>
@@ -116,8 +114,8 @@
       <file leaf-file-name="mesoger.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mesoger.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1029">
-              <caret line="88" column="37" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="88" selection-end-column="37" />
+            <state relative-caret-position="1848">
+              <caret line="88" column="37" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="88" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -138,6 +136,7 @@
       <list>
         <option value="$PROJECT_DIR$/mikroger.php" />
         <option value="$PROJECT_DIR$/mikrodisplayger.php" />
+        <option value="$PROJECT_DIR$/serviceout.js" />
       </list>
     </option>
   </component>
@@ -169,6 +168,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -184,13 +184,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spiderweb_old" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/PhpstormProjects/spiderweb" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
@@ -320,14 +319,15 @@
       <workItem from="1498819865557" duration="2566000" />
       <workItem from="1498831134836" duration="1857000" />
       <workItem from="1501592693356" duration="1037000" />
+      <workItem from="1501673708064" duration="228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5762000" />
+    <option name="totallyTimeSpent" value="5990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-421" y="-1449" width="2578" height="1458" extended-state="7" />
+    <frame x="-421" y="-1449" width="2578" height="1458" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20898438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -549,18 +549,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <marker date="1501592035382" expanded="true" signature="357:384" ph="INSERT INTO `mikroebene`... " />
-            <marker date="1501592035382" expanded="true" signature="357:488" ph="INSERT INTO `mikroebene`... " />
-            <marker date="1501592035382" expanded="true" signature="386:488" ph="INSERT INTO `mikroebene`... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="6426">
+          <caret line="306" column="0" lean-forward="false" selection-start-line="306" selection-start-column="0" selection-end-line="306" selection-end-column="0" />
           <folding>
             <marker date="1501592035259" expanded="true" signature="17403:17410" ph="..." />
           </folding>
@@ -569,7 +565,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mikroeng.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
+        <state relative-caret-position="819">
           <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
           <folding />
         </state>
@@ -617,7 +613,7 @@
     <entry file="file://$PROJECT_DIR$/displayger.php" />
     <entry file="file://$PROJECT_DIR$/mikrodisplayeng.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="861">
           <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="23" />
           <folding />
         </state>
@@ -633,24 +629,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mesoger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="88" column="37" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="88" selection-end-column="37" />
+        <state relative-caret-position="1848">
+          <caret line="88" column="37" lean-forward="false" selection-start-line="52" selection-start-column="28" selection-end-line="88" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mesodisplayger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="186" column="8" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="186" selection-end-column="8" />
+        <state relative-caret-position="3906">
+          <caret line="186" column="8" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="186" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mikroger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="797">
-          <caret line="85" column="88" lean-forward="true" selection-start-line="85" selection-start-column="88" selection-end-line="85" selection-end-column="88" />
+        <state relative-caret-position="1785">
+          <caret line="85" column="33" lean-forward="false" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="33" />
           <folding>
             <marker date="1501593091609" expanded="true" signature="17659:17671" ph="..." />
           </folding>
@@ -659,16 +655,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mikrodisplayger.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="483">
+          <caret line="23" column="5" lean-forward="false" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serviceout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="48" column="31" lean-forward="true" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+        <state relative-caret-position="1575">
+          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
           <folding />
         </state>
       </provider>

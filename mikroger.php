@@ -11,6 +11,7 @@
       
 	<script src="libs/jquery.js"></script>
 	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="formchecker.js"></script>
   
    <!-- header navigation -->
     <?php include 'navigation.php' ?>
@@ -60,7 +61,7 @@
 														Uni:
 													</td>
 													<td colspan="3">
-														<div  ><input name="Uni" placeholder="Uni"  ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus></div>
 													</td>
 												</tr>
 												<tr>
@@ -68,18 +69,18 @@
 														Kurs:
 													</td>
 													<td colspan="3">
-														<div align="right"><input name="Kurs" placeholder="Kurs"  ></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
 													</td>
                                                 </tr><tr>
                                                     <td width="38%">
                                                         Fachbereich:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
+                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
                                                     </td>
                                                 </tr>
                                             </table> <!-- all dimensions of the universities -->
-                                            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
+                                            <button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
                                         </div>
                                     </div>
                                     <div class="panel panel-default">
@@ -90,7 +91,7 @@
                                                         Anzahl von Studenten:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%" ></div>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -98,12 +99,12 @@
                                                         Semesterzahl:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                                        <div align="right"><input id="semesterInput" name="Semesterzahl" placeholder="0" size="72%" ></div>
                                                     </td>
                                                 </tr>
                                             </table>
                                             <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
-                                            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
+                                            <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
                                         </div>
                                     </div>
 									<div class="panel panel-default">
@@ -153,7 +154,7 @@
 										</div>
 									</div> <!-- .panel -->
 					   
-								   <div class="panel panel-default">
+								    <div class="panel panel-default">
 										<div class="panel-collapse collapse" id="third">
 											<table class="table js-options-table">
 												<tr class="header">
@@ -400,7 +401,7 @@
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
-											<button class="btn btn-primary" type="submit">senden</button>
+											<button id="submitButton" class="btn btn-primary" type="submit">senden</button>
 										</div>
 									</div>
 									
