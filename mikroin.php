@@ -37,5 +37,5 @@ function redirect($url, $statusCode = 303)
     die();
 }
 if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
-    redirect ("mikrodisplayeng.php?id=".$id,303);}
-else redirect("mikrodisplayger.php?id=".$id,303);
+    redirect ("mesoeng.php?mikroid=".$id,303);}
+else redirect("mesoger.php?mikroid=".$id,303);

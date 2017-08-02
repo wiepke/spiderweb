@@ -19,6 +19,7 @@
     </div> <!-- language toggle -->
     <script src="libs/jquery.js"></script>
     <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="formchecker.js"></script>
     <div align="center" style="margin-top: 5px;">
         <h2><u> Analysis and conception of research learning - the FideS-Doppelradmodell </u></h2>
         <h3><u> Micro-Level </u></h3>
@@ -38,7 +39,7 @@
                             Uni:
                         </td>
                         <td colspan="3">
-                            <div align="right"><input name="Uni" placeholder="Uni" size="72%" ></div>
+                            <div align="right"><input id="uniInput" name="Uni" placeholder="Uni" size="72%" autofocus></div>
                         </td>
                     </tr>
                     <tr>
@@ -46,18 +47,18 @@
                             Course:
                         </td>
                         <td colspan="3">
-                            <div align="right"><input name="Kurs" placeholder="Course" size="72%" ></div>
+                            <div align="right"><input id="kursInput" name="Kurs" placeholder="Course" size="72%" ></div>
                         </td>
                     </tr><tr>
                         <td width="38%">
                             department:
                         </td>
                         <td colspan="3">
-                            <div align="right"><input name="Fachbereich" placeholder="department" size="72%" ></div>
+                            <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="department" size="72%" ></div>
                         </td>
                     </tr>
                 </table> <!-- all dimensions of the universities -->
-                <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> next </button>
+                <button id="zerobutton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> next </button>
             </div>
                 </div>
                 <div class="panel panel-default">
@@ -68,7 +69,7 @@
                                     number of students:
                                 </td>
                                 <td colspan="3">
-                                    <div align="right"><input name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                    <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%" ></div>
                                 </td>
                             </tr>
                             <tr>
@@ -76,12 +77,12 @@
                                     semester count:
                                 </td>
                                 <td colspan="3">
-                                    <div align="right"><input name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                    <div align="right"><input id="semesterInput" name="Semesterzahl" placeholder="0" size="72%" ></div>
                                 </td>
                             </tr>
                         </table>
                         <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> back </button>
-                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> next </button>
+                        <button id="firstbutton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> next </button>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -337,7 +338,7 @@
                             </tr>
                         </table>
                         <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> back </button>
-                        <button class="btn btn-primary" type="submit">send</button>
+                        <button id="submitButton" class="btn btn-primary" type="submit">send</button>
                     </div>
                 </div>
             </div> <!--complete form div -->

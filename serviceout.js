@@ -1,6 +1,7 @@
 /**
  * Created by fides-WHK on 16.03.2017.
  */
+
 function cleanall(){
     let idclass = document.getElementsByClassName("dia");
     for (let i=0;i<idclass.length;i++) {
@@ -8,8 +9,8 @@ function cleanall(){
     }
     return false;
 }
-
 function setKriterien() {
+
     if (location.pathname.match('mikrodisplayeng') !== null) {
         return ["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
     } else if (location.pathname.match('mikrodisplayger') !== null) {
@@ -34,7 +35,7 @@ function seturl(mikro, Filter){
         tempurl = tempurl + "?mikro=false";
     }
     for (let i=0; i<Filter.length; i++){
-        if (i%2==0){
+        if (i%2===0){
             tempurl = tempurl + "&" + Filter[i];
         }
         else tempurl = tempurl + "=" + Filter[i];
@@ -42,6 +43,88 @@ function seturl(mikro, Filter){
     return tempurl;
 }
 let number_of_showall;
+function showResults(Filter) {
+    document.getElementById('next').disabled=true;
+    document.getElementById('previous').disabled=true;
+    document.getElementById('labels0').hidden=true;
+    document.getElementById('labels1').hidden=true;
+    document.getElementById('labels2').hidden=true;
+    cleanall();
+    number_of_showall=0;
+    let values = [];
+    let Kriterienmikro=[];
+    let Kriterienmeso =[];
+    let urlmikro = "";
+    let urlmeso = "";
+    if (Filter.length===4){
+        if (location.pathname.match('eng') !== null) {
+            Kriterienmikro=["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            Kriterienmeso =["curric. embedding", "modular location", "content", "assessement", "recourses", "time"];
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&from=0";
+        }
+        if (location.pathname.match('ger') !== null) {
+            Kriterienmikro=["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            Kriterienmeso =["Curric. Einbindung", "Modulare Verortung", "Inhaltsrahmen", "Prüfungsrahmen", "Ressourcenrahmen", "Zeitrahmen"];
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&from=0";
+        }
+    }
+    else if (Filter.length===0){
+        return false;
+    }
+    else if (Filter[0].match('mikro')!==null){
+        if (location.pathname.match('eng') !== null) {
+            Kriterienmikro = ["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+        }else {
+            Kriterienmikro=["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+        }
+    }else {
+        if (location.pathname.match('eng') !== null) {
+            Kriterienmeso =["curric. embedding", "modular location", "content", "assessement", "recourses", "time"];
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&from=0";
+        }else {
+            Kriterienmeso =["Curric. Einbindung", "Modulare Verortung", "Inhaltsrahmen", "Prüfungsrahmen", "Ressourcenrahmen", "Zeitrahmen"];
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&from=0";
+        }
+    }
+    if (urlmikro!==""){
+        $.ajax({
+            url: urlmikro,
+            success: function (data) {
+                values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                diagram(Kriterienmikro, values,0);
+                number_of_showall++;
+                document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+            },
+            async: false
+        });
+        document.getElementById('labels0').hidden=false;
+    }
+    if (urlmeso!==""){
+        $.ajax({
+            url: urlmeso,
+            success: function (data) {
+                values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                diagram(Kriterienmeso, values,1);
+                number_of_showall++;
+                document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+            },
+            async: false
+        });
+        document.getElementById('labels1').hidden=false;
+    }
+}
 
 function showall(Filter) {
     document.getElementById('next').disabled=false;
@@ -66,7 +149,7 @@ function showall(Filter) {
                     } else {
                         values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                     }
-                    diagram(Kriterien, values,/*data[i].Uni, data[i].Kurs,*/i);
+                    diagram(Kriterien, values,i);
                     number_of_showall++;
                     document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
                     document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
@@ -98,7 +181,7 @@ function next(Filter) {
     document.getElementById('labels0').hidden=true;
     document.getElementById('labels1').hidden=true;
     document.getElementById('labels2').hidden=true;
-    if (number_of_showall % 3 == 0) {
+    if (number_of_showall % 3 === 0) {
         let values = [];
         let Kriterien = setKriterien();
         let mikro = setmikro();
@@ -107,7 +190,7 @@ function next(Filter) {
         $.ajax({
             url: url,
             success: function (data) {
-                if (data.length != 0) {
+                if (data.length !== 0) {
                     cleanall();
                     for (let i = data.length - 1; i >= 0; i--) {
                         if (mikro) {
@@ -115,7 +198,7 @@ function next(Filter) {
                         } else {
                             values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                         }
-                        diagram(Kriterien, values, /*data[i].Uni, data[i].Kurs, */i);
+                        diagram(Kriterien, values, i);
                         number_of_showall++;
                         document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
                         document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
@@ -128,7 +211,7 @@ function next(Filter) {
             async: false
         });
     }
-    if (number_of_showall % 3 != 0) {
+    if (number_of_showall % 3 !== 0) {
         document.getElementById('next').disabled=true;
         document.getElementById('previous').disabled=false;
     }
@@ -151,7 +234,7 @@ function previous(Filter) {
         document.getElementById('previous').disabled=true;
         return false;
     }
-    if (number_of_showall%3==0) number_of_showall-=3;
+    if (number_of_showall%3===0) number_of_showall-=3;
     else number_of_showall-=number_of_showall%3;
     cleanall();
     let values = [];
@@ -168,7 +251,7 @@ function previous(Filter) {
                 } else {
                     values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
                 }
-                diagram(Kriterien, values,/*data[i].Uni, data[i].Kurs,*/i);
+                diagram(Kriterien, values,i);
                 number_of_showall--;
                 document.getElementById('Unilabel'+i).innerHTML=data[i].Uni;
                 document.getElementById('Kurslabel'+i).innerHTML=data[i].Kurs;
