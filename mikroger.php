@@ -5,13 +5,14 @@
     <head>
 
 		<?php include 'header.php' ?>
+		<script src="libs/jquery.js"></script>
+		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<!-- <script src="formchecker.js"></script> -->
 </head>
    
 <body class="home blog custom-background">
       
-	<script src="libs/jquery.js"></script>
-	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="formchecker.js"></script>
+	
   
    <!-- header navigation -->
     <?php include 'navigation.php' ?>
@@ -71,7 +72,8 @@
 													<td colspan="3">
 														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
 													</td>
-                                                </tr><tr>
+                                                </tr>
+												<tr>
                                                     <td width="38%">
                                                         Fachbereich:
                                                     </td>
@@ -85,7 +87,7 @@
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-collapse collapse" id="first">
-                                            <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                                            <table class="table js-options-table">
                                                 <tr>
                                                     <td width="38%">
                                                         Anzahl von Studenten:
