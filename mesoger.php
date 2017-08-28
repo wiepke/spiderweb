@@ -369,6 +369,6 @@
 	</div><!-- .content -->
 
    <?php include 'footer.php' ?>
-    </body>
+</body>
 <?php
 ?>		

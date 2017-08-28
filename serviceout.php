@@ -10,26 +10,37 @@ echo "[\n";
 $Kriterien = [];
 $REQUESTSPINNE  = "SELECT * FROM mesoebene";
 foreach ($_GET as $key => $value){
-    if ($key!="mikro"){
-    array_push($Kriterien,$key);
-    array_push($Kriterien,$value);
+    if (($key!="mikro")){
+        if($key!="anyway"){
+            if(($key!="from")){
+                array_push($Kriterien,$key);
+                array_push($Kriterien,$value);
+            }
+        }
     }else {
         if ($value=="true"){
             $REQUESTSPINNE  = "SELECT * FROM mikroebene";
         }
     }
 }
-for ($i=0;$i<count($Kriterien)-2;$i++){
+for ($i=0;$i<count($Kriterien);$i++){
     if ($i % 2 == 0) {
         if ($i == 0) {
             $REQUESTSPINNE = $REQUESTSPINNE . " WHERE " . $Kriterien[$i];
         }
-        else $REQUESTSPINNE = $REQUESTSPINNE . ") AND " . $Kriterien[$i];
+        else $REQUESTSPINNE = $REQUESTSPINNE . "') AND " . $Kriterien[$i];
     }
-    else $REQUESTSPINNE = $REQUESTSPINNE."=LOWER(".$Kriterien[$i];
+    else $REQUESTSPINNE = $REQUESTSPINNE."=LOWER('".$Kriterien[$i];
 }
-if (count($Kriterien)!=2) {$REQUESTSPINNE=$REQUESTSPINNE.")";}
-$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$Kriterien[count($Kriterien)-1] .",3;";
+if (!isset($_GET["anyway"])) {
+    if (count($Kriterien) == 0) {
+        $REQUESTSPINNE = $REQUESTSPINNE . " WHERE published=LOWER('1";
+    } else {
+        $REQUESTSPINNE = $REQUESTSPINNE . "') AND published=LOWER('1";
+    }
+}
+if ((count($Kriterien)!=0)||(!isset($_GET['anyway']))) {$REQUESTSPINNE=$REQUESTSPINNE."')";}
+$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$_GET['from'] .",3;";
 $queryObj = mysqli_query($conn, $REQUESTSPINNE);
 $next = 0;
 if ($result = mysqli_fetch_object($queryObj))
