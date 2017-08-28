@@ -5,7 +5,7 @@
 $(document).ready(function(){
     let i=1;
     let id=-1;
-    if (location.search.match('mikroid')!==0){
+    if (location.search.match('mikroid')!==null){
         id=0;
         while(location.search[i]!=="="){
             i++;

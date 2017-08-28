@@ -87,87 +87,87 @@
                         <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
                     </div>
                 </div>
-    <div class="panel panel-default">
-        <div class="panel-collapse collapse" id="second">
-            <table style="width:900px" class="table table-bordered table-striped js-options-table">
-            <tr>
-                <td colspan="3">
-                    <p align="center">
-                        Wie sieht die curriculare Einbindung aus?
-                    </p>
-                </td>
-            </tr>
-                <tr>
-                    <td width="27%">
-                        Die studentische Forschung der ist mit Credit Points versehen und wird benotet.
-                    </td>
-                    <td width="27%">
-                        Die studentische Forschung ist unbenotet, aber mit Credit Points versehen.
-                    </td>
-                    <td width="27%">
-                        Die studentische Forschung wird nicht mit Credit Points versehen.
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <input type="radio" name="Einbindung" value="1">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Einbindung" value="2">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Einbindung" value="3">
-                    </td>
-                </tr>
-            </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-collapse collapse" id="third">
-            <table style="width:900px" class="table table-bordered table-striped js-options-table">
-                <tr>
-                    <td colspan="3">
-                        <p align="center">
-                        Wie ist die Gewichtung (CP-Anzahl) im Curriculum?
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="27%">
-                        Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
-                    </td>
-                    <td width="27%">
-                        Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
-                    </td>
-                    <td width="27%">
-                        Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <input type="radio" name="Inhaltsrahmen" value="1">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Inhaltsrahmen" value="2">
-                    </td>
-                    <td align="center">
-                        <input type="radio" name="Inhaltsrahmen" value="3">
-                    </td>
-                </tr>
-            </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
-            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
-        </div>
-    </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="second">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td colspan="3">
+                                    <p align="center">
+                                        Wie sieht die curriculare Einbindung aus?
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="27%">
+                                    Die studentische Forschung der ist mit Credit Points versehen und wird benotet.
+                                </td>
+                                <td width="27%">
+                                    Die studentische Forschung ist unbenotet, aber mit Credit Points versehen.
+                                </td>
+                                <td width="27%">
+                                    Die studentische Forschung wird nicht mit Credit Points versehen.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="radio" name="Einbindung" value="1">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Einbindung" value="2">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Einbindung" value="3">
+                                </td>
+                            </tr>
+                        </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-collapse collapse" id="third">
+                        <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                            <tr>
+                                <td colspan="3">
+                                    <p align="center">
+                                        Wie ist die Gewichtung (CP-Anzahl) im Curriculum?
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="27%">
+                                    Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
+                                </td>
+                                <td width="27%">
+                                    Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
+                                </td>
+                                <td width="27%">
+                                    Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <input type="radio" name="Inhaltsrahmen" value="1">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Inhaltsrahmen" value="2">
+                                </td>
+                                <td align="center">
+                                    <input type="radio" name="Inhaltsrahmen" value="3">
+                                </td>
+                            </tr>
+                        </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
+                        <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-collapse collapse" id="fourth">
                         <table style="width:900px" class="table table-bordered table-striped js-options-table">
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie sieht die modulare Verortung aus?
+                                        Wie sieht die modulare Verortung aus?
                                     </p>
                                 </td>
                             </tr>
@@ -204,7 +204,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie ist der Prüfungsrahmen gestaltet?
+                                        Wie ist der Prüfungsrahmen gestaltet?
                                     </p>
                                 </td>
                             </tr>
@@ -241,7 +241,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p align="center">
-                                    Wie ist der Zeitrahmen gestaltet?
+                                        Wie ist der Zeitrahmen gestaltet?
                                     </p>
                                 </td>
                             </tr>
@@ -308,8 +308,8 @@
                         <button class="btn btn-primary" type="submit">senden</button>
                     </div>
                 </div>
-    </div> <!--complete form div -->
-    </form>
+            </div> <!--complete form div -->
+        </form>
     </div>
     </body>
 <?php

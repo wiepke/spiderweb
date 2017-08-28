@@ -7,19 +7,19 @@
 </head> <!-- all the libraries-->
 <body class="home blog custom-background" onLoad="
 <?php
-    echo "showResults([";
-    if (isset($_GET["mikroid"])) {
-        echo "'mikroid',";
-        echo $_GET["mikroid"];
-        if (isset($_GET["mesoid"])) {
-            echo ',';
-        }
-    }
+echo "showResults([";
+if (isset($_GET["mikroid"])) {
+    echo "'mikroid',";
+    echo $_GET["mikroid"];
     if (isset($_GET["mesoid"])) {
-        echo "'mesoid',";
-        echo $_GET["mesoid"];
+        echo ',';
     }
-        echo "])";
+}
+if (isset($_GET["mesoid"])) {
+    echo "'mesoid',";
+    echo $_GET["mesoid"];
+}
+echo "])";
 
 ?>
         ">

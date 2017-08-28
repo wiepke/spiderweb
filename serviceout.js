@@ -59,15 +59,15 @@ function showResults(Filter) {
     if (Filter.length===4){
         if (location.pathname.match('eng') !== null) {
             Kriterienmikro=["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
-            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&anyway=1"+"&from=0";
             Kriterienmeso =["curric. embedding", "modular location", "content", "assessement", "recourses", "time"];
-            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&from=0";
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&anyway=1"+"&from=0";
         }
         if (location.pathname.match('ger') !== null) {
             Kriterienmikro=["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
-            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&anyway=1"+"&from=0";
             Kriterienmeso =["Curric. Einbindung", "Modulare Verortung", "Inhaltsrahmen", "Prüfungsrahmen", "Ressourcenrahmen", "Zeitrahmen"];
-            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&from=0";
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[3]+"&anyway=1"+"&from=0";
         }
     }
     else if (Filter.length===0){
@@ -76,18 +76,18 @@ function showResults(Filter) {
     else if (Filter[0].match('mikro')!==null){
         if (location.pathname.match('eng') !== null) {
             Kriterienmikro = ["Assessment", "research topic", "research question", "scheduling", "conduct", "relfection", "results"];
-            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&anyway=1"+"&from=0";
         }else {
             Kriterienmikro=["Assessment", "Forschungsthema", "Forschungsfrage", "Planung", "Durchführung", "Reflexion", "Ergebnisdarstellung"];
-            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&from=0";
+            urlmikro = "serviceout.php?mikro=true&id="+Filter[1]+"&anyway=1"+"&from=0";
         }
     }else {
         if (location.pathname.match('eng') !== null) {
             Kriterienmeso =["curric. embedding", "modular location", "content", "assessement", "recourses", "time"];
-            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&from=0";
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&anyway=1"+"&from=0";
         }else {
             Kriterienmeso =["Curric. Einbindung", "Modulare Verortung", "Inhaltsrahmen", "Prüfungsrahmen", "Ressourcenrahmen", "Zeitrahmen"];
-            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&from=0";
+            urlmeso = "serviceout.php?mikro=false&id="+Filter[1]+"&anyway=1"+"&from=0";
         }
     }
     if (urlmikro!==""){
