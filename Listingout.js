@@ -14,7 +14,7 @@ let stringFilter = document.getElementsByClassName("stringFilter");
 for (let i=0;i<stringFilter.length;i++){
     if (stringFilter[i].value!==""){
         output.push(stringFilter[i].name);
-        output.push("'"+stringFilter[i].value+"'");
+        output.push(stringFilter[i].value);
         /*
         * You could check for name additions as "st.", "uni", "bad" or "an der" here.
         * This can be achieved with str_replace(). It's not implemented because I don't see the necessity.
