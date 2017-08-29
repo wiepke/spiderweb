@@ -14,8 +14,8 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
         array_push($keys,($key));
         array_push($values,($val));
     }
-    $INSERTSPINNE = "UPDATE `mesoebene` SET ".$keys[0]."=".$values[0].
-        " WHERE id=".$_GET["mesoid"];
+    $INSERTSPINNE = "UPDATE `mikroebene` SET ".$keys[0]."=".$values[0].
+        " WHERE id=".$_GET["mikroid"];
     if (mysqli_query($conn,$INSERTSPINNE) === TRUE){
         openLog("New record created successfully",LOG_INFO,1);
     } else {
