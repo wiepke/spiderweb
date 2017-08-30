@@ -5,13 +5,14 @@
     <head>
 
 		<?php include 'header.php' ?>
+		<script src="libs/jquery.js"></script>
+		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="formchecker.js"></script>
 </head>
    
 <body class="home blog custom-background">
       
-	<script src="libs/jquery.js"></script>
-	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="formchecker.js"></script>
+	
   
    <!-- header navigation -->
     <?php include 'navigation.php' ?>
@@ -61,7 +62,7 @@
 														Uni:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus ></div>
 													</td>
 												</tr>
 												<tr>
@@ -71,12 +72,13 @@
 													<td colspan="3">
 														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
 													</td>
-                                                </tr><tr>
+                                                </tr>
+												<tr>
                                                     <td width="38%">
                                                         Fachbereich:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
+                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                             </table> <!-- all dimensions of the universities -->
@@ -85,13 +87,13 @@
                                     </div>
                                     <div class="panel panel-default">
                                         <div class="panel-collapse collapse" id="first">
-                                            <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                                            <table class="table js-options-table">
                                                 <tr>
                                                     <td width="38%">
                                                         Anzahl von Studenten:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%" ></div>
+                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -99,7 +101,7 @@
                                                         Semesterzahl:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="semesterInput" name="Semesterzahl" placeholder="0" size="72%" ></div>
+                                                        <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -121,7 +123,7 @@
 									
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Forschungsthema" value="1">
+														<input type="radio" name="Forschungsthema" value="1"  checked>
 													</td>
 													
 													<td >
@@ -130,7 +132,7 @@
 												</tr>
 												<tr>
 													<td  width="10px" >
-														<input type="radio" name="Forschungsthema" value="2">
+														<input type="radio" name="Forschungsthema" value="2"  >
 													</td>
 													
 													<td >
@@ -139,7 +141,7 @@
 												</tr>
 												<tr>
 													<td  width="10px">
-														<input type="radio" name="Forschungsthema" value="3">
+														<input type="radio" name="Forschungsthema" value="3" >
 													</td>
 													<td >
 														Die Studierenden legen das Thema ihrer Forschungsarbeit selbst fest.
@@ -167,7 +169,7 @@
 												<tr>
 												
 													<td width="10px">
-														<input type="radio" name="Forschungsfrage" value="1">
+														<input type="radio" name="Forschungsfrage" value="1"  checked>
 													</td>
 													<td>
 														Lehrende geben die Forschungsfrage vor.
@@ -175,7 +177,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Forschungsfrage" value="2">
+														<input type="radio" name="Forschungsfrage" value="2" >
 													</td>
 													<td>
 														Die Studierenden entwickeln die Forschungsfrage unter Anleitung von Lehrenden.
@@ -183,7 +185,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Forschungsfrage" value="3">
+														<input type="radio" name="Forschungsfrage" value="3" >
 													</td>
 													<td >
 														Die Studierenden entwickeln die Forschungsfrage selbst.
@@ -210,7 +212,7 @@
 											   
 											   <tr>
 													<td width="10px">
-														<input type="radio" name="Planung" value="1">
+														<input type="radio" name="Planung" value="1"  checked >
 													</td>
 													<td >
 														Lehrende geben Phasen und Fristen des Forschungs-prozesses vor.
@@ -219,7 +221,7 @@
 												<tr>
 													
 													 <td width="10px">
-														<input type="radio" name="Planung" value="2">
+														<input type="radio" name="Planung" value="2" >
 													</td>
 													<td >
 														Die Studierenden planen unter Anleitung von Lehrenden den Forschungsprozess.
@@ -227,7 +229,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Planung" value="3">
+														<input type="radio" name="Planung" value="3" >
 													</td>
 													<td >
 														Die Studierenden planen den Forschungsprozess selbständig.
@@ -252,7 +254,7 @@
 												</tr>
 												<tr>
 													<td  width="10px">
-														<input type="radio" name="Durchfuhrung" value="1">
+														<input type="radio" name="Durchfuhrung" value="1"  checked >
 													</td>
 													<td >
 														Lehrende (oder Tutoren) leiten die Durchführung der Forschung an.
@@ -261,7 +263,7 @@
 												</tr>
 												<tr>
 													 <td  width="10px">
-														<input type="radio" name="Durchfuhrung" value="2">
+														<input type="radio" name="Durchfuhrung" value="2" >
 													</td>
 													<td >
 														Die Studierenden führen mit Unterstützung von Lehrenden (oder Tutoren) ihre Forschung durch.
@@ -269,7 +271,7 @@
 												</tr>
 												<tr>
 													 <td  width="10px">
-														<input type="radio" name="Durchfuhrung" value="3">
+														<input type="radio" name="Durchfuhrung" value="3" >
 													</td>
 													<td>
 														Die Studierenden führen die Forschung selbständig durch.
@@ -294,7 +296,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="1">
+														<input type="radio" name="Reflexion" value="1"  checked>
 													</td>
 													<td >
 														Lehrende (oder Tutoren) geben (oder fordern) zu gesetzten Zeitpunkten (Peer-)Feedback.
@@ -302,7 +304,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="2">
+														<input type="radio" name="Reflexion" value="2" >
 													</td>
 													<td >
 														Gesetztes und selbst eingeholtes Feedback werden kombiniert
@@ -310,7 +312,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="3">
+														<input type="radio" name="Reflexion" value="3" >
 													</td>
 													<td>
 														Die Studierenden erfragen selbst Feedback bei Lehrenden oder Peers.
@@ -335,7 +337,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Ergebnisdarstellung" value="1">
+														<input type="radio" name="Ergebnisdarstellung" value="1"  checked>
 													</td>
 													<td >
 														Die Ergebnisse bleiben im geschützten Rahmen der Beteiligten.
@@ -343,7 +345,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Ergebnisdarstellung" value="2">
+														<input type="radio" name="Ergebnisdarstellung" value="2" >
 													</td>
 													<td >
 														Die Ergebnisse werden im Fachbereich / in der Fakultät öffentlich gemacht.
@@ -351,7 +353,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Ergebnisdarstellung" value="3">
+														<input type="radio" name="Ergebnisdarstellung" value="3" >
 													</td>
 													<td >
 														Die Ergebnisse werden veröffent-licht und hochschulweit sichtbar.
@@ -376,7 +378,7 @@
 												</tr>
 												<tr>
 													<td width="10px" >
-														<input type="radio" name="Assessment" value="1">
+														<input type="radio" name="Assessment" value="1"  checked>
 													</td>
 													<td >
 														Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).
@@ -384,7 +386,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Assessment" value="2">
+														<input type="radio" name="Assessment" value="2" >
 													</td>
 													<td >
 														Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.
