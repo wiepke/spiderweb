@@ -4,6 +4,25 @@
 <html lang="en">
 <head>
   <?php include 'header.php' ?>
+  <?php
+	if (isset($_GET["mikroid"])) {
+									
+	echo "<style type=\"text/css\" >
+			.placeholderdiv {
+			display:none;
+			}
+			</style>";					
+									
+	} else {
+		echo "<style type=\"text/css\" >
+			.placeholderdiv {
+			display:block;
+			}
+			</style>";								
+	}
+								
+?>
+  
 </head> <!-- all the libraries-->
 <body class="home blog custom-background" onLoad="
 <?php
@@ -11,6 +30,7 @@ echo "showResults([";
 if (isset($_GET["mikroid"])) {
     echo "'mikroid',";
     echo $_GET["mikroid"];
+	
     if (isset($_GET["mesoid"])) {
         echo ',';
     }
@@ -48,7 +68,7 @@ echo "])";
 								<div class="clear"></div>
 								<?php
 								if (isset($_GET["mikroid"])) {
-									echo "<p> Vielen Dank für die Teilnahme an unserer Umfrage! In den beiden Registerkarten Meso und Mikro finden Sie die grafische Auswertung ihrer Eingaben.<br> Über \"Nach weiteren Ergebnissen suchen\" können Sie in unserer Datenbank stöbern. Die Parameter des Filters beziehen sich jeweils auf die Mirko- oder Makroebene der Befragung - wechseln Sie die Registrkarte, um die jeweils anderen Filtereinstellungen vornehmen zu können.
+									echo "<p> Vielen Dank für die Teilnahme an unserer Umfrage! In den beiden Registerkarten Meso und Mikro finden Sie die grafische Auswertung ihrer Eingaben.<br> Über \"Nach weiteren Ergebnissen suchen\" können Sie in unserer Datenbank stöbern. Die Parameter des Filters beziehen sich jeweils auf die Mirko- oder Mesoebene der Befragung - wechseln Sie die Registrkarte, um die jeweils anderen Filtereinstellungen vornehmen zu können.
 									
 									
 									</p>
@@ -61,7 +81,22 @@ echo "])";
 									<a href=\"mikroger.php\" class=\"poll-link\">  den Fragebogen selbst ausfüllen </a><br><br>
 									
 									
-									</p>							
+									</p>		
+
+									 <script type=\"text/javascript\">
+										$('document').ready(showfilter);
+										
+										function showfilter() {
+											$('.collapse').addClass('in');
+											$('.expand-area').attr('aria-expanded','true');
+											$('.collapse').attr('aria-expanded','true');
+											alert('bla');
+										
+										}
+										</script>		
+										
+										
+										
 
 									"; //end output
 								}
@@ -82,6 +117,12 @@ echo "])";
 									
 									<div class="tab-pane active" id="tab1">
 						<div class="left-col">
+						
+							<div class="placeholderdiv">
+								<p class="course-meta last" id="Unilabel0"> Ergebnisedarstellung </p><br>
+								<p  class="course-meta-sub-label">Wählen sie auf der rechten Seite Ihre Suchkriterien</p>
+								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
+							</div>
                            <div id="labels0">
 	
 								<p class="course-meta" id="Unilabel0">Dummy </p> <p id="Kurslabel0" class="course-meta">Dummy</p>  <p id="Fachbereichlabel0" class="course-meta last"> Dummy </p>
@@ -279,6 +320,11 @@ echo "])";
 					
 					<div class="tab-pane " id="tab2">
 						<div class="left-col">
+							<div class="placeholderdiv">
+								<p class="course-meta last" id="Unilabel0"> Ergebnisedarstellung </p><br>
+								<p  class="course-meta-sub-label">Wählen sie auf der rechten Seite Ihre Suchkriterien</p>
+								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
+							</div>
 							<div id="labels1" >
 								<p class="course-meta" id="Unilabel1">Dummy </p> <p id="Kurslabel1" class="course-meta">Dummy</p>  <p id="Fachbereichlabel1" class="course-meta last"> Dummy </p>
 							
