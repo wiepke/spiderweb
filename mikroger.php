@@ -44,9 +44,9 @@
 							</ul>
 							</div> <!-- language toogle -->
 						
-							<p >
-								Im Folgenden betrachten wir die Mikroebene Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
-							</p>
+							<p>Mikroebene: Im folgenden betrachten wir die Mikroebene Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
+
+				</p>
 				
 							<!-- start poll mikro -->
 					
