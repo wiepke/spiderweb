@@ -42,9 +42,9 @@
 							</ul>
 							</div> <!-- language toogle -->
 						
-							<p >
-								 Im Folgenden betrachten wir die Mesoebene Ihrer Lehrveranstaltungen (Rahmenbedingungen), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.
-							</p>
+							<p>
+				Mesoebene: Im folgenden betrachten wir die Mesoebene Ihrer Lehrveranstaltungen (//Rahmenbedingungen//), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.	
+				</p>
 				
 							<!-- start poll mikro -->
 	
