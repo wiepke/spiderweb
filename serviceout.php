@@ -40,7 +40,7 @@ if (!isset($_GET["anyway"])) {
     }
 }
 if ((count($Kriterien)!=0)||(!isset($_GET['anyway']))) {$REQUESTSPINNE=$REQUESTSPINNE."')";}
-$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$_GET['from'] .",3;";
+$REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$_GET['from'] .",1;";
 $queryObj = mysqli_query($conn, $REQUESTSPINNE);
 $next = 0;
 if ($result = mysqli_fetch_object($queryObj))

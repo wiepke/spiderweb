@@ -68,7 +68,7 @@ echo "])";
 								<div class="clear"></div>
 								<?php
 								if (isset($_GET["mikroid"])) {
-									echo "<p> Vielen Dank für die Teilnahme an unserer Umfrage! In den beiden Registerkarten Meso und Mikro finden Sie die grafische Auswertung ihrer Eingaben.<br> Über \"Nach weiteren Ergebnissen suchen\" können Sie in unserer Datenbank stöbern. Die Parameter des Filters beziehen sich jeweils auf die Mirko- oder Mesoebene der Befragung - wechseln Sie die Registrkarte, um die jeweils anderen Filtereinstellungen vornehmen zu können.
+									echo "<p> Vielen Dank für die Teilnahme an unserer Umfrage! In den beiden Registerkarten Meso und Mikro finden Sie die grafische Auswertung ihrer Eingaben.<br> Über \"Nach weiteren Ergebnissen suchen\" können Sie in unserer Datenbank stöbern. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder Mesoebene der Befragung - wechseln Sie die Registrkarte, um die jeweils anderen Filtereinstellungen vornehmen zu können.
 									
 									
 									</p>
@@ -119,13 +119,13 @@ echo "])";
 						<div class="left-col">
 						
 							<div class="placeholderdiv">
-								<p class="course-meta last" id="Unilabel0"> Ergebnisedarstellung </p><br>
+								<p class="course-meta last"> Ergebnisedarstellung </p><br>
 								<p  class="course-meta-sub-label">Wählen sie auf der rechten Seite Ihre Suchkriterien</p>
 								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
 							</div>
-                           <div id="labels0">
-	
-								<p class="course-meta" id="Unilabel0">Dummy </p> <p id="Kurslabel0" class="course-meta">Dummy</p>  <p id="Fachbereichlabel0" class="course-meta last"> Dummy </p>
+                            <div id="labels0">
+
+                                <p class="course-meta" id="Unilabel0">Dummy </p> <p id="Kurslabel0" class="course-meta">Dummy</p>  <p id="Fachbereichlabel0" class="course-meta last"> Dummy </p>
 							
 								<br style="line-height: .5em;"> 
 								
@@ -137,37 +137,12 @@ echo "])";
 						   
 								<p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p> 
 									  
-							</div>
-											
-							<div  id="diagram0" class="dia"></div> 
+                            </div>
+                            <div  id="diagram0" class="dia"></div>
 							
-								
-							<div id="labels2">
-										  
-								<p>Universität3:</p>
-												
-								<p id="Unilabel2">Dummy</p>
-						   
-								<p>Projekttitel:</p>
-						   
-								<p id="Kurslabel2">Dummy</p>
-							
-								<p>Fachbereich:</p>
-							
-								<p id="Fachbereichlabel2">Dummy</p>
-						   
-								<p>Anzahl von Studierenden:</p>
-							
-								<p id="AnzahlStudentenlabel2">Dummy</p>
-						
-								<p>Semesterzahl der Studierenden:</p>
-							
-								<p id="Semesterzahllabel2">Dummy</p>
-							</div>				  
-							<div  id="diagram2" class="dia"></div>
-							
-							<button id="previous" type="button" class="btn btn-primary" disabled onClick="previous(Listing());return false;">Letztes Ergebnis</button>
-							<button id="next" type="button" class="btn btn-primary" disabled onClick="next(Listing());return false;">Nächstes Ergebnis</button>
+
+							<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true);return false;">Letztes Ergebnis</button>
+							<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true);return false;">Nächstes Ergebnis</button>
 						
 						</div>
 						
@@ -180,7 +155,7 @@ echo "])";
 										Uni:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilter" size="40">
+										<input name="Uni" value="" class="stringFilterMikro" size="40">
 									</td>
 								</tr>
 								<tr>
@@ -188,22 +163,47 @@ echo "])";
 										Kurs:
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilter" size="40">
+										<input name="Kurs" value="" class="stringFilterMikro" size="40">
 									</td>
 								</tr>
+                                <tr>
+                                    <td>
+                                        Fachbereich:
+                                    </td>
+                                    <td colspan="3">
+                                        <input name="Fachbereich" value="" class="stringFilterMikro" size="40">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Anzahl von Studierenden:
+                                    </td>
+                                    <td colspan="3">
+                                        <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Semesterzahl der Studierenden:
+                                    </td>
+                                    <td colspan="3">
+                                        <input name="Semesterzahl" value="" class="stringFilterMikro" size="40">
+                                    </td>
+                                </tr>
 								<tr>
 									<td>
 										Assessment:
 									</td>
 									<td>
 										
-										<input type="radio" name="Assessment" class="dimensionFilter" value="1">
+										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
 									</td>
 									<td>
-										<input type="radio" name="Assessment" class="dimensionFilter" value="2">
+										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
 									</td>
 									<td>
-										<input type="radio" name="Assessment" class="dimensionFilter" value="3">
+										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 								
@@ -213,13 +213,13 @@ echo "])";
 									</td>
 									<td>
 									
-										<input type="radio" name="Forschungsthema" class="dimensionFilter" value="1">
+										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="1">
 									</td>
 									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilter" value="2">
+										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="2">
 									</td>
 									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilter" value="3">
+										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 										
@@ -228,13 +228,13 @@ echo "])";
 										Forschungsfrage:
 									</td>
 									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilter" value="1">
+										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="1">
 									</td>
 									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilter" value="2">
+										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Forschungsfrage" class="dimensionFilter" value="3">
+										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="3">
 									</td>
 								
 								</tr>
@@ -246,13 +246,13 @@ echo "])";
 									
 									
 									<td >
-										<input type="radio" name="Planung" class="dimensionFilter" value="1">
+										<input type="radio" name="Planung" class="dimensionFilterMikro" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Planung" class="dimensionFilter" value="2">
+										<input type="radio" name="Planung" class="dimensionFilterMikro" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Planung" class="dimensionFilter" value="3">
+										<input type="radio" name="Planung" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 										
@@ -263,13 +263,13 @@ echo "])";
 									
 									
 									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilter" value="1">
+										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilter" value="2">
+										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilter" value="3">
+										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 											
@@ -278,13 +278,13 @@ echo "])";
 										Reflexion:
 									</td>
 									<td>
-										<input type="radio" name="Reflexion" class="dimensionFilter" value="1">
+										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilter" value="2">
+										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilter" value="3">
+										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 										
@@ -293,18 +293,18 @@ echo "])";
 										Ergebnisdarstellung:
 									</td>
 									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="1">
+										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="2">
+										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="2">
 									</td>
 									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilter" value="3">
+										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="3">
 									</td>
 								</tr>
 							</table>
 							
-							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listing())">Filter anwenden</button>
+							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true)">Filter anwenden</button>
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="cleanFilter(); return false">bereinige Filter</button>
 							
 							</div> <!-- collapse -->
@@ -321,7 +321,7 @@ echo "])";
 					<div class="tab-pane " id="tab2">
 						<div class="left-col">
 							<div class="placeholderdiv">
-								<p class="course-meta last" id="Unilabel0"> Ergebnisedarstellung </p><br>
+								<p class="course-meta last"> Ergebnisedarstellung </p><br>
 								<p  class="course-meta-sub-label">Wählen sie auf der rechten Seite Ihre Suchkriterien</p>
 								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
 							</div>
@@ -342,8 +342,8 @@ echo "])";
 							
 							<div  id="diagram1" class="dia"></div>
 							
-							<button id="previous1" type="button" class="btn btn-primary" disabled onClick="previous(Listing());return false;">Letztes Ergebnis</button>
-							<button id="next1" type="button" class="btn btn-primary" disabled onClick="next(Listing());return false;">Nächstes Ergebnis</button>
+							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Letztes Ergebnis</button>
+							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Nächstes Ergebnis</button>
 							
 						</div> <!-- end left col -->
 						
@@ -358,7 +358,7 @@ echo "])";
 										Uni:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilter" size="40">
+										<input name="Uni" value="" class="stringFilterMeso" size="40">
 									</td>
 								</tr>
 								<tr>
@@ -366,7 +366,7 @@ echo "])";
 										Kurs:
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilter" size="40">
+										<input name="Kurs" value="" class="stringFilterMeso" size="40">
 									</td>
 								</tr>
 								
@@ -375,7 +375,7 @@ echo "])";
 										Fachbereich:
 									</td>
 									<td colspan="3">
-										<input name="Fachbereich" value="" class="stringFilter" size="40">
+										<input name="Fachbereich" value="" class="stringFilterMeso" size="40">
 									</td>
 								</tr>
 								
@@ -384,7 +384,7 @@ echo "])";
 										 Anzahl von Studierenden:
 									</td>
 									<td colspan="3">
-										<input name="AnzahlStudenten" value="" class="stringFilter" size="40">
+										<input name="AnzahlStudenten" value="" class="stringFilterMeso" size="40">
 									</td>
 								</tr>
 								<tr>
@@ -392,7 +392,7 @@ echo "])";
 										 Semesterzahl der Studierenden:
 									</td>
 									<td colspan="3">
-										<input name="Semesterzahl" value="" class="stringFilter" size="40">
+										<input name="Semesterzahl" value="" class="stringFilterMeso" size="40">
 									</td>
 								</tr>
 								
@@ -402,13 +402,13 @@ echo "])";
 									</td>
 									<td>
 										
-										<input type="radio" name="Einbindung" class="dimensionFilter" value="1">
+										<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
 									</td>
 									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilter" value="2">
+										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
 									</td>
 									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilter" value="3">
+										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
 									</td>
 								</tr>
 								
@@ -418,13 +418,13 @@ echo "])";
 									</td>
 									<td>
 									
-										<input type="radio" name="Verortung" class="dimensionFilter" value="1">
+										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="1">
 									</td>
 									<td>
-										<input type="radio" name="Verortung" class="dimensionFilter" value="2">
+										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="2">
 									</td>
 									<td>
-										<input type="radio" name="Verortung" class="dimensionFilter" value="3">
+										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="3">
 									</td>
 								</tr>
 										
@@ -436,10 +436,10 @@ echo "])";
 										<input type="radio" name="Inhaltsrahmen" class="dimensionFilter" value="1">
 									</td>
 									<td>
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilter" value="2">
+										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilter" value="3">
+										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="3">
 									</td>
 								
 								</tr>
@@ -451,13 +451,13 @@ echo "])";
 									
 									
 									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilter" value="1">
+										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilter" value="2">
+										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilter" value="3">
+										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
 									</td>
 								</tr>
 										
@@ -468,13 +468,13 @@ echo "])";
 									
 									
 									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilter" value="1">
+										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilter" value="2">
+										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilter" value="3">
+										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="3">
 									</td>
 								</tr>
 											
@@ -483,19 +483,19 @@ echo "])";
 										Ressourcenrahmen:
 									</td>
 									<td>
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilter" value="1">
+										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
 									</td>
 									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilter" value="2">
+										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
 									</td>
 									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilter" value="3">
+										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
 									</td>
 								</tr>
 										
 								
 							</table>
-							<button type="button" class="btn btn-primary" onClick="showall(Listing())">Filter anwenden</button>
+							<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false)">Filter anwenden</button>
 								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
 							
 						</div> <!--- end collapse -->
