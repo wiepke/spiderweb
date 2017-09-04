@@ -171,6 +171,9 @@ function showall(Filter,mikro) {
                         document.getElementById('AnzahlStudentenlabel1').innerHTML=data[i].AnzahlStudenten;
                     }
                 }
+                if (data.length===0){
+                    alert("Mit diesen Filtern gibt es leider keine Ergebnisse.")
+                }
             },
             async: false
         });
