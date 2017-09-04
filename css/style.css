@@ -189,14 +189,129 @@ article table tr.header td {
 	margin-bottom:20px !important;
 }
 
-#left-col {
-	    width: 50%;
-    float: left;
-    box-sizing: border-box;
+.tab-content {
+	padding-top:20px;
 }
 
-#right-col {
-	width: 40%;
+.left-col {
+	width: 55%;
+    float: left;
+}
+
+.right-col {
+	width: 45%;
     box-sizing: border-box;
     float: right;
+	padding-top: 30px;
 }
+
+p.course-meta {
+	display:inline-block;
+	font-weight:bold;
+	margin:0;
+	line-height: .5em;
+}
+
+p.course-meta:after {
+	content:" / "
+}
+
+p.course-meta.last:after {
+	content:"";
+}
+
+p.course-meta-sub-label {
+	display:inline-block;
+	font-weight:bold;
+	margin:0;
+	color:#666;
+	font-size:12px;
+	line-height: .5em;
+	
+}
+
+p.course-meta-sub {
+	display:inline-block;
+	margin:0;
+	color:#666;
+	font-size:12px;
+	line-height: .5em;
+}
+
+button.btn.expand-area {
+	background-color:transparent;
+	color:#000;
+	text-align: left;
+	letter-spacing: 0;
+    transition: none;
+	text-transform: none;
+	color: #23527c;
+	margin-bottom:20px;
+	padding-left:0;
+	font-weight:bold;
+}
+
+button.btn.expand-area:hover {
+	    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.18), 0 0px 0px 0 rgba(0, 0, 0, 0.15);
+}
+button.btn.expand-area.collapsed:after {
+	content:" \e259";
+	font-family: 'Glyphicons Halflings';
+	display: inline-block;
+    float: right;
+    margin-left: 3px;
+}
+
+button.btn.expand-area:after {
+	content:"\e260";
+	font-family: 'Glyphicons Halflings';
+	display: inline-block;
+    float: right;
+    margin-left: 3px;
+}
+.halfwidth {
+	width:49.5%
+}
+
+@media only screen and (max-width: 992px) {
+	.halfwidth {
+		width:100%
+	}
+}
+
+.bottomspace {
+	margin-bottom:10px !important;
+	
+}
+svg:not(:root) {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 789px) {
+	.left-col, .right-col {
+		float:none;
+		width:100%;
+	}
+}
+.btn-primary[disabled]:hover {
+	background-color: #ee7f7c !important;
+    border-color: none !important;
+	opacity: .65 !important;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    background-color: #a71b18 !important;
+}
+
+.tablebg {    
+	
+	background-color: #d0e1e9;
+
+    margin-bottom: 10px !important;
+    color: #000;
+    margin-top: 10px;
+}
+
+
+

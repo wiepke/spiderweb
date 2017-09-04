@@ -5,12 +5,13 @@
 <head>
 
     <?php include 'header.php' ?>
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="formchecker.js"></script>
 </head>
 <body class="home blog custom-background">
 
-<script src="libs/jquery.js"></script>
-<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="formchecker.js"></script>
+
 
 <!-- header navigation -->
 <?php include 'navigation.php' ?>
@@ -27,7 +28,7 @@
                 <!-- post content wrapper -->
                 <article class="post-915 post type-post status-publish format-standard hentry">
 
-                    <h2 class="post-title" style="color:#666666;">Publizieren</h2>
+                    <h2 class="post-title" style="color:#666666;">Eine letzte Frage ... </h2>
                     <div class="clear"></div>
 
                     <!-- model content starts here -->
@@ -40,32 +41,36 @@
                                 <li><a href="#">deutsch</a></li>
                                 <li><a href="indexeng.html">englisch</a></li>
                             </ul>
-                        </div> <!-- language toogle -->
-                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" style="width:950px">
+                        </div> <!-- language toogle --><br>
+                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" >
                             <div class="panel-group" id="forms">
                                 <div class="panel panel-default">
-                                    <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                                   <table class="table js-options-table tablebg">
+                                        <tr class="header">
+											<td colspan="2">
+													   
+												Möchten Sie ihre Ergebnisse publizieren?
+													   
+											</td>
+										</tr>
                                         <tr>
-                                            <td colspan="3">
-                                                <p align="center">
-                                                    Möchten Sie Ihre Ergebnisse publizieren?
-                                                </p>
+											<td width="10px" >
+                                                <input type="radio" name="published" value="1" required>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="27%">
+                                            <td>
                                                 Ja, alle sollen ihre Kurse mit meinem Vergleichen können.
-                                            <td width="27%">
-                                                Nein, nur ich möchte die Ergebnisse einsehen können
                                             </td>
+                                                
                                         </tr>
                                         <tr>
-                                            <td align="center">
-                                                <input type="radio" name="published" value="1">
+											<td width="10px" >
+                                                <input type="radio" name="published" value="0" required>
                                             </td>
-                                            <td align="center">
-                                                <input type="radio" name="published" value="0">
+											<td>
+												Nein, nur ich möchte die Ergebnisse einsehen können
                                             </td>
+                                            
+                                            
                                         </tr>
                                     </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
                                     <button class="btn btn-primary" type="submit">zur Anzeige</button>
