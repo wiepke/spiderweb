@@ -7,6 +7,8 @@ function cleanall(){
     for (let i=0;i<idclass.length;i++) {
         idclass[i].innerHTML = '';
     }
+    document.getElementById("labels1").hidden=true;
+    document.getElementById("labels0").hidden=true;
     return false;
 }
 function setKriterien() {
@@ -283,15 +285,19 @@ function previous(Filter,mikro) {
     }
 }
 function cleanFilter() {
-    let inputs = document.getElementsByClassName("idclass");
+    inputs = document.getElementsByClassName("stringFilterMikro");
     for (let i=0;i<inputs.length;i++){
         inputs[i].value="";
     }
-    inputs = document.getElementsByClassName("stringFilter");
+    inputs = document.getElementsByClassName("dimensionFilterMikro");
+    for (let i=0;i<inputs.length;i++){
+        inputs[i].checked=false;
+    }
+    inputs = document.getElementsByClassName("stringFilterMeso");
     for (let i=0;i<inputs.length;i++){
         inputs[i].value="";
     }
-    inputs = document.getElementsByClassName("dimensionFilter");
+    inputs = document.getElementsByClassName("dimensionFilterMeso");
     for (let i=0;i<inputs.length;i++){
         inputs[i].checked=false;
     }
