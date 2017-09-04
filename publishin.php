@@ -25,8 +25,8 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $INSERTSPINNE = "UPDATE `mesoebene` SET ".$keys[0]."=".$values[0].
-        " WHERE id=".$_GET["mesoid"];
+    $INSERTSPINNE = "UPDATE `mikroebene` SET ".$keys[0]."=".$values[0].
+        " WHERE id=".$_GET["mikroid"];
     if (mysqli_query($conn,$INSERTSPINNE) === TRUE){
         openLog("New record created successfully",LOG_INFO,1);
     } else {
@@ -39,7 +39,6 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
 
     $conn->close();
 }
-echo $INSERTSPINNE;
 function redirect($url, $statusCode = 303)
 {
     header('Location: ' . $url, true, $statusCode);
