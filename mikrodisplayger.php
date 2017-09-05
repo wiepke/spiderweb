@@ -140,7 +140,7 @@ echo "])";
                             </div>
                             <div  id="diagram0" class="dia"></div>
 							
-
+                            <p id="Pagination0" hidden> dummy von dummy</p>
 							<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true);return false;">Letztes Ergebnis</button>
 							<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true);return false;">Nächstes Ergebnis</button>
 						
@@ -341,7 +341,7 @@ echo "])";
 							</div>
 							
 							<div  id="diagram1" class="dia"></div>
-							
+                            <p id="Pagination1" hidden> dummy von dummy</p>
 							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Letztes Ergebnis</button>
 							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Nächstes Ergebnis</button>
 							
