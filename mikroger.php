@@ -123,7 +123,7 @@
 									
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Forschungsthema" value="1"  checked>
+														<input type="radio" name="Forschungsthema" value="1"  >
 													</td>
 													
 													<td >
@@ -169,7 +169,7 @@
 												<tr>
 												
 													<td width="10px">
-														<input type="radio" name="Forschungsfrage" value="1"  checked>
+														<input type="radio" name="Forschungsfrage" value="1"  >
 													</td>
 													<td>
 														Lehrende geben die Forschungsfrage vor.
@@ -212,7 +212,7 @@
 											   
 											   <tr>
 													<td width="10px">
-														<input type="radio" name="Planung" value="1"  checked >
+														<input type="radio" name="Planung" value="1"   >
 													</td>
 													<td >
 														Lehrende geben Phasen und Fristen des Forschungs-prozesses vor.
@@ -254,7 +254,7 @@
 												</tr>
 												<tr>
 													<td  width="10px">
-														<input type="radio" name="Durchfuhrung" value="1"  checked >
+														<input type="radio" name="Durchfuhrung" value="1"   >
 													</td>
 													<td >
 														Lehrende (oder Tutoren) leiten die Durchführung der Forschung an.
@@ -296,7 +296,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="1"  checked>
+														<input type="radio" name="Reflexion" value="1"  >
 													</td>
 													<td >
 														Lehrende (oder Tutoren) geben (oder fordern) zu gesetzten Zeitpunkten (Peer-)Feedback.
@@ -337,7 +337,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Ergebnisdarstellung" value="1"  checked>
+														<input type="radio" name="Ergebnisdarstellung" value="1"  >
 													</td>
 													<td >
 														Die Ergebnisse bleiben im geschützten Rahmen der Beteiligten.
@@ -378,7 +378,7 @@
 												</tr>
 												<tr>
 													<td width="10px" >
-														<input type="radio" name="Assessment" value="1"  checked>
+														<input type="radio" name="Assessment" value="1"  >
 													</td>
 													<td >
 														Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).
