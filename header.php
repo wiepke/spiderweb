@@ -29,6 +29,8 @@
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 	
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	
+	
 	<style type="text/css">
 
     /* header color */
@@ -129,3 +131,4 @@
 <link rel="icon" href="http://fides-projekt.de/wp-content/uploads/2017/04/Pfeil.jpg" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="http://fides-projekt.de/wp-content/uploads/2017/04/Pfeil.jpg" />
 <meta name="msapplication-TileImage" content="http://fides-projekt.de/wp-content/uploads/2017/04/Pfeil.jpg" />
+
