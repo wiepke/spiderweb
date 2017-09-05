@@ -128,6 +128,8 @@ function showResults(Filter) {
 }
 
 function showall(Filter,mikro) {
+    document.getElementById("Pagination0").hidden=true;
+    document.getElementById("Pagination1").hidden=true;
     if (mikro){
         document.getElementById('nextmikro').disabled=false;
         document.getElementById('previousmikro').disabled=true;
@@ -150,30 +152,48 @@ function showall(Filter,mikro) {
             url: url,
             mikro: mikro,
             success: function (data) {
-                for (let i=data.length-1; i>=0; i--) {
-                    if (mikro){
-                        values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
-                        diagram(Kriterien, values,0);
-                        number_of_showall_mikro++;
-                        document.getElementById('Unilabel0').innerHTML=data[i].Uni;
-                        document.getElementById('Kurslabel0').innerHTML=data[i].Kurs;
-                        document.getElementById('Fachbereichlabel0').innerHTML=data[i].Fachbereich;
-                        document.getElementById('Semesterzahllabel0').innerHTML=data[i].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[i].AnzahlStudenten;
-                    } else {
-                        values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
-                        diagram(Kriterien, values,1);
-                        number_of_showall_meso++;
-                        document.getElementById('Unilabel1').innerHTML=data[i].Uni;
-                        document.getElementById('Kurslabel1').innerHTML=data[i].Kurs;
-                        document.getElementById('Fachbereichlabel1').innerHTML=data[i].Fachbereich;
-                        document.getElementById('Semesterzahllabel1').innerHTML=data[i].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[i].AnzahlStudenten;
+                if (data[0].hasOwnProperty("limit")){
+                    if (mikro) {
+                        document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                        document.getElementById("Pagination0").hidden=false;
+                        document.getElementById('nextmikro').disabled=true;
+                    }
+                    else {
+                        document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                        document.getElementById("Pagination1").hidden=false;
+                        document.getElementById('nextmeso').disabled=true;
                     }
                 }
-                if (data.length===0){
-                    alert("Mit diesen Filtern gibt es leider keine Ergebnisse.")
+                else {
+                    if (mikro){
+                        values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                        diagram(Kriterien, values,0);
+                        number_of_showall_mikro++;
+                        document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                        document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                        document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                        document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                    } else {
+                        values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                        diagram(Kriterien, values,1);
+                        number_of_showall_meso++;
+                        document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                        document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                        document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                        document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                    }
+                    if (mikro) {
+                        document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                        document.getElementById("Pagination0").hidden=false;
+                    }
+                    else {
+                        document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                        document.getElementById("Pagination1").hidden=false;
+                    }
                 }
+
             },
             async: false
         });
@@ -197,34 +217,42 @@ function next(Filter,mikro) {
     $.ajax({
         url: url,
         success: function (data) {
-            if (data.length !== 0) {
-                cleanall();
-                for (let i = data.length - 1; i >= 0; i--) {
-                    if (mikro) {
-                        values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
-                        diagram(Kriterien, values, 0);
-                        number_of_showall_mikro++;
-                        document.getElementById('Unilabel0').innerHTML = data[i].Uni;
-                        document.getElementById('Kurslabel0').innerHTML = data[i].Kurs;
-                        document.getElementById('Fachbereichlabel0').innerHTML = data[i].Fachbereich;
-                        document.getElementById('Semesterzahllabel0').innerHTML = data[i].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel0').innerHTML = data[i].AnzahlStudenten;
-                    } else {
-                        values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
-                        diagram(Kriterien, values, 1);
-                        number_of_showall_meso++;
-                        document.getElementById('Unilabel1').innerHTML = data[i].Uni;
-                        document.getElementById('Kurslabel1').innerHTML = data[i].Kurs;
-                        document.getElementById('Fachbereichlabel1').innerHTML = data[i].Fachbereich;
-                        document.getElementById('Semesterzahllabel1').innerHTML = data[i].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel1').innerHTML = data[i].AnzahlStudenten;
-                    }
-                }
-            } else
-                if (mikro) document.getElementById('nextmikro').disabled=true;
-                else document.getElementById('nextmeso').disabled=true;
-
-
+            cleanall();
+            if (mikro){
+                values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                diagram(Kriterien, values,0);
+                number_of_showall_mikro++;
+                document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+            } else {
+                values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                diagram(Kriterien, values,1);
+                number_of_showall_meso++;
+                document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+            }
+            if (mikro) {
+                document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+            }
+            else {
+                document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+            }
+        },
+        error: function(){
+            if (mikro) {
+                document.getElementById('nextmikro').disabled=true;
+                return false;
+            }
+            else {
+                document.getElementById('nextmeso').disabled = true;
+                return false;
+            }
         },
         async: false
     });
@@ -258,23 +286,37 @@ function previous(Filter,mikro) {
     $.ajax({
         url: url,
         success: function (data) {
-            for (let i=data.length-1; i>=0; i--) {
+            if (data[0].hasOwnProperty("limit")){
+                if (mikro) {
+                    document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                }
+                else {
+                    document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                }
+            }
+            else {
                 if (mikro){
-                    values = [data[i].Assessment, data[i].Forschungsthema, data[i].Forschungsfrage, data[i].Planung, data[i].Durchfuhrung, data[i].Reflexion, data[i].Ergebnisdarstellung];
+                    values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
                     diagram(Kriterien, values,0);
-                    document.getElementById('Unilabel0').innerHTML=data[i].Uni;
-                    document.getElementById('Kurslabel0').innerHTML=data[i].Kurs;
-                    document.getElementById('Fachbereichlabel0').innerHTML=data[i].Fachbereich;
-                    document.getElementById('Semesterzahllabel0').innerHTML=data[i].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[i].AnzahlStudenten;
+                    document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                    document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                    document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                    document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                 } else {
-                    values = [data[i].Einbindung, data[i].Verortung, data[i].Inhaltsrahmen, data[i].Prufungsrahmen, data[i].Ressourcenrahmen, data[i].Zeitrahmen];
+                    values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
                     diagram(Kriterien, values,1);
-                    document.getElementById('Unilabel1').innerHTML=data[i].Uni;
-                    document.getElementById('Kurslabel1').innerHTML=data[i].Kurs;
-                    document.getElementById('Fachbereichlabel1').innerHTML=data[i].Fachbereich;
-                    document.getElementById('Semesterzahllabel1').innerHTML=data[i].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[i].AnzahlStudenten;
+                    document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                    document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                    document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                    document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                }
+                if (mikro) {
+                    document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                }
+                else {
+                    document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
                 }
             }
         },
