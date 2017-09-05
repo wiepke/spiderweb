@@ -40,6 +40,12 @@ if (!isset($_GET["anyway"])) {
     }
 }
 if ((count($Kriterien)!=0)||(!isset($_GET['anyway']))) {$REQUESTSPINNE=$REQUESTSPINNE."')";}
+
+$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
+$statement = $pdo->prepare($REQUESTSPINNE);
+$statement->execute();
+$row = $statement->rowCount();
+
 $REQUESTSPINNE = $REQUESTSPINNE." LIMIT " .$_GET['from'] .",1;";
 $queryObj = mysqli_query($conn, $REQUESTSPINNE);
 $next = 0;
@@ -55,4 +61,10 @@ while ($next) {
     }
     else $next=0;
 }
+if($row!==0) {
+    echo ",";
+}
+echo "\n{";
+echo "\n".'"limit": '.'"'.$row.'"'."\n";
+echo "}";
 echo "\n]";
