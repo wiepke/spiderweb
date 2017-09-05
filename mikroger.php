@@ -7,7 +7,7 @@
 		<?php include 'header.php' ?>
 		<script src="libs/jquery.js"></script>
 		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<script src="formchecker.js"></script>
+		<script src="js/formchecker.js"></script>
 </head>
    
 <body class="home blog custom-background">
@@ -35,18 +35,11 @@
 						<!-- model content starts here -->
 						<div class="post-content">
 					
-							<div class="dropdown"  style="text-align:right;">
-								<button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown">Sprache
-									<span class="caret"></span></button>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="#">deutsch</a></li>
-									<li><a href="indexeng.html">englisch</a></li>
-							</ul>
-							</div> <!-- language toogle -->
+							
 						
 							<p>Mikroebene: Im folgenden betrachten wir die Mikroebene Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
 
-				</p>
+							</p>
 				
 							<!-- start poll mikro -->
 					

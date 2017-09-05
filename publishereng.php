@@ -5,12 +5,13 @@
 <head>
 
     <?php include 'header.php' ?>
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="js/formchecker.js"></script>
 </head>
 <body class="home blog custom-background">
 
-<script src="libs/jquery.js"></script>
-<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="formchecker.js"></script>
+
 
 <!-- header navigation -->
 <?php include 'navigation.php' ?>
@@ -27,48 +28,45 @@
                 <!-- post content wrapper -->
                 <article class="post-915 post type-post status-publish format-standard hentry">
 
-                    <h2 class="post-title" style="color:#666666;">Publish</h2>
+                    <h2 class="post-title" style="color:#666666;">Eine letzte Frage ... </h2>
                     <div class="clear"></div>
 
                     <!-- model content starts here -->
                     <div class="post-content">
 
-                        <div class="dropdown"  style="text-align:right;">
-                            <button class="btn btn-primary dropdown-toggle"  type="button" data-toggle="dropdown">Sprache
-                                <span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#">german</a></li>
-                                <li><a href="indexeng.html">english</a></li>
-                            </ul>
-                        </div> <!-- language toogle -->
-                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" style="width:950px">
+                        
+                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" >
                             <div class="panel-group" id="forms">
                                 <div class="panel panel-default">
-                                    <table style="width:900px" class="table table-bordered table-striped js-options-table">
+                                   <table class="table js-options-table tablebg">
+                                        <tr class="header">
+											<td colspan="2">
+													   
+												 Do you want to publish your results?
+													   
+											</td>
+										</tr>
                                         <tr>
-                                            <td colspan="3">
-                                                <p align="center">
-                                                    Do you want to publish your results?
-                                                </p>
+											<td width="10px" >
+                                                <input type="radio" name="published" value="1" required>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="27%">
+                                            <td>
                                                 Yes, everyone shall see my course.
-                                            <td width="27%">
-                                                No, the results are just for me.
                                             </td>
+                                                
                                         </tr>
                                         <tr>
-                                            <td align="center">
-                                                <input type="radio" name="published" value="1">
+											<td width="10px" >
+                                                <input type="radio" name="published" value="0" required>
                                             </td>
-                                            <td align="center">
-                                                <input type="radio" name="published" value="0">
+											<td>
+												 No, the results are just for me.
                                             </td>
+                                            
+                                            
                                         </tr>
                                     </table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-                                    <button class="btn btn-primary" type="submit">bestätigen</button>
+                                    <button class="btn btn-primary" type="submit">Confirm</button>
                                 </div>
                             </div> <!--complete form div -->
                         </form>

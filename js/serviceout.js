@@ -154,12 +154,12 @@ function showall(Filter,mikro) {
             success: function (data) {
                 if (data[0].hasOwnProperty("limit")){
                     if (mikro) {
-                        document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                        document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filtereinstellungen vor.";
                         document.getElementById("Pagination0").hidden=false;
                         document.getElementById('nextmikro').disabled=true;
                     }
                     else {
-                        document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                        document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filtereinstellungen vor.";
                         document.getElementById("Pagination1").hidden=false;
                         document.getElementById('nextmeso').disabled=true;
                     }
@@ -185,11 +185,11 @@ function showall(Filter,mikro) {
                         document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                     }
                     if (mikro) {
-                        document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                        document.getElementById("Pagination0").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_mikro+" von "+data[1].limit +")";
                         document.getElementById("Pagination0").hidden=false;
                     }
                     else {
-                        document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                        document.getElementById("Pagination1").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_meso+" von "+data[1].limit +")";
                         document.getElementById("Pagination1").hidden=false;
                     }
                 }
@@ -238,10 +238,10 @@ function next(Filter,mikro) {
                 document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
             }
             if (mikro) {
-                document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                document.getElementById("Pagination0").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_mikro+" von "+data[1].limit +")";
             }
             else {
-                document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                document.getElementById("Pagination1").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_meso+" von "+data[1].limit +")";
             }
         },
         error: function(){
@@ -288,10 +288,10 @@ function previous(Filter,mikro) {
         success: function (data) {
             if (data[0].hasOwnProperty("limit")){
                 if (mikro) {
-                    document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                    document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filtereinstellungen vor.";
                 }
                 else {
-                    document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
+                    document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filtereinstellungen vor.";
                 }
             }
             else {
@@ -313,10 +313,10 @@ function previous(Filter,mikro) {
                     document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 }
                 if (mikro) {
-                    document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                    document.getElementById("Pagination0").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_mikro+" von "+data[1].limit +")";
                 }
                 else {
-                    document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                    document.getElementById("Pagination1").innerHTML="Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse ("+number_of_showall_meso+" von "+data[1].limit +")";
                 }
             }
         },

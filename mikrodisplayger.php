@@ -22,6 +22,12 @@
 	}
 								
 ?>
+
+<script type="text/javascript">
+	function hidediv() {
+		$('.placeholderdiv').hide();
+	};
+</script>
   
 </head> <!-- all the libraries-->
 <body class="home blog custom-background" onLoad="
@@ -45,10 +51,10 @@ echo "])";
         ">
 <script src="libs/jquery.js"></script>
 <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="bonsai.js"></script>
-<script src="diagram.js"></script>
-<script src="serviceout.js"></script>
-<script src="Listingout.js"></script>
+<script src="js/bonsai.js"></script>
+<script src="js/diagram.js"></script>
+<script src="js/serviceout.js"></script>
+<script src="js/Listingout.js"></script>
  <!-- header navigation -->
     <?php include 'navigation.php' ?>
         
@@ -90,7 +96,7 @@ echo "])";
 											$('.collapse').addClass('in');
 											$('.expand-area').attr('aria-expanded','true');
 											$('.collapse').attr('aria-expanded','true');
-											alert('bla');
+											
 										
 										}
 										</script>		
@@ -140,7 +146,8 @@ echo "])";
                             </div>
                             <div  id="diagram0" class="dia"></div>
 							
-                            <p id="Pagination0" hidden> dummy von dummy</p>
+                            
+							<p id="Pagination0" hidden> dummy von dummy</p>
 							<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true);return false;">Letztes Ergebnis</button>
 							<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true);return false;">Nächstes Ergebnis</button>
 						
@@ -304,7 +311,7 @@ echo "])";
 								</tr>
 							</table>
 							
-							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true)">Filter anwenden</button>
+							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true);hidediv();">Filter anwenden</button>
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="cleanFilter(); return false">bereinige Filter</button>
 							
 							</div> <!-- collapse -->
