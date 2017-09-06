@@ -53,7 +53,7 @@
 														Hochschule:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus required ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus  ></div>
 													</td>
 												</tr>
 												<tr>
@@ -61,7 +61,7 @@
 														Titel der Lehrveranstaltung:
 													</td>
 													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs" required  ></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"   ></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -69,7 +69,7 @@
                                                         Fachbereich:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"required  ></div>
+                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
                                                     </td>
                                                 </tr>
 												<tr>
@@ -77,7 +77,7 @@
                                                         Anzahl an Studierenden:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%"  required></div>
+                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -85,7 +85,7 @@
                                                         Semesterzahl der Studierenden <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%" required ></div>
+                                                        <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                             </table> <!-- all dimensions of the universities -->
