@@ -101,7 +101,7 @@
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
 										<p>
-				Im folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen (//Rahmenbedingungen//), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.	
+				Im folgenden betrachten wir die Mesoebene Ihrer Lehrveranstaltungen (//Rahmenbedingungen//), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.	
 				</p>
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">

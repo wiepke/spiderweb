@@ -349,4 +349,7 @@ svg:not(:root) {
 	
 }
 
+textarea {
+	height:10rem;
+}
 
