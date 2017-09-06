@@ -353,3 +353,11 @@ textarea {
 	height:10rem;
 }
 
+select {
+	display:block;
+	background-color: transparent;
+	border:none;
+	padding: 0;
+	color: #655c5c !important;
+}
+

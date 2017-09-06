@@ -160,18 +160,30 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 							<table class="table table-striped js-options-table">
 								<tr>
 									<td>
-										Uni:
+										Hochschule:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilterMikro" size="40">
+										<!-- <input name="Uni" value="" class="stringFilterMikro" size="40"> -->
+									<select>
+									  <option value="volvo">Wählen Sie die Hochschule</option>
+									  <option value="saab">bla</option>
+									  <option value="mercedes">bla</option>
+									  <option value="audi">bla</option>
+									</select>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										Kurs:
+										Titel der Lehrveranstaltung::
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilterMikro" size="40">
+										<!-- <input name="Kurs" value="" class="stringFilterMikro" size="40"> -->
+										<select>
+									  <option value="volvo">Lehrveranstaltung</option>
+									  <option value="saab">bla</option>
+									  <option value="mercedes">bla</option>
+									  <option value="audi">bla</option>
+									</select>
 									</td>
 								</tr>
                                 <tr>
@@ -179,16 +191,28 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         Fachbereich:
                                     </td>
                                     <td colspan="3">
-                                        <input name="Fachbereich" value="" class="stringFilterMikro" size="40">
+                                        <!-- <input name="Fachbereich" value="" class="stringFilterMikro" size="40"> -->
+										<select>
+									  <option value="volvo">Wählen Sie einen Fachbereich</option>
+									  <option value="saab">bla</option>
+									  <option value="mercedes">bla</option>
+									  <option value="audi">bla</option>
+									</select>
                                     </td>
                                 </tr>
 
                                 <tr>
                                     <td>
-                                        Anzahl von Studierenden:
+                                        Anzahl an Studierenden:
                                     </td>
                                     <td colspan="3">
-                                        <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40">
+                                        <!-- <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40"> -->
+									<select>
+									  <option value="volvo">1-10</option>
+									  <option value="saab">11-20</option>
+									  <option value="mercedes">21-30</option>
+									  <option value="audi">über 30</option>
+									</select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -196,125 +220,247 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         Semesterzahl der Studierenden:
                                     </td>
                                     <td colspan="3">
-                                        <input name="Semesterzahl" value="" class="stringFilterMikro" size="40">
+                                        <!-- <input name="Semesterzahl" value="" class="stringFilterMikro" size="40"> -->
+										<select>
+										  <option value="volvo">1-3</option>
+										  <option value="saab">3-6</option>
+										  <option value="saab"> mehr als 6</option>
+										 
+									</select>
                                     </td>
                                 </tr>
-								<tr>
-									<td>
-										Assessment:
-									</td>
-									<td>
-										
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										Forschungsthema:
-									</td>
-									<td>
-									
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Forschungsfrage:
-									</td>
-									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="3">
-									</td>
-								
-								</tr>
-										
-								<tr>
-									<td>
-										Planung:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Durchführung:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
+								</table>
+								<button type="button" class="btn expand-area" id="expandbutton2" data-toggle="collapse" data-target="#table2" aria-expanded="false">Erweiterte Optionen</button>
+								<div  class="collapse" id="table2">
+									<table class="table table-striped js-options-table">
+									<tr class="header">
+										<td colspan="2">
+											Prüfungsrahmen:
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
 											
-								<tr>
-									<td>
-										Reflexion:
-									</td>
-									<td>
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
+											<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
+										</td>
+									
+										<td>
+											Prüfungsform festgelegt
+										</td>
+									</tr>
+									<tr>
+										<td  width="10px">
+											<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
+										</td>
 										
-								<tr>
-									<td>
-										Ergebnisdarstellung:
-									</td>
-									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-							</table>
-							
+										<td>
+											Wahlmöglichkeiten
+										</td>
+									</tr>
+									<tr>
+									
+										<td  width="10px">
+											<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+											keine Prüfung
+										</td>
+									</tr>
+									
+									<tr class="header">
+										<td colspan="2">
+											Forschungsthema:
+										</td>
+									</tr>
+									<tr>
+										
+										<td >
+										
+											<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+											vorgegeben
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+											ausgehandelt
+										
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+											selbstbestimmt
+										</td>
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Forschungsfrage:
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+											vorgegeben
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+										ausgehandelt
+										</td>
+									</tr>
+										<td >
+											<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+										selbstbestimmt
+										</td>
+									
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Planung:
+										</td>
+									</tr>
+									<tr>
+										
+										
+										<td >
+											<input type="radio" name="Planung" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+										angeleitet
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Planung" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+										unterstützt
+										</td>
+									</tr>
+									<tr>	
+										<td >
+											<input type="radio" name="Planung" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+											selbstständig
+										</td>
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Durchführung:
+										</td>
+									</tr>
+									<tr>
+										
+										
+										<td >
+											<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+											angeleitet
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+										unterstützt
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+											selbstständig
+										</td>
+										
+									</tr>
+												
+									<tr class="header">
+										<td colspan="2">
+											Reflexion:
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+										angeleitet
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+										unterstützt
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+										selbstständig
+										</td>
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Ergebnisdarstellung:
+										</td>
+									</tr>
+									<tr>
+									
+										<td>
+											<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="1">
+										</td>
+										<td>
+											geschlossen
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="2">
+										</td>
+										<td>
+											teilöffentlich
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="3">
+										</td>
+										<td>
+											öffentlich
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div>
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true);hidediv();">Filter anwenden</button>
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="cleanFilter(); return false">bereinige Filter</button>
-							
+							</div>
 							</div> <!-- collapse -->
 						
 							
@@ -360,21 +506,33 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 							
 							<div class="collapse" id="table1"  >
 							
-								<table class="table table-striped js-options-table">
+							<table class="table table-striped js-options-table">
 								<tr>
 									<td>
-										Uni:
+										Hochschule:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilterMeso" size="40">
+										<!-- <input name="Uni" value="" class="stringFilterMeso" size="40"> -->
+										<select>
+									  <option value="volvo">Wählen Sie die Hochschule</option>
+									  <option value="saab">bla</option>
+									  <option value="mercedes">bla</option>
+									  <option value="audi">bla</option>
+									</select>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										Kurs:
+										Titel der Lehrveranstaltung:
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilterMeso" size="40">
+										<!-- <input name="Kurs" value="" class="stringFilterMeso" size="40"> -->
+										<select>
+										  <option value="volvo">wählen Sie aus den Lehrveranstaltungen</option>
+										  <option value="saab">bla</option>
+										  <option value="mercedes">bla</option>
+										  <option value="audi">bla</option>
+									</select>
 									</td>
 								</tr>
 								
@@ -383,129 +541,215 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 										Fachbereich:
 									</td>
 									<td colspan="3">
-										<input name="Fachbereich" value="" class="stringFilterMeso" size="40">
+										<!-- <input name="Fachbereich" value="" class="stringFilterMeso" size="40"> -->
+										<select>
+										  <option value="volvo">Wählen Sie einen Fachbereich</option>
+										  <option value="saab">bla</option>
+										  <option value="mercedes">bla</option>
+										  <option value="audi">bla</option>
+									</select>
 									</td>
 								</tr>
 								
 								<tr>
 									<td>
-										 Anzahl von Studierenden:
+										 Anzahl an Studierenden:
 									</td>
 									<td colspan="3">
-										<input name="AnzahlStudenten" value="" class="stringFilterMeso" size="40">
+										<!-- <input name="AnzahlStudenten" value="" class="stringFilterMeso" size="40"> -->
+										<select>
+										  <option value="volvo">1-10</option>
+										  <option value="saab">11-20</option>
+										  <option value="mercedes">21-50</option>
+										  <option value="audi">51-100</option>
+										  <option value="audi">über 100</option>
+									</select>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										 Semesterzahl der Studierenden:
+										  Semesterzahl der Studierenden 
 									</td>
 									<td colspan="3">
-										<input name="Semesterzahl" value="" class="stringFilterMeso" size="40">
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										Curriculare Einbindung:
-									</td>
-									<td>
+										<!-- <input name="Semesterzahl" value="" class="stringFilterMeso" size="40"> -->
+										<select>
+										  <option value="volvo">1-3</option>
+										  <option value="saab">3-6</option>
 										
-										<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
-									</td>
-									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
-									</td>
-									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
+									</select>
 									</td>
 								</tr>
-								
-								<tr>
-									<td>
-										Modulare Verortung:
-									</td>
-									<td>
-									
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Inhaltsrahmen:
-									</td>
-									<td>
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilter" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								
-								</tr>
-										
-								<tr>
-									<td>
-										Prüfungsrahmen:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Zeitrahmen:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-											
-								<tr>
-									<td>
-										Ressourcenrahmen:
-									</td>
-									<td>
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-										
-								
 							</table>
-							<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false)">Filter anwenden</button>
-								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
+							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table4" >Erweiterte Optionen</button>
 							
+							<div class="collapse" id="table4"  >
+								<table  class="table table-striped js-options-table">
+									
+									<tr class="header">
+										<td colspan="2">
+											Curriculare Einbindung:
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
+											
+											<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											CP & benotet
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
+											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											CP und unbenotet
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
+											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											ohne CP
+										</td>
+									</tr>
+									
+									<tr class="header">
+										<td colspan="2">
+											Modulare Verortung:
+										</td>
+									</tr>
+									<tr>
+										<td>
+										
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											Pflicht
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											Wahlpflicht
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											keine
+										</td>
+									</tr>
+											
+									
+											
+									<tr class="header">
+										<td colspan="2">
+											Prüfungsrahmen:
+										</td>
+									</tr>
+									<tr>
+										
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											Prüfungsform festgelegt
+										</td>
+									</tr>
+									<tr>
+										
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											Wahlmöglichkeiten
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											keine Prüfung
+										</td>
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Zeitrahmen:
+										</td>
+									</tr>
+									<tr>
+										
+										
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											semesterbezogen
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											semesterübergreifend
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											studienbegleitend
+										</td>
+									</tr>
+												
+									<tr class="header">
+										<td colspan="2">
+											Ressourcenrahmen:
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											keine Ressourcen
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											befristet
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											dauerhaft
+										</td>
+									</tr>
+											
+									
+								</table>
+							</div>
+							<div>
+								<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false)">Filter anwenden</button>
+								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
+							</div>
 						</div> <!--- end collapse -->
 						
 					</div> <!-- end right col -->
