@@ -27,7 +27,7 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fragebogen Mesoebene</h2>
+						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell </h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
@@ -35,18 +35,18 @@
 					
 							
 							<p>
-				Mesoebene: Im folgenden betrachten wir die Mesoebene Ihrer Lehrveranstaltungen (//Rahmenbedingungen//), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.	
+				Im folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen (//Rahmenbedingungen//), d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.	
 				</p>
 				
 							<!-- start poll mikro -->
 	
 							<form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?>">
 								<div class="panel-group" id="forms">
-									<div class="panel panel-default">
+									<!-- <div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="zero">
 											<p>
 												Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
-											</p> <!-- explanation text -->
+											</p> 
 											<table class="table js-options-table">
 												<tr>
 													<td width="10%" class="middle">
@@ -72,12 +72,12 @@
                                                         <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
                                                     </td>
                                                 </tr>
-                                            </table> <!-- all dimensions of the universities -->
+                                            </table> 
 											<button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
 										</div>
-									</div>
-									<div class="panel panel-default">
-										<div class="panel-collapse collapse" id="first">
+									</div> -->
+									<!-- <div class="panel panel-default">
+										<div class="panel-collapse collapse " id="first">
 											<table class="table js-options-table">
 												<tr>
 													<td width="38%">
@@ -99,9 +99,9 @@
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
 											<button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
 										</div>
-									</div>
+									</div> -->
 									<div class="panel panel-default">
-										<div class="panel-collapse collapse" id="second">
+										<div class="panel-collapse collapse in" id="second">
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">
 														<td colspan="2">
@@ -136,7 +136,7 @@
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
+										
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
 										</div>
 									</div>
