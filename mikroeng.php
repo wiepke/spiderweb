@@ -391,7 +391,7 @@
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> Back </button>
-											<button id="submitButton" class="btn btn-primary" type="submit">Send</button>
+											<button id="submitButton" class="btn btn-primary" type="submit">Next</button>
 										</div>
 									</div>
 									
