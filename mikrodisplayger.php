@@ -82,9 +82,10 @@ echo "])";
 									
 									
 								} else {
-									echo "<p> Wählen Sie eine der Registerkarten Mikro oder Meso, um in den Ergebnissen der Befragung zu stöbern. Durch die Eingabe von Filterparametern und einen Klick auf \"Filter anwenden \" erhalten sie eine grafische Darstellung der Ergebnisse, die ihren gewählten Parametern entsrpechen.<br>
-									Wir freuen uns, wenn Sie im Anschluss &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  den Fragebogen selbst ausfüllen </a><br><br>
+									echo "<p> Ergebnisse der Anwendung des Doppelradmodells
+Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Fragebogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
+Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: </a><br><br>
 									
 									
 									</p>		
