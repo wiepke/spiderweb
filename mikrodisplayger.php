@@ -70,7 +70,7 @@ echo "])";
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Auswertung der eingegebenen Daten</h2>
+						<h2 class="post-title" style="color:#666666;"> Ergebnisse der Anwendung des Doppelradmodells</h2>
 								<div class="clear"></div>
 								<?php
 								if (isset($_GET["mikroid"])) {
@@ -82,10 +82,10 @@ echo "])";
 									
 									
 								} else {
-									echo "<p> Ergebnisse der Anwendung des Doppelradmodells
+									echo "<p>
 Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Fragebogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
 Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: </a><br><br>
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen. </a><br><br>
 									
 									
 									</p>		
