@@ -70,21 +70,22 @@ echo "])";
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Auswertung der eingegebenen Daten</h2>
+						<h2 class="post-title" style="color:#666666;"> Ergebnisse der Anwendung des Doppelradmodells</h2>
 								<div class="clear"></div>
 								<?php
 								if (isset($_GET["mikroid"])) {
-									echo "<p> Vielen Dank für die Teilnahme an unserer Umfrage! In den beiden Registerkarten Meso und Mikro finden Sie die grafische Auswertung ihrer Eingaben.<br> Über \"Nach weiteren Ergebnissen suchen\" können Sie in unserer Datenbank stöbern. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder Mesoebene der Befragung - wechseln Sie die Registrkarte, um die jeweils anderen Filtereinstellungen vornehmen zu können.
-									
+									echo "<p> Unter den Registerkarten „Meso“ und „Mikro“ finden Sie nun die grafische Darstellung Ihrer Eingaben.
+Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um einen bestimmten Fokus zu setzen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
 									
 									</p>
 									";
 									
 									
 								} else {
-									echo "<p> Wählen Sie eine der Registerkarten Mikro oder Meso, um in den Ergebnissen der Befragung zu stöbern. Durch die Eingabe von Filterparametern und einen Klick auf \"Filter anwenden \" erhalten sie eine grafische Darstellung der Ergebnisse, die ihren gewählten Parametern entsrpechen.<br>
-									Wir freuen uns, wenn Sie im Anschluss &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  den Fragebogen selbst ausfüllen </a><br><br>
+									echo "<p>
+Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Fragebogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
+Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen. </a><br><br>
 									
 									
 									</p>		

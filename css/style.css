@@ -313,5 +313,43 @@ svg:not(:root) {
     margin-top: 10px;
 }
 
+.ind-img {
+	float:left;
+	margin-right:30px;
+}
 
+.question {
+	position:relative; 
+	
+}
+
+.question:after {
+	content:"\e086";
+	font-family: 'Glyphicons Halflings';
+    vertical-align: middle;
+}
+
+.tooltipp {
+	display:none;
+	position:absolute;
+	width:200px;
+	padding:5px;
+	background-color:rgba(229, 57, 53, 0.33);
+	right:-210px;
+	top:-30px;
+	opacity:0;
+	transition: opacity 2s ease-in;
+	font-size: .8em;
+	
+}
+
+.question:hover .tooltipp {
+	display:block;
+	opacity:1; 
+	
+}
+
+textarea {
+	height:10rem;
+}
 

@@ -8,6 +8,11 @@
 		<script src="libs/jquery.js"></script>
 		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="js/formchecker.js"></script>
+		<script>
+		  $( function() {
+			$( document ).tooltip();
+		  } );
+  </script
 </head>
    
 <body class="home blog custom-background">
@@ -29,7 +34,7 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fragebogen Mikroebene</h2>
+						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell</h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
@@ -37,8 +42,6 @@
 					
 							
 						
-							<p>With this survey you can see the micro-level of your lecture (teach-/learn -setting), which contains your decisions for your course. This will effect the students in their research quality and scale.
-							</p>
 							
 				
 							<!-- start poll mikro -->
@@ -47,12 +50,11 @@
 								<div class="panel-group" id="forms">
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="zero">
-											<p> Here you can choose between different dimensions of your lecture. Your choice comprehends your didactic methods, which you used related to research learning. Be advised to have a specific course in mind to reflect the same or to build up a concept for a new similar course. After finishing this survey you will see a graphic of your results and you can compare your course to others.
-												</p> <!-- explanation text -->
+											<p> Please give us some general information about your course </p> <!-- explanation text -->
 											<table class="table js-options-table">
 												<tr>
 													<td width="10%" class="middle">
-														Uni:
+														University:
 													</td>
 													<td colspan="3">
 														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus ></div>
@@ -74,14 +76,7 @@
                                                         <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
                                                     </td>
                                                 </tr>
-                                            </table> <!-- all dimensions of the universities -->
-                                            <button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> Next </button>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-collapse collapse" id="first">
-                                            <table class="table js-options-table">
-                                                <tr>
+												<tr>
                                                     <td width="38%">
                                                          Number of students:
                                                     </td>
@@ -91,17 +86,17 @@
                                                 </tr>
                                                 <tr>
                                                     <td width="38%">
-                                                        Semester count:
+                                                        Semester count <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
                                                         <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
-                                            </table>
-                                            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> Back </button>
-                                            <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> Next </button>
+                                            </table> <!-- all dimensions of the universities -->
+                                            <button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> Next </button>
                                         </div>
                                     </div>
+                                   
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse" id="second">
 											<table class="table js-options-table">
@@ -143,7 +138,7 @@
 												
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> Back </button>
+										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> Back </button>
 										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> Next </button>
 										
 										</div>
@@ -396,7 +391,7 @@
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> Back </button>
-											<button id="submitButton" class="btn btn-primary" type="submit">Send</button>
+											<button id="submitButton" class="btn btn-primary" type="submit">Next</button>
 										</div>
 									</div>
 									

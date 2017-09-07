@@ -8,6 +8,7 @@
 		<script src="libs/jquery.js"></script>
 		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="js/formchecker.js"></script>
+		
 </head>
    
 <body class="home blog custom-background">
@@ -29,7 +30,7 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fragebogen Mikroebene</h2>
+						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell</h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
@@ -37,9 +38,7 @@
 					
 							
 						
-							<p>Mikroebene: Im folgenden betrachten wir die Mikroebene Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
-
-							</p>
+							
 				
 							<!-- start poll mikro -->
 					
@@ -47,23 +46,22 @@
 								<div class="panel-group" id="forms">
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="zero">
-											<p >                            Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
-											</p> <!-- explanation text -->
+											<p >Zunächst bitten wir Sie um einige allgemeine Angaben zu Ihrer Lehrveranstaltung.</p> <!-- explanation text -->
 											<table class="table js-options-table">
 												<tr>
 													<td width="10%" class="middle">
-														Uni:
+														Hochschule:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus  ></div>
 													</td>
 												</tr>
 												<tr>
 													<td width="10%" class="middle">
-														Kurs:
+														Titel der Lehrveranstaltung:
 													</td>
 													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"   ></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -74,36 +72,34 @@
                                                         <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
                                                     </td>
                                                 </tr>
-                                            </table> <!-- all dimensions of the universities -->
-                                            <button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-collapse collapse" id="first">
-                                            <table class="table js-options-table">
-                                                <tr>
+												<tr>
                                                     <td width="38%">
-                                                        Anzahl von Studenten:
+                                                        Anzahl an Studierenden:
                                                     </td>
                                                     <td colspan="3">
                                                         <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td width="38%">
-                                                        Semesterzahl:
+                                                    <td width="38%" >
+                                                        Semesterzahl der Studierenden <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
                                                         <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>
                                                     </td>
                                                 </tr>
-                                            </table>
-                                            <button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
+                                            </table> <!-- all dimensions of the universities -->
+											 
                                             <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
+                                           
                                         </div>
                                     </div>
+                                   
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse" id="second">
+										<p>
+											Im folgenden betrachten wir die <em>Mikroebene</em> Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
+										</p>
 											<table class="table js-options-table">
 											
 												<tr class="header">
@@ -143,7 +139,7 @@
 												
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> zurück </button>
+										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
 										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
 										
 										</div>
@@ -396,7 +392,7 @@
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
-											<button id="submitButton" class="btn btn-primary" type="submit">senden</button>
+											<button id="submitButton" class="btn btn-primary" type="submit">weiter</button>
 										</div>
 									</div>
 									
