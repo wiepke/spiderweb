@@ -361,3 +361,53 @@ select {
 	color: #655c5c !important;
 }
 
+#Pagination1, #Pagination0 {
+	background-color: #f9f9f9;
+    width: 90%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#Pagination1 span, #Pagination0 span {
+	font-weight:bold;
+}
+
+.lightbox {
+	display:none;
+}
+
+.dia {
+	position: relative;
+}
+
+.dia .featherlight {
+	position:absolute;
+	width:100%;
+	height:500px;
+	
+}
+
+.dia .featherlight .featherlight-content {
+	position: relative;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    padding: 25px;
+    border-bottom: none;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 98%;
+    background: #fff;
+    cursor: auto;
+    white-space: normal;
+    width: 98%;
+}
+
+.dia .featherlight .featherlight-content .featherlight-inner {
+	margin-top:-20px;
+}
+
+.dia .featherlight:last-of-type {
+    background: rgba(193, 193, 193, 0.8);
+}
