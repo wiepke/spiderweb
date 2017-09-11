@@ -27,10 +27,13 @@
 	<link rel='stylesheet' href="css/mythemes-icons.css">
 	<link rel='stylesheet' href="css/style.css"> 
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
-	<link rel='stylesheet' href="css/featherlight.css"> 
 	
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="js/featherlight.js"></script>
+	
+	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+	<script src="libs/jquery.js"></script>
+	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="js/featherlight.js"></script> 
+	<link rel='stylesheet' href="css/featherlight.css"> 
 	
 	
 	<style type="text/css">
