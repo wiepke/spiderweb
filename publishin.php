@@ -14,8 +14,13 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
         array_push($keys,($key));
         array_push($values,($val));
     }
-    $INSERTSPINNE = "UPDATE `mesoebene` SET ".$keys[0]."=".$values[0].
-        " WHERE id=".$_GET["mesoid"];
+    $i=1;
+    $INSERTSPINNE = "UPDATE `mesoebene` SET"." `".$keys[0]."`='".$values[0]."'";
+    while (count($keys)>$i){
+        $INSERTSPINNE=$INSERTSPINNE.", `".$keys[$i]."`='".$values[$i]."'";
+        $i++;
+    }
+    $INSERTSPINNE=$INSERTSPINNE." WHERE id=".$_GET["mesoid"];
     if (mysqli_query($conn,$INSERTSPINNE) === TRUE){
         openLog("New record created successfully",LOG_INFO,1);
     } else {
@@ -25,8 +30,14 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $INSERTSPINNE = "UPDATE `mikroebene` SET ".$keys[0]."=".$values[0].
-        " WHERE id=".$_GET["mikroid"];
+    echo $INSERTSPINNE;
+    $i=1;
+    $INSERTSPINNE = "UPDATE `mikroebene` SET"." `".$keys[0]."`='".$values[0]."'";
+    while (count($keys)>$i){
+        $INSERTSPINNE=$INSERTSPINNE.", `".$keys[$i]."`='".$values[$i]."'";
+        $i++;
+    }
+    $INSERTSPINNE=$INSERTSPINNE." WHERE id=".$_GET["mikroid"];
     if (mysqli_query($conn,$INSERTSPINNE) === TRUE){
         openLog("New record created successfully",LOG_INFO,1);
     } else {
@@ -36,6 +47,7 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    echo $INSERTSPINNE;
 
     $conn->close();
 }
@@ -44,6 +56,12 @@ function redirect($url, $statusCode = 303)
     header('Location: ' . $url, true, $statusCode);
     die();
 }
-if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
-    redirect ("mikrodisplayeng.php?mesoid=".$_GET["mesoid"]."&mikroid=".$_GET["mikroid"],303);}
-else redirect("mikrodisplayger.php?mesoid=".$_GET["mesoid"]."&mikroid=".$_GET["mikroid"],303);
+if ($_POST['published']==="1"){
+    if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
+        redirect ("additionaleng.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);}
+    else redirect("additionalger.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);
+} else {
+    if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
+        redirect ("mikrodisplayeng.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);}
+    else redirect("mikrodisplayger.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);
+}

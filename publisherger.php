@@ -43,7 +43,7 @@
 											<tr >
 												<td >
 														   
-													  <input type="checkbox" name="agreement" value="agreement">
+													  <input type="checkbox" name="agreement" value="1">
 														   
 												</td>
 												<td>

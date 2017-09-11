@@ -40,15 +40,15 @@
 						
 							<!-- start poll mikro -->
 					
-							<form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
+							<form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
 								<div class="panel-group" id="forms">
 									<div class="panel panel-default">
 										
-											<p>[ENG]Um anderen Lehrenden einen Einblick in Ihre Lehrveranstaltung zu geben, bitten wir Sie um eine kurze Einschätzung:</p> 
+											<p>For the sake of understanding, please evaluate the following:</p>
 											<table class="table js-options-table" style="width:70%;">
 												<tr>
 													<td >
-														In meiner Lehrveranstaltung hat gut funktioniert…
+														In my lecture it worked pretty well
 													</td>
 												</tr>
 												<tr>
@@ -59,7 +59,7 @@
 												</tr>
 												<tr>
 													<td>
-														An meiner Lehrveranstaltung fand ich kritisch/schwierig…
+														In my lecture there were problems with
 													</td>
 												</tr>
 												<tr>
@@ -69,19 +69,16 @@
                                                 </tr>
 												<tr>
                                                     <td>
-                                                        Optional können Sie eine (E-Mail-)Adresse oder Webseite hinterlegen, um mit anderen Lehrenden in den Kontakt zu treten
+                                                        As an alternative, you can also keep contact with other tutors with you E-mail-address
                                                     </td>
 												</tr>
 												<tr>
                                                     <td >
-                                                        <div align="right"><input id="contact" name="contact" placeholder="Mailadresse oder Webseite" size="72%" ></textarea><br><br></div>
+                                                        <div align="right"><input id="contact" name="contact" placeholder="Mailadress or website" size="72%" ></textarea><br><br></div>
                                                     </td><br><br>
                                                 </tr>
                                             </table> 
-											 
-                                         
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
-											<button id="submitButton" class="btn btn-primary" type="submit">weiter</button>    
+                                        <button id="submitButton" class="btn btn-primary" type="submit">weiter</button>
                                        
                                     </div>
           

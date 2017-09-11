@@ -1,19 +1,17 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien, values, /*uni, course, */diacount) {
+function diagram(Kriterien, values, diacount) {
     mikro=(location.pathname.match('mikro')!==null);
     bonsai.run(document.getElementById('diagram'+diacount), {
         //uni: uni,
         mikrobool: mikro,
         Kriterien: Kriterien,
         values: values,
-        //course: course,
         code: function () {
             let picwidth = 530;
             let picheight = 500;
             let maxradius=400;
-            let uni = stage.options.uni;
             let Kriterien = stage.options.Kriterien;
             let mikrobool = stage.options.mikrobool;
             let values = stage.options.values;
@@ -58,25 +56,8 @@ function diagram(Kriterien, values, /*uni, course, */diacount) {
                     .closePath()
                     .addTo(stage).attr('strokeDash', 10);
             }
-            /* one line for each dimension which shall be displayed
-            new Text("Uni: "+uni).addTo(stage).attr({
-                fontFamily: 'Arial, sans-serif',
-                fontSize: '20',
-                textFillColor: 'darkblue',
-                textStrokeColor: 'black',
-                textStrokeWidth: 1,
-                x:20,
-                y:20
-            });
-            new Text("Kurs: "+course).addTo(stage).attr({
-                fontFamily: 'Arial, sans-serif',
-                fontSize: '20',
-                textFillColor: 'darkblue',
-                textStrokeColor: 'black',
-                textStrokeWidth: 1,
-                x:150,
-                y: 20
-            });
+            /* one line for each dimension which shall be displayed*/
+
             /*
              * The basic picture (circles and dimensions) is done now
              * The length of "Kriterien" is variable.
@@ -100,7 +81,7 @@ function diagram(Kriterien, values, /*uni, course, */diacount) {
                 inner.fill(gradient.radial(['transparent', 'rgb(10,255,10)'], 200, 50, 50));
             }
             /*
-             * "outer" is the darkgreen line connecting the values
+             * "outer" is the orange line connecting the values
              */
             let apprlimit=20;
             for (let i=0; i<values.length;i++) {
