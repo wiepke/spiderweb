@@ -166,40 +166,38 @@ function showall(Filter,mikro) {
                     document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
                     document.getElementById("Pagination1").hidden=false;
                     document.getElementById('nextmeso').hidden=true;
-                }
-            }
-            else {
-                if (mikro){
-                    document.getElementById('nextmikro').hidden=false;
-                    values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].Assessment];
-                    diagram(Kriterien, values,0);
-                    number_of_showall_mikro++;
-                    document.getElementById('Unilabel0').innerHTML=data[0].Uni;
-                    document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
-                    document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                    document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                 } else {
-                    document.getElementById('nextmeso').hidden=false;
-                    values = [data[0].Einbindung, data[0].Inhaltsrahmen, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
-                    diagram(Kriterien, values,1);
-                    number_of_showall_meso++;
-                    document.getElementById('Unilabel1').innerHTML=data[0].Uni;
-                    document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
-                    document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                    document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
-                }
-                if (mikro) {
-                    document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
-                    document.getElementById("Pagination0").hidden=false;
-                }
-                else {
-                    document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
-                    document.getElementById("Pagination1").hidden=false;
+
+                    if (mikro){
+                        values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                        diagram(Kriterien, values,0);
+                        number_of_showall_mikro++;
+                        document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                        document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                        document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                        document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                    } else {
+                        values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                        diagram(Kriterien, values,1);
+                        number_of_showall_meso++;
+                        document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                        document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                        document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                        document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                    }
+                    if (mikro) {
+                        document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
+                        document.getElementById("Pagination0").hidden=false;
+                    }
+                    else {
+                        document.getElementById("Pagination1").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_meso+" von "+data[1].limit +"</span></span>";
+                        document.getElementById("Pagination1").hidden=false;
+                    }
                 }
             }
-
+           
         },
         async: false
     });
@@ -244,10 +242,10 @@ function next(Filter,mikro) {
                 document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
             }
             if (mikro) {
-                document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+                document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
             }
             else {
-                document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                document.getElementById("Pagination1").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_meso+" von "+data[1].limit +"</span></span>";
             }
         },
         error: function(){
@@ -319,10 +317,11 @@ function previous(Filter,mikro) {
                     document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 }
                 if (mikro) {
-                    document.getElementById("Pagination0").innerHTML=number_of_showall_mikro+" von "+data[1].limit;
+
+                    document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
                 }
                 else {
-                    document.getElementById("Pagination1").innerHTML=number_of_showall_meso+ " von "+data[1].limit;
+                    document.getElementById("Pagination1").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_meso+" von "+data[1].limit +"</span></span>";
                 }
             }
         },
