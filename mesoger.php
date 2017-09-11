@@ -40,64 +40,11 @@
 	
 							<form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?>">
 								<div class="panel-group" id="forms">
-									<!-- <div class="panel panel-default">
-										<div class="panel-collapse collapse in" id="zero">
-											<p>
-												Im Folgenden können Sie unterschiedliche Dimensionen wählen, die die Gestaltung Ihrer Lehrveranstaltung prägen. Die Auswahl dient dazu, die didaktischen Entscheidungen, die sich bei der Planung einer Lehrveranstaltung im Modus forschenden Lernens treffen, nachzuvollziehen. Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Fragebogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen. <br>
-											</p> 
-											<table class="table js-options-table">
-												<tr>
-													<td width="10%" class="middle">
-														Uni:
-													</td>
-													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus></div>
-													</td>
-												</tr>
-												<tr>
-													<td width="10%" class="middle">
-														Kurs:
-													</td>
-													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
-													</td>
-                                                </tr>
-												<tr>
-                                                    <td width="38%">
-                                                        Fachbereich:
-                                                    </td>
-                                                    <td colspan="3">
-                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%" ></div>
-                                                    </td>
-                                                </tr>
-                                            </table> 
-											<button id="zeroButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#first"> weiter </button>
-										</div>
-									</div> -->
-									<!-- <div class="panel panel-default">
-										<div class="panel-collapse collapse " id="first">
-											<table class="table js-options-table">
-												<tr>
-													<td width="38%">
-														Anzahl von Studenten:
-													</td>
-													<td colspan="3">
-														<div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%" ></div>
-													</td>
-												</tr>
-												<tr>
-													<td width="38%">
-														Semesterzahl:
-													</td>
-													<td colspan="3">
-														<div align="right"><input id="semesterInput" name="Semesterzahl" placeholder="0" size="72%" ></div>
-													</td>
-												</tr>
-											</table>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
-											<button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> weiter </button>
-										</div>
-									</div> -->
+                                    <div><input id="uniInput" name="Uni" hidden></div>
+                                    <div><input id="kursInput" name="Kurs" hidden></div>
+                                    <div><input id="fachbereichInput" name="Fachbereich" hidden></div>
+                                    <div><input id="anzahlInput" name="AnzahlStudenten" hidden></div>
+                                    <div><input id="semesterInput" name="Semesterzahl" hidden></div>
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
 										<p>

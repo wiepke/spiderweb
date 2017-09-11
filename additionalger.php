@@ -40,7 +40,7 @@
 						
 							<!-- start poll mikro -->
 					
-							<form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
+							<form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
 								<div class="panel-group" id="forms">
 									<div class="panel panel-default">
 										
@@ -54,7 +54,7 @@
 												<tr>
 													<td >
 														<div  >
-														<textarea rows="4" cols="50" id="beneficial" name="beneficial" > </textarea><br><br></div>
+														<textarea rows="4" cols="50" name="beneficial" ></textarea><br><br></div>
 													</td>
 												</tr>
 												<tr>
@@ -64,7 +64,7 @@
 												</tr>
 												<tr>
 													<td>
-														<div align="right"><textarea rows="4" cols="50" id="poorly" name="poorly" ></textarea><br><br></div>
+														<div align="right"><textarea rows="4" cols="50" name="poorly" ></textarea><br><br></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -74,14 +74,11 @@
 												</tr>
 												<tr>
                                                     <td >
-                                                        <div align="right"><input id="contact" name="contact" placeholder="Mailadresse oder Webseite" size="72%" ></textarea><br><br></div>
+                                                        <div align="right"><input name="contact" placeholder="Mailadresse oder Webseite" size="72%" ></textarea><br><br></div>
                                                     </td><br><br>
                                                 </tr>
                                             </table> 
-											 
-                                         
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
-											<button id="submitButton" class="btn btn-primary" type="submit">weiter</button>    
+                                        <button id="submitButton" class="btn btn-primary" type="submit">weiter</button>
                                        
                                     </div>
           
