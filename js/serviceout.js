@@ -1,6 +1,53 @@
 /**
  * Created by fides-WHK on 16.03.2017.
  */
+$(document).ready(function (){
+    $("select[name=Uni]").on("change",function(){
+        chosenFilter.Uni=$("select[name=Uni]").val();
+        adjustFilter();
+    });
+    $("select[name=Kurs]").on("change",function(){
+        chosenFilter.Kurs=$("select[name=Kurs]").val();
+        adjustFilter();
+    });
+    $("select[name=Fachbereich]").on("change",function(){
+        chosenFilter.Fachbereich=$("select[name=Fachbereich]").val();
+        adjustFilter();
+    });
+    $("select[name=SemesterZahl]").on("change",function(){
+        chosenFilter.SemesterZahl=$("select[name=SemesterZahl]").val();
+    });
+    $("select[name=AnzahlStudenten]").on("change",function(){
+        chosenFilter.AnzahlStudenten=$("select[name=AnzahlStudenten]").val();
+    });
+});
+
+function adjustFilter(){
+    let elements;
+        elements = document.getElementsByClassName("Fachbereich");
+        for (let j=0; j<elements.length;j++){
+            elements[j].hidden=true;
+        }
+        elements = document.getElementsByClassName("Kurs");
+        for (let j=0; j<elements.length;j++){
+            elements[j].hidden=true;
+        }
+        elements = document.getElementsByClassName("Uni");
+        for (let j=0; j<elements.length;j++){
+            elements[j].hidden=true;
+        }
+
+
+    for (let i=0; i<allOfIt.length; i++){
+        if (((allOfIt[i].Uni===chosenFilter.Uni)||(chosenFilter.Uni===""))&&
+            ((allOfIt[i].Kurs === chosenFilter.Kurs)||(chosenFilter.Kurs===""))&&
+            ((allOfIt[i].Fachbereich === chosenFilter.Fachbereich)||(chosenFilter.Fachbereich===""))){
+            document.getElementById(allOfIt[i].Kurs+"KursId").hidden=false;
+            document.getElementById(allOfIt[i].Fachbereich+"FachbereichId").hidden=false;
+            document.getElementById(allOfIt[i].Uni + "UniId").hidden = false;
+        }
+    }
+}
 
 function cleanall(){
     let idclass = document.getElementsByClassName("dia");
@@ -335,6 +382,10 @@ function previous(Filter,mikro) {
     }
 }
 function cleanFilter() {
+    chosenFilter.Uni="";
+    chosenFilter.Fachbereich="";
+    chosenFilter.Kurs="";
+    adjustFilter();
     inputs = document.getElementsByClassName("stringFilterMikro");
     for (let i=0;i<inputs.length;i++){
         inputs[i].value="";
