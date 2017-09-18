@@ -156,18 +156,21 @@ function showall(Filter,mikro) {
         url: url,
         mikro: mikro,
         success: function (data) {
-            if (data[0].hasOwnProperty("limit")){
+            if (data[0].hasOwnProperty("limit")) {
                 if (mikro) {
-                    document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
-                    document.getElementById("Pagination0").hidden=false;
-                    document.getElementById('nextmikro').hidden=true;
+                    document.getElementById("Pagination0").innerHTML = "Es liegen keine Ergebnisse für diese Filter vor.";
+                    document.getElementById("Pagination0").hidden = false;
+                    document.getElementById('nextmikro').hidden = true;
                 }
                 else {
-                    document.getElementById("Pagination1").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
-                    document.getElementById("Pagination1").hidden=false;
-                    document.getElementById('nextmeso').hidden=true;
-                } else {
-
+                    document.getElementById("Pagination1").innerHTML = "Es liegen keine Ergebnisse für diese Filter vor.";
+                    document.getElementById("Pagination1").hidden = false;
+                    document.getElementById('nextmeso').hidden = true;
+                    document.getElementById("Pagination1").innerHTML = "Es liegen keine Ergebnisse für diese Filter vor.";
+                    document.getElementById("Pagination1").hidden = false;
+                    document.getElementById('nextmeso').hidden = true;
+                }
+            }else {
                     if (mikro){
                         values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
                         diagram(Kriterien, values,0);
@@ -196,9 +199,7 @@ function showall(Filter,mikro) {
                         document.getElementById("Pagination1").hidden=false;
                     }
                 }
-            }
-           
-        },
+            },
         async: false
     });
     if (number_of_showall_mikro >= 1) {
@@ -317,7 +318,6 @@ function previous(Filter,mikro) {
                     document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 }
                 if (mikro) {
-
                     document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
                 }
                 else {
