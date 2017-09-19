@@ -2,49 +2,99 @@
  * Created by fides-WHK on 16.03.2017.
  */
 $(document).ready(function (){
-    $("select[name=Uni]").on("change",function(){
-        chosenFilter.Uni=$("select[name=Uni]").val();
-        adjustFilter();
+    $("select[id=UniMikro]").on("change",function(){
+        chosenFilterMikro.Uni=$("select[id=UniMikro]").val();
+        adjustFilterMikro();
     });
-    $("select[name=Kurs]").on("change",function(){
-        chosenFilter.Kurs=$("select[name=Kurs]").val();
-        adjustFilter();
+    $("select[id=KursMikro]").on("change",function(){
+        chosenFilterMikro.Kurs=$("select[id=KursMikro]").val();
+        adjustFilterMikro();
     });
-    $("select[name=Fachbereich]").on("change",function(){
-        chosenFilter.Fachbereich=$("select[name=Fachbereich]").val();
-        adjustFilter();
+    $("select[id=FachbereichMikro]").on("change",function(){
+        chosenFilterMikro.Fachbereich=$("select[id=FachbereichMikro]").val();
+        adjustFilterMikro();
     });
-    $("select[name=SemesterZahl]").on("change",function(){
-        chosenFilter.SemesterZahl=$("select[name=SemesterZahl]").val();
+    $("select[id=SemesterZahlMikro]").on("change",function(){
+        chosenFilterMikro.SemesterZahl=$("select[id=SemesterZahlMikro]").val();
     });
-    $("select[name=AnzahlStudenten]").on("change",function(){
-        chosenFilter.AnzahlStudenten=$("select[name=AnzahlStudenten]").val();
+    $("select[id=AnzahlStudentenMikro]").on("change",function(){
+        chosenFilterMikro.AnzahlStudenten=$("select[id=AnzahlStudentenMikro]").val();
+    });
+    $("select[id=UniMeso]").on("change",function(){
+        chosenFilterMeso.Uni=$("select[id=UniMeso]").val();
+        adjustFilterMeso();
+    });
+    $("select[id=KursMeso]").on("change",function(){
+        chosenFilterMeso.Kurs=$("select[id=KursMeso]").val();
+        adjustFilterMeso();
+    });
+    $("select[id=FachbereichMeso]").on("change",function(){
+        chosenFilterMeso.Fachbereich=$("select[id=FachbereichMeso]").val();
+        adjustFilterMeso();
+    });
+    $("select[id=SemesterZahlMeso]").on("change",function(){
+        chosenFilterMeso.SemesterZahl=$("select[id=SemesterZahlMeso]").val();
+    });
+    $("select[id=AnzahlStudentenMeso]").on("change",function(){
+        chosenFilterMeso.AnzahlStudenten=$("select[id=AnzahlStudentenMeso]").val();
     });
 });
 
-function adjustFilter(){
+function adjustFilterMikro(){
     let elements;
-        elements = document.getElementsByClassName("Fachbereich");
-        for (let j=0; j<elements.length;j++){
-            elements[j].hidden=true;
+    elements = document.getElementsByClassName("KursMikro");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("FachbereichMikro");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("UniMikro");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    for (let i=0; i<allOfItMikro.length; i++){
+        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
+            ((allOfItMikro[i].Kurs === chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))){
+            document.getElementById(allOfItMikro[i].Fachbereich+"FachbereichMikroId").hidden=false;
         }
-        elements = document.getElementsByClassName("Kurs");
-        for (let j=0; j<elements.length;j++){
-            elements[j].hidden=true;
+        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))) {
+            document.getElementById(allOfItMikro[i].Kurs + "KursMikroId").hidden = false;
         }
-        elements = document.getElementsByClassName("Uni");
-        for (let j=0; j<elements.length;j++){
-            elements[j].hidden=true;
+        if (((allOfItMikro[i].Kurs===chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))&&
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))) {
+            document.getElementById(allOfItMikro[i].Uni + "UniMikroId").hidden = false;
         }
-
-
-    for (let i=0; i<allOfIt.length; i++){
-        if (((allOfIt[i].Uni===chosenFilter.Uni)||(chosenFilter.Uni===""))&&
-            ((allOfIt[i].Kurs === chosenFilter.Kurs)||(chosenFilter.Kurs===""))&&
-            ((allOfIt[i].Fachbereich === chosenFilter.Fachbereich)||(chosenFilter.Fachbereich===""))){
-            document.getElementById(allOfIt[i].Kurs+"KursId").hidden=false;
-            document.getElementById(allOfIt[i].Fachbereich+"FachbereichId").hidden=false;
-            document.getElementById(allOfIt[i].Uni + "UniId").hidden = false;
+    }
+}
+function adjustFilterMeso(){
+    let elements;
+    elements = document.getElementsByClassName("KursMeso");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("FachbereichMeso");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("UniMeso");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    for (let i=0; i<allOfItMeso.length; i++){
+        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
+            ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))){
+            document.getElementById(allOfItMeso[i].Fachbereich+"FachbereichMesoId").hidden=false;
+        }
+        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))) {
+            document.getElementById(allOfItMeso[i].Kurs + "KursMesoId").hidden = false;
+        }
+        if (((allOfItMeso[i].Kurs===chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))&&
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))) {
+            document.getElementById(allOfItMeso[i].Uni + "UniMesoId").hidden = false;
         }
     }
 }
@@ -382,10 +432,14 @@ function previous(Filter,mikro) {
     }
 }
 function cleanFilter() {
-    chosenFilter.Uni="";
-    chosenFilter.Fachbereich="";
-    chosenFilter.Kurs="";
-    adjustFilter();
+    chosenFilterMikro.Uni="";
+    chosenFilterMikro.Fachbereich="";
+    chosenFilterMikro.Kurs="";
+    adjustFilterMikro();
+    chosenFilterMeso.Uni="";
+    chosenFilterMeso.Fachbereich="";
+    chosenFilterMeso.Kurs="";
+    adjustFilterMeso();
     inputs = document.getElementsByClassName("stringFilterMikro");
     for (let i=0;i<inputs.length;i++){
         inputs[i].value="";

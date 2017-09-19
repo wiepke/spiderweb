@@ -62,8 +62,25 @@ function Listingmeso(){
     let stringFilter = document.getElementsByClassName("stringFilterMeso");
     for (let i=0;i<stringFilter.length;i++){
         if (stringFilter[i].value!==""){
-            output.push(stringFilter[i].name);
-            output.push(stringFilter[i].value);
+            if (stringFilter[i].name==="AnzahlStudenten"){
+                output.push(stringFilter[i].name+">");
+                output.push(stringFilter[i].value);
+                if (parseInt(stringFilter[i].value)<6){
+                    output.push(stringFilter[i].name+"<");
+                    output.push(String(parseInt(stringFilter[i].value)+9));
+                }
+            }else
+            if (stringFilter[i].name==="Semesterzahl"){
+                output.push(stringFilter[i].name+">");
+                output.push(stringFilter[i].value);
+                if (parseInt(stringFilter[i].value)<6){
+                    output.push(stringFilter[i].name+"<");
+                    output.push(String(parseInt(stringFilter[i].value)+2));
+                }
+            }else {
+                output.push(stringFilter[i].name);
+                output.push(stringFilter[i].value);
+            }
             /*
              * You could check for name additions as "st.", "uni", "bad" or "an der" here.
              * This can be achieved with str_replace(). It's not implemented because I don't see the necessity.
