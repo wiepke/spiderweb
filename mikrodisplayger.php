@@ -87,7 +87,56 @@ echo "])";
 <script src="js/Listingout.js"></script>
  <!-- header navigation -->
     <?php include 'navigation.php' ?>
-        
+<?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+$allOfItMikro=[];
+$allOfItMeso=[];
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mikroebene` WHERE published='1'";
+$queryObj = mysqli_query($conn, $REQUEST);
+while ($result = mysqli_fetch_object($queryObj)){
+    $temp=$result;
+    $temp->Uni=utf8_encode($result->Uni);
+    $temp->Kurs=utf8_encode($result->Kurs);
+    $temp->Fachbereich=utf8_encode($result->Fachbereich);
+    $temp->AnzahlStudenten=utf8_encode($result->AnzahlStudenten);
+    $temp->SemesterZahl=utf8_encode($result->SemesterZahl);
+    array_push($allOfItMikro, $temp);
+};
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mesoebene` WHERE published='1'";
+$queryObj = mysqli_query($conn, $REQUEST);
+while ($result = mysqli_fetch_object($queryObj)){
+    $temp=$result;
+    $temp->Uni=utf8_encode($result->Uni);
+    $temp->Kurs=utf8_encode($result->Kurs);
+    $temp->Fachbereich=utf8_encode($result->Fachbereich);
+    $temp->AnzahlStudenten=utf8_encode($result->AnzahlStudenten);
+    $temp->SemesterZahl=utf8_encode($result->SemesterZahl);
+    array_push($allOfItMeso, $temp);
+};
+$conn->close();
+echo "<script> let allOfItMikro=[];\n let chosenFilterMikro={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};\n";
+for ($i=0; $i<count($allOfItMikro);$i++){
+    echo "allOfItMikro.push({\n"
+        ."Uni: '".$allOfItMikro[$i]->Uni."',\n"
+        ."Kurs: '".$allOfItMikro[$i]->Kurs."',\n"
+        ."Fachbereich: '".$allOfItMikro[$i]->Fachbereich."',\n"
+        ."AnzahlStudenten: '".$allOfItMikro[$i]->AnzahlStudenten."',\n"
+        ."Semesterzahl: '".$allOfItMikro[$i]->SemesterZahl."'\n"
+        ."});\n";
+}
+echo"</script>";
+echo "<script> let allOfItMeso=[];\n let chosenFilterMeso={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};\n";
+for ($i=0; $i<count($allOfItMeso);$i++){
+    echo "allOfItMeso.push({\n"
+        ."Uni: '".$allOfItMeso[$i]->Uni."',\n"
+        ."Kurs: '".$allOfItMeso[$i]->Kurs."',\n"
+        ."Fachbereich: '".$allOfItMeso[$i]->Fachbereich."',\n"
+        ."AnzahlStudenten: '".$allOfItMeso[$i]->AnzahlStudenten."',\n"
+        ."Semesterzahl: '".$allOfItMeso[$i]->SemesterZahl."'\n"
+        ."});\n";
+}
+echo"</script>";
+?>
 	<div class="content">
 
 		<!-- the container ( align to center ) -->
@@ -202,52 +251,30 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                             </td>
                                             <td colspan="3">
                                                 <!-- <input name="Uni" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="Uni" class="stringFilterMikro">
+                                                <select name="Uni" class="stringFilterMikro" id="UniMikro">
                                                     <option value="">Wählen Sie die Hochschule</option>
                                                     <?php
-                                                    $conn = mysqli_connect("localhost", "root", "", "test");
                                                     //////////////////Finds all the options there are in "Uni"/////////////////////////////////
                                                     $options=[];
-                                                    $REQUEST="SELECT Uni FROM `mikroebene`";
-                                                        //while (there are options) $REQUEST=$REQUEST.option[value];
-                                                    $queryObj = mysqli_query($conn, $REQUEST);
-                                                    $exists = false;
-                                                    $result = mysqli_fetch_object($queryObj);
-                                                    $temp=utf8_encode($result->Uni);
-                                                    array_push($options, $temp);
+                                                    array_push($options, $allOfItMikro[0]->Uni);
                                                     $next=0;
-                                                    if ($result = mysqli_fetch_object($queryObj)){
-                                                        $temp=utf8_encode($result->Uni);
-                                                        $next=1;
-                                                    }
-                                                    while ($next===1) {
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
                                                         $exists=false;
-                                                        for ($i=0; count($options)>$i; $i++) {
-                                                            if ($options[$i] === $temp) {
-                                                                $exists = true;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Uni){
+                                                                $exists=true;
                                                                 break;
                                                             }
                                                         }
-                                                        if ($exists){
-                                                            if($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Uni);
-                                                            }
-                                                            else $next=0;
-                                                        }
-                                                        else {
-                                                            array_push($options, $temp);
-                                                            if ($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Uni);
-                                                            }
-                                                                else $next=0;
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Uni);
                                                         }
                                                     }
-                                                    $conn->close();
                                                     //////////////////Finds all the options there are in "Uni"///////////////////////////////
-
+                                                    sort($options);
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     for ($i=0;count($options)>$i;$i++){
-                                                        echo "<option value='".$options[$i]."'>".$options[$i]."</option>";
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."UniMikroId' class='UniMikro'>".$options[$i]."</option>";
                                                     }
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     ?>
@@ -260,52 +287,30 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                             </td>
                                             <td colspan="3">
                                                 <!-- <input name="Kurs" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="Kurs" class="stringFilterMikro">
+                                                <select name="Kurs" class="stringFilterMikro" id="KursMikro">
                                                     <option value="">Lehrveranstaltung</option>
                                                     <?php
-                                                    $conn = mysqli_connect("localhost", "root", "", "test");
                                                     //////////////////Finds all the options there are in "Kurs"/////////////////////////////////
                                                     $options=[];
-                                                    $REQUEST="SELECT Kurs FROM `mikroebene`";
-                                                    //while (there are options) $REQUEST=$REQUEST.option[value];
-                                                    $queryObj = mysqli_query($conn, $REQUEST);
-                                                    $exists = false;
-                                                    $result = mysqli_fetch_object($queryObj);
-                                                    $temp=utf8_encode($result->Kurs);
-                                                    array_push($options, $temp);
+                                                    array_push($options, $allOfItMikro[0]->Kurs);
                                                     $next=0;
-                                                    if ($result = mysqli_fetch_object($queryObj)){
-                                                        $temp=utf8_encode($result->Kurs);
-                                                        $next=1;
-                                                    }
-                                                    while ($next===1) {
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
                                                         $exists=false;
-                                                        for ($i=0; count($options)>$i; $i++) {
-                                                            if ($options[$i] === $temp) {
-                                                                $exists = true;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Kurs){
+                                                                $exists=true;
                                                                 break;
                                                             }
                                                         }
-                                                        if ($exists){
-                                                            if($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Kurs);
-                                                            }
-                                                            else $next=0;
-                                                        }
-                                                        else {
-                                                            array_push($options, $temp);
-                                                            if ($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Kurs);
-                                                            }
-                                                            else $next=0;
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Kurs);
                                                         }
                                                     }
-                                                    $conn->close();
                                                     //////////////////Finds all the options there are in "Kurs"///////////////////////////////
-
+                                                    sort($options);
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     for ($i=0;count($options)>$i;$i++){
-                                                        echo "<option value='".$options[$i]."'>".$options[$i]."</option>";
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."KursMikroId' class='KursMikro'>".$options[$i]."</option>";
                                                     }
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     ?>
@@ -318,52 +323,30 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                             </td>
                                             <td colspan="3">
                                                 <!-- <input name="Fachbereich" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="Fachbereich" class="stringFilterMikro">
+                                                <select name="Fachbereich" class="stringFilterMikro" id="FachbereichMikro">
                                                     <option value="">Wählen Sie einen Fachbereich</option>
                                                     <?php
-                                                    $conn = mysqli_connect("localhost", "root", "", "test");
                                                     //////////////////Finds all the options there are in "Fachbereich"/////////////////////////////////
                                                     $options=[];
-                                                    $REQUEST="SELECT Fachbereich FROM `mikroebene`";
-                                                    //while (there are options) $REQUEST=$REQUEST.option[value];
-                                                    $queryObj = mysqli_query($conn, $REQUEST);
-                                                    $exists = false;
-                                                    $result = mysqli_fetch_object($queryObj);
-                                                    $temp=utf8_encode($result->Fachbereich);
-                                                    array_push($options, $temp);
+                                                    array_push($options, $allOfItMikro[0]->Fachbereich);
                                                     $next=0;
-                                                    if ($result = mysqli_fetch_object($queryObj)){
-                                                        $temp=utf8_encode($result->Fachbereich);
-                                                        $next=1;
-                                                    }
-                                                    while ($next===1) {
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
                                                         $exists=false;
-                                                        for ($i=0; count($options)>$i; $i++) {
-                                                            if ($options[$i] === $temp) {
-                                                                $exists = true;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Fachbereich){
+                                                                $exists=true;
                                                                 break;
                                                             }
                                                         }
-                                                        if ($exists){
-                                                            if($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Fachbereich);
-                                                            }
-                                                            else $next=0;
-                                                        }
-                                                        else {
-                                                            array_push($options, $temp);
-                                                            if ($result = mysqli_fetch_object($queryObj)){
-                                                                $temp=utf8_encode($result->Fachbereich);
-                                                            }
-                                                            else $next=0;
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Fachbereich);
                                                         }
                                                     }
-                                                    $conn->close();
                                                     //////////////////Finds all the options there are in "Fachbereich"///////////////////////////////
-
+                                                    sort($options);
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     for ($i=0;count($options)>$i;$i++){
-                                                        echo "<option value='".$options[$i]."'>".$options[$i]."</option>";
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."FachbereichMikroId' class='FachbereichMikro'>".$options[$i]."</option>";
                                                     }
                                                     //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                     ?>
@@ -377,7 +360,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                             </td>
                                             <td colspan="3">
                                                 <!-- <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="AnzahlStudenten" class="stringFilterMikro">
+                                                <select name="AnzahlStudenten" class="stringFilterMikro" id="AnzahlStudentenMikro">
                                                     <option value="">Wählen Sie eine Anzahl</option>
                                                     <option value="1">1-10</option>
                                                     <option value="11">11-20</option>
@@ -392,7 +375,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											</td>
 											<td colspan="3">
 												<!-- <input name="Semesterzahl" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="Semesterzahl" class="stringFilterMikro">
+                                                <select name="Semesterzahl" class="stringFilterMikro"  id="SemesterZahlMikro">
                                                     <option value="">Wählen Sie eine Anzahl</option>
                                                     <option value="1">1-3</option>
                                                     <option value="3">3-6</option>
@@ -679,81 +662,142 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table1" >Nach weiteren Ergebnissen suchen</button>
 							
 							<div class="collapse" id="table1"  >
-							
-							<table class="table table-striped js-options-table">
-								<tr>
-									<td>
-										Hochschule:
-									</td>
-									<td colspan="3">
-										<!-- <input name="Uni" value="" class="stringFilterMeso" size="40"> -->
-										<select>
-									  <option value="volvo">Wählen Sie die Hochschule</option>
-									  <option value="saab">bla</option>
-									  <option value="mercedes">bla</option>
-									  <option value="audi">bla</option>
-									</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Titel der Lehrveranstaltung:
-									</td>
-									<td colspan="3">
-										<!-- <input name="Kurs" value="" class="stringFilterMeso" size="40"> -->
-										<select>
-										  <option value="volvo">wählen Sie aus den Lehrveranstaltungen</option>
-										  <option value="saab">bla</option>
-										  <option value="mercedes">bla</option>
-										  <option value="audi">bla</option>
-									</select>
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										Fachbereich:
-									</td>
-									<td colspan="3">
-										<!-- <input name="Fachbereich" value="" class="stringFilterMeso" size="40"> -->
-										<select>
-										  <option value="volvo">Wählen Sie einen Fachbereich</option>
-										  <option value="saab">bla</option>
-										  <option value="mercedes">bla</option>
-										  <option value="audi">bla</option>
-									</select>
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										 Anzahl an Studierenden:
-									</td>
-									<td colspan="3">
-										<!-- <input name="AnzahlStudenten" value="" class="stringFilterMeso" size="40"> -->
-										<select>
-										  <option value="volvo">1-10</option>
-										  <option value="saab">11-20</option>
-										  <option value="mercedes">21-50</option>
-										  <option value="audi">51-100</option>
-										  <option value="audi">über 100</option>
-									</select>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										  Semesterzahl der Studierenden 
-									</td>
-									<td colspan="3">
-										<!-- <input name="Semesterzahl" value="" class="stringFilterMeso" size="40"> -->
-										<select>
-										  <option value="volvo">1-3</option>
-										  <option value="saab">3-6</option>
-										
-									</select>
-									</td>
-								</tr>
-							</table>
+
+                                <table class="table table-striped js-options-table">
+                                    <tr>
+                                        <td>
+                                            Hochschule:
+                                        </td>
+                                        <td colspan="3">
+                                            <select name="Uni" class="stringFilterMeso" id="UniMeso">
+                                                <option value="">Wählen Sie die Hochschule</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Uni"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Uni);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Uni){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Uni);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Uni"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."UniMesoId' class='UniMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Titel der Lehrveranstaltung::
+                                        </td>
+                                        <td colspan="3">
+                                            <select name="Kurs" class="stringFilterMeso"  id="KursMeso">
+                                                <option value="">Lehrveranstaltung</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Kurs"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Kurs);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Kurs){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Kurs);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Kurs"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."KursMesoId' class='KursMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Fachbereich:
+                                        </td>
+                                        <td colspan="3">
+                                            <select name="Fachbereich" class="stringFilterMeso" id="FachbereichMeso">
+                                                <option value="">Wählen Sie einen Fachbereich</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Fachbereich"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Fachbereich);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Fachbereich){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Fachbereich);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Fachbereich"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."FachbereichMesoId' class='FachbereichMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Anzahl an Studierenden:
+                                        </td>
+                                        <td colspan="3">
+                                            <select name="AnzahlStudenten" class="stringFilterMeso" id="AnzahlStudentenMeso">
+                                                <option value="">Wählen Sie eine Anzahl</option>
+                                                <option value="1">1-10</option>
+                                                <option value="11">11-20</option>
+                                                <option value="21">21-30</option>
+                                                <option value="30">über 30</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Semesterzahl der Studierenden:
+                                        </td>
+                                        <td colspan="3">
+                                            <select name="Semesterzahl" class="stringFilterMeso" id="SemesterZahlMeso">
+                                                <option value="">Wählen Sie eine Anzahl</option>
+                                                <option value="1">1-3</option>
+                                                <option value="3">3-6</option>
+                                                <option value="6"> mehr als 6</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
 							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table4" >Erweiterte Optionen</button>
 							
 							<div class="collapse" id="table4"  >
