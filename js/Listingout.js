@@ -47,6 +47,10 @@ function Listingmikro(){
             output.push(dimensionFilter[i].value);
         }
     }
+    if (location.search.match('anyway=1')!==null) {
+        output.push("anyway");
+        output.push("1");
+    }
 
     return output;
 }
@@ -95,6 +99,11 @@ function Listingmeso(){
             output.push(dimensionFilter[i].name);
             output.push(dimensionFilter[i].value);
         }
+    }
+
+    if (location.search.match('anyway=1')!==null) {
+        output.push("anyway");
+        output.push("1");
     }
 
     return output;
