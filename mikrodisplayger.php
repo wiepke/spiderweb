@@ -171,6 +171,9 @@ echo"</script>";
 Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um einen bestimmten Fokus zu setzen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
 									
 									</p>
+									<p>
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>
 									
 										
 										";
@@ -180,10 +183,13 @@ Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank st
 									echo "<p>
 Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Fragebogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
 Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen. </a><br><br>
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen. </a>
 									
 									
-									</p>		
+									</p>
+									<p>
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>									
 
 									 <script type=\"text/javascript\">
 										//$('document').ready(showfilter);
@@ -243,16 +249,17 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 										<p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p> 
 											  
 									</div>
+									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 										
 									<div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
 									<div  id="diagram0" class="dia"></div>
-                                    Gut funktioniert hat:
-                                    <div  id="beneficialmikro"></div>
-                                    Nicht so gut funktioniert hat:
-                                    <div  id="poorlymikro"></div>
-                                    E-Mail zum Dozenten:
-                                    <div  id="contactmikro"></div>
-									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
+                                    <h5>Gut funktioniert hat</h5>
+                                    <p  id="beneficialmikro"></p>
+                                    <h5>Nicht so gut funktioniert hat:</h5>
+                                    <p  id="poorlymikro"></p>
+                                    <h5>E-Mail zum Dozenten:</h5>
+                                    <p  id="contactmikro"></p>
+									
 									
 									
 									
@@ -404,7 +411,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											</td>
 										</tr>
 										</table>
-										<button type="button" class="btn expand-area" id="expandbutton2" data-target="#table2" data-toggle="collapse"  aria-expanded="false">Erweiterte Optionen</button>
+										<button type="button" class="btn expand-area" id="expandbutton2" data-target="#table2" data-toggle="collapse"  aria-expanded="false">Dimensionen des Doppelradmodells</button>
 										<div  class="collapse" id="table2">
 											<table class="table table-striped js-options-table">
 											<tr class="header">
@@ -669,15 +676,16 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 								<p id="Semesterzahllabel1" class="course-meta-sub last">Dummy</p>
 									  
 							</div>
-							
+							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
+							<div class="lightbox" id="fl2"><img src="img/meso.png"></div>
 							
 							<div  id="diagram1" class="dia"></div>
-                            Gut funktioniert hat:
-                            <div  id="beneficialmeso"></div>
-                            Nicht so gut funktioniert hat:
-                            <div  id="poorlymeso"></div>
-                            E-Mail zum Dozenten:
-                            <div  id="contactmeso"></div>
+                            <h5>Gut funktioniert hat:</h5>
+                            <p  id="beneficialmeso"></p>
+                            <h5>Nicht so gut funktioniert hat:</h5>
+                            <p  id="poorlymeso"></p>
+                            <h5>E-Mail zum Dozenten:</h5>
+                            <p  id="contactmeso"></p>
 							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Letztes Ergebnis</button>
 							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Nächstes Ergebnis</button>
 							
@@ -823,7 +831,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         </td>
                                     </tr>
                                 </table>
-							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table4" >Erweiterte Optionen</button>
+							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table4" >Dimensionen des Doppelradmodells</button>
 							
 							<div class="collapse" id="table4"  >
 								<table  class="table table-striped js-options-table">
@@ -990,7 +998,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 								</table>
 							</div>
 							<div>
-								<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false)">Filter anwenden</button>
+								<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false);hidediv();">Filter anwenden</button>
 								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
 							</div>
 						</div> <!--- end collapse -->

@@ -28,7 +28,7 @@
                 <!-- post content wrapper -->
                 <article class="post-915 post type-post status-publish format-standard hentry">
 
-                    <h2 class="post-title" style="color:#666666;">Eine letzte Frage ... </h2>
+                    <h2 class="post-title" style="color:#666666;">Organisatorisches zum Schluss </h2>
                     <div class="clear"></div>
 
                     <!-- model content starts here -->
@@ -36,14 +36,14 @@
 
                         
                         <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" >
-                             <div class="panel-group" id="forms">
+                            <div class="panel-group" id="forms">
                                 <div class="panel panel-default">
 									<div class="panel-collapse collapse in" id="zero">
 									   <table class="table js-options-table ">
 											<tr >
 												<td >
 														   
-													  <input type="checkbox" name="agreement" value="agreement">
+													  <input type="checkbox" name="agreement" value="1">
 														   
 												</td>
 												<td>
@@ -54,7 +54,7 @@
 										</table> 
 									   
 									   
-										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one"> weiter </button>
+										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one"> Next </button>
 									</div>
 									<div class="panel-collapse collapse " id="one">
 										
@@ -86,8 +86,8 @@
 												
 											</tr>
 										</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
-										<button class="btn btn-primary" type="submit">weiter</button>
+										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> Back </button>
+										<button class="btn btn-primary" type="submit">Next</button>
 									</div>
                                     
                                 </div>

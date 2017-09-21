@@ -69,7 +69,7 @@
                                                 </tr>
 												<tr>
                                                     <td>
-                                                        As an alternative, you can also keep contact with other tutors with you E-mail-address
+                                                        As an alternative, you can also keep contact with other tutors with your E-mail-address
                                                     </td>
 												</tr>
 												<tr>
@@ -78,7 +78,7 @@
                                                     </td><br><br>
                                                 </tr>
                                             </table> 
-                                        <button id="submitButton" class="btn btn-primary" type="submit">weiter</button>
+                                        <button id="submitButton" class="btn btn-primary" type="submit">Next</button>
                                        
                                     </div>
           
