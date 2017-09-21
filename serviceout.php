@@ -10,15 +10,15 @@ echo "[\n";
 $Kriterien = [];
 $REQUESTSPINNE  = "SELECT * FROM mesoebene";
 foreach ($_GET as $key => $value){
-    if (($key!="mikro")){
-        if($key!="anyway"){
+    if (($key!=="mikro")){
+        if($key!=="anyway"){
             if(($key!="from")){
                 array_push($Kriterien,$key);
                 array_push($Kriterien,$value);
             }
         }
     }else {
-        if ($value=="true"){
+        if ($value==="true"){
             $REQUESTSPINNE  = "SELECT * FROM mikroebene";
         }
     }

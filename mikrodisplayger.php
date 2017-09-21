@@ -91,7 +91,14 @@ echo "])";
 $conn = mysqli_connect("localhost", "root", "", "test");
 $allOfItMikro=[];
 $allOfItMeso=[];
-$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mikroebene` WHERE published='1'";
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mikroebene`";
+if (isset($_GET['anyway'])){
+    if ($_GET['anyway']!=='1'){
+        $REQUEST = $REQUEST." WHERE published='1'";
+    }
+}else {
+    $REQUEST = $REQUEST." WHERE published='1'";
+}
 $queryObj = mysqli_query($conn, $REQUEST);
 while ($result = mysqli_fetch_object($queryObj)){
     $temp=$result;
@@ -102,7 +109,14 @@ while ($result = mysqli_fetch_object($queryObj)){
     $temp->SemesterZahl=utf8_encode($result->SemesterZahl);
     array_push($allOfItMikro, $temp);
 };
-$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mesoebene` WHERE published='1'";
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mesoebene`";
+if (isset($_GET['anyway'])){
+    if ($_GET['anyway']!=='1'){
+        $REQUEST = $REQUEST." WHERE published='1'";
+    }
+}else {
+    $REQUEST = $REQUEST." WHERE published='1'";
+}
 $queryObj = mysqli_query($conn, $REQUEST);
 while ($result = mysqli_fetch_object($queryObj)){
     $temp=$result;
@@ -232,6 +246,12 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 										
 									<div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
 									<div  id="diagram0" class="dia"></div>
+                                    Gut funktioniert hat:
+                                    <div  id="beneficialmikro"></div>
+                                    Nicht so gut funktioniert hat:
+                                    <div  id="poorlymikro"></div>
+                                    E-Mail zum Dozenten:
+                                    <div  id="contactmikro"></div>
 									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 									
 									
@@ -652,7 +672,12 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 							
 							
 							<div  id="diagram1" class="dia"></div>
-                            
+                            Gut funktioniert hat:
+                            <div  id="beneficialmeso"></div>
+                            Nicht so gut funktioniert hat:
+                            <div  id="poorlymeso"></div>
+                            E-Mail zum Dozenten:
+                            <div  id="contactmeso"></div>
 							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Letztes Ergebnis</button>
 							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Nächstes Ergebnis</button>
 							
