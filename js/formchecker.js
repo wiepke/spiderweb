@@ -24,7 +24,8 @@ $(document).ready(function(){
                 $('#kursInput').val(data[0].Kurs);
                 $('#semesterInput').val(data[0].Semesterzahl);
                 $('#anzahlInput').val(data[0].AnzahlStudenten);
-            }
+            },
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
         });
     }
     $('#uniInput').keypress(function(e){

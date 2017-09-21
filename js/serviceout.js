@@ -204,6 +204,9 @@ function showResults(Filter) {
                 document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
                 document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
                 document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
+                document.getElementById('poorlymikro').innerHTML=data[0].poorly;
+                document.getElementById('contactmikro').innerHTML=data[0].contact;
             },
             async: false
         });
@@ -221,6 +224,9 @@ function showResults(Filter) {
                 document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
                 document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
                 document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;
+                document.getElementById('poorlymeso').innerHTML=data[0].poorly;
+                document.getElementById('contactmeso').innerHTML=data[0].contact;
             },
             async: false
         });

@@ -6,6 +6,7 @@
  * Time: 14:04
  */
 include 'dbconn.php';
+$conn->set_charset("utf8");
 echo "[\n";
 $Kriterien = [];
 $REQUESTSPINNE  = "SELECT * FROM mesoebene";
@@ -53,8 +54,6 @@ if ($result = mysqli_fetch_object($queryObj))
     $next=1;
 while ($next) {
     $temp=$result;
-    $temp->Kurs=utf8_encode($result->Kurs);
-    $temp->Uni=utf8_encode($result->Uni);
     echo json_encode($temp, JSON_PRETTY_PRINT);
     if ($result = mysqli_fetch_object($queryObj)) {
         echo ",\n";
