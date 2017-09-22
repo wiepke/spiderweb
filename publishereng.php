@@ -14,7 +14,7 @@
 
 
 <!-- header navigation -->
-<?php include 'navigation.php' ?>
+<?php include 'navigationeng.php' ?>
 
 <div class="content">
 
@@ -95,10 +95,16 @@
                         </form>
                     </div>
                 </article>
-            </section>
-        </div>
-    </div>
-</div>
-<?php include 'footer.php' ?>
+				<div class=" aligncenter"> </div>
+				</section>
+        <!-- widgets -->		
+				<?php include 'aside.php' ?>
+			</div> <!-- end row -->
+
+		</div><!-- .container -->
+	</div><!-- .content -->
+
+   <?php include 'footer.php' ?>
 </body>
-</html>
+<?php
+?>		

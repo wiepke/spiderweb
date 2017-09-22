@@ -79,14 +79,13 @@ echo "])";
 
 ?>
         ">
-<script src="libs/jquery.js"></script>
-<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
 <script src="js/bonsai.js"></script>
 <script src="js/diagram.js"></script>
 <script src="js/serviceout.js"></script>
 <script src="js/Listingout.js"></script>
  <!-- header navigation -->
-    <?php include 'navigation.php' ?>
+    <?php include 'navigationeng.php' ?>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "test");
 $allOfItMikro=[];

@@ -434,3 +434,18 @@ select {
 .dia .featherlight:last-of-type {
     background: rgba(193, 193, 193, 0.8);
 }
+
+/*some media queries to adjust height of theme boxes */
+
+@media (max-width: 1190px) {
+	aside.mythemes-sidebar div.widget_text div.textwidget, 
+	aside.mythemes-sidebar div.widget_text div.textwidget, 
+	aside.mythemes-sidebar div.widget_text#text-6 div.textwidget 
+	{
+		height:auto;
+		min-height:400px;
+	}
+	body {
+		background:red;
+	}
+}
