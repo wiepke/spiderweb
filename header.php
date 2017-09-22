@@ -29,7 +29,8 @@
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 	
 	
-	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
 	<script src="libs/jquery.js"></script>
 	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	 <script type="text/javascript" src="js/featherlight.js"></script> 

@@ -79,8 +79,6 @@ echo "])";
 
 ?>
         ">
-<script src="libs/jquery.js"></script>
-<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <script src="js/bonsai.js"></script>
 <script src="js/diagram.js"></script>
 <script src="js/serviceout.js"></script>
@@ -269,7 +267,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 								</div>
 						
 								<div class="right-col">
-								<button type="button" class="btn expand-area" id="expandbutton" data-toggle="collapse" data-target="#table" aria-expanded="false">Nach weiteren Ergebnissen suchen</button>
+								<button type="button" class="btn expand-area" id="expandbutton" data-toggle="collapse" data-target="#table" >Nach weiteren Ergebnissen suchen</button>
 									<div class="collapse" id="table"  >
 									<table class="table table-striped js-options-table">
 										<tr>
@@ -411,7 +409,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											</td>
 										</tr>
 										</table>
-										<button type="button" class="btn expand-area" id="expandbutton2" data-target="#table2" data-toggle="collapse"  aria-expanded="false">Dimensionen des Doppelradmodells</button>
+										 <button type="button" class="btn expand-area" id="expandbutton2" data-target="#table2" data-toggle="collapse"  aria-expanded="false">Dimensionen des Doppelradmodells</button> 
 										<div  class="collapse" id="table2">
 											<table class="table table-striped js-options-table">
 											<tr class="header">
@@ -676,7 +674,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 								<p id="Semesterzahllabel1" class="course-meta-sub last">Dummy</p>
 									  
 							</div>
-							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
+							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden um zu vergleichen</a> 
 							<div class="lightbox" id="fl2"><img src="img/meso.png"></div>
 							
 							<div  id="diagram1" class="dia"></div>
