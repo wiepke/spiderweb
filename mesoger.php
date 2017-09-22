@@ -5,8 +5,7 @@
     <head>
 
 		<?php include 'header.php' ?>
-		<script src="libs/jquery.js"></script>
-		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
 		<script src="js/formchecker.js"></script>
 </head>
    

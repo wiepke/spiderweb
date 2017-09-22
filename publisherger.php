@@ -95,10 +95,16 @@
                         </form>
                     </div>
                 </article>
+				<div class=" aligncenter"> </div>
             </section>
-        </div>
-    </div>
-</div>
-<?php include 'footer.php' ?>
+        <!-- widgets -->		
+				<?php include 'aside.php' ?>
+			</div> <!-- end row -->
+
+		</div><!-- .container -->
+	</div><!-- .content -->
+
+   <?php include 'footer.php' ?>
 </body>
-</html>
+<?php
+?>		
