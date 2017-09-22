@@ -63,7 +63,7 @@ jQuery(document).ready(function(){
     });
 
     if( jQuery( 'select' ).length ){
-       // jQuery('select').material_select();
+        jQuery('select').material_select();
     }
 
     if( !jQuery( 'textarea' ).hasClass( 'materialize-textarea' ) ){
@@ -83,9 +83,6 @@ jQuery(document).ready(function(){
 
     if( !jQuery( '.button' ).hasClass( 'waves-effect' ) )
         jQuery( '.button' ).addClass( 'waves-effect waves-dark' );
-	
-	 if( !jQuery( '.button.expand-area' ).hasClass( 'waves-effect' ) )
-        jQuery( '.button.expand-area' ).removeClass( 'waves-effect waves-dark' );
 
     if( !jQuery( '.mythemes-btn' ).hasClass( 'waves-effect' ) )
         jQuery( '.mythemes-btn' ).addClass( 'waves-effect waves-dark' );
