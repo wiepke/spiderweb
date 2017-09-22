@@ -5,13 +5,10 @@
     <head>
 
 		<?php include 'header.php' ?>
-		<script src="libs/jquery.js"></script>
-		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		
 		<script src="js/formchecker.js"></script>
 		<script>
-		  $( function() {
-			$( document ).tooltip();
-		  } );
+		
   </script
 </head>
    
@@ -57,7 +54,7 @@
 														University:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="University" autofocus ></div>
 													</td>
 												</tr>
 												<tr>
@@ -65,7 +62,7 @@
 														Course:
 													</td>
 													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"  ></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Course"  ></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -73,7 +70,7 @@
                                                         Department:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
+                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Department" size="72%"  ></div>
                                                     </td>
                                                 </tr>
 												<tr>

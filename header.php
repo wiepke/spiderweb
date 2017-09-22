@@ -29,11 +29,16 @@
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 	
 	
-	<!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
-	<script src="libs/jquery.js"></script>
+	
+	
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+	<!--<script type="text/javascript" src="test/front.js"></script>-->
 	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	 <script type="text/javascript" src="js/featherlight.js"></script> 
+	<script type="text/javascript" src="js/featherlight.js"></script>
 	<link rel='stylesheet' href="css/featherlight.css"> 
+	
+	<!-- test -->
 	
 	
 	<style type="text/css">

@@ -220,15 +220,38 @@ p.course-meta.last:after {
 	content:"";
 }
 
-p.course-meta-sub-label {
+p.course-meta-sub-label, h5 {
 	display:inline-block;
 	font-weight:bold;
 	margin:0;
 	color:#666;
 	font-size:12px;
-	line-height: .5em;
+	line-height: 1.3em;
 	
 }
+
+@media (min-width: 1200px) {
+	.hentry  h5 {
+	display:inline-block;
+	font-weight:bold;
+	margin:0;
+	color:#666;
+	font-size:12px;
+	line-height: 1em
+		
+	}
+}
+
+p#beneficialmikro,
+p#poorlymikro,
+p#contactmikro,
+p#beneficialmeso,
+p#poorlymeso,
+p#contactmeso {
+	margin-top:5px;
+	font-size: .9em;
+}
+
 
 p.course-meta-sub {
 	display:inline-block;

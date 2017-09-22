@@ -26,11 +26,41 @@
 <script type="text/javascript">
 	function hidediv() {
 		$('.placeholderdiv').hide();
+		$( ".toggle-modell" ).show();
+		$( "#previousmikro").show();
+		$( "#nextmikro").show();
+		$( "#previousmeso").show();
+		$( "#nextmeso").show();
 	};
+	
+	$('document').ready(checksvg);
+	function checksvg() {
+		if ( $( "svg" ).length > 0 ) {
+ 
+			$( ".toggle-modell" ).show();
+			
+ 
+		} else {
+			$( ".toggle-modell" ).hide();
+			$( "#previousmikro" ).hide();
+			$( "#nextmikro" ).hide();
+			$( "#previousmeso" ).hide();
+			$( "#nextmeso" ).hide();
+			
+		}
+	}
+	
+	
 </script>
-  
+
+<style>
+html.with-featherlight {
+    overflow: scroll;
+}
+</style>
+
 </head> <!-- all the libraries-->
-<body class="home blog custom-background" onLoad="
+<body class="home blog custom-background results" onLoad="
 <?php
 echo "showResults([";
 if (isset($_GET["mikroid"])) {
@@ -56,8 +86,71 @@ echo "])";
 <script src="js/serviceout.js"></script>
 <script src="js/Listingout.js"></script>
  <!-- header navigation -->
-    <?php include 'navigationeng.php' ?>
-        
+    <?php include 'navigation.php' ?>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "test");
+$allOfItMikro=[];
+$allOfItMeso=[];
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mikroebene`";
+if (isset($_GET['anyway'])){
+    if ($_GET['anyway']!=='1'){
+        $REQUEST = $REQUEST." WHERE published='1'";
+    }
+}else {
+    $REQUEST = $REQUEST." WHERE published='1'";
+}
+$queryObj = mysqli_query($conn, $REQUEST);
+while ($result = mysqli_fetch_object($queryObj)){
+    $temp=$result;
+    $temp->Uni=utf8_encode($result->Uni);
+    $temp->Kurs=utf8_encode($result->Kurs);
+    $temp->Fachbereich=utf8_encode($result->Fachbereich);
+    $temp->AnzahlStudenten=utf8_encode($result->AnzahlStudenten);
+    $temp->SemesterZahl=utf8_encode($result->SemesterZahl);
+    array_push($allOfItMikro, $temp);
+};
+$REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mesoebene`";
+if (isset($_GET['anyway'])){
+    if ($_GET['anyway']!=='1'){
+        $REQUEST = $REQUEST." WHERE published='1'";
+    }
+}else {
+    $REQUEST = $REQUEST." WHERE published='1'";
+}
+$queryObj = mysqli_query($conn, $REQUEST);
+while ($result = mysqli_fetch_object($queryObj)){
+    $temp=$result;
+    $temp->Uni=utf8_encode($result->Uni);
+    $temp->Kurs=utf8_encode($result->Kurs);
+    $temp->Fachbereich=utf8_encode($result->Fachbereich);
+    $temp->AnzahlStudenten=utf8_encode($result->AnzahlStudenten);
+    $temp->SemesterZahl=utf8_encode($result->SemesterZahl);
+    array_push($allOfItMeso, $temp);
+};
+$conn->close();
+echo "<script> let allOfItMikro=[];\n let chosenFilterMikro={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};\n";
+for ($i=0; $i<count($allOfItMikro);$i++){
+    echo "allOfItMikro.push({\n"
+        ."Uni: '".$allOfItMikro[$i]->Uni."',\n"
+        ."Kurs: '".$allOfItMikro[$i]->Kurs."',\n"
+        ."Fachbereich: '".$allOfItMikro[$i]->Fachbereich."',\n"
+        ."AnzahlStudenten: '".$allOfItMikro[$i]->AnzahlStudenten."',\n"
+        ."Semesterzahl: '".$allOfItMikro[$i]->SemesterZahl."'\n"
+        ."});\n";
+}
+echo"</script>";
+echo "<script> let allOfItMeso=[];\n let chosenFilterMeso={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};\n";
+for ($i=0; $i<count($allOfItMeso);$i++){
+    echo "allOfItMeso.push({\n"
+        ."Uni: '".$allOfItMeso[$i]->Uni."',\n"
+        ."Kurs: '".$allOfItMeso[$i]->Kurs."',\n"
+        ."Fachbereich: '".$allOfItMeso[$i]->Fachbereich."',\n"
+        ."AnzahlStudenten: '".$allOfItMeso[$i]->AnzahlStudenten."',\n"
+        ."Semesterzahl: '".$allOfItMeso[$i]->SemesterZahl."'\n"
+        ."});\n";
+}
+echo"</script>";
+?>
 	<div class="content">
 
 		<!-- the container ( align to center ) -->
@@ -70,7 +163,7 @@ echo "])";
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">[eng]Auswertung der eingegebenen Daten</h2>
+						<h2 class="post-title" style="color:#666666;">[eng]Ergebnisse der Anwendung des Doppelradmodellsn</h2>
 								<div class="clear"></div>
 								<?php
 								if (isset($_GET["mikroid"])) {
@@ -78,13 +171,19 @@ echo "])";
 									
 									
 									</p>
+									<p>
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>
 									";
 									
 									
 								} else {
 									echo "<p> Wählen Sie eine der Registerkarten Mikro oder Meso, um in den Ergebnissen der Befragung zu stöbern. Durch die Eingabe von Filterparametern und einen Klick auf \"Filter anwenden \" erhalten sie eine grafische Darstellung der Ergebnisse, die ihren gewählten Parametern entsrpechen.<br>
 									Wir freuen uns, wenn Sie im Anschluss &nbsp;
-									<a href=\"mikroeng.php\" class=\"poll-link\">  den Fragebogen selbst ausfüllen </a><br><br>
+									<a href=\"mikroeng.php\" class=\"poll-link\">  den Fragebogen selbst ausfüllen </a>
+									<p>
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>
 									
 									
 									</p>		
@@ -125,13 +224,15 @@ echo "])";
 						<div class="left-col">
 						
 							<div class="placeholderdiv">
-								<p class="course-meta last"> Results </p><br>
+								<p class="course-meta last"> Results  </p><br>
 								<p  class="course-meta-sub-label">Choose your criteria for searching the results in the filter element on the right.</p>
 								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
 							</div>
                             <div id="labels0">
 
-                                <p class="course-meta" id="Unilabel0">Dummy </p> <p id="Kurslabel0" class="course-meta">Dummy</p>  <p id="Fachbereichlabel0" class="course-meta last"> Dummy </p>
+                                <p id="Pagination0" hidden> dummy von dummy </p>
+								
+								<p class="course-meta" id="Unilabel0">Dummy </p> <p id="Kurslabel0" class="course-meta">Dummy</p>  <p id="Fachbereichlabel0" class="course-meta last"> Dummy </p>
 							
 								<br style="line-height: .5em;"> 
 								
@@ -144,10 +245,16 @@ echo "])";
 								<p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p> 
 									  
                             </div>
-                            <div  id="diagram0" class="dia"></div>
-							
-                            
-							<p id="Pagination0" hidden> dummy von dummy</p>
+                            <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
+										
+									<div class="lightbox" id="fl1"><img src="img/mikro-en.png"></div>
+									<div  id="diagram0" class="dia"></div>
+                                    <h5>What worked fine:</h5>
+                                    <p  id="beneficialmikro"></p>
+                                    <h5>What did not work that good:</h5>
+                                    <p  id="poorlymikro"></p>
+                                    <h5>E-Mail to the lecturer:</h5>
+                                    <p  id="contactmikro"></p>
 							<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true);return false;">Last Result</button>
 							<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true);return false;">Next Result</button>
 						
@@ -162,7 +269,34 @@ echo "])";
 										Uni:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilterMikro" size="40">
+										<select name="Uni" class="stringFilterMikro" id="UniMikro">
+                                                    <option value="">Choose University</option>
+                                                    <?php
+                                                    //////////////////Finds all the options there are in "Uni"/////////////////////////////////
+                                                    $options=[];
+                                                    array_push($options, $allOfItMikro[0]->Uni);
+                                                    $next=0;
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
+                                                        $exists=false;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Uni){
+                                                                $exists=true;
+                                                                break;
+                                                            }
+                                                        }
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Uni);
+                                                        }
+                                                    }
+                                                    //////////////////Finds all the options there are in "Uni"///////////////////////////////
+                                                    sort($options);
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    for ($i=0;count($options)>$i;$i++){
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."UniMikroId' class='UniMikro'>".$options[$i]."</option>";
+                                                    }
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    ?>
+                                                </select>
 									</td>
 								</tr>
 								<tr>
@@ -170,7 +304,34 @@ echo "])";
 										Course:
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilterMikro" size="40">
+										<select name="Kurs" class="stringFilterMikro" id="KursMikro">
+                                                    <option value="">Choose Course</option>
+                                                    <?php
+                                                    //////////////////Finds all the options there are in "Kurs"/////////////////////////////////
+                                                    $options=[];
+                                                    array_push($options, $allOfItMikro[0]->Kurs);
+                                                    $next=0;
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
+                                                        $exists=false;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Kurs){
+                                                                $exists=true;
+                                                                break;
+                                                            }
+                                                        }
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Kurs);
+                                                        }
+                                                    }
+                                                    //////////////////Finds all the options there are in "Kurs"///////////////////////////////
+                                                    sort($options);
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    for ($i=0;count($options)>$i;$i++){
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."KursMikroId' class='KursMikro'>".$options[$i]."</option>";
+                                                    }
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    ?>
+                                                </select>
 									</td>
 								</tr>
                                 <tr>
@@ -178,7 +339,34 @@ echo "])";
                                         Department:
                                     </td>
                                     <td colspan="3">
-                                        <input name="Fachbereich" value="" class="stringFilterMikro" size="40">
+                                        <select name="Fachbereich" class="stringFilterMikro" id="FachbereichMikro">
+                                                    <option value="">Choose Department</option>
+                                                    <?php
+                                                    //////////////////Finds all the options there are in "Fachbereich"/////////////////////////////////
+                                                    $options=[];
+                                                    array_push($options, $allOfItMikro[0]->Fachbereich);
+                                                    $next=0;
+                                                    for ($i=0; $i<count($allOfItMikro);$i++){
+                                                        $exists=false;
+                                                        for ($j=0;$j<count($options);$j++){
+                                                            if ($options[$j]===$allOfItMikro[$i]->Fachbereich){
+                                                                $exists=true;
+                                                                break;
+                                                            }
+                                                        }
+                                                        if (!$exists){
+                                                            array_push($options,$allOfItMikro[$i]->Fachbereich);
+                                                        }
+                                                    }
+                                                    //////////////////Finds all the options there are in "Fachbereich"///////////////////////////////
+                                                    sort($options);
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    for ($i=0;count($options)>$i;$i++){
+                                                        echo "<option value='".$options[$i]."' id='".$options[$i]."FachbereichMikroId' class='FachbereichMikro'>".$options[$i]."</option>";
+                                                    }
+                                                    //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                    ?>
+                                                </select>
                                     </td>
                                 </tr>
 
@@ -187,7 +375,13 @@ echo "])";
                                         Number of Students:
                                     </td>
                                     <td colspan="3">
-                                        <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40">
+                                        <select name="AnzahlStudenten" class="stringFilterMikro" id="AnzahlStudentenMikro">
+                                                    <option value="">Choose Number of Students</option>
+                                                    <option value="1">1-10</option>
+                                                    <option value="11">11-20</option>
+                                                    <option value="21">21-30</option>
+                                                    <option value="30">more than 30</option>
+                                                </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -195,126 +389,249 @@ echo "])";
                                         Semester Count:
                                     </td>
                                     <td colspan="3">
-                                        <input name="Semesterzahl" value="" class="stringFilterMikro" size="40">
-                                    </td>
-                                </tr>
-								<tr>
-									<td>
-										Assessment:
-									</td>
-									<td>
-										
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										 Research topic:
-									</td>
-									<td>
-									
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Research question:
-									</td>
-									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="3">
-									</td>
-								
-								</tr>
-										
-								<tr>
-									<td>
-										Plan:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Planung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Conduct:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
+                                         <select name="Semesterzahl" class="stringFilterMikro"  id="SemesterZahlMikro">
+                                                    <option value="">Choose Number of Semesters</option>
+                                                    <option value="1">1-3</option>
+                                                    <option value="3">3-6</option>
+                                                    <option value="6"> more than 6</option>
+                                                </select>
+											</td>
+										</tr>
+										</table>
+										<button type="button" class="btn expand-area" id="expandbutton2" data-target="#table2" data-toggle="collapse"  aria-expanded="false">Dimensions of the model</button>
+										<div  class="collapse" id="table2">
+											<table class="table table-striped js-options-table">
+											<tr class="header">
+												<td colspan="2">
+													Examination frame:
+												</td>
+											</tr>
+											<tr>
+												<td width="10px">
+													
+													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
+												</td>
 											
-								<tr>
-									<td>
-										Reflection:
-									</td>
-									<td>
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Solutiondisplay:
-									</td>
-									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="3">
-									</td>
-								</tr>
-							</table>
+												<td>
+													exam determined
+												</td>
+											</tr>
+											<tr>
+												<td  width="10px">
+													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
+												</td>
+												
+												<td>
+													exam eligible
+												</td>
+											</tr>
+											<tr>
+											
+												<td  width="10px">
+													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+													no exam
+												</td>
+											</tr>
+											
+											<tr class="header">
+												<td colspan="2">
+													Research topic:
+												</td>
+											</tr>
+											<tr>
+												
+												<td >
+												
+													<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+													provided
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+													negotiated
+												
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Forschungsthema" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+													self-determined
+												</td>
+											</tr>
+													
+											<tr class="header">
+												<td colspan="2">
+													Research question:
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+													provided
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+												negotiated
+												</td>
+											</tr>
+												<td >
+													<input type="radio" name="Forschungsfrage" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+												self-determined
+												</td>
+											
+											</tr>
+													
+											<tr class="header">
+												<td colspan="2">
+													Research design:
+												</td>
+											</tr>
+											<tr>
+												
+												
+												<td >
+													<input type="radio" name="Planung" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+												directed
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Planung" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+												supported
+												</td>
+											</tr>
+											<tr>	
+												<td >
+													<input type="radio" name="Planung" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+													self-directed
+												</td>
+											</tr>
+													
+											<tr class="header">
+												<td colspan="2">
+													Research conduct:
+												</td>
+											</tr>
+											<tr>
+												
+												
+												<td >
+													<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+													directed
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+												supported
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Durchfuhrung" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+													self-directed
+												</td>
+												
+											</tr>
+														
+											<tr class="header">
+												<td colspan="2">
+													Reflection:
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+												directed
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+												supported
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+												self-directed
+												</td>
+											</tr>
+													
+											<tr class="header">
+												<td colspan="2">
+													Presentation of results:
+												</td>
+											</tr>
+											<tr>
+											
+												<td>
+													<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="1">
+												</td>
+												<td>
+													non-public
+												</td>
+											</tr>
+											<tr>
+												<td >
+													<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="2">
+												</td>
+												<td>
+													partly-public
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input type="radio" name="Ergebnisdarstellung" class="dimensionFilterMikro" value="3">
+												</td>
+												<td>
+													public
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div>
 							
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true);hidediv();">Apply Filter</button>
 							<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="cleanFilter(); return false">Clean Filter</button>
 							
-							</div> <!-- collapse -->
+							</div>
+						</div> <!-- collapse -->
 						
 							
 								
@@ -328,11 +645,12 @@ echo "])";
 					<div class="tab-pane " id="tab2">
 						<div class="left-col">
 							<div class="placeholderdiv">
-								<p class="course-meta last"> Results Display </p><br>
+								<p class="course-meta last"> Results  </p><br>
 								<p  class="course-meta-sub-label">Choose your criteria for searching the results in the filter element on the right.</p>
 								<div class="dia" style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div> 
 							</div>
 							<div id="labels1" >
+							<p id="Pagination1" hidden> dummy von dummy</p>
 								<p class="course-meta" id="Unilabel1">Dummy </p> <p id="Kurslabel1" class="course-meta">Dummy</p>  <p id="Fachbereichlabel1" class="course-meta last"> Dummy </p>
 							
 							   <br style="line-height: .5em;"> 
@@ -347,8 +665,17 @@ echo "])";
 									  
 							</div>
 							
+							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
+							<div class="lightbox" id="fl2"><img src="img/meso-en.png"></div>
+							
 							<div  id="diagram1" class="dia"></div>
-                            <p id="Pagination1" hidden> dummy von dummy</p>
+                            <h5>What worked fine:</h5>
+                            <p  id="beneficialmeso"></p>
+                            <h5>What did not work that good:</h5>
+                            <p  id="poorlymeso"></p>
+                            <h5>E-Mail to the lecturer:</h5>
+                            <p  id="contactmeso"></p>
+							
 							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Last Result</button>
 							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Next Result</button>
 							
@@ -365,7 +692,34 @@ echo "])";
 										Uni:
 									</td>
 									<td colspan="3">
-										<input name="Uni" value="" class="stringFilterMeso" size="40">
+										<select name="Uni" class="stringFilterMeso" id="UniMeso">
+                                                <option value="">Choose University</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Uni"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Uni);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Uni){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Uni);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Uni"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."UniMesoId' class='UniMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
 									</td>
 								</tr>
 								<tr>
@@ -373,7 +727,34 @@ echo "])";
 										Course:
 									</td>
 									<td colspan="3">
-										<input name="Kurs" value="" class="stringFilterMeso" size="40">
+										<select name="Kurs" class="stringFilterMeso"  id="KursMeso">
+                                                <option value="">Choose Course</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Kurs"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Kurs);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Kurs){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Kurs);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Kurs"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."KursMesoId' class='KursMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
 									</td>
 								</tr>
 								
@@ -382,7 +763,34 @@ echo "])";
 										Department:
 									</td>
 									<td colspan="3">
-										<input name="Fachbereich" value="" class="stringFilterMeso" size="40">
+										 <select name="Fachbereich" class="stringFilterMeso" id="FachbereichMeso">
+                                                <option value="">Choose Department</option>
+                                                <?php
+                                                //////////////////Finds all the options there are in "Fachbereich"/////////////////////////////////
+                                                $options=[];
+                                                array_push($options, $allOfItMeso[0]->Fachbereich);
+                                                $next=0;
+                                                for ($i=0; $i<count($allOfItMeso);$i++){
+                                                    $exists=false;
+                                                    for ($j=0;$j<count($options);$j++){
+                                                        if ($options[$j]===$allOfItMeso[$i]->Fachbereich){
+                                                            $exists=true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!$exists){
+                                                        array_push($options,$allOfItMeso[$i]->Fachbereich);
+                                                    }
+                                                }
+                                                //////////////////Finds all the options there are in "Fachbereich"///////////////////////////////
+                                                sort($options);
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                for ($i=0;count($options)>$i;$i++){
+                                                    echo "<option value='".$options[$i]."' id='".$options[$i]."FachbereichMesoId' class='FachbereichMeso'>".$options[$i]."</option>";
+                                                }
+                                                //////////////////Writes the options in a dropdown menu///////////////////////////////////
+                                                ?>
+                                            </select>
 									</td>
 								</tr>
 								
@@ -391,7 +799,13 @@ echo "])";
 										 Number of Students:
 									</td>
 									<td colspan="3">
-										<input name="AnzahlStudenten" value="" class="stringFilterMeso" size="40">
+										 <select name="AnzahlStudenten" class="stringFilterMeso" id="AnzahlStudentenMeso">
+                                                <option value="">Choose Number of Students</option>
+                                                <option value="1">1-10</option>
+                                                <option value="11">11-20</option>
+                                                <option value="21">21-30</option>
+                                                <option value="30">more than 30</option>
+                                            </select>
 									</td>
 								</tr>
 								<tr>
@@ -399,112 +813,186 @@ echo "])";
 										 Semester Count:
 									</td>
 									<td colspan="3">
-										<input name="Semesterzahl" value="" class="stringFilterMeso" size="40">
+										 <select name="Semesterzahl" class="stringFilterMeso" id="SemesterZahlMeso">
+                                                <option value="">Choose Number of Semesters</option>
+                                                <option value="1">1-3</option>
+                                                <option value="3">3-6</option>
+                                                <option value="6"> more than 6</option>
+                                            </select>
 									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										Curricular embedding:
-									</td>
-									<td>
-										
-										<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
-									</td>
-									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
-									</td>
-									<td>
-										 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-								
-								<tr>
-									<td>
-										 Modular location:
-									</td>
-									<td>
+                                    </tr>
+                                </table>
+							<button type="button" class="btn expand-area" data-toggle="collapse" data-target="#table4" >Dimensions of the model</button>
+							
+							<div class="collapse" id="table4"  >
+								<table  class="table table-striped js-options-table">
 									
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="2">
-									</td>
-									<td>
-										<input type="radio" name="Verortung" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Contentsetting:
-									</td>
-									<td>
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilter" value="1">
-									</td>
-									<td>
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Inhaltsrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								
-								</tr>
-										
-								<tr>
-									<td>
-										Assessmentsetting:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
-										
-								<tr>
-									<td>
-										Timesetting:
-									</td>
-									
-									
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
+									<tr class="header">
+										<td colspan="2">
+											Integration in curriculum:
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
 											
-								<tr>
-									<td>
-										Ressourcsetting:
-									</td>
-									<td>
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
-									</td>
-									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
-									</td>
-									<td >
-										<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
-									</td>
-								</tr>
+											<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											CP & graded
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
+											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											CP & ungraded
+										</td>
+									</tr>
+									<tr>
+										<td width="10px">
+											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											without CP
+										</td>
+									</tr>
+									
+									<tr class="header">
+										<td colspan="2">
+											Integration in modules:
+										</td>
+									</tr>
+									<tr>
+										<td>
 										
-								
-							</table>
-							<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false)">Apply Filter</button>
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											mandatory module
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											optional module
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Verortung" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											no module
+										</td>
+									</tr>
+											
+									
+											
+									<tr class="header">
+										<td colspan="2">
+											Examination frame:
+										</td>
+									</tr>
+									<tr>
+										
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											exam determined
+										</td>
+									</tr>
+									<tr>
+										
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											exam eligible
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											exam determined
+										</td>
+									</tr>
+											
+									<tr class="header">
+										<td colspan="2">
+											Time frame:
+										</td>
+									</tr>
+									<tr>
+										
+										
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											tri-/semester
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											more than a tri-/semester
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Zeitrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											whole study program
+										</td>
+									</tr>
+												
+									<tr class="header">
+										<td colspan="2">
+											Resource frame:
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
+										</td>
+										<td>
+											no resources
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
+										</td>
+										<td>
+											temporary 
+										</td>
+									</tr>
+									<tr>
+										<td >
+											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
+										</td>
+										<td>
+											permanent
+										</td>
+									</tr>
+											
+									
+								</table>
+							</div>
+							<div>
+							<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false); hidediv();">Apply Filter</button>
 								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">Clean Filter</button>
 							
+						</div>
 						</div> <!--- end collapse -->
 						
 					</div> <!-- end right col -->
@@ -520,6 +1008,7 @@ echo "])";
 		<div class=" aligncenter"> </div>
 						
 	</section>
+					
 			
 	<!-- widgets -->		
 				<?php include 'aside.php' ?>
