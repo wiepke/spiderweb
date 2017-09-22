@@ -196,7 +196,7 @@ function showResults(Filter) {
         $.ajax({
             url: urlmikro,
             success: function (data) {
-                values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].Assessment];
+                values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
                 diagram(Kriterienmikro, values,0);
                 number_of_showall_mikro++;
                 document.getElementById('Unilabel0').innerHTML=data[0].Uni;
@@ -216,7 +216,7 @@ function showResults(Filter) {
         $.ajax({
             url: urlmeso,
             success: function (data) {
-                values = [data[0].Einbindung, data[0].Inhaltsrahmen, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
+                values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
                 diagram(Kriterienmeso, values,1);
                 number_of_showall_meso++;
                 document.getElementById('Unilabel1').innerHTML=data[0].Uni;
@@ -272,7 +272,7 @@ function showall(Filter,mikro) {
                 }
             }else {
                     if (mikro){
-                        values = [data[0].Assessment, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                        values = [data[0].feedback, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
                         diagram(Kriterien, values,0);
                         number_of_showall_mikro++;
                         document.getElementById('Unilabel0').innerHTML=data[0].Uni;
@@ -284,7 +284,7 @@ function showall(Filter,mikro) {
                         document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                         document.getElementById('contactmikro').innerHTML=data[0].contact;
                     } else {
-                        values = [data[0].Einbindung, data[0].Verortung, data[0].Inhaltsrahmen, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                        values = [data[0].Einbindung, data[0].Verortung, data[0].CreditPoints, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
                         diagram(Kriterien, values,1);
                         number_of_showall_meso++;
                         document.getElementById('Unilabel1').innerHTML=data[0].Uni;
@@ -330,7 +330,7 @@ function next(Filter,mikro) {
         success: function (data) {
             cleanall();
             if (mikro){
-                values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].Assessment];
+                values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
                 diagram(Kriterien, values,0);
                 number_of_showall_mikro++;
                 document.getElementById('Unilabel0').innerHTML=data[0].Uni;
@@ -342,7 +342,7 @@ function next(Filter,mikro) {
                 document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                 document.getElementById('contactmikro').innerHTML=data[0].contact;
             } else {
-                values = [data[0].Einbindung, data[0].Inhaltsrahmen, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
+                values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
                 diagram(Kriterien, values,1);
                 number_of_showall_meso++;
                 document.getElementById('Unilabel1').innerHTML=data[0].Uni;
@@ -413,7 +413,7 @@ function previous(Filter,mikro) {
             }
             else {
                 if (mikro){
-                    values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].Assessment];
+                    values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
                     diagram(Kriterien, values,0);
                     document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
@@ -424,7 +424,7 @@ function previous(Filter,mikro) {
                     document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                     document.getElementById('contactmikro').innerHTML=data[0].contact;
                 } else {
-                    values = [data[0].Einbindung, data[0].Inhaltsrahmen, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
+                    values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
                     diagram(Kriterien, values,1);
                     document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;

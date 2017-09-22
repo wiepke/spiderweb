@@ -84,7 +84,12 @@
                                                         Semesterzahl der Studierenden <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>
+                                                        <select name="Semesterzahl" id="semesterInput">
+                                                            <option value="">Wählen Sie eine Anzahl</option>
+                                                            <option value="1">1-3 Bachelor</option>
+                                                            <option value="4">4-6 Bachelor</option>
+                                                            <option value="6">Master</option>
+                                                        </select>
                                                     </td>
                                                 </tr>
                                             </table> <!-- all dimensions of the universities -->
@@ -366,7 +371,7 @@
 												</tr>
 												<tr>
 													<td width="10px" >
-														<input type="radio" name="Assessment" value="1"  >
+														<input type="radio" name="feedback" value="1"  >
 													</td>
 													<td >
 														Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).
@@ -374,7 +379,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Assessment" value="2" >
+														<input type="radio" name="feedback" value="2" >
 													</td>
 													<td >
 														Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.
@@ -382,7 +387,7 @@
 												</tr>
 												<tr>
 												   <td width="10px">
-														<input type="radio" name="Assessment" value="3">
+														<input type="radio" name="feedback" value="3">
 													</td>
 												   <td >
 														Studierende entscheiden selbst, ob und wie ihre Forschung bewertet wird.

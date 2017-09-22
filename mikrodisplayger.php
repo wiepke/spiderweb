@@ -402,9 +402,9 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 												<!-- <input name="Semesterzahl" value="" class="stringFilterMikro" size="40"> -->
                                                 <select name="Semesterzahl" class="stringFilterMikro"  id="SemesterZahlMikro">
                                                     <option value="">Wählen Sie eine Anzahl</option>
-                                                    <option value="1">1-3</option>
-                                                    <option value="3">3-6</option>
-                                                    <option value="6"> mehr als 6</option>
+                                                    <option value="1">1-3 Bachelor</option>
+                                                    <option value="4">4-6Bachelor</option>
+                                                    <option value="6"> Master</option>
                                                 </select>
 											</td>
 										</tr>
@@ -414,13 +414,13 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											<table class="table table-striped js-options-table">
 											<tr class="header">
 												<td colspan="2">
-													Prüfungsrahmen:
+													Feedback:
 												</td>
 											</tr>
 											<tr>
 												<td width="10px">
 													
-													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="1">
+													<input type="radio" name="feedback" class="dimensionFilterMikro" value="1">
 												</td>
 											
 												<td>
@@ -429,7 +429,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											</tr>
 											<tr>
 												<td  width="10px">
-													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="2">
+													<input type="radio" name="feedback" class="dimensionFilterMikro" value="2">
 												</td>
 												
 												<td>
@@ -439,7 +439,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 											<tr>
 											
 												<td  width="10px">
-													<input type="radio" name="Assessment" class="dimensionFilterMikro" value="3">
+													<input type="radio" name="feedback" class="dimensionFilterMikro" value="3">
 												</td>
 												<td>
 													keine Prüfung
@@ -822,9 +822,9 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         <td colspan="3">
                                             <select name="Semesterzahl" class="stringFilterMeso" id="SemesterZahlMeso">
                                                 <option value="">Wählen Sie eine Anzahl</option>
-                                                <option value="1">1-3</option>
-                                                <option value="3">3-6</option>
-                                                <option value="6"> mehr als 6</option>
+                                                <option value="1">1-3 Bachelor</option>
+                                                <option value="4">4-6 Bachelor</option>
+                                                <option value="6">Master</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -833,37 +833,67 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 							
 							<div class="collapse" id="table4"  >
 								<table  class="table table-striped js-options-table">
-									
-									<tr class="header">
-										<td colspan="2">
-											Curriculare Einbindung:
-										</td>
-									</tr>
-									<tr>
-										<td width="10px">
-											
-											<input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
-										</td>
-										<td>
-											CP & benotet
-										</td>
-									</tr>
-									<tr>
-										<td width="10px">
-											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
-										</td>
-										<td>
-											CP und unbenotet
-										</td>
-									</tr>
-									<tr>
-										<td width="10px">
-											 <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
-										</td>
-										<td>
-											ohne CP
-										</td>
-									</tr>
+
+                                    <tr class="header">
+                                        <td colspan="2">
+                                            Curriculare Einbindung:
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+
+                                            <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="1">
+                                        </td>
+                                        <td>
+                                            CP & benotet
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+                                            <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="2">
+                                        </td>
+                                        <td>
+                                            CP und unbenotet
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+                                            <input type="radio" name="Einbindung" class="dimensionFilterMeso" value="3">
+                                        </td>
+                                        <td>
+                                            ohne CP
+                                        </td>
+                                    </tr>
+                                    <tr class="header">
+                                        <td colspan="2">
+                                            Anzahl an Credit Points:
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+
+                                            <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="1">
+                                        </td>
+                                        <td>
+                                            Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+                                            <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="2">
+                                        </td>
+                                        <td>
+                                            Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="10px">
+                                            <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="3">
+                                        </td>
+                                        <td>
+                                            Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
+                                        </td>
+                                    </tr>
 									
 									<tr class="header">
 										<td colspan="2">
