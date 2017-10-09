@@ -84,9 +84,9 @@ echo "])";
 <script src="js/serviceout.js"></script>
 <script src="js/Listingout.js"></script>
  <!-- header navigation -->
-    <?php include 'navigation.php' ?>
+<?php include 'navigation.php' ?>
+<?php include 'dbconn.php' ?>
 <?php
-$conn = mysqli_connect("localhost", "root", "", "test");
 $allOfItMikro=[];
 $allOfItMeso=[];
 $REQUEST="SELECT Uni,Kurs,Fachbereich,AnzahlStudenten,SemesterZahl FROM `mikroebene`";

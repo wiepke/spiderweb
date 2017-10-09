@@ -259,6 +259,7 @@ function showall(Filter,mikro) {
         url: url,
         mikro: mikro,
         success: function (data) {
+            data = JSON.parse(data);
             if (data[0].hasOwnProperty("limit")) {
                 if (mikro) {
                     document.getElementById("Pagination0").innerHTML = "Es liegen keine Ergebnisse für diese Filter vor.";
@@ -328,6 +329,7 @@ function next(Filter,mikro) {
     $.ajax({
         url: url,
         success: function (data) {
+            data = JSON.parse(data);
             cleanall();
             if (mikro){
                 values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
@@ -403,6 +405,7 @@ function previous(Filter,mikro) {
     $.ajax({
         url: url,
         success: function (data) {
+            data = JSON.parse(data);
             if (data[0].hasOwnProperty("limit")){
                 if (mikro) {
                     document.getElementById("Pagination0").innerHTML="Es liegen keine Ergebnisse für diese Filter vor.";
