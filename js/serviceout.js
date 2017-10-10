@@ -196,6 +196,7 @@ function showResults(Filter) {
         $.ajax({
             url: urlmikro,
             success: function (data) {
+                data = JSON.parse(data);
                 values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
                 diagram(Kriterienmikro, values,0);
                 number_of_showall_mikro++;
@@ -216,6 +217,7 @@ function showResults(Filter) {
         $.ajax({
             url: urlmeso,
             success: function (data) {
+                data = JSON.parse(data);
                 values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
                 diagram(Kriterienmeso, values,1);
                 number_of_showall_meso++;

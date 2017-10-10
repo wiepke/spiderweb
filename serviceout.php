@@ -42,7 +42,7 @@ if (!isset($_GET["anyway"])) {
 }
 if ((count($Kriterien)!=0)||(!isset($_GET['anyway']))) {$REQUESTSPINNE=$REQUESTSPINNE."')";}
 
-$pdo = new PDO('mysql:host=localhost;dbname=spinnennetz', 'root', 'voyager');
+$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '');
 $statement = $pdo->prepare($REQUESTSPINNE);
 $statement->execute();
 $row = $statement->rowCount();
