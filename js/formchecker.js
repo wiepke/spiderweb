@@ -19,6 +19,7 @@ $(document).ready(function(){
         $.ajax({
             url: "serviceout.php?mikro=true&id="+id+"&from=0",
             success: function (data) {
+                data = JSON.parse(data);
                 $('#uniInput').val(data[0].Uni);
                 $('#fachbereichInput').val(data[0].Fachbereich);
                 $('#kursInput').val(data[0].Kurs);
