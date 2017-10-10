@@ -52,7 +52,7 @@
 														Hochschule:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus  ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus required ></div>
 													</td>
 												</tr>
 												<tr>
@@ -60,7 +60,7 @@
 														Titel der Lehrveranstaltung:
 													</td>
 													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs"   ></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs" required></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -68,7 +68,7 @@
                                                         Fachbereich:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%"  ></div>
+                                                        <div align="right"><input id="fachbereichInput" name="Fachbereich" placeholder="Fachbereich" size="72%" required ></div>
                                                     </td>
                                                 </tr>
 												<tr>
@@ -76,7 +76,7 @@
                                                         Anzahl an Studierenden:
                                                     </td>
                                                     <td colspan="3">
-                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%"  ></div>
+                                                        <div align="right"><input id="anzahlInput" name="AnzahlStudenten" placeholder="0" size="72%" required ></div>
                                                     </td>
                                                 </tr>
                                                 <tr>

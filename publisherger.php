@@ -43,7 +43,7 @@
 											<tr >
 												<td >
 														   
-													  <input type="checkbox" name="agreement" value="1">
+													  <input type="checkbox" name="agreement" value="1" onclick="document.getElementById('firstButton').disabled=!document.getElementById('firstButton').disabled;">
 														   
 												</td>
 												<td>
@@ -54,7 +54,7 @@
 										</table> 
 									   
 									   
-										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one"> weiter </button>
+										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one" disabled> weiter </button>
 									</div>
 									<div class="panel-collapse collapse " id="one">
 										
