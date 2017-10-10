@@ -3,6 +3,30 @@
  */
 
 $(document).ready(function(){
+    if (location.pathname.match('mikroger')!==null){
+        document.getElementById('firstButton').disabled=true;
+        $('#uniInput').keypress(function() {
+            document.getElementById('firstButton').disabled=
+                !(($('#uniInput').val()!=="")&&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+        });
+        $('#kursInput').keypress(function() {
+            document.getElementById('firstButton').disabled=
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+        });
+        $('#semesterInput').on('change',function() {
+            document.getElementById('firstButton').disabled=
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+        });
+        $('#fachbereichInput').keypress(function() {
+            document.getElementById('firstButton').disabled=
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+        });
+        $('#anzahlInput').keypress(function() {
+            document.getElementById('firstButton').disabled=
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+        });
+    }
+
     let i=1;
     let id=-1;
     if (location.search.match('mikroid')!==null){
