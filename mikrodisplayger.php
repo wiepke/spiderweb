@@ -387,24 +387,23 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                                 <!-- <input name="AnzahlStudenten" value="" class="stringFilterMikro" size="40"> -->
                                                 <select name="AnzahlStudenten" class="stringFilterMikro" id="AnzahlStudentenMikro">
                                                     <option value="">Wählen Sie eine Anzahl</option>
-                                                    <option value="1">1-10</option>
-                                                    <option value="11">11-20</option>
-                                                    <option value="21">21-30</option>
-                                                    <option value="30">über 30</option>
+                                                    <option value="1" id='AnzahlStudentenMikroId1' class='AnzahlStudentenMikro'>1-10</option>
+                                                    <option value="11" id='AnzahlStudentenMikroId11' class='AnzahlStudentenMikro'>11-20</option>
+                                                    <option value="21" id='AnzahlStudentenMikroId21' class='AnzahlStudentenMikro'>21-30</option>
+                                                    <option value="30" id='AnzahlStudentenMikroId30' class='AnzahlStudentenMikro'>über 30</option>
                                                 </select>
                                             </td>
-										</tr>
-										<tr>
-											<td>
-												Semesterzahl der Studierenden:
-											</td>
-											<td colspan="3">
-												<!-- <input name="Semesterzahl" value="" class="stringFilterMikro" size="40"> -->
-                                                <select name="Semesterzahl" class="stringFilterMikro"  id="SemesterZahlMikro">
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Semesterzahl der Studierenden:
+                                            </td>
+                                            <td colspan="3">
+                                                <select name="Semesterzahl" class="stringFilterMikro" id="SemesterZahlMikro">
                                                     <option value="">Wählen Sie eine Anzahl</option>
-                                                    <option value="1">1-3 Bachelor</option>
-                                                    <option value="4">4-6Bachelor</option>
-                                                    <option value="6"> Master</option>
+                                                    <option value="1" id='SemesterZahlMikroId1' class='SemesterZahlMikro'>1-3 Bachelor</option>
+                                                    <option value="4" id='SemesterZahlMikroId4' class='SemesterZahlMikro'>4-6 Bachelor</option>
+                                                    <option value="6" id='SemesterZahlMikroId6' class='SemesterZahlMikro'>Master</option>
                                                 </select>
 											</td>
 										</tr>
@@ -674,7 +673,7 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
 								<p id="Semesterzahllabel1" class="course-meta-sub last">Dummy</p>
 									  
 							</div>
-							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden um zu vergleichen</a> 
+							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 							<div class="lightbox" id="fl2"><img src="img/meso.png"></div>
 							
 							<div  id="diagram1" class="dia"></div>
@@ -808,10 +807,10 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         <td colspan="3">
                                             <select name="AnzahlStudenten" class="stringFilterMeso" id="AnzahlStudentenMeso">
                                                 <option value="">Wählen Sie eine Anzahl</option>
-                                                <option value="1">1-10</option>
-                                                <option value="11">11-20</option>
-                                                <option value="21">21-30</option>
-                                                <option value="30">über 30</option>
+                                                <option value="1" id='AnzahlStudentenMesoId1' class='AnzahlStudentenMeso'>1-10</option>
+                                                <option value="11" id='AnzahlStudentenMesoId11' class='AnzahlStudentenMeso'>11-20</option>
+                                                <option value="21" id='AnzahlStudentenMesoId21' class='AnzahlStudentenMeso'>21-30</option>
+                                                <option value="30" id='AnzahlStudentenMesoId30' class='AnzahlStudentenMeso'>über 30</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -822,9 +821,9 @@ Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
                                         <td colspan="3">
                                             <select name="Semesterzahl" class="stringFilterMeso" id="SemesterZahlMeso">
                                                 <option value="">Wählen Sie eine Anzahl</option>
-                                                <option value="1">1-3 Bachelor</option>
-                                                <option value="4">4-6 Bachelor</option>
-                                                <option value="6">Master</option>
+                                                <option value="1" id='SemesterZahlMesoId1' class='SemesterZahlMeso'>1-3 Bachelor</option>
+                                                <option value="4" id='SemesterZahlMesoId4' class='SemesterZahlMeso'>4-6 Bachelor</option>
+                                                <option value="6" id='SemesterZahlMesoId6' class='SemesterZahlMeso'>Master</option>
                                             </select>
                                         </td>
                                     </tr>

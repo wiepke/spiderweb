@@ -47,7 +47,7 @@
 														   
 												</td>
 												<td>
-												 Durch die Nutzung des Tools zum FideS-Doppelradmodell erkläre ich mich einverstanden, dass meine Eingaben anonymisiert in die weitere Forschungsarbeit des FideS-Projekts einfließen können. Eine Weitergabe an Dritte erfolgt nicht.
+												 With usage of tools of the Fides-Doppelradmodell I accept my given information as anonymous part of research. My Data will not be given to third parties.
 												</td>
 											</tr>
 											
@@ -61,8 +61,7 @@
 									<table class="table js-options-table tablebg">
 											<tr class="header">
 												<td colspan="2">
-														   
-													Sie erhalten nun auf Basis Ihrer Eingaben eine grafische Darstellung Ihrer Lehrveranstaltung. Um Ihr Ergebnis einschätzen zu können und Anregungen von anderen Lehrenden zu erhalten, können Sie Ihre Lehrveranstaltung danach mit anderen vergleichen. Wir freuen uns, wenn auch Sie bereit sind, Ihr Ergebnis zu veröffentlichen, so dass andere Lehrende von Ihren Erfahrungen profitieren können.
+													You will now get a visual reply based on your given information. Furthermore you can look at other courses, compare them to yours and get contact details of the teacher. We are happy about your assent, to publish your results, so others can benefit from your experiences.
 														   
 												</td>
 											</tr>
@@ -71,7 +70,7 @@
 													<input type="radio" name="published" value="1" required>
 												</td>
 												<td>
-													Ja, andere Nutzer*innen sollen ihre Lehrveranstaltungen mit meinen vergleichen können.
+                                                    Yes, other users shall see my course.
 												</td>
 													
 											</tr>
@@ -80,7 +79,7 @@
 													<input type="radio" name="published" value="0" required>
 												</td>
 												<td>
-													Nein, nur ich soll die Auswertung meiner Eingaben einsehen können.
+                                                    No, I want my results to be just seen by me.
 												</td>
 												
 												
