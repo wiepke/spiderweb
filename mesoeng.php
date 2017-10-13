@@ -26,7 +26,7 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">[ENG]Fragebogen Mesoebene</h2>
+						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell</h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->

@@ -2,6 +2,7 @@
  * Created by fides-WHK on 16.03.2017.
  */
 $(document).ready(function (){
+    cleanFilter();
     $("select[id=UniMikro]").on("change",function(){
         chosenFilterMikro.Uni=$("select[id=UniMikro]").val();
         adjustFilterMikro();
@@ -16,9 +17,11 @@ $(document).ready(function (){
     });
     $("select[id=SemesterZahlMikro]").on("change",function(){
         chosenFilterMikro.SemesterZahl=$("select[id=SemesterZahlMikro]").val();
+        adjustFilterMikro();
     });
     $("select[id=AnzahlStudentenMikro]").on("change",function(){
         chosenFilterMikro.AnzahlStudenten=$("select[id=AnzahlStudentenMikro]").val();
+        adjustFilterMikro();
     });
     $("select[id=UniMeso]").on("change",function(){
         chosenFilterMeso.Uni=$("select[id=UniMeso]").val();
@@ -34,9 +37,11 @@ $(document).ready(function (){
     });
     $("select[id=SemesterZahlMeso]").on("change",function(){
         chosenFilterMeso.SemesterZahl=$("select[id=SemesterZahlMeso]").val();
+        adjustFilterMeso();
     });
     $("select[id=AnzahlStudentenMeso]").on("change",function(){
         chosenFilterMeso.AnzahlStudenten=$("select[id=AnzahlStudentenMeso]").val();
+        adjustFilterMeso();
     });
 });
 
@@ -54,18 +59,63 @@ function adjustFilterMikro(){
     for (let j = 0; j < elements.length; j++) {
         elements[j].hidden = true;
     }
+    elements = document.getElementsByClassName("AnzahlStudentenMikro");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("SemesterZahlMikro");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
     for (let i=0; i<allOfItMikro.length; i++){
         if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
-            ((allOfItMikro[i].Kurs === chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))){
+            ((allOfItMikro[i].Kurs === chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))&&
+            ((allOfItMikro[i].Semesterzahl-2 <= chosenFilterMikro.SemesterZahl)||(chosenFilterMikro.SemesterZahl===""))&&
+            ((allOfItMikro[i].AnzahlStudenten-9 <= chosenFilterMikro.AnzahlStudenten)||(chosenFilterMikro.AnzahlStudenten===""))){
             document.getElementById(allOfItMikro[i].Fachbereich+"FachbereichMikroId").hidden=false;
         }
-        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
-            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))) {
-            document.getElementById(allOfItMikro[i].Kurs + "KursMikroId").hidden = false;
-        }
         if (((allOfItMikro[i].Kurs===chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))&&
-            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))) {
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))&&
+            ((allOfItMikro[i].Semesterzahl-2 <= chosenFilterMikro.SemesterZahl)||(chosenFilterMikro.SemesterZahl===""))&&
+            ((allOfItMikro[i].AnzahlStudenten-9 <= chosenFilterMikro.AnzahlStudenten)||(chosenFilterMikro.AnzahlStudenten===""))) {
             document.getElementById(allOfItMikro[i].Uni + "UniMikroId").hidden = false;
+        }
+        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))&&
+            ((allOfItMikro[i].Semesterzahl-2 <= chosenFilterMikro.SemesterZahl)||(chosenFilterMikro.SemesterZahl===""))&&
+            ((allOfItMikro[i].AnzahlStudenten-9 <= chosenFilterMikro.AnzahlStudenten)||(chosenFilterMikro.AnzahlStudenten===""))){
+            document.getElementById(allOfItMikro[i].Kurs+"KursMikroId").hidden=false;
+        }
+        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))&&
+            ((allOfItMikro[i].Kurs === chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))&&
+            ((allOfItMikro[i].AnzahlStudenten-9 <= chosenFilterMikro.AnzahlStudenten)||(chosenFilterMikro.AnzahlStudenten===""))) {
+            if ((allOfItMikro[i].Semesterzahl>=1) && (allOfItMikro[i].Semesterzahl<=3)){
+                document.getElementById("SemesterZahlMikroId1").hidden = false;
+            }
+            if ((allOfItMikro[i].Semesterzahl>=4) && (allOfItMikro[i].Semesterzahl<=6)){
+                document.getElementById("SemesterZahlMikroId4").hidden = false;
+            }
+            if (allOfItMikro[i].Semesterzahl>=7){
+                document.getElementById("SemesterZahlMikroId6").hidden = false;
+            }
+        }
+        if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
+            ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))&&
+            ((allOfItMikro[i].Kurs === chosenFilterMikro.Kurs)||(chosenFilterMikro.Kurs===""))&&
+            ((allOfItMikro[i].Semesterzahl-2 <= chosenFilterMikro.SemesterZahl)||(chosenFilterMikro.SemesterZahl===""))) {
+            if ((allOfItMikro[i].AnzahlStudenten>=1) && (allOfItMikro[i].AnzahlStudenten<=10)){
+                document.getElementById("AnzahlStudentenMikroId1").hidden = false;
+            }
+            if ((allOfItMikro[i].AnzahlStudenten>=11) && (allOfItMikro[i].AnzahlStudenten<=20)){
+                document.getElementById("AnzahlStudentenMikroId11").hidden = false;
+            }
+            if ((allOfItMikro[i].AnzahlStudenten>=21) && (allOfItMikro[i].AnzahlStudenten<=30)){
+                document.getElementById("AnzahlStudentenMikroId21").hidden = false;
+            }
+            if (allOfItMikro[i].AnzahlStudenten>=31){
+                document.getElementById("AnzahlStudentenMikroId30").hidden = false;
+            }
         }
     }
 }
@@ -83,18 +133,63 @@ function adjustFilterMeso(){
     for (let j = 0; j < elements.length; j++) {
         elements[j].hidden = true;
     }
+    elements = document.getElementsByClassName("AnzahlStudentenMeso");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
+    elements = document.getElementsByClassName("SemesterZahlMeso");
+    for (let j = 0; j < elements.length; j++) {
+        elements[j].hidden = true;
+    }
     for (let i=0; i<allOfItMeso.length; i++){
         if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
-            ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))){
+            ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))&&
+            ((allOfItMeso[i].Semesterzahl-2 <= chosenFilterMeso.SemesterZahl)||(chosenFilterMeso.SemesterZahl===""))&&
+            ((allOfItMeso[i].AnzahlStudenten-9 <= chosenFilterMeso.AnzahlStudenten)||(chosenFilterMeso.AnzahlStudenten===""))){
             document.getElementById(allOfItMeso[i].Fachbereich+"FachbereichMesoId").hidden=false;
         }
-        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
-            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))) {
-            document.getElementById(allOfItMeso[i].Kurs + "KursMesoId").hidden = false;
-        }
         if (((allOfItMeso[i].Kurs===chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))&&
-            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))) {
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))&&
+            ((allOfItMeso[i].Semesterzahl-2 <= chosenFilterMeso.SemesterZahl)||(chosenFilterMeso.SemesterZahl===""))&&
+            ((allOfItMeso[i].AnzahlStudenten-9 <= chosenFilterMeso.AnzahlStudenten)||(chosenFilterMeso.AnzahlStudenten===""))) {
             document.getElementById(allOfItMeso[i].Uni + "UniMesoId").hidden = false;
+        }
+        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))&&
+            ((allOfItMeso[i].Semesterzahl-2 <= chosenFilterMeso.SemesterZahl)||(chosenFilterMeso.SemesterZahl===""))&&
+            ((allOfItMeso[i].AnzahlStudenten-9 <= chosenFilterMeso.AnzahlStudenten)||(chosenFilterMeso.AnzahlStudenten===""))){
+            document.getElementById(allOfItMeso[i].Kurs+"KursMesoId").hidden=false;
+        }
+        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))&&
+            ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))&&
+            ((allOfItMeso[i].AnzahlStudenten-9 <= chosenFilterMeso.AnzahlStudenten)||(chosenFilterMeso.AnzahlStudenten===""))) {
+            if ((allOfItMeso[i].Semesterzahl>=1) && (allOfItMikro[i].Semesterzahl<=3)){
+                document.getElementById("SemesterZahlMesoId1").hidden = false;
+            }
+            if ((allOfItMeso[i].Semesterzahl>=4) && (allOfItMikro[i].Semesterzahl<=6)){
+                document.getElementById("SemesterZahlMesoId4").hidden = false;
+            }
+            if (allOfItMeso[i].Semesterzahl>=7){
+                document.getElementById("SemesterZahlMesoId6").hidden = false;
+            }
+        }
+        if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
+            ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))&&
+            ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs)||(chosenFilterMeso.Kurs===""))&&
+            ((allOfItMeso[i].Semesterzahl-2 <= chosenFilterMeso.SemesterZahl)||(chosenFilterMeso.SemesterZahl===""))) {
+            if ((allOfItMeso[i].AnzahlStudenten>=1) && (allOfItMeso[i].AnzahlStudenten<=10)){
+                document.getElementById("AnzahlStudentenMesoId1").hidden = false;
+            }
+            if ((allOfItMeso[i].AnzahlStudenten>=11) && (allOfItMeso[i].AnzahlStudenten<=20)){
+                document.getElementById("AnzahlStudentenMesoId11").hidden = false;
+            }
+            if ((allOfItMeso[i].AnzahlStudenten>=21) && (allOfItMeso[i].AnzahlStudenten<=30)){
+                document.getElementById("AnzahlStudentenMesoId21").hidden = false;
+            }
+            if (allOfItMeso[i].AnzahlStudenten>=31){
+                document.getElementById("AnzahlStudentenMesoId30").hidden = false;
+            }
         }
     }
 }
