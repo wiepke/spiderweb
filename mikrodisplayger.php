@@ -179,9 +179,9 @@ Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank st
 									
 								} else {
 									echo "<p>
-Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Fragebogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
-Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen: &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Fragebogen ausfüllen. </a>
+Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Reflexionsbogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
+Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen. </a>
 									
 									
 									</p>

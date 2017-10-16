@@ -52,7 +52,7 @@
 														Hochschule:
 													</td>
 													<td colspan="3">
-														<div  ><input id="uniInput" name="Uni" placeholder="Uni" autofocus required ></div>
+														<div  ><input id="uniInput" name="Uni" placeholder="Hochschule" autofocus required ></div>
 													</td>
 												</tr>
 												<tr>
@@ -60,7 +60,7 @@
 														Titel der Lehrveranstaltung:
 													</td>
 													<td colspan="3">
-														<div align="right"><input id="kursInput" name="Kurs" placeholder="Kurs" required></div>
+														<div align="right"><input id="kursInput" name="Kurs" placeholder="Lehrveranstaltung" required></div>
 													</td>
                                                 </tr>
 												<tr>
@@ -102,7 +102,7 @@
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse" id="second">
 										<p>
-											Im folgenden betrachten wir die <em>Mikroebene</em> Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
+											Im Folgenden betrachten wir die <em>Mikroebene</em> Ihrer Lehrveranstaltungen (Lehr-/Lernsetting), d.h. die Entscheidungen, die Sie persönlich für Ihren Kurs treffen. Diese haben Auswirkungen auf die Autonomie der Studierenden und ihre Handlungsspielräume.
 										</p>
 											<table class="table js-options-table">
 											
