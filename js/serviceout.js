@@ -370,7 +370,7 @@ function showall(Filter,mikro) {
                 }
             }else {
                     if (mikro){
-                        values = [data[0].feedback, data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Reflexion, data[0].Ergebnisdarstellung];
+                        values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
                         diagram(Kriterien, values,0);
                         number_of_showall_mikro++;
                         document.getElementById('Unilabel0').innerHTML=data[0].Uni;
