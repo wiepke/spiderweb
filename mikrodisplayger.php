@@ -149,6 +149,9 @@ for ($i=0; $i<count($allOfItMeso);$i++){
 }
 echo"</script>";
 ?>
+<script>
+    let background=false;
+</script>
 	<div class="content">
 
 		<!-- the container ( align to center ) -->
@@ -247,10 +250,14 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 										<p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p> 
 											  
 									</div>
-									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
+									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmikro(),true,background)"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 										
 									<div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
-									<div  id="diagram0" class="dia"></div>
+                                    <ul class="results" style="position:relative;height:530px">
+                                        <li class="spaces"><div style="position:absolute; margin-left:86px; margin-top:1px;" id="background0" class="dia"></div> </li>
+                                        <li class="result"><div style="position:absolute; width:90%" id="diagram0" class="dia"></div> </li>
+                                    </ul>
+									<!--<div  id="diagram0" class="dia"></div>-->
                                     <h5>Gut funktioniert hat</h5>
                                     <p  id="beneficialmikro"></p>
                                     <h5>Nicht so gut funktioniert hat:</h5>
@@ -261,8 +268,8 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 									
 									
 									
-									<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true);return false;">Letztes Ergebnis</button>
-									<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true);return false;">Nächstes Ergebnis</button>
+									<button id="previousmikro" type="button" class="btn btn-primary" disabled onClick="previous(Listingmikro(),true, background);return false;">Letztes Ergebnis</button>
+									<button id="nextmikro" type="button" class="btn btn-primary" disabled onClick="next(Listingmikro(),true, background);return false;">Nächstes Ergebnis</button>
 								
 								</div>
 						
@@ -636,7 +643,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 										</table>
 									</div>
 									<div>
-									<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true);hidediv();">Filter anwenden</button>
+									<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="showall(Listingmikro(),true, background);hidediv();">Filter anwenden</button>
 									<button type="button" class="btn btn-primary bottomspace halfwidth" onClick="cleanFilter(); return false">bereinige Filter</button>
 									</div>
 									</div> <!-- collapse -->
@@ -673,18 +680,20 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 								<p id="Semesterzahllabel1" class="course-meta-sub last">Dummy</p>
 									  
 							</div>
-							<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
+                            <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 							<div class="lightbox" id="fl2"><img src="img/meso.png"></div>
-							
-							<div  id="diagram1" class="dia"></div>
+                            <ul class="results" style="position:relative;height:530px">
+                                <li><div style="position:absolute; margin-left:86px; margin-top:1px;" id="background1" class="dia"></div> </li>
+                                <li><div style="position:absolute;width:90%" id="diagram1" class="dia"></div> </li>
+                            </ul>
                             <h5>Gut funktioniert hat:</h5>
                             <p  id="beneficialmeso"></p>
                             <h5>Nicht so gut funktioniert hat:</h5>
                             <p  id="poorlymeso"></p>
                             <h5>E-Mail zum Dozenten:</h5>
                             <p  id="contactmeso"></p>
-							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false);return false;">Letztes Ergebnis</button>
-							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false);return false;">Nächstes Ergebnis</button>
+							<button id="previousmeso" type="button" class="btn btn-primary" disabled onClick="previous(Listingmeso(),false, background);return false;">Letztes Ergebnis</button>
+							<button id="nextmeso" type="button" class="btn btn-primary" disabled onClick="next(Listingmeso(),false, background);return false;">Nächstes Ergebnis</button>
 							
 						</div> <!-- end left col -->
 						
@@ -1025,7 +1034,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 								</table>
 							</div>
 							<div>
-								<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false);hidediv();">Filter anwenden</button>
+								<button type="button" class="btn btn-primary" onClick="showall(Listingmeso(),false, background);hidediv();">Filter anwenden</button>
 								<button type="button" class="btn btn-primary" onClick="cleanFilter(); return false">bereinige Filter</button>
 							</div>
 						</div> <!--- end collapse -->

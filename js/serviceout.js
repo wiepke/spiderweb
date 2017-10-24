@@ -331,7 +331,7 @@ function showResults(Filter) {
     }
 }
 
-function showall(Filter,mikro) {
+function showall(Filter,mikro, background) {
     document.getElementById("Pagination0").hidden=true;
     document.getElementById("Pagination1").hidden=true;
     if (mikro){
@@ -371,7 +371,7 @@ function showall(Filter,mikro) {
             }else {
                     if (mikro){
                         values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
-                        diagram(Kriterien, values,0);
+                        diagram(Kriterien, values,0, background);
                         number_of_showall_mikro++;
                         document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                         document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
@@ -383,7 +383,7 @@ function showall(Filter,mikro) {
                         document.getElementById('contactmikro').innerHTML=data[0].contact;
                     } else {
                         values = [data[0].Einbindung, data[0].Verortung, data[0].CreditPoints, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
-                        diagram(Kriterien, values,1);
+                        diagram(Kriterien, values,1, background);
                         number_of_showall_meso++;
                         document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                         document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
@@ -413,7 +413,7 @@ function showall(Filter,mikro) {
         document.getElementById('labels1').hidden=false;
     }
 }
-function next(Filter,mikro) {
+function next(Filter,mikro, background) {
     if (mikro) document.getElementById('previousmikro').disabled=false;
     else document.getElementById('previousmeso').disabled=false;
     document.getElementById('labels0').hidden=true;
@@ -430,7 +430,7 @@ function next(Filter,mikro) {
             cleanall();
             if (mikro){
                 values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
-                diagram(Kriterien, values,0);
+                diagram(Kriterien, values,0, background);
                 number_of_showall_mikro++;
                 document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
@@ -442,7 +442,7 @@ function next(Filter,mikro) {
                 document.getElementById('contactmikro').innerHTML=data[0].contact;
             } else {
                 values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
-                diagram(Kriterien, values,1);
+                diagram(Kriterien, values,1, background);
                 number_of_showall_meso++;
                 document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
@@ -480,7 +480,7 @@ function next(Filter,mikro) {
     }
 }
 
-function previous(Filter,mikro) {
+function previous(Filter,mikro, background) {
     if (mikro) document.getElementById('nextmikro').disabled=false;
     else document.getElementById('nextmeso').disabled=false;
     if ((mikro) && (number_of_showall_mikro<=1)) {
@@ -514,7 +514,7 @@ function previous(Filter,mikro) {
             else {
                 if (mikro){
                     values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
-                    diagram(Kriterien, values,0);
+                    diagram(Kriterien, values,0, background);
                     document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
                     document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
@@ -525,7 +525,7 @@ function previous(Filter,mikro) {
                     document.getElementById('contactmikro').innerHTML=data[0].contact;
                 } else {
                     values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
-                    diagram(Kriterien, values,1);
+                    diagram(Kriterien, values,1, background);
                     document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
                     document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
