@@ -237,10 +237,12 @@ Here you can see results of other teachers, who used our model for their lecture
                                         <p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p>
 
                                     </div>
-                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl1" data-featherlight-root="#diagram0"><i class="glyphicon glyphicon-picture"></i> Show model to compare </a>
-
-                                    <div class="lightbox" id="fl1"><img src="img/mikro-en.png"></div>
-                                    <div  id="diagram0" class="dia"></div>
+                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i>show model to compare</a>
+                                    <div class="lightbox" id="fl2"><img src="img/meso.png"></div>
+                                    <ul style="position:relative;height:480px;width:480px">
+                                        <li><div style="position:absolute;margin-top:-8px;margin-left:37px;" id="background0" class="dia"></div> </li>
+                                        <li><div style="position:absolute;width:90%" id="diagram0" class="dia"></div> </li>
+                                    </ul>
                                     <h5>What worked fine:</h5>
                                     <p  id="beneficialmikro"></p>
                                     <h5>What did not work that good:</h5>
@@ -657,10 +659,12 @@ Here you can see results of other teachers, who used our model for their lecture
 
                                     </div>
 
-                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" href="#" data-featherlight="#fl2" data-featherlight-root="#diagram1"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
-                                    <div class="lightbox" id="fl2"><img src="img/meso-en.png"></div>
-
-                                    <div  id="diagram1" class="dia"></div>
+                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
+                                    <div class="lightbox" id="fl2"><img src="img/meso.png"></div>
+                                    <ul style="position:relative;height:480px;width:480px">
+                                        <li><div style="position:absolute;margin-top:-8px;margin-left:37px;" id="background1" class="dia"></div> </li>
+                                        <li><div style="position:absolute;width:90%" id="diagram1" class="dia"></div> </li>
+                                    </ul>
                                     <h5>What worked fine:</h5>
                                     <p  id="beneficialmeso"></p>
                                     <h5>What did not work that good:</h5>
