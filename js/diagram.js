@@ -5,10 +5,14 @@ function diagram(Kriterien, values, diacount, background) {
     if (background){
         let model = document.createElement("IMG");
         if (Kriterien.length===7){
-            model.src = "img/mikro.png";
+            if (location.pathname.match('eng\.')!==null){
+                model.src = "img/mikro-en.png";
+            }else model.src = "img/mikro.png";
             document.getElementById("background0").appendChild(model);
         }else{
-            model.src = "img/meso.png";
+            if (location.pathname.match('eng\.')!==null){
+                model.src = "img/meso-en.png";
+            }else model.src = "img/meso.png";
             document.getElementById("background1").appendChild(model);
         }
     }
@@ -17,30 +21,32 @@ function diagram(Kriterien, values, diacount, background) {
         Kriterien: Kriterien,
         values: values,
         code: function () {
-            let picwidth = 530;//530;
-            let picheight = 500;//500;
-            let maxradius = 400;//400;
+            let picwidth = 480;//530;
+            let picheight = 480;//500;
+            let maxradius = 420;//400;
             let Kriterien = stage.options.Kriterien;
             let background = stage.options.background;
             let values = stage.options.values;
             let y = 0.0;
             let x = 0.0;
-            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 60)
-                .addTo(stage)
-                .stroke('lightgray', 3.5);
-            new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 85)
-                .addTo(stage)
-                .stroke('lightgray', 3.5);
-            if (Kriterien.length===7){
-                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 103)
+            if (!background){
+                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 60)
                     .addTo(stage)
                     .stroke('lightgray', 3.5);
-            }else {
-                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 40)
+                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 82)
                     .addTo(stage)
                     .stroke('lightgray', 3.5);
+                if (Kriterien.length===7){
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 103)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.5);
+                }else {
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 40)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.5);
+                }
+                /*just 3 gray circles so far. The inner cirlce of the micro-level is exchanged for the outer circle in the meso level*/
             }
-            /*just 3 gray circles so far. The inner cirlce of the micro-level is exchanged for the outer circle in the meso level*/
             if (!background) {
                 let slidein=0;
                 for (let i = 0; i < values.length; i++) {
@@ -90,13 +96,13 @@ function diagram(Kriterien, values, diacount, background) {
             let dimensionValue=0;
             if (Kriterien.length===7){
                 if (values[0]==="3") dimensionValue=60;
-                if (values[0]==="2") dimensionValue=85;
+                if (values[0]==="2") dimensionValue=82;
                 if (values[0]==="1") dimensionValue=103;
                 if (values[0]==="0") dimensionValue=maxradius / 2;
             } else {
-                if (values[0]==="3") dimensionValue=40;
-                if (values[0]==="2") dimensionValue=60;
-                if (values[0]==="1") dimensionValue=85;
+                if (values[0]==="3") dimensionValue=38;
+                if (values[0]==="2") dimensionValue=58;
+                if (values[0]==="1") dimensionValue=81;
                 if (values[0]==="0") dimensionValue=maxradius / 2;
             }
             x = (maxradius / 2 - dimensionValue);
@@ -124,13 +130,13 @@ function diagram(Kriterien, values, diacount, background) {
                 for (let appr=0; appr<apprlimit+1;appr++){
                     if (Kriterien.length===7){
                         if (values[i]==="3") dimensionValue=60;
-                        if (values[i]==="2") dimensionValue=85;
+                        if (values[i]==="2") dimensionValue=82;
                         if (values[i]==="1") dimensionValue=103;
                         if (values[i]==="0") dimensionValue=maxradius / 2;
                     } else {
-                        if (values[i]==="3") dimensionValue=40;
-                        if (values[i]==="2") dimensionValue=60;
-                        if (values[i]==="1") dimensionValue=85;
+                        if (values[i]==="3") dimensionValue=38;
+                        if (values[i]==="2") dimensionValue=58;
+                        if (values[i]==="1") dimensionValue=81;
                         if (values[i]==="0") dimensionValue=maxradius / 2;
                     }
                     y = (maxradius / 2 - dimensionValue) * Math.sin(2*Math.PI*(i+appr/apprlimit)/values.length);
@@ -223,7 +229,7 @@ function diagram(Kriterien, values, diacount, background) {
                 /* label on each circle. "0" to "3" */
             }
         },
-        width: 530,//530,
+        width: 480,//530,
         height: 480//480
         /*
          * todo: width and height need to be scalable at some point

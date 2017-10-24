@@ -253,9 +253,9 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 									<a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmikro(),true,background)"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 										
 									<div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
-                                    <ul class="results" style="position:relative;height:530px">
-                                        <li class="spaces"><div style="position:absolute; margin-left:86px; margin-top:1px;" id="background0" class="dia"></div> </li>
-                                        <li class="result"><div style="position:absolute; width:90%" id="diagram0" class="dia"></div> </li>
+                                    <ul style="position:relative;height:480px;width:480px">
+                                        <li><div style="position:absolute;margin-top:-9px;margin-left:37px;" id="background0" class="dia"></div> </li>
+                                        <li><div style="position:absolute;width:90%" id="diagram0" class="dia"></div> </li>
                                     </ul>
 									<!--<div  id="diagram0" class="dia"></div>-->
                                     <h5>Gut funktioniert hat</h5>
@@ -682,8 +682,8 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 							</div>
                             <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu vergleichen</a>
 							<div class="lightbox" id="fl2"><img src="img/meso.png"></div>
-                            <ul class="results" style="position:relative;height:530px">
-                                <li><div style="position:absolute; margin-left:86px; margin-top:1px;" id="background1" class="dia"></div> </li>
+                            <ul style="position:relative;height:480px;width:480px">
+                                <li><div style="position:absolute;margin-top:-8px;margin-left:37px;" id="background1" class="dia"></div> </li>
                                 <li><div style="position:absolute;width:90%" id="diagram1" class="dia"></div> </li>
                             </ul>
                             <h5>Gut funktioniert hat:</h5>
