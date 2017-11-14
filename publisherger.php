@@ -58,7 +58,7 @@
 									</div>
 									<div class="panel-collapse collapse " id="one">
 										
-									<table class="table js-options-table tablebg">
+									<table class="table js-options-table">
 											<tr class="header">
 												<td colspan="2">
 														   
@@ -80,7 +80,7 @@
 													<input type="radio" name="published" value="0" required>
 												</td>
 												<td>
-													Nein, nur ich soll die Auswertung meiner Eingaben einsehen können.
+													Nein, nur ich (und das FideS-Team) soll die Auswertung meiner Eingaben einsehen können.
 												</td>
 												
 												

@@ -169,7 +169,6 @@ echo"</script>";
 								<?php
 								if (isset($_GET["mikroid"])) {
 									echo "<p> Unter den Registerkarten „Meso“ und „Mikro“ finden Sie nun die grafische Darstellung Ihrer Eingaben.
-Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um einen bestimmten Fokus zu setzen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
 									
 									</p>
 									<p>
@@ -411,6 +410,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                                     <option value="1" id='SemesterZahlMikroId1' class='SemesterZahlMikro'>1-3 Bachelor</option>
                                                     <option value="4" id='SemesterZahlMikroId4' class='SemesterZahlMikro'>4-6 Bachelor</option>
                                                     <option value="6" id='SemesterZahlMikroId6' class='SemesterZahlMikro'>Master</option>
+                                                    <option value="8" id='SemesterZahlMikroId8' class='SemesterZahlMikro'>gemischt</option>
                                                 </select>
 											</td>
 										</tr>
@@ -430,7 +430,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 												</td>
 											
 												<td>
-													Prüfungsform festgelegt
+													vorgegeben
 												</td>
 											</tr>
 											<tr>
@@ -439,7 +439,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 												</td>
 												
 												<td>
-													Wahlmöglichkeiten
+													ausgehandelt
 												</td>
 											</tr>
 											<tr>
@@ -448,7 +448,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 													<input type="radio" name="feedback" class="dimensionFilterMikro" value="3">
 												</td>
 												<td>
-													keine Prüfung
+													selbstständig eingeholt
 												</td>
 											</tr>
 											
@@ -579,36 +579,6 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 												</td>
 												
 											</tr>
-														
-											<tr class="header">
-												<td colspan="2">
-													Reflexion:
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
-												</td>
-												<td>
-												angeleitet
-												</td>
-											</tr>
-											<tr>
-												<td >
-													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
-												</td>
-												<td>
-												unterstützt
-												</td>
-											</tr>
-											<tr>
-												<td >
-													<input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
-												</td>
-												<td>
-												selbstständig
-												</td>
-											</tr>
 													
 											<tr class="header">
 												<td colspan="2">
@@ -640,6 +610,35 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 													öffentlich
 												</td>
 											</tr>
+                                                <tr class="header">
+                                                    <td colspan="2">
+                                                        Reflexion:
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="radio" name="Reflexion" class="dimensionFilterMikro" value="1">
+                                                    </td>
+                                                    <td>
+                                                        angeleitet
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td >
+                                                        <input type="radio" name="Reflexion" class="dimensionFilterMikro" value="2">
+                                                    </td>
+                                                    <td>
+                                                        unterstützt
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td >
+                                                        <input type="radio" name="Reflexion" class="dimensionFilterMikro" value="3">
+                                                    </td>
+                                                    <td>
+                                                        selbstständig
+                                                    </td>
+                                                </tr>
 										</table>
 									</div>
 									<div>
@@ -833,6 +832,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                                 <option value="1" id='SemesterZahlMesoId1' class='SemesterZahlMeso'>1-3 Bachelor</option>
                                                 <option value="4" id='SemesterZahlMesoId4' class='SemesterZahlMeso'>4-6 Bachelor</option>
                                                 <option value="6" id='SemesterZahlMesoId6' class='SemesterZahlMeso'>Master</option>
+                                                <option value="8" id='SemesterZahlMesoId8' class='SemesterZahlMeso'>germischt</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -841,6 +841,38 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 							
 							<div class="collapse" id="table4"  >
 								<table  class="table table-striped js-options-table">
+
+                                    <tr class="header">
+                                        <td colspan="2">
+                                            Prüfungsrahmen:
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td >
+                                            <input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
+                                        </td>
+                                        <td>
+                                            Prüfungsform festgelegt
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td >
+                                            <input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
+                                        </td>
+                                        <td>
+                                            Wahlmöglichkeiten
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td >
+                                            <input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
+                                        </td>
+                                        <td>
+                                            keine Prüfung
+                                        </td>
+                                    </tr>
 
                                     <tr class="header">
                                         <td colspan="2">
@@ -883,7 +915,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                             <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="1">
                                         </td>
                                         <td>
-                                            Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
+                                            hoch
                                         </td>
                                     </tr>
                                     <tr>
@@ -891,7 +923,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                             <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="2">
                                         </td>
                                         <td>
-                                            Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
+                                            mittel
                                         </td>
                                     </tr>
                                     <tr>
@@ -899,7 +931,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                             <input type="radio" name="CreditPoints" class="dimensionFilterMeso" value="3">
                                         </td>
                                         <td>
-                                            Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
+                                            gering
                                         </td>
                                     </tr>
 									
@@ -933,41 +965,37 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 											keine
 										</td>
 									</tr>
-											
-									
-											
-									<tr class="header">
-										<td colspan="2">
-											Prüfungsrahmen:
-										</td>
-									</tr>
-									<tr>
-										
-										<td >
-											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="1">
-										</td>
-										<td>
-											Prüfungsform festgelegt
-										</td>
-									</tr>
-									<tr>
-										
-										<td >
-											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="2">
-										</td>
-										<td>
-											Wahlmöglichkeiten
-										</td>
-									</tr>
-									<tr>
-										<td >
-											<input type="radio" name="Prufungsrahmen" class="dimensionFilterMeso" value="3">
-										</td>
-										<td>
-											keine Prüfung
-										</td>
-									</tr>
-											
+
+                                    <tr class="header">
+                                        <td colspan="2">
+                                            Ressourcenrahmen:
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
+                                        </td>
+                                        <td>
+                                            keine Ressourcen
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td >
+                                            <input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
+                                        </td>
+                                        <td>
+                                            befristet
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td >
+                                            <input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
+                                        </td>
+                                        <td>
+                                            dauerhaft
+                                        </td>
+                                    </tr>
+
 									<tr class="header">
 										<td colspan="2">
 											Zeitrahmen:
@@ -997,36 +1025,6 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 										</td>
 										<td>
 											studienbegleitend
-										</td>
-									</tr>
-												
-									<tr class="header">
-										<td colspan="2">
-											Ressourcenrahmen:
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="1">
-										</td>
-										<td>
-											keine Ressourcen
-										</td>
-									</tr>
-									<tr>
-										<td >
-											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="2">
-										</td>
-										<td>
-											befristet
-										</td>
-									</tr>
-									<tr>
-										<td >
-											<input type="radio" name="Ressourcenrahmen" class="dimensionFilterMeso" value="3">
-										</td>
-										<td>
-											dauerhaft
 										</td>
 									</tr>
 											
