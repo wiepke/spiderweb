@@ -99,6 +99,7 @@ function adjustFilterMikro(){
             if (allOfItMikro[i].Semesterzahl>=7){
                 document.getElementById("SemesterZahlMikroId6").hidden = false;
             }
+            document.getElementById("SemesterZahlMikroId8").hidden = false;
         }
         if (((allOfItMikro[i].Uni===chosenFilterMikro.Uni)||(chosenFilterMikro.Uni===""))&&
             ((allOfItMikro[i].Fachbereich === chosenFilterMikro.Fachbereich)||(chosenFilterMikro.Fachbereich===""))&&
@@ -173,6 +174,7 @@ function adjustFilterMeso(){
             if (allOfItMeso[i].Semesterzahl>=7){
                 document.getElementById("SemesterZahlMesoId6").hidden = false;
             }
+            document.getElementById("SemesterZahlMesoId8").hidden = false;
         }
         if (((allOfItMeso[i].Uni===chosenFilterMeso.Uni)||(chosenFilterMeso.Uni===""))&&
             ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich)||(chosenFilterMeso.Fachbereich===""))&&
@@ -298,7 +300,11 @@ function showResults(Filter) {
                 document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
                 document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                if (data[0].SemesterZahl!=="8"){
+                    document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                }else {
+                    document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
+                }
                 document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                 document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
                 document.getElementById('poorlymikro').innerHTML=data[0].poorly;
@@ -319,7 +325,11 @@ function showResults(Filter) {
                 document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
                 document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                if (data[0].SemesterZahl!=="8"){
+                    document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                }else {
+                    document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
+                }
                 document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;
                 document.getElementById('poorlymeso').innerHTML=data[0].poorly;
@@ -376,8 +386,11 @@ function showall(Filter,mikro, background) {
                         document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                         document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
                         document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                        document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                        if (data[0].Semesterzahl!=="8"){
+                            document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                        }else {
+                            document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
+                        }                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                         document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
                         document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                         document.getElementById('contactmikro').innerHTML=data[0].contact;
@@ -388,8 +401,11 @@ function showall(Filter,mikro, background) {
                         document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                         document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
                         document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                        document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
-                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                        if (data[0].Semesterzahl!=="8"){
+                            document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                        }else {
+                            document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
+                        }                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                         document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;
                         document.getElementById('poorlymeso').innerHTML=data[0].poorly;
                         document.getElementById('contactmeso').innerHTML=data[0].contact;
@@ -435,8 +451,11 @@ function next(Filter,mikro, background) {
                 document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
                 document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
-                document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                if (data[0].Semesterzahl!=="8"){
+                    document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                }else {
+                    document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
+                }                document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                 document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
                 document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                 document.getElementById('contactmikro').innerHTML=data[0].contact;
@@ -447,8 +466,11 @@ function next(Filter,mikro, background) {
                 document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                 document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
                 document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
-                document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                if (data[0].Semesterzahl!=="8"){
+                    document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                }else {
+                    document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
+                }                document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;
                 document.getElementById('poorlymeso').innerHTML=data[0].poorly;
                 document.getElementById('contactmeso').innerHTML=data[0].contact;
@@ -518,8 +540,11 @@ function previous(Filter,mikro, background) {
                     document.getElementById('Unilabel0').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
                     document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                    document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                    if (data[0].Semesterzahl!=="8"){
+                        document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                    }else {
+                        document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
+                    }                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
                     document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
                     document.getElementById('poorlymikro').innerHTML=data[0].poorly;
                     document.getElementById('contactmikro').innerHTML=data[0].contact;
@@ -529,8 +554,11 @@ function previous(Filter,mikro, background) {
                     document.getElementById('Unilabel1').innerHTML=data[0].Uni;
                     document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
                     document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                    document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
-                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                    if (data[0].Semesterzahl!=="8"){
+                        document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                    }else {
+                        document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
+                    }                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                     document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;
                     document.getElementById('poorlymeso').innerHTML=data[0].poorly;
                     document.getElementById('contactmeso').innerHTML=data[0].contact;

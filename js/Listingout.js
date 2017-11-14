@@ -22,7 +22,11 @@ function Listingmikro(){
                 }
             }else
             if (stringFilter[i].name==="Semesterzahl"){
-                output.push(stringFilter[i].name+">");
+                if (stringFilter[i].value!=="8"){           //"8" means, that there are "composite" semesters in this course
+                    output.push(stringFilter[i].name+">");
+                } else{
+                    output.push(stringFilter[i].name);
+                }
                 output.push(stringFilter[i].value);
                 if (parseInt(stringFilter[i].value)<6){
                     output.push(stringFilter[i].name+"<");

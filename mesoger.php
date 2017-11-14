@@ -47,7 +47,7 @@
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
 										<p>
-                                            Im Folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen, d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrenden und Ihre Handlungsspielräume.
+                                            Im Folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen, d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrende und Ihre Handlungsspielräume.
 				</p>
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">
@@ -191,7 +191,7 @@
 														<input type="radio" name="Prufungsrahmen" value="2">
 													</td>
 													<td>
-														Für die Bewertung der studentischen Forschung kann zwischen mehreren Prüfungsform gewählt werden.
+														Für die Bewertung der studentischen Forschung kann zwischen mehreren Prüfungsformen gewählt werden.
 													</td>
 												</tr>
 												<tr>
@@ -239,7 +239,7 @@
 														<input type="radio" name="Zeitrahmen" value="3">
 													</td>
 													<td>
-														Studentische Forschung kann begleitend während des Studiums erfolgen.
+														Die studentische Forschung kann begleitend während des Studiums erfolgen.
 													</td>
 												</tr>
 											

@@ -89,6 +89,7 @@
                                                             <option value="1">1-3 Bachelor</option>
                                                             <option value="4">4-6 Bachelor</option>
                                                             <option value="6">Master</option>
+                                                            <option value="8">gemischt</option>
                                                         </select>
                                                     </td>
                                                 </tr>
@@ -208,7 +209,7 @@
 														<input type="radio" name="Planung" value="1"   >
 													</td>
 													<td >
-														Lehrende geben Phasen und Fristen des Forschungs-prozesses vor.
+														Lehrende geben Phasen und Fristen des Forschungsprozesses vor.
 													</td>
 												</tr>
 												<tr>
@@ -283,7 +284,7 @@
 												<tr class="header">
 													<td colspan="2">
 														
-														Wie erhalten die Studierenden Feedback im Forschungs-prozess?
+														Wie erhalten die Studierenden Feedback im Forschungsprozess?
 													   
 													</td>
 												</tr>
@@ -300,7 +301,7 @@
 														<input type="radio" name="Reflexion" value="2" >
 													</td>
 													<td >
-														Gesetztes und selbst eingeholtes Feedback werden kombiniert
+														Gesetztes und selbst eingeholtes Feedback werden kombiniert.
 													</td>
 												</tr>
 												<tr>
@@ -349,7 +350,7 @@
 														<input type="radio" name="Ergebnisdarstellung" value="3" >
 													</td>
 													<td >
-														Die Ergebnisse werden veröffent-licht und hochschulweit sichtbar.
+														Die Ergebnisse werden veröffentlicht und hochschulweit sichtbar.
 													</td>
 												</tr>
 											   
