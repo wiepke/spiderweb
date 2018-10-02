@@ -83,7 +83,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td width="38%">
-                                                        Semester count <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
+                                                        Semester count <span class="question"><span class="tooltipp">In which Semester are your students mainly?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
                                                         <div align="right"><input  id="semesterInput" name="Semesterzahl" placeholder="0" size="72%"  ></div>

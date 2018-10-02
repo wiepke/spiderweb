@@ -81,16 +81,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td width="38%" >
-                                                        Semesterzahl der Studierenden <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung (Angabe "von x bis y" möglich)?"</span> </span>:
+                                                        Semesterzahl der Studierenden <span class="question"><span class="tooltipp">In welchem Semester sind die Studierenden in Ihrer Lehrveranstaltung?"</span> </span>:
                                                     </td>
                                                     <td colspan="3">
-                                                        <select name="Semesterzahl" id="semesterInput">
-                                                            <option value="">Wählen Sie eine Anzahl</option>
-                                                            <option value="1">1-3 Bachelor</option>
-                                                            <option value="4">4-6 Bachelor</option>
-                                                            <option value="6">Master</option>
-                                                            <option value="8">gemischt</option>
-                                                        </select>
+                                                        <div align="right"><input name="Semesterzahl" id="semesterInput" placeholder="0" size="72%" required></div>
                                                     </td>
                                                 </tr>
                                             </table> <!-- all dimensions of the universities -->

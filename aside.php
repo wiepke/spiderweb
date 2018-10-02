@@ -32,7 +32,7 @@
 			
 			<div id="text-6" class="widget widget_text"><h4 class="widget-title">BmBF</h4>			
 				<div class="textwidget"> 
-				<p>Dieses Vorhaben wird unter dem Förderkennzeichen 01PB14013A gefördert.</p>
+				<p>Dieses Vorhaben wird unter den Kennzeichen 01PB14013 (FideS-Projekt) und 01PB18013 (FideS-Transfer) gefördert.</p>
 					<a href="http://www.hochschulforschung-bmbf.de/de/1622.php"><img src="img/BMBF_angepasst.jpg"> </a> 
 
 				</div>
