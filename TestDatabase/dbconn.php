@@ -5,6 +5,6 @@
  * Date: 25.07.2017
  * Time: 08:41
  */
-$conn = mysqli_connect("localhost", "root", "voyager", "spinnennetzTest");
+$conn = mysqli_connect("localhost", "root", "", "spinnennetztest");
 
 ?>
