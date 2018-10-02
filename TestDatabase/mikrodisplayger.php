@@ -163,31 +163,15 @@ echo "</script>";
                     <h2 class="post-title" style="color:#666666;"> Ergebnisse der Anwendung des Doppelradmodells</h2>
                     <div class="clear"></div>
                     <?php
-                    if (isset($_GET["mikroid"])) {
-                        echo "<p> Unter den Registerkarten „Meso“ und „Mikro“ finden Sie nun die grafische Darstellung Ihrer Eingaben.
-									
-									</p>
-									<p>
-									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
-									</p>
-									
-										
-										";
-
-
-                    } else {
-                        echo "<p>
-Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Reflexionsbogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
-Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
-									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen. </a>
+                    echo "<p>
+Hier können Sie Ihr Ergebnis und das von anderen Tests sehen. Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
+									<a href=\"../mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen. </a>
 									
 									
 									</p>
 									<p>
-									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
-									</p>						
-									"; //end output
-                    }
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.</p>";
+
 
                     ?>
 
