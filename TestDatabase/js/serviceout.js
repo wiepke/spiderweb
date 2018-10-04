@@ -249,9 +249,9 @@ function seturl(mikro, Filter){
 let number_of_showall_mikro;
 let number_of_showall_meso;
 function showResults(Filter) {
-    document.getElementById('beneficialExists').hidden=true;
-    document.getElementById('poorlyExists').hidden=true;
-    document.getElementById('emailExists').hidden=true;
+    $('.beneficialExists').hide();
+    $('.poorlyExists').hide();
+    $('.emailExists').hide();
     document.getElementById('nextmikro').disabled=true;
     document.getElementById('previousmikro').disabled=true;
     document.getElementById('nextmeso').disabled=true;
@@ -317,11 +317,11 @@ function showResults(Filter) {
                     document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
                 }
                 document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
-                if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                if (data[0].beneficial != ""){ $('.beneficialExists').show();
                     document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;}
-                if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                if (data[0].poorly != ""){ $('.poorlyExists').show();
                     document.getElementById('poorlymikro').innerHTML=data[0].poorly;}
-                if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                if (data[0].contact != ""){ $('.emailExists').show();
                     document.getElementById('contactmikro').innerHTML=data[0].contact;}
             },
             async: false
@@ -345,11 +345,11 @@ function showResults(Filter) {
                     document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
                 }
                 document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
-                if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                if (data[0].beneficial != ""){ $('.beneficialExists').show();
                     document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;}
-                if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                if (data[0].poorly != ""){ $('.poorlyExists').show();
                     document.getElementById('poorlymeso').innerHTML=data[0].poorly;}
-                if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                if (data[0].contact != ""){ $('.emailExists').show();
                     document.getElementById('contactmeso').innerHTML=data[0].contact;}
             },
             async: false
@@ -359,9 +359,9 @@ function showResults(Filter) {
 }
 
 function showall(Filter,mikro, background) {
-    document.getElementById('beneficialExists').hidden=true;
-    document.getElementById('poorlyExists').hidden=true;
-    document.getElementById('emailExists').hidden=true;
+    $('.beneficialExists').hide();
+    $('.poorlyExists').hide();
+    $('.emailExists').hide();
     document.getElementById("Pagination0").hidden=true;
     document.getElementById("Pagination1").hidden=true;
     if (mikro){
@@ -399,51 +399,51 @@ function showall(Filter,mikro, background) {
                     document.getElementById('nextmeso').hidden = true;
                 }
             }else {
-                    if (mikro){
-                        values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
-                        diagram(Kriterien, values,0, background);
-                        number_of_showall_mikro++;
-                        document.getElementById('Unilabel0').innerHTML=data[0].Uni;
-                        document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
-                        document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
-                        if (data[0].Semesterzahl!=="8"){
-                            document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
-                        }else {
-                            document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
-                        }                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
-                        document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
-                        document.getElementById('poorlymikro').innerHTML=data[0].poorly;
-                        document.getElementById('contactmikro').innerHTML=data[0].contact;
-                    } else {
-                        values = [data[0].Einbindung, data[0].Verortung, data[0].CreditPoints, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
-                        diagram(Kriterien, values,1, background);
-                        number_of_showall_meso++;
-                        document.getElementById('Unilabel1').innerHTML=data[0].Uni;
-                        document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
-                        document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
-                        if (data[0].Semesterzahl!=="8"){
-                            document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
-                        }else {
-                            document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
-                        }
-                        document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
+                if (mikro){
+                    values = [data[0].Forschungsthema, data[0].Forschungsfrage, data[0].Planung, data[0].Durchfuhrung, data[0].Ergebnisdarstellung, data[0].Reflexion, data[0].feedback];
+                    diagram(Kriterien, values,0, background);
+                    number_of_showall_mikro++;
+                    document.getElementById('Unilabel0').innerHTML=data[0].Uni;
+                    document.getElementById('Kurslabel0').innerHTML=data[0].Kurs;
+                    document.getElementById('Fachbereichlabel0').innerHTML=data[0].Fachbereich;
+                    if (data[0].Semesterzahl!=="8"){
+                        document.getElementById('Semesterzahllabel0').innerHTML=data[0].Semesterzahl;
+                    }else {
+                        document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
+                    }                        document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
+                    document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;
+                    document.getElementById('poorlymikro').innerHTML=data[0].poorly;
+                    document.getElementById('contactmikro').innerHTML=data[0].contact;
+                } else {
+                    values = [data[0].Einbindung, data[0].Verortung, data[0].CreditPoints, data[0].Prufungsrahmen, data[0].Ressourcenrahmen, data[0].Zeitrahmen];
+                    diagram(Kriterien, values,1, background);
+                    number_of_showall_meso++;
+                    document.getElementById('Unilabel1').innerHTML=data[0].Uni;
+                    document.getElementById('Kurslabel1').innerHTML=data[0].Kurs;
+                    document.getElementById('Fachbereichlabel1').innerHTML=data[0].Fachbereich;
+                    if (data[0].Semesterzahl!=="8"){
+                        document.getElementById('Semesterzahllabel1').innerHTML=data[0].Semesterzahl;
+                    }else {
+                        document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
                     }
-                if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
-                    document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;}
-                if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
-                    document.getElementById('poorlymikro').innerHTML=data[0].poorly;}
-                if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
-                    document.getElementById('contactmikro').innerHTML=data[0].contact;}
-                    if (mikro) {
-                        document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
-                        document.getElementById("Pagination0").hidden=false;
-                    }
-                    else {
-                        document.getElementById("Pagination1").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_meso+" von "+data[1].limit +"</span></span>";
-                        document.getElementById("Pagination1").hidden=false;
-                    }
+                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
                 }
-            },
+                if (data[0].beneficial != ""){ $('.beneficialExists').show();
+                    document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;}
+                if (data[0].poorly != ""){ $('.poorlyExists').show();
+                    document.getElementById('poorlymikro').innerHTML=data[0].poorly;}
+                if (data[0].contact != ""){ $('.emailExists').show();
+                    document.getElementById('contactmikro').innerHTML=data[0].contact;}
+                if (mikro) {
+                    document.getElementById("Pagination0").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_mikro+" von "+data[1].limit +"</span></span>";
+                    document.getElementById("Pagination0").hidden=false;
+                }
+                else {
+                    document.getElementById("Pagination1").innerHTML="<span class=\"paginationout>\">Die Anwendung des Filters ergab "+ data[1].limit + " Ergebnisse - <span> "+number_of_showall_meso+" von "+data[1].limit +"</span></span>";
+                    document.getElementById("Pagination1").hidden=false;
+                }
+            }
+        },
         async: false
     });
     if (number_of_showall_mikro >= 1) {
@@ -454,9 +454,9 @@ function showall(Filter,mikro, background) {
     }
 }
 function next(Filter,mikro, background) {
-    document.getElementById('beneficialExists').hidden=true;
-    document.getElementById('poorlyExists').hidden=true;
-    document.getElementById('emailExists').hidden=true;
+    $('.beneficialExists').hide();
+    $('.poorlyExists').hide();
+    $('.emailExists').hide();
     if (mikro) document.getElementById('previousmikro').disabled=false;
     else document.getElementById('previousmeso').disabled=false;
     document.getElementById('labels0').hidden=true;
@@ -483,11 +483,11 @@ function next(Filter,mikro, background) {
                 }else {
                     document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
                 }                document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
-                if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                if (data[0].beneficial != ""){ $('.beneficialExists').show();
                     document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;}
-                if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                if (data[0].poorly != ""){ $('.poorlyExists').show();
                     document.getElementById('poorlymikro').innerHTML=data[0].poorly;}
-                if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                if (data[0].contact != ""){ $('.emailExists').show();
                     document.getElementById('contactmikro').innerHTML=data[0].contact;}
             } else {
                 values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
@@ -501,11 +501,11 @@ function next(Filter,mikro, background) {
                 }else {
                     document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
                 }                document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
-                if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                if (data[0].beneficial != ""){ $('.beneficialExists').show();
                     document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;}
-                if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                if (data[0].poorly != ""){ $('.poorlyExists').show();
                     document.getElementById('poorlymeso').innerHTML=data[0].poorly;}
-                if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                if (data[0].contact != ""){ $('.emailExists').show();
                     document.getElementById('contactmeso').innerHTML=data[0].contact;}
             }
             if (mikro) {
@@ -536,9 +536,9 @@ function next(Filter,mikro, background) {
 }
 
 function previous(Filter,mikro, background) {
-    document.getElementById('beneficialExists').hidden=true;
-    document.getElementById('poorlyExists').hidden=true;
-    document.getElementById('emailExists').hidden=true;
+    $('.beneficialExists').hide();
+    $('.poorlyExists').hide();
+    $('.emailExists').hide();
     if (mikro) document.getElementById('nextmikro').disabled=false;
     else document.getElementById('nextmeso').disabled=false;
     if ((mikro) && (number_of_showall_mikro<=1)) {
@@ -581,11 +581,11 @@ function previous(Filter,mikro, background) {
                     }else {
                         document.getElementById('Semesterzahllabel0').innerHTML="gemischt";
                     }                    document.getElementById('AnzahlStudentenlabel0').innerHTML=data[0].AnzahlStudenten;
-                    if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                    if (data[0].beneficial != ""){ $('.beneficialExists').show();
                         document.getElementById('beneficialmikro').innerHTML=data[0].beneficial;}
-                    if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                    if (data[0].poorly != ""){ $('.poorlyExists').show();
                         document.getElementById('poorlymikro').innerHTML=data[0].poorly;}
-                    if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                    if (data[0].contact != ""){ $('.emailExists').show();
                         document.getElementById('contactmikro').innerHTML=data[0].contact;}
                 } else {
                     values = [data[0].Einbindung, data[0].CreditPoints, data[0].Verortung, data[0].Ressourcenrahmen, data[0].Zeitrahmen, data[0].Prufungsrahmen];
@@ -598,11 +598,11 @@ function previous(Filter,mikro, background) {
                     }else {
                         document.getElementById('Semesterzahllabel1').innerHTML="gemischt";
                     }                    document.getElementById('AnzahlStudentenlabel1').innerHTML=data[0].AnzahlStudenten;
-                    if (data[0].beneficial != ""){ document.getElementById('beneficialExists').hidden=false;
+                    if (data[0].beneficial != ""){ $('.beneficialExists').show();
                         document.getElementById('beneficialmeso').innerHTML=data[0].beneficial;}
-                    if (data[0].poorly != ""){ document.getElementById('poorlyExists').hidden=false;
+                    if (data[0].poorly != ""){ $('.poorlyExists').show();
                         document.getElementById('poorlymeso').innerHTML=data[0].poorly;}
-                    if (data[0].contact != ""){ document.getElementById('emailExists').hidden=false;
+                    if (data[0].contact != ""){ $('.emailExists').show();
                         document.getElementById('contactmeso').innerHTML=data[0].contact;}
                 }
                 if (mikro) {

@@ -163,15 +163,31 @@ echo "</script>";
                     <h2 class="post-title" style="color:#666666;"> Ergebnisse der Anwendung des Doppelradmodells</h2>
                     <div class="clear"></div>
                     <?php
-                    echo "<p>
-Hier können Sie Ihr Ergebnis und das von anderen Tests sehen. Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
-									<a href=\"../mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen. </a>
+                    if (isset($_GET["mikroid"])) {
+                        echo "<p> Unter den Registerkarten „Meso“ und „Mikro“ finden Sie nun die grafische Darstellung Ihrer Eingaben.
+									
+									</p>
+									<p>
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>
+									
+										
+										";
+
+
+                    } else {
+                        echo "<p>
+Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Reflexionsbogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren.
+Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
+									<a href=\"mikroger.php\" class=\"poll-link\">  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen. </a>
 									
 									
 									</p>
 									<p>
-									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.</p>";
-
+									Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.
+									</p>						
+									"; //end output
+                    }
 
                     ?>
 
@@ -225,19 +241,19 @@ Hier können Sie Ihr Ergebnis und das von anderen Tests sehen. Wir freuen uns, w
                                 <div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
                                 <ul style="position:relative;height:480px;width:480px">
                                     <li>
-                                        <div style="position:absolute;margin-top:-9px;margin-left:37px;"
+                                        <div style="position:absolute;margin-top:0px;margin-left:0px;"
                                              id="background0" class="dia"></div>
                                     </li>
                                     <li>
-                                        <div style="position:absolute;width:90%" id="diagram0" class="dia"></div>
+                                        <div style="position:absolute; margin-top:-8px; margin-left:-10px;" id="diagram0" class="dia"></div>
                                     </li>
                                 </ul>
                                 <!--<div  id="diagram0" class="dia"></div>-->
-                                <div id="beneficialExists"><h5>Gut funktioniert hat</h5>
+                                <div class="beneficialExists"><h5>Gut funktioniert hat</h5>
                                     <p id="beneficialmikro"></p></div>
-                                <div id="poorlyExists"><h5>Nicht so gut funktioniert hat:</h5>
+                                <div class="poorlyExists"><h5>Nicht so gut funktioniert hat:</h5>
                                     <p id="poorlymikro"></p></div>
-                                <div id="emailExists"><h5>E-Mail zum Dozenten:</h5>
+                                <div class="emailExists"><h5>E-Mail zum Dozenten:</h5>
                                     <p id="contactmikro"></p></div>
 
 
@@ -718,18 +734,18 @@ Hier können Sie Ihr Ergebnis und das von anderen Tests sehen. Wir freuen uns, w
                                              id="background1" class="dia"></div>
                                     </li>
                                     <li>
-                                        <div style="position:absolute;width:90%" id="diagram1" class="dia"></div>
+                                        <div style="position:absolute;width:90%; margin-top: -16.5px;" id="diagram1" class="dia"></div>
                                     </li>
                                 </ul>
-                                <div id="beneficialExists">
+                                <div class="beneficialExists">
                                     <h5>Gut funktioniert hat</h5>
                                     <p id="beneficialmeso"></p>
                                 </div>
-                                <div id="poorlyExists">
+                                <div class="poorlyExists">
                                     <h5>Nicht so gut funktioniert hat:</h5>
                                     <p id="poorlymeso"></p>
                                 </div>
-                                <div id="emailExists">
+                                <div class="emailExists">
                                     <h5>E-Mail zum Dozenten:</h5>
                                     <p id="contactmeso"></p>
                                 </div>

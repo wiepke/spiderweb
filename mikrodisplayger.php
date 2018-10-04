@@ -241,19 +241,19 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                 <div class="lightbox" id="fl1"><img src="img/mikro.png"></div>
                                 <ul style="position:relative;height:480px;width:480px">
                                     <li>
-                                        <div style="position:absolute;margin-top:-9px;margin-left:37px;"
+                                        <div style="position:absolute;margin-top:0px;margin-left:0px;"
                                              id="background0" class="dia"></div>
                                     </li>
                                     <li>
-                                        <div style="position:absolute;width:90%" id="diagram0" class="dia"></div>
+                                        <div style="position:absolute; margin-top:-8px; margin-left:-10px;" id="diagram0" class="dia"></div>
                                     </li>
                                 </ul>
                                 <!--<div  id="diagram0" class="dia"></div>-->
-                                <div id="beneficialExists"><h5>Gut funktioniert hat</h5>
+                                <div class="beneficialExists"><h5>Gut funktioniert hat</h5>
                                     <p id="beneficialmikro"></p></div>
-                                <div id="poorlyExists"><h5>Nicht so gut funktioniert hat:</h5>
+                                <div class="poorlyExists"><h5>Nicht so gut funktioniert hat:</h5>
                                     <p id="poorlymikro"></p></div>
-                                <div id="emailExists"><h5>E-Mail zum Dozenten:</h5>
+                                <div class="emailExists"><h5>E-Mail zum Dozenten:</h5>
                                     <p id="contactmikro"></p></div>
 
 
@@ -734,18 +734,18 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
                                              id="background1" class="dia"></div>
                                     </li>
                                     <li>
-                                        <div style="position:absolute;width:90%" id="diagram1" class="dia"></div>
+                                        <div style="position:absolute;width:90%; margin-top: -16.5px;" id="diagram1" class="dia"></div>
                                     </li>
                                 </ul>
-                                <div id="beneficialExists">
+                                <div class="beneficialExists">
                                     <h5>Gut funktioniert hat</h5>
                                     <p id="beneficialmeso"></p>
                                 </div>
-                                <div id="poorlyExists">
+                                <div class="poorlyExists">
                                     <h5>Nicht so gut funktioniert hat:</h5>
                                     <p id="poorlymeso"></p>
                                 </div>
-                                <div id="emailExists">
+                                <div class="emailExists">
                                     <h5>E-Mail zum Dozenten:</h5>
                                     <p id="contactmeso"></p>
                                 </div>
