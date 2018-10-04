@@ -99,7 +99,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="1">
+														<input type="radio" name="CreditPoints" value="1">
 													</td>
 													<td>
 														Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
@@ -107,7 +107,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="2">
+														<input type="radio" name="CreditPoints" value="2">
 													</td>
 													<td>
 														Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
@@ -115,7 +115,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="3">
+														<input type="radio" name="CreditPoints" value="3">
 													</td>
 													<td>
 														Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.

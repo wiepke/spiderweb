@@ -103,7 +103,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="1">
+														<input type="radio" name="CreditPoints" value="1">
 													</td>
 													<td>
 														The research is fairly high rated.
@@ -111,7 +111,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="2">
+														<input type="radio" name="CreditPoints" value="2">
 													</td>
 													<td>
 														The research is fairly low rated.
@@ -119,7 +119,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="3">
+														<input type="radio" name="CreditPoints" value="3">
 													</td>
 													<td>
 														 The research is of ideally value.
