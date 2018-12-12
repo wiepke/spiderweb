@@ -30,21 +30,28 @@ function diagram(Kriterien, values, diacount, background) {
             let y = 0.0;
             let x = 0.0;
             if (!background){
-                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 60)
-                    .addTo(stage)
-                    .stroke('lightgray', 3.9);
-                new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 82)
-                    .addTo(stage)
-                    .stroke('lightgray', 3.9);
                 if (Kriterien.length===7){
-                    new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 103)
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 4.4 - 2)
                         .addTo(stage)
                         .stroke('lightgray', 3.9);
-                }else {
-                    new Circle(picwidth / 2, picheight / 2, maxradius / 2 - 40)
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 3.6 - 2)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.9);
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 3 -2)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.9);
+                } else {
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 3.6)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.9);
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 3 - 2)
+                        .addTo(stage)
+                        .stroke('lightgray', 3.9);
+                    new Circle(picwidth / 2, picheight / 2, maxradius / 2.7 + 1)
                         .addTo(stage)
                         .stroke('lightgray', 3.9);
                 }
+
                 /*just 3 gray circles so far. The inner cirlce of the micro-level is exchanged for the outer circle in the meso level*/
             }
             if (!background) {
