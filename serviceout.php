@@ -42,7 +42,7 @@ if (!isset($_GET["anyway"])) {
 }
 if ((count($Kriterien)!=0)||(!isset($_GET['anyway']))) {$REQUESTSPINNE=$REQUESTSPINNE."')";}
 
-$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', '', array(PDO::MYSQL_ATTR_FOUND_ROWS => true));
+$pdo = new PDO('mysql:host=localhost;dbname=test', 'root', 'voyager', array(PDO::MYSQL_ATTR_FOUND_ROWS => true));
 $pdo->setAttribute(PDO::MYSQL_ATTR_USE_BUFFERED_QUERY, true);
 $statement = $pdo->prepare($REQUESTSPINNE);
 $statement->execute();
