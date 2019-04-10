@@ -11,7 +11,7 @@ let latestDiagramMikro = {
 let latestDiagramMeso = {
     Kriterien: [],
     values: [],
-    diacount: 0
+    diacount: 1
 };
 
 let labels = {
@@ -23,6 +23,10 @@ let labels = {
 $(document).ready(function () {
     cleanFilter();
     showfilter();
+    let showModelToggleLinks = $('.toggle-modell');
+    showModelToggleLinks.each(function(){
+        $(this).hide();
+    });
     $("select[id=UniMikro]").on("change", function () {
         chosenFilterMikro.Uni = $("select[id=UniMikro]").val();
         adjustFilterMikro();
