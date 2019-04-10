@@ -281,7 +281,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="1"  >
+														<input type="radio" name="feedback" value="1"  >
 													</td>
 													<td >
 														 Teachers (or tutors) will give (or claim) (Peer-)Feedback.
@@ -289,7 +289,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="2" >
+														<input type="radio" name="feedback" value="2" >
 													</td>
 													<td >
 														 Set and self organised feedback will be organized.
@@ -297,7 +297,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="3" >
+														<input type="radio" name="feedback" value="3" >
 													</td>
 													<td>
 														Students will ask for feedback of teachers or tutors.
@@ -356,33 +356,37 @@
 											<table class="table  js-options-table">
 												<tr class="header">
 													<td colspan="2">
-													   
-														 How is the success rated in research?
+
+                                                        How do students reflect on their process in research?
+                                                        <!--How is the success rated in research?-->
 													   
 													</td>
 												</tr>
 												<tr>
 													<td width="10px" >
-														<input type="radio" name="Assessment" value="1"  >
+														<input type="radio" name="Reflexion" value="1"  >
 													</td>
 													<td >
-														 There is a set form for assessment (e.g. a test).
+                                                        Tutors will provide events for reflection
+                                                        <!--There is a set form for assessment (e.g. a test).-->
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Assessment" value="2" >
+														<input type="radio" name="Reflexion" value="2" >
 													</td>
 													<td >
-														Students and teacher evolve an assessment together.
+                                                        Students are encouraged to reflect, but are able to to it on their own.
+                                                        <!--Students and teacher evolve an assessment together.-->
 													</td>
 												</tr>
 												<tr>
 												   <td width="10px">
-														<input type="radio" name="Assessment" value="3">
+														<input type="radio" name="Reflexion" value="3">
 													</td>
 												   <td >
-														 Students decide how and whether they will be proved.
+                                                       Students reflect on their own.
+                                                       <!--Students decide how and whether they will be proved.-->
 													</td>
 												</tr>
 												

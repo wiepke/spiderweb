@@ -284,7 +284,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="1"  >
+														<input type="radio" name="feedback" value="1"  >
 													</td>
 													<td >
 														Lehrende (oder Tutoren) geben (oder fordern) zu gesetzten Zeitpunkten (Peer-)Feedback.
@@ -292,7 +292,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="2" >
+														<input type="radio" name="feedback" value="2" >
 													</td>
 													<td >
 														Gesetztes und selbst eingeholtes Feedback werden kombiniert.
@@ -300,7 +300,7 @@
 												</tr>
 												<tr>
 													 <td width="10px">
-														<input type="radio" name="Reflexion" value="3" >
+														<input type="radio" name="feedback" value="3" >
 													</td>
 													<td>
 														Die Studierenden erfragen selbst Feedback bei Lehrenden oder Peers.
@@ -367,7 +367,7 @@
 												</tr>
 												<tr>
 													<td width="10px" >
-														<input type="radio" name="feedback" value="1"  >
+														<input type="radio" name="Reflexion" value="1"  >
 													</td>
 													<td >
                                                         Die Lehrenden (oder Tutor*innen) geben den Studierenden Reflexionsanlässe vor.
@@ -376,7 +376,7 @@
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="feedback" value="2" >
+														<input type="radio" name="Reflexion" value="2" >
 													</td>
 													<td >
                                                         Die Studierenden werden zum Reflektieren angeregt, können aber auch selbständig reflektieren.
@@ -385,7 +385,7 @@
 												</tr>
 												<tr>
 												   <td width="10px">
-														<input type="radio" name="feedback" value="3">
+														<input type="radio" name="Reflexion" value="3">
 													</td>
 												   <td >
                                                        Die Studierenden reflektieren ihre Erfahrungen selbständig.
