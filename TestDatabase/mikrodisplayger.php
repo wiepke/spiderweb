@@ -234,7 +234,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 
                                 </div>
                                 <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;"
-                                   onclick="background=!background; showall(Listingmikro(),true,background)"><i
+                                   onclick="background=!background; updateDiagram(null,null,null,background)"><i
                                             class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu
                                     vergleichen</a>
 
@@ -724,7 +724,7 @@ Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: &nbsp;
 
                                 </div>
                                 <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;"
-                                   onclick="background=!background; showall(Listingmeso(),false,background)"><i
+                                   onclick="background=!background; updateDiagram(null,null,null,background)"><i
                                             class="glyphicon glyphicon-picture"></i> Modell einblenden, um zu
                                     vergleichen</a>
                                 <div class="lightbox" id="fl2"><img src="img/meso.png"></div>

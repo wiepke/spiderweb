@@ -1,7 +1,10 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien, values, diacount, background) {
+function diagram(latestDiagram, background) {
+    let Kriterien = latestDiagram.Kriterien;
+    let values = latestDiagram.values;
+    let diacount = latestDiagram.diacount;
     if (background){
         let model = document.createElement("IMG");
         if (Kriterien.length===7){
@@ -51,6 +54,7 @@ function diagram(Kriterien, values, diacount, background) {
                         .addTo(stage)
                         .stroke('lightgray', 3.9);
                 }
+
                 /*just 3 gray circles so far. The inner cirlce of the micro-level is exchanged for the outer circle in the meso level*/
             }
             if (!background) {
@@ -79,10 +83,10 @@ function diagram(Kriterien, values, diacount, background) {
             }
             let yvalue = 1/3;
             for (let i = 0; i < values.length; i++) {
-               /*
-                * Point (x1,y1) is the center of the width and on the upper end
-                * All following points circle in equal distances around the center
-                */
+                /*
+                 * Point (x1,y1) is the center of the width and on the upper end
+                 * All following points circle in equal distances around the center
+                 */
                 y = maxradius / 2.5 * Math.sin(2*Math.PI*(i+1)/values.length);
                 x = maxradius / 2.5 * Math.cos(2*Math.PI*(i+1)/values.length);
                 new Path()

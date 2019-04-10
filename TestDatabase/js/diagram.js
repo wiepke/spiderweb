@@ -1,7 +1,10 @@
 /**
  * Created by fides-WHK on 13.03.2017.
  */
-function diagram(Kriterien, values, diacount, background) {
+function diagram(latestDiagram, background) {
+    let Kriterien = latestDiagram.Kriterien;
+    let values = latestDiagram.values;
+    let diacount = latestDiagram.diacount;
     if (background){
         let model = document.createElement("IMG");
         if (Kriterien.length===7){

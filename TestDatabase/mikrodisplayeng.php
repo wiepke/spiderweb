@@ -237,7 +237,7 @@ Here you can see results of other teachers, who used our model for their lecture
                                         <p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p>
 
                                     </div>
-                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i>show model to compare</a>
+                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; updateDiagram(null,null,null,background)"><i class="glyphicon glyphicon-picture"></i>show model to compare</a>
                                     <div class="lightbox" id="fl2"><img src="img/meso.png"></div>
                                     <ul style="position:relative;height:480px;width:480px">
                                         <li><div style="position:absolute;margin-top:-8px;margin-left:37px;" id="background0" class="dia"></div> </li>
@@ -659,7 +659,7 @@ Here you can see results of other teachers, who used our model for their lecture
 
                                     </div>
 
-                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; showall(Listingmeso(),false,background)"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
+                                    <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;" onclick="background=!background; updateDiagram(null,null,null,background)"><i class="glyphicon glyphicon-picture"></i> Show model to compare</a>
                                     <div class="lightbox" id="fl2"><img src="img/meso.png"></div>
                                     <ul style="position:relative;height:480px;width:480px">
                                         <li><div style="position:absolute;margin-top:-8px;margin-left:37px;" id="background1" class="dia"></div> </li>
