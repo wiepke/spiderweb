@@ -357,37 +357,41 @@
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse" id="eighth">
 											<table class="table  js-options-table">
-												<tr class="header">
-													<td colspan="2">
-													   
-														Wie wird der Erfolg der Forschung bewertet?
-													   
-													</td>
-												</tr>
-												<tr>
-													<td width="10px" >
-														<input type="radio" name="feedback" value="1"  >
-													</td>
-													<td >
-														Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).
-													</td>
-												</tr>
-												<tr>
-													<td width="10px">
-														<input type="radio" name="feedback" value="2" >
-													</td>
-													<td >
-														Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.
-													</td>
-												</tr>
-												<tr>
-												   <td width="10px">
-														<input type="radio" name="feedback" value="3">
-													</td>
-												   <td >
-														Studierende entscheiden selbst, ob und wie ihre Forschung bewertet wird.
-													</td>
-												</tr>
+                                                <tr class="header">
+                                                    <td colspan="2">
+
+                                                        Wie reflektieren die Studierenden ihren Forschungsprozess?
+                                                        <!--Wie wird der Erfolg der Forschung bewertet?-->
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="10px" >
+                                                        <input type="radio" name="feedback" value="1"  >
+                                                    </td>
+                                                    <td >
+                                                        Die Lehrenden (oder Tutor*innen) geben den Studierenden Reflexionsanlässe vor.
+                                                        <!--Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="10px">
+                                                        <input type="radio" name="feedback" value="2" >
+                                                    </td>
+                                                    <td >
+                                                        Die Studierenden werden zum Reflektieren angeregt, können aber auch selbständig reflektieren.
+                                                        <!--Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="10px">
+                                                        <input type="radio" name="feedback" value="3">
+                                                    </td>
+                                                    <td >
+                                                        Die Studierenden reflektieren ihre Erfahrungen selbständig.
+                                                        <!--Studierende entscheiden selbst, ob und wie ihre Forschung bewertet wird.-->
+                                                    </td>
+                                                </tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> zurück </button>
