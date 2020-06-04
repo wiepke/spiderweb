@@ -5,14 +5,14 @@
     <head>
 
 		<?php include 'header.php' ?>
-	
+
 		<script src="js/formchecker.js"></script>
 </head>
    
 <body class="home blog custom-background">
    
 	<!-- header navigation -->
-    <?php include 'navigationeng.php' ?>
+    <?php include 'navigation.php' ?>
         
 	<div class="content">
 
@@ -26,37 +26,33 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell</h2>
+						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell </h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
 						<div class="post-content">
 					
-											
-							<p>
-				 With this survey you can see the meso-level of your lecture (teach-/learn -setting), which contains the decisions of your institute. These decisions effect you and your radius of operation.
-				</p>
+							
+							
 				
 							<!-- start poll mikro -->
 	
 							<form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?>">
 								<div class="panel-group" id="forms">
-									<div><input id="uniInput" name="Uni" hidden></div>
+                                    <div><input id="uniInput" name="Uni" hidden></div>
                                     <div><input id="kursInput" name="Kurs" hidden></div>
                                     <div><input id="fachbereichInput" name="Fachbereich" hidden></div>
                                     <div><input id="anzahlInput" name="AnzahlStudenten" hidden></div>
                                     <div><input id="semesterInput" name="Semesterzahl" hidden></div>
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
-											<p>
-											   Here you can choose between different dimensions of your lecture. Your choice comprehends your didactic methods, which you used related to research learning. Be advised to have a specific course in mind to reflect the same or to build up a concept for a new similar course. After finishing this survey you will see a graphic of your results and you can compare your course to others.
-											</p> <!-- explanation text -->
-											
-										
+										<p>
+                                            Im Folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen, d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrende und Ihre Handlungsspielräume.
+				</p>
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">
 														<td colspan="2">
-															 What is the bonding in the curriculum?
+															Wie sieht die curriculare Einbindung aus?
 														</td>
 												</tr>
 											
@@ -66,7 +62,7 @@
 													</td>
 													<td>
 												
-														The student research will bring Credit Points and a grade.
+														Die studentische Forschung ist mit Credit Points versehen und wird benotet.
 													</td>
 												</tr>
 												<tr>
@@ -74,7 +70,7 @@
 														<input type="radio" name="Einbindung" value="2">
 													</td>
 													<td>
-														The student research will bring Credit Points without a grade.
+														Die studentische Forschung ist unbenotet, aber mit Credit Points versehen.
 													</td>
 												</tr>
 												<tr>
@@ -82,13 +78,13 @@
 														<input type="radio" name="Einbindung" value="3">
 													</td>
 													<td>
-														There are nor Credit Points for the student Research.
+														Die studentische Forschung wird nicht mit Credit Points versehen.
 													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 										
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> Next </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -97,38 +93,38 @@
 												<tr class="header">
 													<td colspan="2">
 														
-														How much is the pay-off in (CP-Number) curriculum?
+														Wie ist die Gewichtung (CP-Anzahl) im Curriculum?
 														
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="1">
+														<input type="radio" name="CreditPoints" value="1">
 													</td>
 													<td>
-														The research is fairly high rated.
+														Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="2">
+														<input type="radio" name="CreditPoints" value="2">
 													</td>
 													<td>
-														The research is fairly low rated.
+														Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="3">
+														<input type="radio" name="CreditPoints" value="3">
 													</td>
 													<td>
-														 The research is of ideally value.
+														Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
 													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> Back </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> Next </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -137,7 +133,7 @@
 												<tr class="header">
 													<td colspan="2">
 														
-														How does the modular location happen?
+														Wie sieht die modulare Verortung aus?
 														
 													</td>
 												</tr>
@@ -146,7 +142,7 @@
 														<input type="radio" name="Verortung" value="1">
 													</td>
 													<td>
-														The student research is an obligation.
+														Die studentische Forschung ist für Studierende Pflicht.
 													</td>
 												</tr>
 												<tr>
@@ -155,7 +151,7 @@
 
 													</td>
 													<td>
-														 The student research is an obligation to vote.
+														Die studentische Forschung ist für Studierende ein Wahlpflichtangebot.
 													</td>
 												</tr>
 												<tr>
@@ -163,13 +159,13 @@
 														<input type="radio" name="Verortung" value="3">
 													</td>
 													<td>
-														Students volunteer to take part.
+														Die Studierenden nehmen an der Forschung freiwillig teil.
 													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> Back </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> Next </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> zurück </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> weiter </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -178,7 +174,7 @@
 												<tr class="header">
 													<td colspan="2">
 														
-														 How is the assessment-setting?
+														Wie ist der Prüfungsrahmen gestaltet?
 														
 													</td>
 												</tr>
@@ -187,7 +183,7 @@
 														<input type="radio" name="Prufungsrahmen" value="1">
 													</td>
 													<td>
-														For assessement of student research there is a set test-frame.
+														Für die Bewertung der studentischen Forschung ist eine Prüfungsform vorgegeben.
 													</td>
 												</tr>
 												<tr>
@@ -195,7 +191,7 @@
 														<input type="radio" name="Prufungsrahmen" value="2">
 													</td>
 													<td>
-														You can choose between different forms for assessment of student research.
+														Für die Bewertung der studentischen Forschung kann zwischen mehreren Prüfungsformen gewählt werden.
 													</td>
 												</tr>
 												<tr>
@@ -203,13 +199,13 @@
 														<input type="radio" name="Prufungsrahmen" value="3">
 													</td>
 													<td>
-														 There will be no exam for the student research.
+														Die studentischen Forschung wird nicht über eine Prüfung bewertet.
 													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> Back </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> Next </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> zurück </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> weiter </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -218,7 +214,7 @@
 												<tr class="header">
 													<td colspan="2">
 														
-													  How is the time-setting?
+														Wie ist der Zeitrahmen gestaltet?
 														
 													</td>
 												</tr>
@@ -227,7 +223,7 @@
 														<input type="radio" name="Zeitrahmen" value="1">
 													</td>
 													<td>
-														Students have one semester for their research.
+														Für die studentische Forschung steht ein Semester zur Verfügung.
 													</td>
 												</tr>
 												<tr>
@@ -235,7 +231,7 @@
 														<input type="radio" name="Zeitrahmen" value="2">
 													</td>
 													<td>
-														There is more than one semester for student research.
+														Für die studentische Forschung steht mehr als ein Semester zur Verfügung.
 													</td>
 												</tr>
 												<tr>
@@ -243,13 +239,13 @@
 														<input type="radio" name="Zeitrahmen" value="3">
 													</td>
 													<td>
-														 The research of students can be done during their study times.
+														Die studentische Forschung kann begleitend während des Studiums erfolgen.
 													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> Back </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> Next </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> zurück </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> weiter </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -258,7 +254,7 @@
 												<tr class="header">
 													<td colspan="2">
 														
-														How is the resource-setting?
+															Wie ist der Ressourcenrahmen gestaltet?
 														
 													</td>
 												</tr>
@@ -267,7 +263,7 @@
 														<input type="radio" name="Ressourcenrahmen" value="1">
 													</td>
 													<td>
-														 There are no additional resources for student research.
+														Für die studentische Forschung stehen keine zusätzlichen Ressourcen zur Verfügung.
 													</td>
 												</tr>
 												<tr>
@@ -275,7 +271,7 @@
 														<input type="radio" name="Ressourcenrahmen" value="2">
 													</td>
 													<td>
-														There are limited additional resources for student research.
+														Für die studentische Forschung stehen befristet Ressourcen zur Verfügung.
 													</td>
 												</tr>
 												<tr>
@@ -283,13 +279,13 @@
 														<input type="radio" name="Ressourcenrahmen" value="3">
 													</td>
 													<td>
-														There are additional planable resources for student research.
+														Für die studentische Forschung stehen längerfristig planbare Ressourcen zur Verfügung.
 													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> Back </button>
-											<button class="btn btn-primary" type="submit">Send</button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> zurück </button>
+											<button class="btn btn-primary" type="submit">senden</button>
 										</div>
 									</div>
 							</div> <!--complete form div -->

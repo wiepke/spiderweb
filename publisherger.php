@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php
+    include_once 'language.php';
+    ?>
+    <?php include 'header.php' ?>
 
     <?php include 'header.php' ?>
 	<script src="libs/jquery.js"></script>
@@ -28,14 +32,14 @@
                 <!-- post content wrapper -->
                 <article class="post-915 post type-post status-publish format-standard hentry">
 
-                    <h2 class="post-title" style="color:#666666;"> Organisatorisches zum Schluss  </h2>
+                    <h2 class="post-title" style="color:#666666;"> <?php echo $lang['Publisher_Titel']?>  </h2>
                     <div class="clear"></div>
 
                     <!-- model content starts here -->
                     <div class="post-content">
 
-                        
-                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>" >
+
+                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET[" >
                             <div class="panel-group" id="forms">
                                 <div class="panel panel-default">
 									<div class="panel-collapse collapse in" id="zero">
@@ -47,23 +51,22 @@
 														   
 												</td>
 												<td>
-												 Durch die Nutzung des Tools zum FideS-Doppelradmodell erkläre ich mich einverstanden, dass meine Eingaben anonymisiert in die weitere Forschungsarbeit des FideS-Projekts einfließen können. Eine Weitergabe an Dritte erfolgt nicht.
+                                                    <?php echo $lang['Publisher_1_Text']?>
 												</td>
 											</tr>
 											
 										</table> 
 									   
 									   
-										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one" disabled> weiter </button>
+										 <button id="firstButton" type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#one" disabled> <?php echo $lang['Btn_Next']?> </button>
 									</div>
 									<div class="panel-collapse collapse " id="one">
 										
 									<table class="table js-options-table">
 											<tr class="header">
 												<td colspan="2">
-														   
-													Sie erhalten nun auf Basis Ihrer Eingaben eine grafische Darstellung Ihrer Lehrveranstaltung. Um Ihr Ergebnis einschätzen zu können und Anregungen von anderen Lehrenden zu erhalten, können Sie Ihre Lehrveranstaltung danach mit anderen vergleichen. Wir freuen uns, wenn auch Sie bereit sind, Ihr Ergebnis zu veröffentlichen, so dass andere Lehrende von Ihren Erfahrungen profitieren können.
-														   
+
+                                                    <?php echo $lang['Publisher_2_Beschreibung']?>
 												</td>
 											</tr>
 											<tr>
@@ -71,8 +74,7 @@
 													<input type="radio" name="published" value="1" required>
 												</td>
 												<td>
-													Ja, andere Nutzer*innen sollen ihre Lehrveranstaltungen mit meinen vergleichen können.
-												</td>
+                                                    <?php echo $lang['Publisher_2_Text1']?>												</td>
 													
 											</tr>
 											<tr>
@@ -80,14 +82,13 @@
 													<input type="radio" name="published" value="0" required>
 												</td>
 												<td>
-													Nein, nur ich (und das FideS-Team) soll die Auswertung meiner Eingaben einsehen können.
-												</td>
+                                                    <?php echo $lang['Publisher_2_Text2']?>												</td>
 												
 												
 											</tr>
 										</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> zurück </button>
-										<button class="btn btn-primary" type="submit">weiter</button>
+										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> <?php echo $lang['Btn_Back']?> </button>
+										<button class="btn btn-primary" type="submit"><?php echo $lang['Btn_Next']?></button>
 									</div>
                                     
                                 </div>

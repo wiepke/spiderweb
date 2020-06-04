@@ -13,13 +13,13 @@
 
                                 <!-- second footer sidebar -->
                                 <div class="col s12 m6 l3">
-                                    <div id="text-4" class="widget widget_text"><h5>TU Kaiserslautern</h5>			<div class="textwidget"> <a href="https://www.sowi.uni-kl.de/schulentwicklung/forschung/projektuebersicht/fides/"><img src="img/TUKL_angepasst.jpg"> </a> 
+                                    <div id="text-4" class="widget widget_text"><h5>TU Kaiserslautern</h5>			<div class="textwidget"> <a href="https://www.sowi.uni-kl.de/schulentwicklung/forschung/projektuebersicht/fides/"><img src="img/TUKL_angepasst.jpg"> </a>
 </div>
 		</div>                                </div>
 
                                 <!-- third footer sidebar -->
                                 <div class="col s12 m6 l3">
-                                    <div id="text-5" class="widget widget_text"><h5>Universität Potsdam</h5>			<div class="textwidget"> <a href="https://www.uni-potsdam.de/multimedia/projekte/e-learning-forschungsprojekte/fides.html"><img src="img/UP_angepasst.jpg"> </a> 
+                                    <div id="text-5" class="widget widget_text"><h5>Universität Potsdam</h5>			<div class="textwidget"> <a href="https://www.uni-potsdam.de/multimedia/projekte/e-learning-forschungsprojekte/fides.html"><img src="img/UP_angepasst.jpg"> </a>
 
 
 
@@ -74,6 +74,6 @@
         </footer>
 
 <script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>	
+<script type="text/javascript" src="js/materialize.min.js"></script>
 
 

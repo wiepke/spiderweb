@@ -1,7 +1,10 @@
 <?php
 ?>
+
+<?php
+include_once 'language.php';
+?>
 <!DOCTYPE html>
-<html lang="en">
     <head>
 
 		<?php include 'header.php' ?>
@@ -26,18 +29,15 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell </h2>
+						<h2 class="post-title" style="color:#666666;"><?php echo $lang['Mikro_Titel']?> </h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
 						<div class="post-content">
-					
-							
-							
-				
+
 							<!-- start poll mikro -->
-	
-							<form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?>">
+
+                            <form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET[">
 								<div class="panel-group" id="forms">
                                     <div><input id="uniInput" name="Uni" hidden></div>
                                     <div><input id="kursInput" name="Kurs" hidden></div>
@@ -47,12 +47,13 @@
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
 										<p>
-                                            Im Folgenden betrachten wir die <em>Mesoebene</em> Ihrer Lehrveranstaltungen, d.h. die Entscheidungen, die auf institutioneller Ebene getroffen werden. Diese haben Auswirkungen auf Sie als Lehrende und Ihre Handlungsspielräume.
+                                            <?php echo $lang['this']?>
+                                            <?php echo $lang['Meso_1_Beschreibung']?>
 				</p>
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">
 														<td colspan="2">
-															Wie sieht die curriculare Einbindung aus?
+                                                            <?php echo $lang['Meso_1_Frage']?>
 														</td>
 												</tr>
 											
@@ -61,30 +62,27 @@
 														<input type="radio" name="Einbindung" value="1">
 													</td>
 													<td>
-												
-														Die studentische Forschung der ist mit Credit Points versehen und wird benotet.
-													</td>
+
+                                                        <?php echo $lang['Meso_1_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Einbindung" value="2">
 													</td>
 													<td>
-														Die studentische Forschung ist unbenotet, aber mit Credit Points versehen.
-													</td>
+                                                        <?php echo $lang['Meso_1_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Einbindung" value="3">
 													</td>
 													<td>
-														Die studentische Forschung wird nicht mit Credit Points versehen.
-													</td>
+                                                        <?php echo $lang['Meso_1_Text3']?>													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 										
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> weiter </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> <?php echo $lang['Btn_Next']?> </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -92,39 +90,34 @@
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-														
-														Wie ist die Gewichtung (CP-Anzahl) im Curriculum?
-														
+
+                                                        <?php echo $lang['Meso_2_Frage']?>
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="1">
+														<input type="radio" name="CreditPoints" value="1">
 													</td>
 													<td>
-														Die studentische Forschung hat im Studiengang / Modul ein relativ großes Gewicht.
-													</td>
+                                                        <?php echo $lang['Meso_2_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="2">
+														<input type="radio" name="CreditPoints" value="2">
 													</td>
 													<td>
-														Die studentische Forschung hat im Studiengang / Modul ein relativ geringes Gewicht.
-													</td>
+                                                        <?php echo $lang['Meso_2_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Inhaltsrahmen" value="3">
+														<input type="radio" name="CreditPoints" value="3">
 													</td>
 													<td>
-														Die Forschung hat für die Studierenden ein ausschließlich ideelles Gewicht.
-													</td>
+                                                        <?php echo $lang['Meso_2_Text3']?>													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#second"> zurück </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> weiter </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> <?php echo $lang['Btn_Next']?> </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -132,9 +125,8 @@
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-														
-														Wie sieht die modulare Verortung aus?
-														
+
+                                                        <?php echo $lang['Meso_3_Frage']?>
 													</td>
 												</tr>
 												<tr>
@@ -142,8 +134,7 @@
 														<input type="radio" name="Verortung" value="1">
 													</td>
 													<td>
-														Die studentische Forschung ist für Studierende Pflicht.
-													</td>
+                                                        <?php echo $lang['Meso_3_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
@@ -151,21 +142,18 @@
 
 													</td>
 													<td>
-														Die studentische Forschung ist für Studierende ein Wahlpflichtangebot.
-													</td>
+                                                        <?php echo $lang['Meso_3_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Verortung" value="3">
 													</td>
 													<td>
-														Die Studierenden nehmen an der Forschung freiwillig teil.
-													</td>
+                                                        <?php echo $lang['Meso_3_Text3']?>													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#third"> zurück </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> weiter </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> <?php echo $lang['Btn_Next']?> </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -173,8 +161,8 @@
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-														
-														Wie ist der Prüfungsrahmen gestaltet?
+
+                                                        <?php echo $lang['Meso_4_Frage']?>
 														
 													</td>
 												</tr>
@@ -183,29 +171,25 @@
 														<input type="radio" name="Prufungsrahmen" value="1">
 													</td>
 													<td>
-														Für die Bewertung der studentischen Forschung ist eine Prüfungsform vorgegeben.
-													</td>
+                                                        <?php echo $lang['Meso_4_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Prufungsrahmen" value="2">
 													</td>
 													<td>
-														Für die Bewertung der studentischen Forschung kann zwischen mehreren Prüfungsformen gewählt werden.
-													</td>
+                                                        <?php echo $lang['Meso_4_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Prufungsrahmen" value="3">
 													</td>
 													<td>
-														Die studentischen Forschung wird nicht über eine Prüfung bewertet.
-													</td>
+                                                        <?php echo $lang['Meso_4_Text3']?>													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fourth"> zurück </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> weiter </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> <?php echo $lang['Btn_Next']?> </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -213,9 +197,8 @@
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-														
-														Wie ist der Zeitrahmen gestaltet?
-														
+
+                                                        <?php echo $lang['Meso_5_Frage']?>
 													</td>
 												</tr>
 												<tr>
@@ -223,29 +206,25 @@
 														<input type="radio" name="Zeitrahmen" value="1">
 													</td>
 													<td>
-														Für die studentische Forschung steht ein Semester zur Verfügung.
-													</td>
+                                                        <?php echo $lang['Meso_5_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Zeitrahmen" value="2">
 													</td>
 													<td>
-														Für die studentische Forschung steht mehr als ein Semester zur Verfügung.
-													</td>
+                                                        <?php echo $lang['Meso_5_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Zeitrahmen" value="3">
 													</td>
 													<td>
-														Die studentische Forschung kann begleitend während des Studiums erfolgen.
-													</td>
+                                                        <?php echo $lang['Meso_5_Text3']?>													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#fifth"> zurück </button>
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> weiter </button>
+											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#seventh"> <?php echo $lang['Btn_Next']?> </button>
 										</div>
 									</div>
 									<div class="panel panel-default">
@@ -253,8 +232,8 @@
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-														
-															Wie ist der Ressourcenrahmen gestaltet?
+
+                                                        <?php echo $lang['Meso_6_Frage']?>
 														
 													</td>
 												</tr>
@@ -263,29 +242,25 @@
 														<input type="radio" name="Ressourcenrahmen" value="1">
 													</td>
 													<td>
-														Für die studentische Forschung stehen keine zusätzlichen Ressourcen zur Verfügung.
-													</td>
+                                                        <?php echo $lang['Meso_6_Text1']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Ressourcenrahmen" value="2">
 													</td>
 													<td>
-														Für die studentische Forschung stehen befristet Ressourcen zur Verfügung.
-													</td>
+                                                        <?php echo $lang['Meso_6_Text2']?>													</td>
 												</tr>
 												<tr>
 													<td width="10px">
 														<input type="radio" name="Ressourcenrahmen" value="3">
 													</td>
 													<td>
-														Für die studentische Forschung stehen längerfristig planbare Ressourcen zur Verfügung.
-													</td>
+                                                        <?php echo $lang['Meso_6_Text3']?>													</td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
-											<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#sixth"> zurück </button>
-											<button class="btn btn-primary" type="submit">senden</button>
+											<button class="btn btn-primary" type="submit"><?php echo $lang['Btn_Send']?></button>
 										</div>
 									</div>
 							</div> <!--complete form div -->
@@ -309,5 +284,6 @@
 
    <?php include 'footer.php' ?>
 </body>
+</html>
 <?php
 ?>		

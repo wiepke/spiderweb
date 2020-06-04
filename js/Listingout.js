@@ -1,6 +1,7 @@
 /**
  * Created by fides-WHK on 22.03.2017.
  */
+
 function Listingmikro(){
     let output = [];
     let idclass = document.getElementsByClassName("idclass");
@@ -68,6 +69,8 @@ function Listingmeso(){
         }
     }
     let stringFilter = document.getElementsByClassName("stringFilterMeso");
+
+
     for (let i=0;i<stringFilter.length;i++){
         if (stringFilter[i].value!==""){
             if (stringFilter[i].name==="AnzahlStudenten"){

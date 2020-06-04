@@ -6,6 +6,7 @@
  * Time: 10:08
  */
 include 'dbconn.php';
+include_once 'language.php';
 $conn->set_charset("utf8");
 function intoDB($keys, $values,$conn,$mikro){
     $i=1;
@@ -51,6 +52,5 @@ function redirect($url, $statusCode = 303)
     header('Location: ' . $url, true, $statusCode);
     die();
 }
-if(preg_match('/eng/',$_SERVER['HTTP_REFERER']) !== 0){
-    redirect ("publishereng.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);}
-else redirect("publisherger.php?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid'],303);
+
+redirect ("publisherger.php?mikroid=".$_GET["mikroid"]."&mesoid=".$_GET['mesoid']."&lang=".$lang['this'],303);

@@ -12,20 +12,20 @@
 	<link rel='stylesheet' id='materialize-google-font-3-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C600%2C700%2C800%2C300&#038;subset=latin%2Ccyrillic-ext%2Clatin-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Cvietnamese&#038;ver=0.0.11' type='text/css' media='all' />
 
     <title> Analyse und Konzeption forschenden Lernens - das FideS-Doppelradmodell </title>
-	<link rel='stylesheet' href="css/blog.css"> 
+	<link rel='stylesheet' href="css/blog.css">
 	<link rel='stylesheet' href="css/materialize.min.css">
 	
-	<link rel='stylesheet' href="css/effects.css"> 
-	<link rel='stylesheet' href="css/elements.css"> 
-	<link rel='stylesheet' href="css/footer.css"> 
-	<link rel='stylesheet' href="css/header.css"> 
-	<link rel='stylesheet' href="css/nav.css"> 
-	<link rel='stylesheet' href="css/navigation.css"> 
-	<link rel='stylesheet' href="css/plugins.css"> 
-	<link rel='stylesheet' href="css/typography.css"> 
-	<link rel='stylesheet' href="css/widgets.css"> 
+	<link rel='stylesheet' href="css/effects.css">
+	<link rel='stylesheet' href="css/elements.css">
+	<link rel='stylesheet' href="css/footer.css">
+	<link rel='stylesheet' href="css/header.css">
+	<link rel='stylesheet' href="css/nav.css">
+	<link rel='stylesheet' href="css/navigation.css">
+	<link rel='stylesheet' href="css/plugins.css">
+	<link rel='stylesheet' href="css/typography.css">
+	<link rel='stylesheet' href="css/widgets.css">
 	<link rel='stylesheet' href="css/mythemes-icons.css">
-	<link rel='stylesheet' href="css/style.css"> 
+	<link rel='stylesheet' href="css/style.css">
     <link href="libs/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 	
 	
@@ -36,7 +36,7 @@
 	<!--<script type="text/javascript" src="test/front.js"></script>-->
 	<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/featherlight.js"></script>
-	<link rel='stylesheet' href="css/featherlight.css"> 
+	<link rel='stylesheet' href="css/featherlight.css">
 	
 	<!-- test -->
 	

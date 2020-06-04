@@ -1,31 +1,33 @@
 /**
  * Created by fides-WHK on 02.08.2017.
- */
+*/
 
 $(document).ready(function(){
-    if (location.pathname.match('mikroger')!==null){
+
+    if (location.pathname.match('mikroger')!==null ){
         document.getElementById('firstButton').disabled=true;
-        $('#uniInput').keypress(function() {
+        $('#uniInput').keyup(function() {
             document.getElementById('firstButton').disabled=
                 !(($('#uniInput').val()!=="")&&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
         });
-        $('#kursInput').keypress(function() {
+        $('#kursInput').keyup(function() {
             document.getElementById('firstButton').disabled=
                 !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
         });
-        $('#semesterInput').on('change',function() {
+        $('#semesterInput').keyup(function() {
             document.getElementById('firstButton').disabled=
                 !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
         });
-        $('#fachbereichInput').keypress(function() {
+        $('#fachbereichInput').keyup(function() {
             document.getElementById('firstButton').disabled=
                 !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
         });
-        $('#anzahlInput').keypress(function() {
+        $('#anzahlInput').keyup(function() {
             document.getElementById('firstButton').disabled=
                 !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
         });
     }
+
 
     let i=1;
     let id=-1;

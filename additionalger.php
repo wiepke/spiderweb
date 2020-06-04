@@ -3,9 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
+        <?php
+        include_once 'language.php';
+        ?>
 		<?php include 'header.php' ?>
-		
+
 		<script src="libs/jquery.js"></script>
 		<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="js/formchecker.js"></script>
@@ -31,7 +33,7 @@
 				<!-- post content wrapper -->
 					<article class="post-915 post type-post status-publish format-standard hentry">
 
-						<h2 class="post-title" style="color:#666666;">Fides Doppelradmodell</h2>
+						<h2 class="post-title" style="color:#666666;"><?php echo $lang['Mikro_Titel']?></h2>
 						<div class="clear"></div>
 					
 						<!-- model content starts here -->
@@ -39,58 +41,59 @@
 					
 						
 							<!-- start poll mikro -->
-					
-							<form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
-								<div class="panel-group" id="forms">
-									<div class="panel panel-default">
+
+                            <form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET[">
+								<div class=\"panel-group\" id=\"forms\">
+									<div class=\"panel panel-default\">
 										
-											<p>Um anderen Lehrenden einen Einblick in Ihre Lehrveranstaltung zu geben, bitten wir Sie um eine kurze Einschätzung:</p> 
-											<table class="table js-options-table" style="width:70%;">
+											<p><?php echo $lang['Additional_Beschreibung']?></p>
+											<table class=\"table js-options-table\" style=\"width:70%;\">
 												<tr>
 													<td >
-														In meiner Lehrveranstaltung hat gut funktioniert…
+                                                        <?php echo $lang['Additional_Text1']?>
 													</td>
 												</tr>
 												<tr>
 													<td >
 														<div  >
-														<textarea rows="4" cols="50" name="beneficial" ></textarea><br><br></div>
+														<textarea rows=\"4\" cols=\"50\" name=\"beneficial\" ></textarea><br><br></div>
 													</td>
 												</tr>
 												<tr>
 													<td>
-														An meiner Lehrveranstaltung fand ich kritisch/schwierig…
+                                                        <?php echo $lang['Additional_Text2']?>
 													</td>
 												</tr>
 												<tr>
 													<td>
-														<div align="right"><textarea rows="4" cols="50" name="poorly" ></textarea><br><br></div>
+														<div align=\"right\"><textarea rows=\"4\" cols=\"50\" name=\"poorly\" ></textarea><br><br></div>
 													</td>
                                                 </tr>
 												<tr>
                                                     <td>
-                                                        Optional können Sie eine (E-Mail-)Adresse oder Webseite hinterlegen, um mit anderen Lehrenden in den Kontakt zu treten
+                                                        <?php echo $lang['Additional_Text3']?>
                                                     </td>
 												</tr>
 												<tr>
                                                     <td >
-                                                        <div align="right"><input name="contact" placeholder="Mailadresse oder Webseite" size="72%" ></textarea><br><br></div>
+                                                       <div align=\"right\"><input name=\"contact\" placeholder=\"<?php echo $lang['Additional_Text3_Inputtext']?>"
+                                                                                   size=\"72%\" ></textarea><br><br></div>
                                                     </td><br><br>
                                                 </tr>
                                             </table> 
-                                        <button id="submitButton" class="btn btn-primary" type="submit">weiter</button>
+                                          <button id=\"submitButton\" class=\"btn btn-primary\" type=\"submit\"><?php echo $lang['Btn_Next']?></button>
                                        
                                     </div>
           
 								</div> <!--complete form div -->
-							</form>
+							</article>
 					
 							<!--model content ends here -->
 				
-							<div class="clearfix"></div>
+							<div class=\"clearfix\"></div>
 						</div> <!-- ende post content -->
 					</article>
-					<div class=" aligncenter"> </div>
+					   <div class=\" aligncenter\"> </div>
 						
 				</section>
 			
