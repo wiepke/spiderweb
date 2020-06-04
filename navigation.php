@@ -1,3 +1,7 @@
+<?php
+include_once 'language.php';
+?>
+
 <script type="text/javascript">
 
 
@@ -6,19 +10,15 @@
     function langswitchde() {
 
         var wholeadress=window.location.href;
-       // alert (wholeadress);
-        var adress2=wholeadress.replace("<?php echo $lang['this']?>","<?php echo $lang['other']?>");
-       // alert(adress2);
+        alert (wholeadress);
+        var replaceVar = "="+"<?php echo $lang['this']?>";
+        var newLangVar = "="+"<?php echo $lang['other']?>";
+        alert(replaceVar);
+        var adress2=wholeadress.replace(replaceVar, newLangVar);
+        alert(adress2);
         $("a.lang-switch").attr("href", (adress2));
     }
 </script>
-
-<?php
-?>
-
-<?php
-include_once 'language.php';
-?>
 <header class="mythemes-miss-header-image">
         <nav class="white mythemes-topper" role="navigation">
 
@@ -44,7 +44,7 @@ include_once 'language.php';
 							<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="http://fides-projekt.de/forschungsergebnisse/"><?php echo $lang['Nav_4']?></a></li>
 							<li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="http://fides-projekt.de/leseempfehlung/"><?php echo $lang['Nav_5']?></a></li>
 							<li id="menu-item-80" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://fides-projekt.de/team/"><?php echo $lang['Nav_6']?></a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a class="lang-switch" href="http://fides-projekt.de/english-version/"><?php echo $lang['Nav_Language']?></a></li>                        </ul>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a class="lang-switch" href=""><?php echo $lang['Nav_Language']?></a></li>                        </ul>
                     </div>
 
                     <div class="collapsed-wrapper">
@@ -55,7 +55,7 @@ include_once 'language.php';
 							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="http://fides-projekt.de/forschungsergebnisse/"><?php echo $lang['Nav_4']?></a></li>
 							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="http://fides-projekt.de/leseempfehlung/"><?php echo $lang['Nav_5']?></a></li>
 							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80"><a href="http://fides-projekt.de/team/"><?php echo $lang['Nav_6']?></a></li>
-							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a class="lang-switch" href="http://fides-projekt.de/english-version/"><?php echo $lang['Nav_Language']?></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-258"><a class="lang-switch" href="http://fides-projekt.de/english-version/"><?php echo $lang['Nav_Language']?></a></li>
 						</ul>
 					</div>                
 			</div>

@@ -37,7 +37,7 @@ include_once 'language.php';
 
 							<!-- start poll mikro -->
 
-                            <form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET[">
+                            <form name="survey" method="POST" action="mesoin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
 								<div class="panel-group" id="forms">
                                     <div><input id="uniInput" name="Uni" hidden></div>
                                     <div><input id="kursInput" name="Kurs" hidden></div>

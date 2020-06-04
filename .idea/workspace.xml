@@ -2,161 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="Bug Fixes">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/additionalger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/additionalin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/aside.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/blog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/effects.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/elements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/featherlight.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/featherlight.gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/materialize.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/mythemes-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/navigation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/plugins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/typography.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/css/widgets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/dbconn.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/BMBF_angepasst.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/TUKL_angepasst.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/UHH-Logo_RGB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/UP_angepasst.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/fides-logo_Maren02.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/meso-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/meso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/mikro-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/img/mikro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/Listingout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/bonsai.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/diagram.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/featherlight.gallery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/featherlight.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/formchecker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/inithelper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/js/serviceout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme (2).css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/libs/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/mesoger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/mesoin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/mikrodisplayger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/mikroger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/mikroin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/navigation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmeso.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmikro.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/Fragebogen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/pics/survey.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/publisherger.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/publishin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/serviceout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/test/jquery-migrate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/test/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TestDatabase/test/materialize.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/Resources/SampleStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/berblick_fr_dozent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/berblick_fr_studenten.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/dozentreviewgruppe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/dozentreviewstudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/landingpagedozent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/landingpagestudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/manual_matching.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/projekt_auswahl_page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/projekt_erstellen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/sitemap_dozent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/sitemapstudent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/student_projekt_page_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/student_projekt_page_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/student_projekt_page_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/student_projekt_page_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fltrail/pages/studentreview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/kreisgrafik-de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/kreisgrafik-s-de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/kreisgrafik-s-en.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/meso-de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/mikro-de.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/language.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/de.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/en.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spinnennetz.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spinnennetztest.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d0bd1ba-4634-4ed7-a755-efb79bbf7ca8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d0bd1ba-4634-4ed7-a755-efb79bbf7ca8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additionaleng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/additionaleng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additionalger.php" beforeDir="false" afterPath="$PROJECT_DIR$/additionalger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additionalin.php" beforeDir="false" afterPath="$PROJECT_DIR$/additionalin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aside.php" beforeDir="false" afterPath="$PROJECT_DIR$/aside.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/widgets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconn.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/kreisgrafik-s.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/kreisgrafik.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/kreisgrafikeng-s.png" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/img/kreisgrafikeng-s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/meso-en.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/meso-en.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/meso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/mikro-en.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/mikro-en.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/mikro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexeng.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Listingout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Listingout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/diagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/diagram.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/formchecker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/formchecker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/materialize.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/serviceout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/serviceout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesodisplayeng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/mesodisplayeng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesodisplayger.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/mesodisplayger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesoeng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/mesoeng.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/additionaleng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/additionalger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/additionalin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/aside.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/blog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/effects.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/featherlight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/featherlight.gallery.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/materialize.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/mythemes-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/navigation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/plugins.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/typography.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/css/widgets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/dbconn.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/BMBF_angepasst.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/TUKL_angepasst.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/UHH-Logo_RGB.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/UP_angepasst.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/fides-logo_Maren02.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafikeng-s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/meso-en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/meso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/mikro-en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/img/mikro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/Listingout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/bonsai.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/diagram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/featherlight.gallery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/featherlight.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/formchecker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/inithelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/jquery-migrate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/materialize.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/js/serviceout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme (2).css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mesodisplayeng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mesodisplayger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoeng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mikrodisplayeng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mikrodisplayger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroeng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/navigation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/navigationeng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmeso.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmikro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fragebogen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/survey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/publishereng.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/publisherger.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/publishin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/serviceout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/front.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/functions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/jquery-migrate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/masonry.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestDatabase/test/materialize.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mesoger.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesoger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesoin.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesoin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikrodisplayeng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/mikrodisplayeng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikrodisplayger.php" beforeDir="false" afterPath="$PROJECT_DIR$/mikrodisplayger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikroeng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/mikroeng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikroger.php" beforeDir="false" afterPath="$PROJECT_DIR$/mikroger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikroin.php" beforeDir="false" afterPath="$PROJECT_DIR$/mikroin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigationeng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/navigationeng.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publishereng.php" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/publishereng.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/publisherger.php" beforeDir="false" afterPath="$PROJECT_DIR$/publisherger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publishin.php" beforeDir="false" afterPath="$PROJECT_DIR$/publishin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serviceout.php" beforeDir="false" afterPath="$PROJECT_DIR$/serviceout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/test/front.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/test/functions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/jquery-migrate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/js/jquery-migrate.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/masonry.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/test/masonry.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/TestDatabase/js/materialize.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,40 +119,6 @@
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>allofitmeso.</find>
-      <find>modell einble</find>
-      <find>Fragebogen</find>
-      <find>im folgen</find>
-      <find>im fo</find>
-      <find>Prüfungsfo</find>
-      <find>toggl</find>
-      <find>current</find>
-      <find>diagram0</find>
-      <find>diagram</find>
-      <find>previous</find>
-      <find>text</find>
-      <find>model</find>
-      <find>einblenden</find>
-      <find>show model</find>
-      <find>gesetztes</find>
-      <find>studentische Forschung kann</find>
-      <find>nein</find>
-      <find>prüfungsfo</find>
-      <find>sie erhalten</find>
-      <find>sie erhalten</find>
-      <find>semes</find>
-      <find>semesterzahlmikroid</find>
-      <find>&lt;=</find>
-      <find>&gt;=</find>
-      <find>sho</find>
-      <find>semester</find>
-      <find>semesterzahl der</find>
-      <find>chosenFilter</find>
-      <find>semesterzahllabel</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -240,7 +148,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../copy" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -367,8 +275,16 @@
       <workItem from="1508838809836" duration="5627000" />
       <workItem from="1509348660517" duration="214000" />
       <workItem from="1510648390174" duration="6225000" />
-      <workItem from="1591262384917" duration="282000" />
+      <workItem from="1591262384917" duration="7991000" />
     </task>
+    <task id="LOCAL-00001" summary="Bug Fixes">
+      <created>1591266313845</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591266313845</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,9 +299,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591266244504" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1591273680271">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591273680271" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591266680355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591266680355" />
     <state x="584" y="191" key="chooseDestDirectoryDialog" timestamp="1591262483914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="191" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1591262483914" />
+    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1591274175200">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591274175200" />
   </component>
 </project>

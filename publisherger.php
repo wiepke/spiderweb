@@ -39,7 +39,7 @@
                     <div class="post-content">
 
 
-                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET[" >
+                        <form name="survey" method="POST" action="publishin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
                             <div class="panel-group" id="forms">
                                 <div class="panel panel-default">
 									<div class="panel-collapse collapse in" id="zero">
