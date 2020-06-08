@@ -10,12 +10,12 @@ include_once 'language.php';
     function langswitchde() {
 
         var wholeadress=window.location.href;
-        alert (wholeadress);
+        //alert (wholeadress);
         var replaceVar = "="+"<?php echo $lang['this']?>";
         var newLangVar = "="+"<?php echo $lang['other']?>";
-        alert(replaceVar);
+        //alert(replaceVar);
         var adress2=wholeadress.replace(replaceVar, newLangVar);
-        alert(adress2);
+        //alert(adress2);
         $("a.lang-switch").attr("href", (adress2));
     }
 </script>

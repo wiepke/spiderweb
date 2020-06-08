@@ -10,44 +10,44 @@
 
 
     //Index
-    $lang['Index_Titel'] = 'Analyse und Konzeption forschenden Lernens - das FideS-Doppelradmodell';
-    $lang['Index_Text'] = '[ENG] Das FideS-Doppelradmodell dient dazu, die Konzeption und Reflexion von forschendem Lernen durch die einfache Handhabung des Modells zu erleichtern und forschendes Lernen durch die vertiefte Auseinandersetzung mit einzelnen Planungsschritten gleichzeitig zu verbessern. Es ist anwendbar auf Lehrveranstaltungen, in denen Studierende aktiv in den Forschungsprozess eingebunden werden und richtet sich an Lehrende oder Koordinator*innen, die forschendes Lernen planen, durchführen und/oder evaluieren. Im Folgenden werden Sie durch die Anwendung des Modells begleitet. Sie können unterschiedliche Dimensionen wählen, die die Gestaltung einer Lehrveranstaltung prägen. Sofern eine Auswahl getroffen wurde, dient sie dazu Ihre didaktischen Entscheidungen bezüglich der Planung der Lehrveranstaltung im Modus forschendem Lernen, nachzuvollziehen.
+    $lang['Index_Titel'] = 'Analysis and conception of research-based learning - the FideS-Doppelradmodell';
+    $lang['Index_Text'] = 'The FideS-Doppelradmodell serves to facilitate the conception and reflection of research-based learning through the easy handling of the model and to improve research-based learning through the in-depth examination of individual planning steps at the same time. It is applicable to courses in which students are actively involved in the research process and it is aimed at teachers or coordinators who plan, implement and/or evaluate research-based learning. In the following you will be guided through the application of the model. You can choose different dimensions that shape the design of a course. Once you have made a selection, it will help you to understand your didactic decisions regarding the planning of a course in research-based learning mode.
 
-Bitte denken Sie beim Ausfüllen an eine bestimmte Lehrveranstaltung, die sie entweder im Nachgang reflektieren oder im Vorfeld neu konzipieren wollen. Nach Absenden des Reflexionsbogens erhalten Sie eine grafische Darstellung Ihres Ergebnisses und können Ihre Lehrveranstaltung mit anderen vergleichen.';
+When filling out the form, please think of a specific course that you would like to either reflect on afterwards or redesign in advance. After submitting the reflection sheet, you will receive a graphic representation of your results and can compare your course with others.';
 
-    $lang['Index_Link_1'] = 'Zum Reflexionsbogen';
-    $lang['Index_Link_2'] = 'Zu den Ergebnissen anderer Lehrveranstaltungen';
+    $lang['Index_Link_1'] = 'To the reflection sheet';
+    $lang['Index_Link_2'] = 'To the results of other courses';
 
     //Navigation
-    $lang['Nav_1'] = 'AKTUELLES';
-    $lang['Nav_2'] = 'DAS PROJEKT';
-    $lang['Nav_3'] = 'FORSCHUNGSDESIGN';
-    $lang['Nav_4'] = 'FORSCHUNGSERGEBNISSE';
-    $lang['Nav_5'] = 'LESEEMPFEHLUNGEN';
+    $lang['Nav_1'] = 'NEWS';
+    $lang['Nav_2'] = 'THE PROJECT';
+    $lang['Nav_3'] = 'RESEARCH DESIGN';
+    $lang['Nav_4'] = 'RESEARCH RESULTS';
+    $lang['Nav_5'] = 'READING RECOMMENDATIONS';
     $lang['Nav_6'] = 'TEAM';
     $lang['Nav_Language'] = 'DEUTSCH';
-    $lang['Nav_Titel'] = 'Begleitforschung zum Qualitätspakt Lehre';
+    $lang['Nav_Titel'] = 'Accompanying research for the Teaching Quality Pact';
 
     //aside
-    $lang['Aside_Titel1'] = 'LINK-EMPFEHLUNGEN';
-    $lang['Aside_Titel2'] = 'KONTAKT';
+    $lang['Aside_Titel1'] = 'LINK-RECOMMENDATIONS';
+    $lang['Aside_Titel2'] = 'CONTACT';
     $lang['Aside_Titel3'] = 'BMBF';
-    $lang['Aside_1_Text_Link1'] = 'Blog von Gabi Reinmann:';
-    $lang['Aside_1_Text_Link2'] = 'Blog von Mandy Schiefner-Rohs:';
+    $lang['Aside_1_Text_Link1'] = 'Blog by Gabi Reinmann:';
+    $lang['Aside_1_Text_Link2'] = 'Blog by Mandy Schiefner-Rohs:';
     $lang['Aside_1_Text_Link3'] = 'Hochschuldidaktische Ringvorlesung am HUL:';
     $lang['Aside_2_Name1'] = 'Hamburger Zentrum für Universitäres Lehren und Lernen (HUL)';
     $lang['Aside_2_Text1'] = 'Universität Hamburg
 Schlüterstraße 51, 2. Obergeschoss, Raum: 2023
 20146 Hamburg
 E-Mail:';
-    $lang['Aside_2_Name2'] = 'Projektleitung:';
+    $lang['Aside_2_Name2'] = 'Project management:';
     $lang['Aside_2_Text2'] = 'Prof. Dr. Gabi Reinmann
 E-Mail:';
-    $lang['Aside_2_Name3'] = 'Projektkoordination:';
+    $lang['Aside_2_Name3'] = 'Project Coordination:';
     $lang['Aside_2_Text3'] = 'Dr. Eileen Lübcke
 					Tel.: +49 40 42838-9645
 					E-Mail:';
-    $lang['Aside_3_Text'] = 'Dieses Vorhaben wird unter den Kennzeichen 01PB14013 (FideS-Projekt) und 01PB18013 (FideS-Transfer) gefördert.';
+    $lang['Aside_3_Text'] = 'This project is funded under the indicators 01PB14013 (FideS-Projekt) and 01PB18013 (FideS-Transfer).';
 
     //Buttons
     $lang['Btn_Next'] = 'NEXT';
@@ -150,7 +150,7 @@ Here you can choose between different dimensions of your lecture. Your choice co
     $lang['Meso_6_Frage'] = 'How is the resource-setting?';
     $lang['Meso_6_Text1'] = 'There are no additional resources for student research.';
     $lang['Meso_6_Text2'] = 'There are limited additional resources for student research.';
-    $lang['Meso_6_Text3'] = '	There are additional planable resources for student research.';
+    $lang['Meso_6_Text3'] = 'There are additional planable resources for student research.';
 
     //Additional
     $lang['Additional_Beschreibung'] = 'For the sake of understanding, please evaluate the following:';
@@ -160,7 +160,7 @@ Here you can choose between different dimensions of your lecture. Your choice co
     $lang['Additional_Text3_Inputtext'] = 'Mailadress or website';
 
     //Publisher
-    $lang['Publisher_Titel'] = 'Organisatorisches zum Schluss';
+    $lang['Publisher_Titel'] = 'Organisational issues at the end';
 
     //Part 1
     $lang['Publisher_1_Text'] = 'With usage of tools of the Fides-Doppelradmodell I accept my given information as anonymous part of research. My Data will not be given to third parties.';
@@ -172,9 +172,9 @@ Here you can choose between different dimensions of your lecture. Your choice co
 
     //Display
     $lang['Display_Titel'] = 'results in the Doppelradmodell';
-    $lang['Display_Text1'] = 'Hier können Sie die Ergebnisse von Lehrenden sehen, die unser Modell auf ihre Lehrveranstaltungen angewandt haben. Die grafischen Darstellungen von forschendem Lernen entstehen nach Ausfüllen unseres Reflexionsbogens und helfen, die eigene Lehrveranstaltung einzuschätzen und zu reflektieren. Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen: ';
-    $lang['Display_Link'] = '  Wir freuen uns, wenn Sie unseren Reflexionsbogen ausfüllen.';
-    $lang['Display_Text2'] = 'Unter „nach weiteren Ergebnissen suchen“ können Sie in unserer Datenbank stöbern, die Darstellungen anderer Lehrveranstaltungen einsehen und sie mit Ihren Ergebnissen vergleichen. Die Filterfunktion können Sie nutzen, um bestimmte Hochschulen oder Fachbereiche zu finden oder um den Fokus auf eine bestimmte Dimension des Doppelradmodells zu legen. So können Sie beispielsweise Lehrveranstaltungen finden, die auf einer bestimmten Dimension die gleiche (oder die gegenteilige) Ausprägung aufweisen wie Ihre Lehrveranstaltung. Die Parameter des Filters beziehen sich jeweils auf die Mikro- oder die Mesoebene. Bitte wechseln sie die Registerkarte, um die Filtereinstellungen für die andere Ebene vorzunehmen.';
+    $lang['Display_Text1'] = 'Here you can see the results of teachers who have applied our model to their courses. The graphic representations of research-based learning are created after filling out our reflection sheet and help you to assess and reflect on your own course. We would be pleased if you would fill out our reflection sheet: ';
+    $lang['Display_Link'] = '  We would be pleased if you would fill out our reflection sheet.';
+    $lang['Display_Text2'] = 'Under "search for further results" you can browse our database, view the presentations of other courses and compare them with your results. You can use the filter function to find specific universities or departments or to focus on a specific dimension of the dual wheel model. For example, you can find courses that have the same (or the opposite) characteristic as your course on a certain dimension. The parameters of the filter refer to the micro- or meso-level respectively. Please change the tab page to make the filter settings for the other level.';
 
     //Display Darstellung
     $lang['Display_Tab_Titel'] = 'Results';

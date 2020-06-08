@@ -3,102 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="Bug Fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/additionaleng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/additionalger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/additionalin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/aside.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/blog.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/effects.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/elements.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/featherlight.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/featherlight.gallery.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/materialize.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/mythemes-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/nav.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/navigation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/plugins.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/typography.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/css/widgets.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/dbconn.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/header.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/BMBF_angepasst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/TUKL_angepasst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/UHH-Logo_RGB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/UP_angepasst.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/fides-logo_Maren02.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik-s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafik.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/kreisgrafikeng-s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/meso-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/meso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/mikro-en.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/img/mikro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/Listingout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/bonsai.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/diagram.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/featherlight.gallery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/featherlight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/formchecker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/inithelper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/jquery-migrate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/materialize.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/js/serviceout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme (2).css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/bootstrap-3.3.7-dist/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/libs/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mesodisplayeng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mesodisplayger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoeng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mesoin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mikrodisplayeng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mikrodisplayger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroeng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/mikroin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/navigation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/navigationeng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmeso.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Darstellungmikro.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fides_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/Fragebogen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/pics/survey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/publishereng.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/publisherger.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/publishin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/serviceout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/front.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/functions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/jquery-migrate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/masonry.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestDatabase/test/materialize.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mesoger.php" beforeDir="false" afterPath="$PROJECT_DIR$/mesoger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/en.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publisherger.php" beforeDir="false" afterPath="$PROJECT_DIR$/publisherger.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +181,7 @@
       <workItem from="1508838809836" duration="5627000" />
       <workItem from="1509348660517" duration="214000" />
       <workItem from="1510648390174" duration="6225000" />
-      <workItem from="1591262384917" duration="7991000" />
+      <workItem from="1591262384917" duration="9008000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Fixes">
       <created>1591266313845</created>
@@ -284,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591266313845</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bug Fixes">
+      <created>1591274903364</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591274903364</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,18 +208,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="293" y="8" key="CommitChangelistDialog2" timestamp="1591266244504">
+    <state x="293" y="8" key="CommitChangelistDialog2" timestamp="1591274902464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591266244504" />
+    <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591274902464" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1591273680271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591273680271" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591266680355">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591274916321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591266680355" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591274916321" />
     <state x="584" y="191" key="chooseDestDirectoryDialog" timestamp="1591262483914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
