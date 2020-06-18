@@ -14,14 +14,28 @@
 
    1. mysql will now run on 3308 in order to not conflict with other mysql dbs on the system
    
+## Option 1 Using the Dockerfile
+
+7. sudo docker build -t spiderweb .
+
+8. sudo docker run --name spiderweb -d -p 8082:80 --mount type=bind,source="$(pwd)",target=/var/www/html --network=spiderweb-network spiderweb
+
+9. Test with [host]:8082 z.B. localhost:8082
+
+## Option 2 Using Docker Run with some tweaks
+
+   
 7. sudo docker run --name spiderweb -d -p 8082:80 --mount type=bind,source="$(pwd)",target=/var/www/html --network=spiderweb-network php:apache
 
    - 8082 will be the port were the software is accessible from outside the hostsystem. You need to open this port on the host
    - you can also create a proxy locally on the host that patches 8082 through to whereevery you want spiderweb to run
 
 8. Enable mysqli:    
-           - docker exec -it spiderweb bash
-           - docker-php-ext-install mysqli
-           - you can save this fixed image with docker commit -p spiderweb spiderweb-i
+   - docker exec -it spiderweb bash
+   - Within the spiderweb vm:
+        - docker-php-ext-install mysqli
+        - apachectl restart
+        - test this with: php -a and mysqli_connect("0.0.0.0", "root", "voyager", "spinnennetz", 3308);
+   - you can save this fixed image with docker commit -p spiderweb spiderweb-i
 
 
