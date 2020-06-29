@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="Bug Fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/additionalger.php" beforeDir="false" afterPath="$PROJECT_DIR$/additionalger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbconn.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconn.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/formchecker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/formchecker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/serviceout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/serviceout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/de.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/de.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/en.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mikrodisplayger.php" beforeDir="false" afterPath="$PROJECT_DIR$/displaydoppelrad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysqldata/ariane_backup.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/publishin.php" beforeDir="false" afterPath="$PROJECT_DIR$/publishin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snipets.html" beforeDir="false" afterPath="$PROJECT_DIR$/snipets.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,6 +180,7 @@
       <workItem from="1592809254240" duration="2507000" />
       <workItem from="1593171935611" duration="2842000" />
       <workItem from="1593408655794" duration="14736000" />
+      <workItem from="1593433912033" duration="292000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Fixes">
       <created>1591266313845</created>

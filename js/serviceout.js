@@ -199,7 +199,7 @@ function adjustFilterMeso() {
             ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich) || (chosenFilterMeso.Fachbereich === "")) &&
             ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs) || (chosenFilterMeso.Kurs === "")) &&
             ((allOfItMeso[i].AnzahlStudenten - 9 <= chosenFilterMeso.AnzahlStudenten) || (chosenFilterMeso.AnzahlStudenten === ""))) {
-            if ((allOfItMeso[i].Semesterzahl >= 1) && (allOfItMikro[i].Semesterzahl <= 3)) {
+            if ((allOfItMeso[i].Semesterzahl >= 1) && (allOfItMeso[i].Semesterzahl <= 3)) {
                 document.getElementById("SemesterZahlMesoId1").hidden = false;
             }
             if ((allOfItMeso[i].Semesterzahl >= 4) && (allOfItMikro[i].Semesterzahl <= 6)) {
