@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="Bug Fixes">
+    <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="English text update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/serviceout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/serviceout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/additionalger.php" beforeDir="false" afterPath="$PROJECT_DIR$/additionalger.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +172,7 @@
       <workItem from="1508838809836" duration="5627000" />
       <workItem from="1509348660517" duration="214000" />
       <workItem from="1510648390174" duration="6225000" />
-      <workItem from="1591262384917" duration="9008000" />
+      <workItem from="1591262384917" duration="11859000" />
       <workItem from="1592804039551" duration="494000" />
       <workItem from="1592804546260" duration="107000" />
       <workItem from="1592804832465" duration="347000" />
@@ -196,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591274903364</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="English text update">
+      <created>1591624632456</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1591624632456</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,10 +211,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
+    <MESSAGE value="English text update" />
+    <option name="LAST_COMMIT_MESSAGE" value="English text update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="348" y="67" key="#CLI_Interpreters" timestamp="1593172652853">
+    <state x="293" y="8" key="CommitChangelistDialog2" timestamp="1591624631513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="348" y="67" key="#CLI_Interpreters/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172652853" />
@@ -215,16 +223,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="475" y="55" key="#PHP/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172264017" />
-    <state x="293" y="8" key="CommitChangelistDialog2" timestamp="1591274902464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591274902464" />
+    <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591624631513" />
     <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1593172646539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172646539" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591273680271" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1592804533228">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591624639988">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533228" />
@@ -292,18 +299,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172656364" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591274916321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591274916321" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591624639988" />
     <state x="584" y="191" key="chooseDestDirectoryDialog" timestamp="1591262483914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="191" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1591262483914" />
-    <state x="253" y="141" width="609" height="592" key="find.popup" timestamp="1593427984857">
+    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1591639313782">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="253" y="141" width="609" height="592" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593427984857" />
-    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591274175200" />
+    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591639313782" />
   </component>
 </project>

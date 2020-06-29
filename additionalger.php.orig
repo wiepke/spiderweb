@@ -42,9 +42,15 @@
 						
 							<!-- start poll mikro -->
 
+<<<<<<< HEAD
                             <form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>">
+								<div class=\"panel-group\" id=\"forms\">
+									<div class=\"panel panel-default\">
+=======
+                            <form name="survey" method="POST" action="additionalin.php?utf8=✓<?php if (isset($_GET["mikroid"])) {echo "&mikroid=";echo $_GET["mikroid"];}?><?php if (isset($_GET["mesoid"])) {echo "&mesoid=";echo $_GET["mesoid"];}?>\">
 								<div class="panel-group" id="forms">
 									<div class="panel panel-default">
+>>>>>>> 88425db67387a2cef8aebaf0e0772a551f58f093
 										
 											<p><?php echo $lang['Additional_Beschreibung']?></p>
 											<table class="table js-options-table" style="width:70%;">
@@ -81,10 +87,17 @@
 												</tr>
 												<tr>
                                                     <td >
+<<<<<<< HEAD
                                                        <div><input name="contact" type="email" placeholder="<?php echo $lang['Additional_Text3_Inputtext']?>"
                                                                                    size="72%" /><br><br></div>
                                                     </td>
+=======
+                                                       <div align="right">
+                                                           <input name="contact" placeholder="<?php echo $lang['Additional_Text3_Inputtext']?>" size="72%" >
+                                                           <br><br>
                                                        </div>
+                                                    </td><br><br>
+>>>>>>> 88425db67387a2cef8aebaf0e0772a551f58f093
                                                 </tr>
                                             </table> 
                                           <button id="submitButton" class="btn btn-primary" type="submit"><?php echo $lang['Btn_Next']?></button>
