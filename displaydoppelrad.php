@@ -165,11 +165,39 @@ echo "</script>";
 
                     <h2 class="post-title" style="color:#666666;"><?php echo $lang['Display_Titel']?></h2>
                     <div class="clear"></div>
-                    <p><?php echo $lang['Display_Text1'] ?>
-                        <a href="mikroger.php?lang=<?php echo $lang['this']?>" class="poll-link"><?php echo $lang['Display_Link']?></a><br>
-                    </p>
-                    <p> <?php echo $lang['Display_Text2']?></p>
 
+                    <?php
+                    if (isset($_GET["mikroid"])) {
+                        echo "<p>";
+                        echo $lang['Display_Text_Results'];
+                        echo "</p>";
+                    } else {
+                        echo "<p>";
+                        echo $lang['Display_Text_look_at'];
+                        echo "<a href='mikroger.php?lang=";echo $lang['this']."'";
+                        echo "class='poll-link'>";
+                        echo $lang['Display_Link'];
+                        echo "</a><br>";
+                        echo "</p>";
+                    }
+                    echo "<p>";
+                        echo $lang['Display_Text_Browse'];
+                        echo "</p>";
+                    echo "<script type=\"text/javascript\">
+							      //$('document').ready(showfilter);
+							      function showfilter() {
+							      	$('.collapse').addClass('in');
+							      	$('.expand-area').attr('aria-expanded','true');
+							      	$('.collapse').attr('aria-expanded','true');
+							      	let table2 =$('#table2');
+							      	table2.attr('aria-expanded','false');
+							      	table2.toggleClass('in');
+							      	let table4 =$('#table4');
+							      	table4.attr('aria-expanded','false');
+							      	table4.toggleClass('in');
+							      }
+							  </script>"; //end output
+                    ?>
 
                     <ul class="nav nav-tabs">
                         <li class="active">
@@ -189,8 +217,7 @@ echo "</script>";
                                 <div class="placeholderdiv">
                                     <p class="course-meta last"> <?php echo $lang['Display_Tab_Titel']?></p><br>
                                     <p class="course-meta-sub-label"><?php echo $lang['Display_Tab_Beschreibung']?></p>
-                                    <div class="dia"
-                                         style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div>
+
                                 </div>
 
                                 <div id="labels0">
@@ -212,18 +239,19 @@ echo "</script>";
                                     <p id="Semesterzahllabel0" class="course-meta-sub last">Dummy</p>
 
                                 </div>
-                                <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;"
+                                <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;cursor:pointer;"
                                    onclick="background=!background; updateDiagram(null,null,0,background)"><i
                                             class="glyphicon glyphicon-picture"></i> <?php echo $lang['Display_Results_Show']?></a>
 
                                 <div class="lightbox" id="fl1"><img src="img/mikro-<?php echo $lang['this']?>.png"></div>
                                 <ul style="position:relative;height:480px;width:480px">
                                     <li>
-                                        <div style="position:absolute;margin-top:0px;margin-left:0px;"
+                                        <div style="position:absolute;margin-top:-8px;margin-left:37px;"
                                              id="background0" class="dia"></div>
                                     </li>
                                     <li>
-                                        <div style="position:absolute; margin-top:-8px; margin-left:-10px;" id="diagram0" class="dia"></div>
+                                        <div style="position:absolute;width:90%; margin-top: -16.5px;" id="diagram0"
+                                             class="dia"></div>
                                     </li>
                                 </ul>
                                 <!--<div  id="diagram0" class="dia"></div>-->
@@ -678,8 +706,7 @@ echo "</script>";
                                 <div class="placeholderdiv">
                                     <p class="course-meta last"> <?php echo $lang['Display_Tab_Titel']?> </p><br>
                                     <p class="course-meta-sub-label"><?php echo $lang['Display_Tab_Beschreibung']?></p>
-                                    <div class="dia"
-                                         style="width:90%; height:400px; background-color:#f9f9f9; margin-bottom:20px;"></div>
+
                                 </div>
 
                                 <div id="labels1">
@@ -699,7 +726,7 @@ echo "</script>";
                                     <p id="Semesterzahllabel1" class="course-meta-sub last">Dummy</p>
 
                                 </div>
-                                <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;"
+                                <a class="toggle-modell" style="margin:0 0 10px 0;width:100%; display:inline-block;cursor:pointer;"
                                    onclick="background=!background; updateDiagram(null,null,1,background)"><i
                                             class="glyphicon glyphicon-picture"></i> <?php echo $lang['Display_Results_Show']?></a>
                                 <div class="lightbox" id="fl2"><img src="img/meso-<?php echo $lang['this']?>.png"></div>

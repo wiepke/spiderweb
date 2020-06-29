@@ -8,40 +8,31 @@ $(document).ready(function(){
         document.getElementById('firstButton').disabled=true;
         $('#uniInput').keyup(function() {
             document.getElementById('firstButton').disabled=
-                !(($('#uniInput').val()!=="")&&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+                !(($('#uniInput').val()!=="")&&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&(!isNaN($('#semesterInput').val())) &&(!isNaN($('#anzahlInput').val())));
         });
         $('#kursInput').keyup(function() {
             document.getElementById('firstButton').disabled=
-                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&(!isNaN($('#semesterInput').val())) &&(!isNaN($('#anzahlInput').val())));
         });
         $('#semesterInput').keyup(function() {
             document.getElementById('firstButton').disabled=
-                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&(!isNaN($('#semesterInput').val())) &&(!isNaN($('#anzahlInput').val())));
         });
         $('#fachbereichInput').keyup(function() {
             document.getElementById('firstButton').disabled=
-                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&(!isNaN($('#semesterInput').val())) &&(!isNaN($('#anzahlInput').val())));
         });
         $('#anzahlInput').keyup(function() {
             document.getElementById('firstButton').disabled=
-                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&($('#semesterInput').val()!=="") &&($('#anzahlInput').val()!==""));
+                !(($('#uniInput').val()!=="") &&($('#fachbereichInput').val()!=="") &&($('#kursInput').val()!=="") &&(!isNaN($('#semesterInput').val())) &&(!isNaN($('#anzahlInput').val())));
         });
     }
 
-
-    let i=1;
     let id=-1;
     if (location.search.match('mikroid')!==null){
-        id=0;
-        while(location.search[i]!=="="){
-            i++;
-        }
-        i++;
-        while(location.search[i]!==undefined){
-            id=id*10;
-            id=id+parseInt(location.search[i]);
-            i++;
-        }
+        let params = getParams(location.search);
+        id = params["mikroid"];
+        //id = location.search.match(/(\d+)/)[0];
         $.ajax({
             url: "serviceout.php?mikro=true&id="+id+"&from=0",
             success: function (data) {
@@ -87,3 +78,22 @@ $(document).ready(function(){
         }
     });
 });
+
+/**
+ * Get the URL parameters
+ * source: https://css-tricks.com/snippets/javascript/get-url-variables/
+ * @param  {String} url The URL
+ * @return {Object}     The URL parameters
+ */
+function getParams (url) {
+    let params = {};
+    let parser = document.createElement('a');
+    parser.href = url;
+    let query = parser.search.substring(1);
+    let vars = query.split('&');
+    for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split('=');
+        params[pair[0]] = decodeURIComponent(pair[1]);
+    }
+    return params;
+}

@@ -172,9 +172,9 @@ Here you can choose between different dimensions of your lecture. Your choice co
 
     //Display
     $lang['Display_Titel'] = 'results in the Doppelradmodell';
-    $lang['Display_Text1'] = 'Here you can see the results of teachers who have applied our model to their courses. The graphic representations of research-based learning are created after filling out our reflection sheet and help you to assess and reflect on your own course. We would be pleased if you would fill out our reflection sheet: ';
+    $lang['Display_Text_look_at'] = 'Here you can see the results of teachers who have applied our model to their courses. The graphic representations of research-based learning are created after filling out our reflection sheet and help you to assess and reflect on your own course. We would be pleased if you would fill out our reflection sheet: ';
     $lang['Display_Link'] = '  We would be pleased if you would fill out our reflection sheet.';
-    $lang['Display_Text2'] = 'Under "search for further results" you can browse our database, view the presentations of other courses and compare them with your results. You can use the filter function to find specific universities or departments or to focus on a specific dimension of the dual wheel model. For example, you can find courses that have the same (or the opposite) characteristic as your course on a certain dimension. The parameters of the filter refer to the micro- or meso-level respectively. Please change the tab page to make the filter settings for the other level.';
+    $lang['Display_Text_Browse'] = 'Under "search for further results" you can browse our database, view the presentations of other courses and compare them with your results. You can use the filter function to find specific universities or departments or to focus on a specific dimension of the dual wheel model. For example, you can find courses that have the same (or the opposite) characteristic as your course on a certain dimension. The parameters of the filter refer to the micro- or meso-level respectively. Please change the tab page to make the filter settings for the other level.';
 
     //Display Darstellung
     $lang['Display_Tab_Titel'] = 'Results';

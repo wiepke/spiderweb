@@ -2,19 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9e04e0-28c8-4350-a0d3-cec11f6e294a" name="Default" comment="Bug Fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/additionalger.php" beforeDir="false" afterPath="$PROJECT_DIR$/additionalger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbconn.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconn.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/formchecker.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/formchecker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/serviceout.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/serviceout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/de.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/de.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/languages/en.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mikrodisplayger.php" beforeDir="false" afterPath="$PROJECT_DIR$/displaydoppelrad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysqldata/ariane_backup.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/publishin.php" beforeDir="false" afterPath="$PROJECT_DIR$/publishin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snipets.html" beforeDir="false" afterPath="$PROJECT_DIR$/snipets.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -34,29 +45,32 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\xampp\htdocs\spiderweb\.idea" />
-      </set>
-    </option>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1cqiAisHjp9OwVBhFIyNlqd5gGY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../copy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../xampp/php/php.exe" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -64,7 +78,7 @@
       <recent name="C:\xampp\htdocs\PhpstormProjects\spiderweb" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
       <PhpTestRunnerSettings />
       <method />
@@ -77,19 +91,19 @@
       <PhpTestRunnerSettings />
       <method />
     </configuration>
+    <configuration name="displaydoppelrad.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/displaydoppelrad.php">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/index.html">
       <method v="2" />
     </configuration>
-    <configuration name="mikrodisplayger.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/mikrodisplayger.php">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/index.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="mikroger.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/mikroger.php">
       <method v="2" />
     </configuration>
     <configuration name="publisherger.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/publisherger.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="serviceout.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/spiderweb/serviceout.php">
       <method v="2" />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp">
@@ -103,32 +117,20 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="JavaScript Debug.mikrodisplayger.php" />
-      <item itemvalue="JavaScript Debug.serviceout.php" />
       <item itemvalue="JavaScript Debug.mikroger.php" />
       <item itemvalue="JavaScript Debug.publisherger.php" />
+      <item itemvalue="JavaScript Debug.index.php" />
+      <item itemvalue="JavaScript Debug.displaydoppelrad.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.mikrodisplayger.php" />
+        <item itemvalue="JavaScript Debug.displaydoppelrad.php" />
         <item itemvalue="JavaScript Debug.publisherger.php" />
         <item itemvalue="JavaScript Debug.mikroger.php" />
-        <item itemvalue="JavaScript Debug.serviceout.php" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -182,6 +184,13 @@
       <workItem from="1509348660517" duration="214000" />
       <workItem from="1510648390174" duration="6225000" />
       <workItem from="1591262384917" duration="9008000" />
+      <workItem from="1592804039551" duration="494000" />
+      <workItem from="1592804546260" duration="107000" />
+      <workItem from="1592804832465" duration="347000" />
+      <workItem from="1592805462625" duration="1780000" />
+      <workItem from="1592809254240" duration="2507000" />
+      <workItem from="1593171935611" duration="2842000" />
+      <workItem from="1593408655794" duration="14736000" />
     </task>
     <task id="LOCAL-00001" summary="Bug Fixes">
       <created>1591266313845</created>
@@ -201,21 +210,98 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bug Fixes" />
     <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="348" y="67" key="#CLI_Interpreters" timestamp="1593172652853">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="348" y="67" key="#CLI_Interpreters/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172652853" />
+    <state x="475" y="55" key="#PHP" timestamp="1593172264017">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="55" key="#PHP/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172264017" />
     <state x="293" y="8" key="CommitChangelistDialog2" timestamp="1591274902464">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="293" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591274902464" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1591273680271">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1593172646539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172646539" />
     <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591273680271" />
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1592804533228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533228" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1592804533228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533228" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1592804533228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533228" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1592804533228">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533228" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.3.bottom" timestamp="1592804533230">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533230" />
+    <state width="1493" height="261" key="GridCell.Tab.3.center" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.3.left" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state width="1493" height="261" key="GridCell.Tab.3.right" timestamp="1592804533229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.3.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1592804533229" />
+    <state x="277" y="57" key="SettingsEditor" timestamp="1593172656364">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593172656364" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1591274916321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -224,9 +310,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="191" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1591262483914" />
-    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1591274175200">
+    <state x="253" y="141" width="609" height="592" key="find.popup" timestamp="1593427984857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="253" y="141" width="609" height="592" key="find.popup/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1593427984857" />
     <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1591274175200" />
   </component>
 </project>
