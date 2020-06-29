@@ -71,20 +71,20 @@
 											</tr>
 											<tr>
 												<td width="10px" >
-													<input type="radio" name="published" value="1" required>
+													<input type="radio" name="published" value="1" required id="one-1">
 												</td>
 												<td>
-                                                    <?php echo $lang['Publisher_2_Text1']?>												</td>
+                                                    <label class="hentry" for="one-1"><?php echo $lang['Publisher_2_Text1']?></label>
+                                                </td>
 													
 											</tr>
 											<tr>
 												<td width="10px" >
-													<input type="radio" name="published" value="0" required>
+													<input type="radio" name="published" value="0" required id="one-2">
 												</td>
 												<td>
-                                                    <?php echo $lang['Publisher_2_Text2']?>												</td>
-												
-												
+                                                    <label class="hentry" for="one-2"><?php echo $lang['Publisher_2_Text2']?></label>
+                                                </td>
 											</tr>
 										</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
 										<button type="button" class="btn btn-primary" data-parent="#forms" data-toggle="collapse" data-target="#zero"> <?php echo $lang['Btn_Back']?> </button>
