@@ -10,6 +10,6 @@
 
 $conn = mysqli_connect("localhost", "root", "", "test");
 /*
-$conn = mysqli_connect("spiderweb-db", "root", "voyager", "spinnennetz", 3308);
+$conn = mysqli_connect("spiderweb-db", "root", "voyager", "spinnennetz", 3306);
 */
 ?>
