@@ -199,7 +199,7 @@ function adjustFilterMeso() {
             ((allOfItMeso[i].Fachbereich === chosenFilterMeso.Fachbereich) || (chosenFilterMeso.Fachbereich === "")) &&
             ((allOfItMeso[i].Kurs === chosenFilterMeso.Kurs) || (chosenFilterMeso.Kurs === "")) &&
             ((allOfItMeso[i].AnzahlStudenten - 9 <= chosenFilterMeso.AnzahlStudenten) || (chosenFilterMeso.AnzahlStudenten === ""))) {
-            if ((allOfItMeso[i].Semesterzahl >= 1) && (allOfItMikro[i].Semesterzahl <= 3)) {
+            if ((allOfItMeso[i].Semesterzahl >= 1) && (allOfItMeso[i].Semesterzahl <= 3)) {
                 document.getElementById("SemesterZahlMesoId1").hidden = false;
             }
             if ((allOfItMeso[i].Semesterzahl >= 4) && (allOfItMikro[i].Semesterzahl <= 6)) {
@@ -240,9 +240,12 @@ function cleanall() {
     return false;
 }
 function cleanDia(diacount){
-    let idclass = document.getElementsByClassName("dia");
-    document.getElementById('diagram'+diacount).innerHTML='';
-    document.getElementById("labels"+diacount).hidden = true;
+    let diagram = 'diagram'+diacount;
+    let labels = "labels"+diacount;
+    let background = "background"+diacount;
+    document.getElementById(diagram).innerHTML='';
+    document.getElementById(background).innerHTML='';
+    document.getElementById(labels).hidden = true;
 }
 
 function setKriterien(mikro, lang) {
@@ -351,15 +354,15 @@ function showResults(Filter) {
                     document.getElementById('Semesterzahllabel0').innerHTML = "gemischt";
                 }
                 document.getElementById('AnzahlStudentenlabel0').innerHTML = data[0].AnzahlStudenten;
-                if (data[0].beneficial != "") {
+                if (data[0].beneficial != null) {
                     $('.beneficialExists').show();
                     document.getElementById('beneficialmikro').innerHTML = data[0].beneficial;
                 }
-                if (data[0].poorly != "") {
+                if (data[0].poorly != null) {
                     $('.poorlyExists').show();
                     document.getElementById('poorlymikro').innerHTML = data[0].poorly;
                 }
-                if (data[0].contact != "") {
+                if (data[0].contact != null) {
                     $('.emailExists').show();
                     document.getElementById('contactmikro').innerHTML = data[0].contact;
                 }
@@ -818,7 +821,7 @@ function cleanFilter() {
 }
 
 function updateDiagram(criteria, values, diacount, background) {
-        cleanall ();
+        cleanDia(diacount);
         if (diacount == 0){
             if (criteria != null) {
                 latestDiagramMikro.Kriterien = criteria;

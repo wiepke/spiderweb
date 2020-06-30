@@ -110,28 +110,27 @@ include_once 'language.php';
 
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Forschungsthema" value="1"  >
+                                                    <input type="radio" name="Forschungsthema" value="1" id="second-1" >
                                                 </td>
-
                                                 <td >
-                                                    <?php echo $lang['Mikro_2_Text1']?>
+                                                    <label class="hentry" for="second-1"><?php echo $lang['Mikro_2_Text1']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td  width="10px" >
-                                                    <input type="radio" name="Forschungsthema" value="2"  >
+                                                    <input type="radio" name="Forschungsthema" value="2"  id="second-2">
                                                 </td>
 
                                                 <td >
-                                                    <?php echo $lang['Mikro_2_Text2']?>
+                                                    <label class="hentry" for="second-2"><?php echo $lang['Mikro_2_Text2']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td  width="10px">
-                                                    <input type="radio" name="Forschungsthema" value="3" >
+                                                    <input type="radio" name="Forschungsthema" value="3" id="second-3">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_2_Text3']?>
+                                                    <label class="hentry" for="second-3"><?php echo $lang['Mikro_2_Text3']?></label>
                                                 </td>
                                             </tr>
 
@@ -154,27 +153,27 @@ include_once 'language.php';
                                                 </td>
                                             </tr>
                                             <tr>
-
                                                 <td width="10px">
-                                                    <input type="radio" name="Forschungsfrage" value="1"  >
+                                                    <input type="radio" name="Forschungsfrage" value="1" id="third-1">
                                                 </td>
                                                 <td>
-                                                    <?php echo $lang['Mikro_3_Text1']?>                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="10px">
-                                                    <input type="radio" name="Forschungsfrage" value="2" >
-                                                </td>
-                                                <td>
-                                                    <?php echo $lang['Mikro_3_Text2']?>
+                                                    <label class="hentry" for="third-1"><?php echo $lang['Mikro_3_Text1']?> </label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Forschungsfrage" value="3" >
+                                                    <input type="radio" name="Forschungsfrage" value="2" id="third-2">
+                                                </td>
+                                                <td>
+                                                    <label class="hentry" for="third-2"><?php echo $lang['Mikro_3_Text2']?></label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="10px">
+                                                    <input type="radio" name="Forschungsfrage" value="3" id="third-3">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_3_Text3']?>
+                                                    <label class="hentry" for="third-3"><?php echo $lang['Mikro_3_Text3']?></label>
                                                 </td>
 
                                             </tr>
@@ -198,26 +197,26 @@ include_once 'language.php';
 
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Planung" value="1"   >
+                                                    <input type="radio" name="Planung" value="1"  id="fourth-1" >
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_4_Text1']?>                                                </td>
+                                                    <label class="hentry" for="fourth-1"><?php echo $lang['Mikro_4_Text1']?> </label>                                               </td>
                                             </tr>
                                             <tr>
 
                                                 <td width="10px">
-                                                    <input type="radio" name="Planung" value="2" >
+                                                    <input type="radio" name="Planung" value="2" id="fourth-2">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_4_Text2']?>
+                                                    <label class="hentry" for="fourth-2"><?php echo $lang['Mikro_4_Text2']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Planung" value="3" >
+                                                    <input type="radio" name="Planung" value="3" id="fourth-3">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_4_Text3']?>
+                                                    <label class="hentry" for="fourth-3"><?php echo $lang['Mikro_4_Text3']?></label>
                                                 </td>
 
                                             </tr>
@@ -239,26 +238,26 @@ include_once 'language.php';
                                             </tr>
                                             <tr>
                                                 <td  width="10px">
-                                                    <input type="radio" name="Durchfuhrung" value="1"   >
+                                                    <input type="radio" name="Durchfuhrung" value="1" id="fifth-1">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_5_Text1']?>
+                                                    <label class="hentry" for="fifth-1"><?php echo $lang['Mikro_5_Text1']?></label>
                                                 </td>
 
                                             </tr>
                                             <tr>
                                                 <td  width="10px">
-                                                    <input type="radio" name="Durchfuhrung" value="2" >
+                                                    <input type="radio" name="Durchfuhrung" value="2" id="fifth-2">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_5_Text2']?>                                                </td>
+                                                    <label class="hentry" for="fifth-2"><?php echo $lang['Mikro_5_Text2']?> </label>                                             </td>
                                             </tr>
                                             <tr>
                                                 <td  width="10px">
-                                                    <input type="radio" name="Durchfuhrung" value="3" >
+                                                    <input type="radio" name="Durchfuhrung" value="3" id="fifth-3">
                                                 </td>
                                                 <td>
-                                                    <?php echo $lang['Mikro_5_Text3']?>
+                                                    <label class="hentry" for="fifth-3"><?php echo $lang['Mikro_5_Text3']?></label>
                                                 </td>
                                             </tr>
 
@@ -280,26 +279,26 @@ include_once 'language.php';
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="feedback" value="1"  >
+                                                    <input type="radio" name="feedback" value="1"  id="sixth-1">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_6_Text1']?>
+                                                    <label class="hentry" for="sixth-1"><?php echo $lang['Mikro_6_Text1']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="feedback" value="2" >
+                                                    <input type="radio" name="feedback" value="2" id="sixth-2">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_6_Text2']?>
+                                                    <label class="hentry" for="sixth-2"><?php echo $lang['Mikro_6_Text2']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="feedback" value="3" >
+                                                    <input type="radio" name="feedback" value="3" id="sixth-3">
                                                 </td>
                                                 <td>
-                                                    <?php echo $lang['Mikro_6_Text3']?>
+                                                    <label class="hentry" for="sixth-3"><?php echo $lang['Mikro_6_Text3']?></label>
                                                 </td>
                                             </tr>
 
@@ -321,26 +320,26 @@ include_once 'language.php';
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Ergebnisdarstellung" value="1"  >
+                                                    <input type="radio" name="Ergebnisdarstellung" value="1"  id="seventh-1">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_7_Text1']?>
+                                                    <label class="hentry" for="seventh-1"><?php echo $lang['Mikro_7_Text1']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Ergebnisdarstellung" value="2" >
+                                                    <input type="radio" name="Ergebnisdarstellung" value="2" id="seventh-2">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_7_Text2']?>
+                                                    <label class="hentry" for="seventh-2"><?php echo $lang['Mikro_7_Text2']?></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Ergebnisdarstellung" value="3" >
+                                                    <input type="radio" name="Ergebnisdarstellung" value="3" id="seventh-3">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_7_Text3']?>
+                                                    <label class="hentry" for="seventh-3"><?php echo $lang['Mikro_7_Text3']?></label>
                                                 </td>
                                             </tr>
 
@@ -363,28 +362,28 @@ include_once 'language.php';
                                             </tr>
                                             <tr>
                                                 <td width="10px" >
-                                                    <input type="radio" name="Reflexion" value="1"  >
+                                                    <input type="radio" name="Reflexion" value="1"  id="eighth-1">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_8_Text1']?>
+                                                    <label class="hentry" for="eighth-1"><?php echo $lang['Mikro_8_Text1']?></label>
                                                     <!--Es gibt eine vorgegebene Form zur Bewertung (z.B. über eine Prüfung).-->
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Reflexion" value="2" >
+                                                    <input type="radio" name="Reflexion" value="2" id="eighth-2">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_8_Text2']?>
+                                                    <label class="hentry" for="eighth-2"><?php echo $lang['Mikro_8_Text2']?></label>
                                                     <!--Lehrende und Studierende bestimmen im Prozess, wie die Forschung bewertet werden kann.-->
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td width="10px">
-                                                    <input type="radio" name="Reflexion" value="3">
+                                                    <input type="radio" name="Reflexion" value="3" id="eighth-3">
                                                 </td>
                                                 <td >
-                                                    <?php echo $lang['Mikro_8_Text3']?>
+                                                    <label class="hentry" for="eighth-3"><?php echo $lang['Mikro_8_Text3']?></label>
                                                     <!--Studierende entscheiden selbst, ob und wie ihre Forschung bewertet wird.-->
                                                 </td>
                                             </tr>

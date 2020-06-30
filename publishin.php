@@ -52,4 +52,4 @@ function redirect($url, $statusCode = 303)
     header('Location: ' . $url, true, $statusCode);
     die();
 }
-redirect ("mikrodisplayger.php"."?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid']."&lang=".$lang['this'],303);
+redirect ("displaydoppelrad.php"."?mikroid=".$_GET['mikroid']."&mesoid=".$_GET['mesoid']."&lang=".$lang['this'],303);

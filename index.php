@@ -192,7 +192,7 @@
 
 
                         <a href="mikroger.php?lang=<?php echo $lang['this']?>" class="poll-link"> <?php echo $lang['Index_Link_1']?> </a> <br>
-                        <a href="mikrodisplayger.php?lang=<?php echo $lang['this']?>" class="results-link"> <?php echo $lang['Index_Link_2']?> </a><br>
+                        <a href="displaydoppelrad.php?lang=<?php echo $lang['this']?>" class="results-link"> <?php echo $lang['Index_Link_2']?> </a><br>
 
 
                         <!--model content ends here -->

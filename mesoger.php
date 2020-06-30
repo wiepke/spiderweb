@@ -47,9 +47,8 @@ include_once 'language.php';
 									<div class="panel panel-default">
 										<div class="panel-collapse collapse in" id="second">
 										<p>
-                                            <?php echo $lang['this']?>
                                             <?php echo $lang['Meso_1_Beschreibung']?>
-				</p>
+				                        </p>
 											<table style="width:900px" class="table js-options-table">
 												<tr class="header">
 														<td colspan="2">
@@ -59,25 +58,27 @@ include_once 'language.php';
 											
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Einbindung" value="1">
+														<input type="radio" name="Einbindung" value="1" id="second-1">
 													</td>
 													<td>
-
-                                                        <?php echo $lang['Meso_1_Text1']?>													</td>
+                                                       <label class="hentry" for="second-1"><?php echo $lang['Meso_1_Text1']?>	</label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Einbindung" value="2">
+														<input type="radio" name="Einbindung" value="2" id="second-2">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_1_Text2']?>													</td>
+                                                        <label class="hentry" for="second-2"><?php echo $lang['Meso_1_Text2']?>	</label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Einbindung" value="3">
+														<input type="radio" name="Einbindung" value="3" id="second-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_1_Text3']?>													</td>
+                                                        <label class="hentry" for="second-3"><?php echo $lang['Meso_1_Text3']?></label>
+                                                    </td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
@@ -90,30 +91,31 @@ include_once 'language.php';
 											<table class="table js-options-table">
 												<tr class="header">
 													<td colspan="2">
-
                                                         <?php echo $lang['Meso_2_Frage']?>
 													</td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="CreditPoints" value="1">
+														<input type="radio" name="CreditPoints" value="1" id="third-1">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_2_Text1']?>													</td>
+                                                        <label class="hentry" for="third-1"><?php echo $lang['Meso_2_Text1']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="CreditPoints" value="2">
+														<input type="radio" name="CreditPoints" value="2" id="third-2">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_2_Text2']?>													</td>
+                                                        <label class="hentry" for="third-2"><?php echo $lang['Meso_2_Text2']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="CreditPoints" value="3">
+														<input type="radio" name="CreditPoints" value="3" id="third-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_2_Text3']?>													</td>
+                                                        <label class="hentry" for="third-3"><?php echo $lang['Meso_2_Text3']?></label>													</td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
@@ -131,25 +133,28 @@ include_once 'language.php';
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Verortung" value="1">
+														<input type="radio" name="Verortung" value="1" id="fourth-1">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_3_Text1']?>													</td>
+                                                        <label class="hentry" for="fourth-1"><?php echo $lang['Meso_3_Text1']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Verortung" value="2">
+														<input type="radio" name="Verortung" value="2" id="fourth-2">
 
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_3_Text2']?>													</td>
+                                                        <label class="hentry" for="fourth-2"><?php echo $lang['Meso_3_Text2']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Verortung" value="3">
+														<input type="radio" name="Verortung" value="3" id="fourth-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_3_Text3']?>													</td>
+                                                        <label class="hentry" for="fourth-3"><?php echo $lang['Meso_3_Text3']?></label>
+                                                    </td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
@@ -168,24 +173,27 @@ include_once 'language.php';
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Prufungsrahmen" value="1">
+														<input type="radio" name="Prufungsrahmen" value="1" id="fifth-1">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_4_Text1']?>													</td>
+                                                       <label class="hentry" for="fifth-1"><?php echo $lang['Meso_4_Text1']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Prufungsrahmen" value="2">
+														<input type="radio" name="Prufungsrahmen" value="2" id="fifth-2">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_4_Text2']?>													</td>
+                                                        <label class="hentry" for="fifth-2"><?php echo $lang['Meso_4_Text2']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Prufungsrahmen" value="3">
+														<input type="radio" name="Prufungsrahmen" value="3" id="fifth-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_4_Text3']?>													</td>
+                                                        <label class="hentry" for="fifth-3"><?php echo $lang['Meso_4_Text3']?></label>
+                                                    </td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
@@ -203,24 +211,27 @@ include_once 'language.php';
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Zeitrahmen" value="1">
+														<input type="radio" name="Zeitrahmen" value="1" id="sixth-1">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_5_Text1']?>													</td>
+                                                        <label class="hentry" for="sixth-1"><?php echo $lang['Meso_5_Text1']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Zeitrahmen" value="2">
+														<input type="radio" name="Zeitrahmen" value="2" id="sixth-2">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_5_Text2']?>													</td>
+                                                        <label class="hentry" for="sixth-2"><?php echo $lang['Meso_5_Text2']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Zeitrahmen" value="3">
+														<input type="radio" name="Zeitrahmen" value="3" id="sixth-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_5_Text3']?>													</td>
+                                                        <label class="hentry" for="sixth-3"><?php echo $lang['Meso_5_Text3']?></label>
+                                                    </td>
 												</tr>
 											
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
@@ -239,24 +250,27 @@ include_once 'language.php';
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Ressourcenrahmen" value="1">
+														<input type="radio" name="Ressourcenrahmen" value="1" id="seventh-1">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_6_Text1']?>													</td>
+                                                        <label class="hentry" for="seventh-1"><?php echo $lang['Meso_6_Text1']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Ressourcenrahmen" value="2">
+														<input type="radio" name="Ressourcenrahmen" value="2" id="seventh-2">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_6_Text2']?>													</td>
+                                                        <label class="hentry" for="seventh-2"><?php echo $lang['Meso_6_Text2']?></label>
+                                                    </td>
 												</tr>
 												<tr>
 													<td width="10px">
-														<input type="radio" name="Ressourcenrahmen" value="3">
+														<input type="radio" name="Ressourcenrahmen" value="3" id="seventh-3">
 													</td>
 													<td>
-                                                        <?php echo $lang['Meso_6_Text3']?>													</td>
+                                                       <label class="hentry" for="seventh-3"><?php echo $lang['Meso_6_Text3']?></label>
+                                                    </td>
 												</tr>
 												
 											</table> <!---knowledgebuilding negotiable topic question tasks inquiry audience assessment -->
