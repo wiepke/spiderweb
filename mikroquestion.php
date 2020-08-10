@@ -1,10 +1,9 @@
 <?php
+include_once 'language.php';
 ?>
     <!DOCTYPE html>
     <html lang="en">
-<?php
-include_once 'language.php';
-?>
+
 <head>
 
     <?php include 'header.php' ?>

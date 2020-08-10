@@ -1,7 +1,4 @@
 <?php
-?>
-
-<?php
 include_once 'language.php';
 ?>
 <!DOCTYPE html>
