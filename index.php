@@ -1,14 +1,11 @@
-<?php
+<?php include_once 'language.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php
-?>
-    <?php
-    include_once 'language.php';
-    ?>
+
+
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -191,7 +188,7 @@
                         <p><?php echo $lang['Index_Text']?></p>
 
 
-                        <a href="mikroger.php?lang=<?php echo $lang['this']?>" class="poll-link"> <?php echo $lang['Index_Link_1']?> </a> <br>
+                        <a href="mikroquestion.php?lang=<?php echo $lang['this']?>" class="poll-link"> <?php echo $lang['Index_Link_1']?> </a> <br>
                         <a href="displaydoppelrad.php?lang=<?php echo $lang['this']?>" class="results-link"> <?php echo $lang['Index_Link_2']?> </a><br>
 
 

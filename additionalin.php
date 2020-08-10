@@ -1,4 +1,6 @@
 <?php
+include_once 'language.php';
+
 /**
  * Created by PhpStorm.
  * User: fides-WHK
@@ -6,7 +8,7 @@
  * Time: 10:08
  */
 include 'dbconn.php';
-include_once 'language.php';
+
 $conn->set_charset("utf8");
 function intoDB($keys, $values,$conn,$mikro){
     $i=1;
@@ -53,4 +55,4 @@ function redirect($url, $statusCode = 303)
     die();
 }
 
-redirect ("publisherger.php?mikroid=".$_GET["mikroid"]."&mesoid=".$_GET['mesoid']."&lang=".$lang['this'],303);
+redirect ("publisherquestion.php?mikroid=".$_GET["mikroid"]."&mesoid=".$_GET['mesoid']."&lang=".$lang['this'],303);

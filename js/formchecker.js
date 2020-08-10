@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
 
-    if (location.pathname.match('mikroger')!==null ){
+    if (location.pathname.match('mikroquestion')!==null ){
         document.getElementById('firstButton').disabled=true;
         $('#uniInput').keyup(function() {
             document.getElementById('firstButton').disabled=

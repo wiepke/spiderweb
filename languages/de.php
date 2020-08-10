@@ -273,5 +273,3 @@ E-Mail:';
     $lang['Display_Meso_Drop_6_Antwort2'] = 'semesterübergreifend';
     $lang['Display_Meso_Drop_6_Antwort3'] = 'studienbegleitend';
 
-?>
-

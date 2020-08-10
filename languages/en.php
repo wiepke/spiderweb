@@ -274,5 +274,5 @@ Here you can choose between different dimensions of your lecture. Your choice co
     $lang['Display_Meso_Drop_6_Antwort2'] = 'more than a tri-/semester';
     $lang['Display_Meso_Drop_6_Antwort3'] = 'whole study program';
 
-?>
+
 

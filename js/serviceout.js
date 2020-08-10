@@ -21,7 +21,8 @@ let labels = {
 };
 
 let resultArray = [];
-
+let chosenFilterMikro={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};
+let chosenFilterMeso={Uni:'',Kurs:'',Fachbereich:'',AnzahlStudenten:'',SemesterZahl:''};
 
 $(document).ready(function () {
     cleanFilter();
