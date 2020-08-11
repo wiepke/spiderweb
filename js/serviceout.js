@@ -435,8 +435,12 @@ function showall(Filter, mikro, background, lang) {
     let values = [];
     let Kriterien = setKriterien(mikro, lang);
     let url = seturl(mikro, Filter);
-    if (mikro) url = url + "&from=" + String(number_of_showall_mikro);
-    else url = url + "&from=" + String(number_of_showall_meso);
+    if (mikro) {
+        url = url + "&from=" + String(number_of_showall_mikro);
+    }
+    else {
+        url = url + "&from=" + String(number_of_showall_meso);
+    }
     $.ajax({
         url: url,
         dataType: 'json',

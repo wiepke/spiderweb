@@ -25,6 +25,8 @@
    - docker exec -it spiderweb bash
    - Within the spiderweb vm:
         - docker-php-ext-install mysqli
+        - docker-php-ext-install pdo
+        - docker-php-ext-install pdo_mysql
         - apachectl restart
         - test this with: php -a and mysqli_connect("0.0.0.0", "root", "voyager", "spinnennetz", 3306);
    - you can save this fixed image with docker commit -p spiderweb spiderweb-i and then run spiderweb-i directly
