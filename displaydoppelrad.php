@@ -246,7 +246,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "UniMikroId' class='UniMikro'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "UniMikroId' class='UniMikro'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
@@ -282,7 +282,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "KursMikroId' class='KursMikro'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "KursMikroId' class='KursMikro'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
@@ -319,7 +319,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "FachbereichMikroId' class='FachbereichMikro'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "FachbereichMikroId' class='FachbereichMikro'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
@@ -734,7 +734,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "UniMesoId' class='UniMeso'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "UniMesoId' class='UniMeso'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
@@ -769,7 +769,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "KursMesoId' class='KursMeso'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "KursMesoId' class='KursMeso'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
@@ -805,7 +805,7 @@ include_once 'language.php';
                                                         sort($options);
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         for ($i = 0; count($options) > $i; $i++) {
-                                                            echo "<option value='" . $options[$i] . "' id='" . $options[$i] . "FachbereichMesoId' class='FachbereichMeso'>" . $options[$i] . "</option>";
+                                                            echo "<option value='" . utf8_decode($options[$i]) . "' id='" . $options[$i] . "FachbereichMesoId' class='FachbereichMeso'>" . utf8_decode($options[$i]) . "</option>";
                                                         }
                                                         //////////////////Writes the options in a dropdown menu///////////////////////////////////
                                                         ?>
