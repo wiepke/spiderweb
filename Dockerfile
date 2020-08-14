@@ -18,10 +18,10 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install gd \
     && docker-php-ext-configure mysql --with-mysql=mysqlnd \
     && docker-php-ext-install mysql \
-RUN docker-php-ext-install mysqli
-RUN docker-php-ext-enable mysqli
-RUN docker-php-ext-install pdo
-RUN docker-php-ext-install pdo_mysql
+    && docker-php-ext-install mysqli
+    && docker-php-ext-enable mysqli
+    && docker-php-ext-install pdo
+    && docker-php-ext-install pdo_mysql
 
 # Add a PHP config file. The file was copied from a php53 dotdeb package and
 # lightly modified (mostly for improving debugging). This may not be the best
