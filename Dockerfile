@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure mysql --with-mysql=mysqlnd \
     && docker-php-ext-install mysql \
     && docker-php-ext-install mysqli
-    && docker-php-ext-enable mysqli
     && docker-php-ext-install pdo
     && docker-php-ext-install pdo_mysql
 
